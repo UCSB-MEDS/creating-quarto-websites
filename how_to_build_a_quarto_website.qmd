@@ -1,0 +1,236 @@
+---
+title: "Creating your personal website using Quarto"
+author: Sam Csik & Allison Horst
+date: August 5, 2022
+format: 
+  html:
+    toc: true
+    toc-float: true
+editor: visual
+---
+
+## What is Quarto?
+
+[Quarto](https://quarto.org/) is a publishing system built on Pandoc that allows users to create dynamic content using R, Python, Julia, and ObservableJS (with plans to add more languages too!).
+
+Inspired by RMarkdown, Quarto is next-gen RMarkdown which extends all the best features to more languages.
+
+Allows you to create documents, websites, blogs, books, slides, etc.
+
+**Note:** This instructional document was built using Quarto!
+
+## I. Create the scaffolding for your website
+
+We'll review two ways to get started with building your website.
+
+a.  Through the command line
+b.  Using the RStudio IDE
+
+### a. Using the command line
+
+**Benefits:** (1) You'll start to get more comfortable working in a command line interface (CLI). (2) You're able to interact with Quarto via the command line regardless of which language you're working with (R, Python, Julia, ObservableJS).
+
+**Steps:**
+
+1.  Open up a terminal (Mac) or git bash (Windows) window.
+
+2.  Determine where you are in your file system using the `pwd` (print working directory). Use `cd` (change directory) to navigate your file system to whatever directory you'd like your quarto project to live.
+
+::: callout-tip
+To stay organized, I save all my git repositories to a folder called `git` in my computer's root directory (e.g. `Users/samanthacsik/git/`).
+:::
+
+3.  Use the following commands to create a quarto project directory that contains the files necessary for building your website:
+
+```{bash}
+#| eval: false
+quarto create-project mysite --type website
+```
+
+```{r}
+#| echo: false
+#| layout-ncol: 2
+#| column: page
+#| fig-subcap: 
+#|  - "Use `pwd` to see your current working directory. Use `cd` to change directories."
+#|  - "Create a new quarto project using the `quarto create-project your_project_name --type website` commands."
+knitr::include_graphics("media/pwd_cd.png")
+knitr::include_graphics("media/CLI_create_website.png")
+```
+
+You should now see a folder called `mysite` (or whatever you named your Quarto project) with a series of files (`_quarto.yml`, `about.qmd`, `index.qmd`, `styles.css`) that provide the scaffolding for your website.
+
+```{r}
+#| echo: false
+knitr::include_graphics("media/mysite_finder.png")
+```
+
+4.  You can preview your very basic, but functional website straight from the terminal by typing:
+
+```{bash}
+#| eval: false
+quarto preview mysite
+```
+
+::: callout-warning
+## come back to this
+
+Your site preview should open up in your browser. Quit your preview by \_\_\_\_
+:::
+
+5.  At this point you've created a directory (folder) but it's not yet being tracked by git. Initialize this folder as a git repository using the `git init` command in the terminal window.
+
+```{bash}
+#| eval: false
+git init
+```
+
+::: callout-warning
+## come back to this
+
+TO BE CONTINUED....
+:::
+
+### b. Using the RStudio IDE
+
+**Benefits:** It's super easy to set up a new Quarto project with the click of just a few buttons!
+
+::: callout-note
+Remember, the commands we typed out in our terminal window underlie the buttons we're clicking on in the RStudio IDE! RStudio simply provides a user-friendly interface for executing those commands.
+:::
+
+**Steps:**
+
+1.  Open up RStudio and click on the <img src="media/project.png" alt="A blue cube symbol with &apos;R&apos; in the center is on the left. To the right are the words &apos;Project: (None)&apos; in white, with a downward facing arrow, signifying a drop down menu" style="display: inline-block; margin: 0; position: relative; top: 0px; width:80px;height:18px;"/> button in the top right corner. Select **New Project...**
+
+```{r}
+#| echo: false
+#| fig-align: center
+knitr::include_graphics("media/vRStudio1.png")
+```
+
+2.  Click on **New Directory**, then **Quarto Website**
+
+```{r}
+#| echo: false
+#| layout-ncol: 2
+#| column: page
+knitr::include_graphics("media/vRStudio2.png")
+knitr::include_graphics("media/vRStudio3.png")
+```
+
+3.  Fill out the **Directory name:** field (this is the name of your R project, and eventually, your GitHub repo name), choose where to save your directory using the **Browse** button. Be sure to check the box that says **Create a git repository**. Click **Create Project**.
+
+::: callout-note
+**Recommended:** Name the project **yourusername.github.io** if you want that to be the site name (this is a "freebie" in GitHub). Otherwise, name it something reasonable (this will become the slug for your site if publishing with GitHub pages, so choose carefully).
+:::
+
+```{r}
+#| echo: false
+#| fig-align: center
+knitr::include_graphics("media/vRStudio4.png")
+```
+
+You should now see a folder called `mysite` (or whatever you named your Quarto project) with a series of files (`_quarto.yml`, `about.qmd`, `index.qmd`, `styles.css`) that provide the scaffolding for your website.
+
+```{r}
+#| echo: false
+#| fig-align: center
+knitr::include_graphics("media/mysite_scaffolding.png")
+```
+
+4.  At this point you've created a directory (folder) with the website scaffolding files, but it's yet being tracked by git, nor is it connected to a remote repository on GitHub. To start, install the [`{usethis}`](https://usethis.r-lib.org/index.html) package if you don't already have it.
+
+```{r}
+#| eval: false
+install.packages("usethis")
+```
+
+5.  In the Console (while in your website project in RStudio), run `usethis::use_git()` to create a local git repo. Choose yes when asked if it's okay to commit any uncommitted files. If asked to restart R, choose yes.
+
+6.  Then, in the Console, run `usethis::use_github()` to create an upstream remote repo. Notice that you're automatically navigated to the repo, and a .nojekyll file is already there.
+
+7.  Next, we'll switch the branch name from `master` to `main`. Why? The racist "master" terminology for git branches motivates us to update our default branch to "main" instead. *Note: If you create a repo in GitHub FIRST, the default now has been updated to make the default branch 'main'. However, the `usethis::use_github()` method for creating a repo hasn't yet been updated, so we'll do it manually.* In RStudio, click on the branch button in the Git tab (the diamond with purple rectangle "branches"):
+
+```{r}
+#| echo: false
+#| fig-align: center
+knitr::include_graphics("media/branch_button.png")
+```
+
+8.  In the new window, enter the new branch name "main". Make sure that **Sync branch with remote** IS CHECKED. Then click "Create."
+
+```{r}
+#| echo: false
+#| fig-align: center
+knitr::include_graphics("media/new_branch.png")
+```
+
+9.  Head back to your GitHub repo, refresh, then click where it now says **2 branches**:
+
+```{r}
+#| echo: false
+#| fig-align: center
+knitr::include_graphics("media/two_branches.png")
+```
+
+10. Click on the "switchy arrows" in the top right of the panel that says "Default branch" (if you hover, the tooltip says "switch default branch"). Click on those arrows to update the default branch to 'main'.
+
+```{r}
+#| echo: false
+#| layout-ncol: 2
+#| column: page
+knitr::include_graphics("media/default_branch.png")
+knitr::include_graphics("media/switch_main.png")
+```
+
+11. Once you've updated the default to main, delete the `master` branch. Cool. Now you're working just in main.
+
+## II. Publish your site with GitHub Pages
+
+There are a [lots of options to publish your website](https://quarto.org/docs/websites/publishing-websites.html). We'll use the [GitHub Pages option](https://quarto.org/docs/websites/publishing-websites.html#github-pages), which allows you to publish a website from any GitHub repository. To do so, there are a few configuration steps:
+
+1.  Create a file named `.nojekyll` in your repository, which is required to disable some processign of HTML files that GitHub does by default. Do this from your terminal (you can use the terminal tab in RStudio or a separate terminal window -- just make sure you're in the correct directory) using the following command:
+
+```{bash}
+#| eval: false
+touch .nojekyll
+```
+
+::: callout-note
+The `touch` command creates a new, empty file.
+:::
+
+::: callout-note
+You're creating a *hidden* file, which won't visibly appear in your directory. You *should* see it show up as a file to track with git under the **Git** tab in RStudio. You can also view hidden files in Finder (Mac) using the keyboard shortcut `Command` + `Shift` + `.`, or follow [these instructions](https://support.microsoft.com/en-us/windows/show-hidden-files-0320fe58-0117-fd59-6851-9b7f9840fdb2) for Windows 10, 8.1, and 7.
+:::
+
+2.  Set the `output-dir` in your `_quarto.yml` file to "docs":
+
+```{r}
+#| eval: false
+project:
+  type: website
+  output-dir: docs
+```
+
+3.  Build your site by clicking on the **Build** tab, then **Render Website.** Your rendered site should appear in the RStudio Viewer. **Stage** files your files by checking the boxes in the **Git** tab (this is analogous to the `git add .` command used in the terminal for staging all files). **Commit** your files by clicking the Commit button, adding a commit message, and clicking "Commit" (analogous to `git commit -m "my commit message"`). **Push** your files to the remote repository (on GitHub) by clicking the "Push" button with the green upward facing arrow (analogous to `git commit`).
+
+```{r}
+#| echo: false
+#| fig-align: center
+knitr::include_graphics("media/build_site.png")
+```
+
+4.  Configure GitHub pages to serve content from the "docs" directory by clicking on the Settings tab in the top menu bar, then Pages tab from the left hand menu bar. Make sure that Branch is set to `main` and Select folder is set to `/docs`. Click "Save". Your website's url will appear inside a blue banner at the top of the page. Give it a few minutes to render (you'll get a 404 error message if it's not ready yet), then explore your site!
+
+```{r}
+#| echo: false
+#| layout-ncol: 2
+#| column: page
+#| fig-subcap: 
+#|  - "Your website's URL will appear at the top of the page once you've configured GitHub pages to host your Quarto site"
+#|  - "A hosted Quarto website! Now time to add customize and add content."
+knitr::include_graphics("media/gh_pages.png")
+knitr::include_graphics("media/rendered_site.png")
+```
