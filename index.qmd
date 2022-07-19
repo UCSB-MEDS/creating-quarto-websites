@@ -1,6 +1,6 @@
 ---
 title: "Creating your personal website using Quarto"
-author: Sam Csik & Allison Horst
+author: Sam Csik
 date: August 5, 2022
 format: 
   html:
@@ -23,6 +23,8 @@ Allows you to create documents, websites, blogs, books, slides, etc.
 
 **Note:** This instructional document was built using Quarto!
 
+## Do I need to use Quarto to build my website?
+
 ## I. Create the scaffolding for your website
 
 We'll review two ways to get started with building your website.
@@ -30,7 +32,8 @@ We'll review two ways to get started with building your website.
 a.  Through the command line
 b.  Using the RStudio IDE
 
-### a. Using the command line
+::: panel-tabset
+## a. Using the command line
 
 **Benefits:** (1) You'll start to get more comfortable working in a command line interface (CLI). (2) You're able to interact with Quarto via the command line regardless of which language you're working with (R, Python, Julia, ObservableJS).
 
@@ -76,11 +79,7 @@ knitr::include_graphics("media/mysite_finder.png")
 quarto preview mysite
 ```
 
-::: callout-warning
-## come back to this
-
-Your site preview should open up in your browser. Quit your preview by \_\_\_\_
-:::
+Your site preview should open up in your browser. Quit your preview by pressing `control` + `C`
 
 5.  At this point you've created a directory (folder) but it's not yet being tracked by git. Initialize this folder as a git repository using the `git init` command in the terminal window.
 
@@ -95,17 +94,15 @@ git init
 TO BE CONTINUED....
 :::
 
-### b. Using the RStudio IDE
+## b. Using the RStudio IDE
 
 **Benefits:** It's super easy to set up a new Quarto project with the click of just a few buttons!
 
-::: callout-note
 Remember, the commands we typed out in our terminal window underlie the buttons we're clicking on in the RStudio IDE! RStudio simply provides a user-friendly interface for executing those commands.
-:::
 
 **Steps:**
 
-1.  Open up RStudio and click on the <img src="media/project.png" alt="A blue cube symbol with &apos;R&apos; in the center is on the left. To the right are the words &apos;Project: (None)&apos; in white, with a downward facing arrow, signifying a drop down menu" style="display: inline-block; margin: 0; position: relative; top: 0px; width:80px;height:18px;"/> button in the top right corner. Select **New Project...**
+1.  Open up RStudio and click on the ![A blue cube symbol with 'R' in the center is on the left. To the right are the words 'Project: (None)' in white, with a downward facing arrow, signifying a drop down menu](media/project.png){alt="A blue cube symbol with 'R' in the center is on the left. To the right are the words 'Project: (None)' in white, with a downward facing arrow, signifying a drop down menu" style="display: inline-block; margin: 0; position: relative; top: 0px; width:80px;height:18px;"} button in the top right corner. Select **New Project...**
 
 ```{r}
 #| echo: false
@@ -125,9 +122,7 @@ knitr::include_graphics("media/vRStudio3.png")
 
 3.  Fill out the **Directory name:** field (this is the name of your R project, and eventually, your GitHub repo name), choose where to save your directory using the **Browse** button. Be sure to check the box that says **Create a git repository**. Click **Create Project**.
 
-::: callout-note
 **Recommended:** Name the project **yourusername.github.io** if you want that to be the site name (this is a "freebie" in GitHub). Otherwise, name it something reasonable (this will become the slug for your site if publishing with GitHub pages, so choose carefully).
-:::
 
 ```{r}
 #| echo: false
@@ -189,6 +184,7 @@ knitr::include_graphics("media/switch_main.png")
 ```
 
 11. Once you've updated the default to main, delete the `master` branch. Cool. Now you're working just in main.
+:::
 
 ## II. Publish your site with GitHub Pages
 

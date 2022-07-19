@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="quarto-0.9.172">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <meta name="author" content="Sam Csik &amp; Allison Horst">
+  <meta name="author" content="Sam Csik">
   <meta name="dcterms.date" content="2022-08-05">
   <title>Creating your personal website using Quarto</title>
   <style>
@@ -99,11 +99,8 @@
 <h2 id="toc-title">Table of contents</h2>
 <ul>
 <li><a href="#what-is-quarto" class="nav-link active" data-scroll-target="#what-is-quarto">What is Quarto?</a></li>
-<li><a href="#i.-create-the-scaffolding-for-your-website" class="nav-link" data-scroll-target="#i.-create-the-scaffolding-for-your-website">I. Create the scaffolding for your website</a>
-<ul class="collapse">
-<li><a href="#a.-using-the-command-line" class="nav-link" data-scroll-target="#a.-using-the-command-line">a. Using the command line</a></li>
-<li><a href="#b.-using-the-rstudio-ide" class="nav-link" data-scroll-target="#b.-using-the-rstudio-ide">b. Using the RStudio IDE</a></li>
-</ul></li>
+<li><a href="#do-i-need-to-use-quarto-to-build-my-website" class="nav-link" data-scroll-target="#do-i-need-to-use-quarto-to-build-my-website">Do I need to use Quarto to build my website?</a></li>
+<li><a href="#i.-create-the-scaffolding-for-your-website" class="nav-link" data-scroll-target="#i.-create-the-scaffolding-for-your-website">I. Create the scaffolding for your website</a></li>
 <li><a href="#ii.-publish-your-site-with-github-pages" class="nav-link" data-scroll-target="#ii.-publish-your-site-with-github-pages">II. Publish your site with GitHub Pages</a></li>
 </ul>
 </nav>
@@ -114,7 +111,7 @@
 
 
 <div class="quarto-title"><h1 class="title display-7">Creating your personal website using Quarto</h1></div><div class="quarto-title-meta"><div><div class="quarto-title-meta-heading">Author</div><div class="quarto-title-meta-contents"><div class="quarto-title-authors"><div><div>
-<p>Sam Csik &amp; Allison Horst</p>
+<p>Sam Csik</p>
 </div></div></div></div></div><div><div class="quarto-title-meta-heading">Published</div><div class="quarto-title-meta-contents"><p class="date">August 5, 2022</p></div></div></div></header>
 
 <div class="callout-warning callout callout-style-default callout-captioned">
@@ -137,6 +134,9 @@ Warning
 <p>Allows you to create documents, websites, blogs, books, slides, etc.</p>
 <p><strong>Note:</strong> This instructional document was built using Quarto!</p>
 </section>
+<section id="do-i-need-to-use-quarto-to-build-my-website" class="level2">
+<h2 class="anchored" data-anchor-id="do-i-need-to-use-quarto-to-build-my-website">Do I need to use Quarto to build my website?</h2>
+</section>
 <section id="i.-create-the-scaffolding-for-your-website" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="i.-create-the-scaffolding-for-your-website">I. Create the scaffolding for your website</h2>
 <p>We’ll review two ways to get started with building your website.</p>
@@ -144,8 +144,10 @@ Warning
 <li>Through the command line</li>
 <li>Using the RStudio IDE</li>
 </ol>
-<section id="a.-using-the-command-line" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="a.-using-the-command-line">a. Using the command line</h3>
+<div class="panel-tabset page-columns page-full">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">a. Using the command line</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">b. Using the RStudio IDE</a></li></ul>
+<div class="tab-content page-columns page-full">
+<div id="tabset-1-1" class="tab-pane active page-columns page-full" role="tabpanel" aria-labeledby="tabset-1-1-tab">
 <p><strong>Benefits:</strong> (1) You’ll start to get more comfortable working in a command line interface (CLI). (2) You’re able to interact with Quarto via the command line regardless of which language you’re working with (R, Python, Julia, ObservableJS).</p>
 <p><strong>Steps:</strong></p>
 <ol type="1">
@@ -203,19 +205,7 @@ Tip
 <div class="cell">
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview mysite</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-come back to this
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Your site preview should open up in your browser. Quit your preview by ____</p>
-</div>
-</div>
+<p>Your site preview should open up in your browser. Quit your preview by pressing <code>control</code> + <code>C</code></p>
 <ol start="5" type="1">
 <li>At this point you’ve created a directory (folder) but it’s not yet being tracked by git. Initialize this folder as a git repository using the <code>git init</code> command in the terminal window.</li>
 </ol>
@@ -235,26 +225,13 @@ come back to this
 <p>TO BE CONTINUED….</p>
 </div>
 </div>
-</section>
-<section id="b.-using-the-rstudio-ide" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="b.-using-the-rstudio-ide">b. Using the RStudio IDE</h3>
+</div>
+<div id="tabset-1-2" class="tab-pane page-columns page-full" role="tabpanel" aria-labeledby="tabset-1-2-tab">
 <p><strong>Benefits:</strong> It’s super easy to set up a new Quarto project with the click of just a few buttons!</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
 <p>Remember, the commands we typed out in our terminal window underlie the buttons we’re clicking on in the RStudio IDE! RStudio simply provides a user-friendly interface for executing those commands.</p>
-</div>
-</div>
 <p><strong>Steps:</strong></p>
 <ol type="1">
-<li>Open up RStudio and click on the <img src="media/project.png" alt="A blue cube symbol with 'R' in the center is on the left. To the right are the words 'Project: (None)' in white, with a downward facing arrow, signifying a drop down menu" style="display: inline-block; margin: 0; position: relative; top: 0px; width:80px;height:18px;"> button in the top right corner. Select <strong>New Project…</strong></li>
+<li>Open up RStudio and click on the <img src="media/project.png" class="img-fluid" alt="A blue cube symbol with 'R' in the center is on the left. To the right are the words 'Project: (None)' in white, with a downward facing arrow, signifying a drop down menu" style="display: inline-block; margin: 0; position: relative; top: 0px; width:80px;height:18px;"> button in the top right corner. Select <strong>New Project…</strong></li>
 </ol>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -281,19 +258,7 @@ Note
 <ol start="3" type="1">
 <li>Fill out the <strong>Directory name:</strong> field (this is the name of your R project, and eventually, your GitHub repo name), choose where to save your directory using the <strong>Browse</strong> button. Be sure to check the box that says <strong>Create a git repository</strong>. Click <strong>Create Project</strong>.</li>
 </ol>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
 <p><strong>Recommended:</strong> Name the project <strong>yourusername.github.io</strong> if you want that to be the site name (this is a “freebie” in GitHub). Otherwise, name it something reasonable (this will become the slug for your site if publishing with GitHub pages, so choose carefully).</p>
-</div>
-</div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -373,7 +338,9 @@ Note
 <ol start="11" type="1">
 <li>Once you’ve updated the default to main, delete the <code>master</code> branch. Cool. Now you’re working just in main.</li>
 </ol>
-</section>
+</div>
+</div>
+</div>
 </section>
 <section id="ii.-publish-your-site-with-github-pages" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="ii.-publish-your-site-with-github-pages">II. Publish your site with GitHub Pages</h2>
