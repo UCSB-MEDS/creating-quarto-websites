@@ -61,6 +61,8 @@ To stay organized, I save all my git repositories to a folder called `git` in my
 quarto create-project mysite --type website
 ```
 
+**Recommended:** Name the project **yourusername.github.io** if you want that to be the site name (this is a "freebie" in GitHub). Otherwise, name it something reasonable (this will become the slug for your site if publishing with GitHub pages, so choose carefully). I'm calling my project **mysite** just for tutorial purposes only -- you should definitely give yours a more practical/creative name.
+
 ```{r}
 #| echo: false
 #| layout-ncol: 2
@@ -95,7 +97,7 @@ Your site preview should open up in your browser. Quit your preview by pressing 
 git init
 ```
 
-6.  We can update the branch name from `master` to `main` by running the following line in the terminal window:
+6.Next, we'll switch the branch name from `master` to `main`. *Why? The racist "master" terminology for git branches motivates us to update our default branch to "main" instead.* **Note:** If you create a repo in GitHub FIRST, the default now has been updated to make the default branch 'main'. However, you'll need to update the branch name if you create a local git repository first (like we've just done). Update the branch name from `master` to `main` by running the following line in the terminal window:
 
 ```{bash}
 #| eval: false
@@ -123,7 +125,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-7.  `add` (analogous to checking the boses next time file names in the RStudio Git tab) the files in your `mysite` directory...
+7.  `add` (analogous to checking the boxes next to your files in the RStudio Git tab) the files in your `mysite` directory...
 
 ```{bash}
 #| eval: false
@@ -142,7 +144,7 @@ Use the `git status` command again to see if your files have been successfully a
 
 ```{bash}
 #| eval: false
-git commit -m "your commit message here"
+git commit -m "your descriptive commit message here"
 ```
 
 8.  Create a repository for your project on GitHub using the subcommand:
@@ -190,7 +192,7 @@ knitr::include_graphics("media/vRStudio3.png")
 
 3.  Fill out the **Directory name:** field (this is the name of your R project, and eventually, your GitHub repo name), choose where to save your directory using the **Browse** button. Be sure to check the box that says **Create a git repository**. Click **Create Project**.
 
-**Recommended:** Name the project **yourusername.github.io** if you want that to be the site name (this is a "freebie" in GitHub). Otherwise, name it something reasonable (this will become the slug for your site if publishing with GitHub pages, so choose carefully).
+**Recommended:** Name the project **yourusername.github.io** if you want that to be the site name (this is a "freebie" in GitHub). Otherwise, name it something reasonable (this will become the slug for your site if publishing with GitHub pages, so choose carefully). I'm calling my project **mysite** just for tutorial purposes only -- you should definitely give yours a more practical/creative name.
 
 ```{r}
 #| echo: false
@@ -216,6 +218,14 @@ install.packages("usethis")
 5.  In the Console (while in your website project in RStudio), run `usethis::use_git()` to create a local git repo. Choose yes when asked if it's okay to commit any uncommitted files. If asked to restart R, choose yes.
 
 6.  Then, in the Console, run `usethis::use_github()` to create an upstream remote repo. Notice that you're automatically navigated to the repo, and a `.nojekyll` file is already there.
+
+```{r}
+#| echo: false
+#| fig-align: center
+knitr::include_graphics("media/branch_button.png")
+```
+
+7. Next, we'll switch the branch name from `master` to `main`. Why? The racist "master" terminology for git branches motivates us to update our default branch to "main" instead. *Note: If you create a repo in GitHub FIRST, the default now has been updated to make the default branch 'main'. However, the `usethis::use_github()` method for creating a repo hasn't yet been updated, so we'll do it manually.* In RStudio, click on the branch button in the Git tab (the diamond with purple rectangle "branches"):
 
 ```{r}
 #| echo: false
