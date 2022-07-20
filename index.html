@@ -130,8 +130,8 @@ Warning
 <section id="what-is-quarto" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-quarto">What is Quarto?</h2>
 <p><a href="https://quarto.org/">Quarto</a> is a publishing system built on Pandoc that allows users to create dynamic content using R, Python, Julia, and ObservableJS (with plans to add more languages too!).</p>
-<p>Inspired by RMarkdown, Quarto is next-gen RMarkdown which extends all the best features to more languages.</p>
-<p>Allows you to create documents, websites, blogs, books, slides, etc.</p>
+<p>R users have long loved <a href="https://rmarkdown.rstudio.com/">RMarkdown</a> for combining prose, code, and outputs into single “knitted” documents. Quarto extends all of RMarkdown’s best features (plus many more!) to additional languages.</p>
+<p>You can explore <a href="https://quarto.org/docs/guide/">Quarto documentation</a> to learn more about created documents, websites, blogs, books, slides, etc.</p>
 <p><strong>Note:</strong> This instructional document was built using Quarto!</p>
 </section>
 <section id="do-i-need-to-use-quarto-to-build-my-website" class="level2">
@@ -144,11 +144,17 @@ Warning
 <li>Through the command line</li>
 <li>Using the RStudio IDE</li>
 </ol>
+<p>The order of operations is slightly different depending on which approach you decide to take, but the concepts remain the same.</p>
 <div class="panel-tabset page-columns page-full">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">a. Using the command line</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">b. Using the RStudio IDE</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true"><strong>a. Through the command line</strong></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><strong>b. Using the RStudio IDE</strong></a></li></ul>
 <div class="tab-content page-columns page-full">
 <div id="tabset-1-1" class="tab-pane active page-columns page-full" role="tabpanel" aria-labeledby="tabset-1-1-tab">
-<p><strong>Benefits:</strong> (1) You’ll start to get more comfortable working in a command line interface (CLI). (2) You’re able to interact with Quarto via the command line regardless of which language you’re working with (R, Python, Julia, ObservableJS).</p>
+<p><strong>Why use the command line to set up your Quarto website?</strong></p>
+<ol type="1">
+<li>You’ll start to get more comfortable working in a command line interface (CLI)</li>
+<li>You’re able to interact with Quarto via the command line regardless of which language or IDE you might find yourself working with (R, Python, Julia, ObservableJS)</li>
+</ol>
+<p><strong>Prerequisites:</strong> In order to interact with GitHub from the command line, you’ll need to install GitHub CLI first. You can do so in your terminal by running <code>brew install gh</code> or download and install from the <a href="https://cli.github.com/">GitHub CLI website</a>.</p>
 <p><strong>Steps:</strong></p>
 <ol type="1">
 <li><p>Open up a terminal (Mac) or git bash (Windows) window.</p></li>
@@ -207,11 +213,72 @@ Tip
 </div>
 <p>Your site preview should open up in your browser. Quit your preview by pressing <code>control</code> + <code>C</code></p>
 <ol start="5" type="1">
-<li>At this point you’ve created a directory (folder) but it’s not yet being tracked by git. Initialize this folder as a git repository using the <code>git init</code> command in the terminal window.</li>
+<li>At this point you’ve created a directory (folder) but it’s not yet being tracked by git. First be sure to <code>cd</code> into your website folder. Then, initialize this folder as a git repository using the <code>git init</code> command in the terminal window.</li>
 </ol>
 <div class="cell">
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<ol start="6" type="1">
+<li>We can update the branch name from <code>master</code> to <code>main</code> by running the following line in the terminal window:</li>
+</ol>
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> init.defaultBranch main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You can double check that this worked by typing out the <code>git status</code> command, which displays the state of the working directory and the staging area (this is a command I find myself using often when working on the command line!). You should see something that looks like this:</p>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">base</span><span class="kw">)</span> <span class="ex">Samanthas-MacBook-Air:mysite</span> samanthacsik$ git status</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">On</span> branch main</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ex">No</span> commits yet</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="ex">Untracked</span> files:</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">(</span><span class="ex">use</span> <span class="st">"git add &lt;file&gt;..."</span> to include in what will be committed<span class="kw">)</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="ex">.quarto/</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="ex">_quarto.yml</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="ex">_site/</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="ex">about.qmd</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="ex">index.qmd</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="ex">styles.css</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="ex">nothing</span> added to commit but untracked files present <span class="er">(</span><span class="ex">use</span> <span class="st">"git add"</span> to track<span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="7" type="1">
+<li><code>add</code> (analogous to checking the boses next time file names in the RStudio Git tab) the files in your <code>mysite</code> directory…</li>
+</ol>
+<div class="cell">
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this adds all untracked or changed files at once</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add . </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># alternatively, you can add files individually</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add <span class="op">&lt;</span>file_name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Use the <code>git status</code> command again to see if your files have been successfully added <em>before</em> committing them.</p>
+</div>
+</div>
+<p>…and commit them:</p>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"your commit message here"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="8" type="1">
+<li>Create a repository for your project on GitHub using the subcommand:</li>
+</ol>
+<div class="cell">
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> repo create</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>When prompted, select <strong>Push an existing local repository to GitHub</strong>, then enter the desired name of your repository.</p>
+<ol start="9" type="1">
+<li></li>
+</ol>
 <div class="callout-warning callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -227,8 +294,10 @@ come back to this
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane page-columns page-full" role="tabpanel" aria-labeledby="tabset-1-2-tab">
-<p><strong>Benefits:</strong> It’s super easy to set up a new Quarto project with the click of just a few buttons!</p>
-<p>Remember, the commands we typed out in our terminal window underlie the buttons we’re clicking on in the RStudio IDE! RStudio simply provides a user-friendly interface for executing those commands.</p>
+<p><strong>Why use RStudio to set up your Quarto website?</strong></p>
+<ol type="1">
+<li>It’s <em>super</em> easy to do with the click of just a few buttons! <strong>Remember</strong>, the commands we typed out in our terminal window underlie the buttons we’re clicking on in the RStudio IDE! RStudio simply provides a user-friendly interface for executing those commands.</li>
+</ol>
 <p><strong>Steps:</strong></p>
 <ol type="1">
 <li>Open up RStudio and click on the <img src="media/project.png" class="img-fluid" alt="A blue cube symbol with 'R' in the center is on the left. To the right are the words 'Project: (None)' in white, with a downward facing arrow, signifying a drop down menu" style="display: inline-block; margin: 0; position: relative; top: 0px; width:80px;height:18px;"> button in the top right corner. Select <strong>New Project…</strong></li>
@@ -282,12 +351,11 @@ come back to this
 <li>At this point you’ve created a directory (folder) with the website scaffolding files, but it’s yet being tracked by git, nor is it connected to a remote repository on GitHub. To start, install the <a href="https://usethis.r-lib.org/index.html"><code>{usethis}</code></a> package if you don’t already have it.</li>
 </ol>
 <div class="cell">
-<div class="sourceCode" id="cb4"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"usethis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"usethis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="5" type="1">
 <li><p>In the Console (while in your website project in RStudio), run <code>usethis::use_git()</code> to create a local git repo. Choose yes when asked if it’s okay to commit any uncommitted files. If asked to restart R, choose yes.</p></li>
-<li><p>Then, in the Console, run <code>usethis::use_github()</code> to create an upstream remote repo. Notice that you’re automatically navigated to the repo, and a .nojekyll file is already there.</p></li>
-<li><p>Next, we’ll switch the branch name from <code>master</code> to <code>main</code>. Why? The racist “master” terminology for git branches motivates us to update our default branch to “main” instead. <em>Note: If you create a repo in GitHub FIRST, the default now has been updated to make the default branch ‘main’. However, the <code>usethis::use_github()</code> method for creating a repo hasn’t yet been updated, so we’ll do it manually.</em> In RStudio, click on the branch button in the Git tab (the diamond with purple rectangle “branches”):</p></li>
+<li><p>Then, in the Console, run <code>usethis::use_github()</code> to create an upstream remote repo. Notice that you’re automatically navigated to the repo, and a <code>.nojekyll</code> file is already there.</p></li>
 </ol>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -349,7 +417,7 @@ come back to this
 <li>Create a file named <code>.nojekyll</code> in your repository, which is required to disable some processign of HTML files that GitHub does by default. Do this from your terminal (you can use the terminal tab in RStudio or a separate terminal window – just make sure you’re in the correct directory) using the following command:</li>
 </ol>
 <div class="cell">
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> .nojekyll</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> .nojekyll</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -381,9 +449,9 @@ Note
 <li>Set the <code>output-dir</code> in your <code>_quarto.yml</code> file to “docs”:</li>
 </ol>
 <div class="cell">
-<div class="sourceCode" id="cb6"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>project<span class="sc">:</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  type<span class="sc">:</span> website</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  output<span class="sc">-</span>dir<span class="sc">:</span> docs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>project<span class="sc">:</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  type<span class="sc">:</span> website</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  output<span class="sc">-</span>dir<span class="sc">:</span> docs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="3" type="1">
 <li>Build your site by clicking on the <strong>Build</strong> tab, then <strong>Render Website.</strong> Your rendered site should appear in the RStudio Viewer. <strong>Stage</strong> files your files by checking the boxes in the <strong>Git</strong> tab (this is analogous to the <code>git add .</code> command used in the terminal for staging all files). <strong>Commit</strong> your files by clicking the Commit button, adding a commit message, and clicking “Commit” (analogous to <code>git commit -m "my commit message"</code>). <strong>Push</strong> your files to the remote repository (on GitHub) by clicking the “Push” button with the green upward facing arrow (analogous to <code>git commit</code>).</li>

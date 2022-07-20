@@ -17,9 +17,9 @@ UNDER DEVELOPMENT
 
 [Quarto](https://quarto.org/) is a publishing system built on Pandoc that allows users to create dynamic content using R, Python, Julia, and ObservableJS (with plans to add more languages too!).
 
-Inspired by RMarkdown, Quarto is next-gen RMarkdown which extends all the best features to more languages.
+R users have long loved [RMarkdown](https://rmarkdown.rstudio.com/) for combining prose, code, and outputs into single "knitted" documents. Quarto extends all of RMarkdown's best features (plus many more!) to additional languages.
 
-Allows you to create documents, websites, blogs, books, slides, etc.
+You can explore [Quarto documentation](https://quarto.org/docs/guide/) to learn more about created documents, websites, blogs, books, slides, etc.
 
 **Note:** This instructional document was built using Quarto!
 
@@ -32,10 +32,17 @@ We'll review two ways to get started with building your website.
 a.  Through the command line
 b.  Using the RStudio IDE
 
-::: panel-tabset
-## a. Using the command line
+The order of operations is slightly different depending on which approach you decide to take, but the concepts remain the same.
 
-**Benefits:** (1) You'll start to get more comfortable working in a command line interface (CLI). (2) You're able to interact with Quarto via the command line regardless of which language you're working with (R, Python, Julia, ObservableJS).
+::: panel-tabset
+## **a. Through the command line**
+
+**Why use the command line to set up your Quarto website?**
+
+1.  You'll start to get more comfortable working in a command line interface (CLI)
+2.  You're able to interact with Quarto via the command line regardless of which language or IDE you might find yourself working with (R, Python, Julia, ObservableJS)
+
+**Prerequisites:** In order to interact with GitHub from the command line, you'll need to install GitHub CLI first. You can do so in your terminal by running `brew install gh` or download and install from the [GitHub CLI website](https://cli.github.com/).
 
 **Steps:**
 
@@ -81,12 +88,73 @@ quarto preview mysite
 
 Your site preview should open up in your browser. Quit your preview by pressing `control` + `C`
 
-5.  At this point you've created a directory (folder) but it's not yet being tracked by git. Initialize this folder as a git repository using the `git init` command in the terminal window.
+5.  At this point you've created a directory (folder) but it's not yet being tracked by git. First be sure to `cd` into your website folder. Then, initialize this folder as a git repository using the `git init` command in the terminal window.
 
 ```{bash}
 #| eval: false
 git init
 ```
+
+6.  We can update the branch name from `master` to `main` by running the following line in the terminal window:
+
+```{bash}
+#| eval: false
+git config --global init.defaultBranch main
+```
+
+You can double check that this worked by typing out the `git status` command, which displays the state of the working directory and the staging area (this is a command I find myself using often when working on the command line!). You should see something that looks like this:
+
+```{bash}
+#| eval: false
+(base) Samanthas-MacBook-Air:mysite samanthacsik$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.quarto/
+	_quarto.yml
+	_site/
+	about.qmd
+	index.qmd
+	styles.css
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+7.  `add` (analogous to checking the boses next time file names in the RStudio Git tab) the files in your `mysite` directory...
+
+```{bash}
+#| eval: false
+# this adds all untracked or changed files at once
+git add . 
+
+# alternatively, you can add files individually
+git add <file_name>
+```
+
+::: callout-tip
+Use the `git status` command again to see if your files have been successfully added *before* committing them.
+:::
+
+...and commit them:
+
+```{bash}
+#| eval: false
+git commit -m "your commit message here"
+```
+
+8.  Create a repository for your project on GitHub using the subcommand:
+
+```{bash}
+#| eval: false
+gh repo create
+```
+
+When prompted, select **Push an existing local repository to GitHub**, then enter the desired name of your repository.
+
+9.  
 
 ::: callout-warning
 ## come back to this
@@ -94,11 +162,11 @@ git init
 TO BE CONTINUED....
 :::
 
-## b. Using the RStudio IDE
+## **b. Using the RStudio IDE**
 
-**Benefits:** It's super easy to set up a new Quarto project with the click of just a few buttons!
+**Why use RStudio to set up your Quarto website?**
 
-Remember, the commands we typed out in our terminal window underlie the buttons we're clicking on in the RStudio IDE! RStudio simply provides a user-friendly interface for executing those commands.
+1.  It's *super* easy to do with the click of just a few buttons! **Remember**, the commands we typed out in our terminal window underlie the buttons we're clicking on in the RStudio IDE! RStudio simply provides a user-friendly interface for executing those commands.
 
 **Steps:**
 
@@ -147,9 +215,7 @@ install.packages("usethis")
 
 5.  In the Console (while in your website project in RStudio), run `usethis::use_git()` to create a local git repo. Choose yes when asked if it's okay to commit any uncommitted files. If asked to restart R, choose yes.
 
-6.  Then, in the Console, run `usethis::use_github()` to create an upstream remote repo. Notice that you're automatically navigated to the repo, and a .nojekyll file is already there.
-
-7.  Next, we'll switch the branch name from `master` to `main`. Why? The racist "master" terminology for git branches motivates us to update our default branch to "main" instead. *Note: If you create a repo in GitHub FIRST, the default now has been updated to make the default branch 'main'. However, the `usethis::use_github()` method for creating a repo hasn't yet been updated, so we'll do it manually.* In RStudio, click on the branch button in the Git tab (the diamond with purple rectangle "branches"):
+6.  Then, in the Console, run `usethis::use_github()` to create an upstream remote repo. Notice that you're automatically navigated to the repo, and a `.nojekyll` file is already there.
 
 ```{r}
 #| echo: false
