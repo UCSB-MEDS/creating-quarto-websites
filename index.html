@@ -160,12 +160,25 @@ Twitter is a great place to stay atop Quarto (and all-things <a href="https://tw
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Follow <a href="https://twitter.com/quarto_pub"><span class="citation" data-cites="quarto_pub">@quarto_pub</span></a> and check out the <a href="https://twitter.com/hashtag/quartotip?src=hashtag_click">#quartotip</a> hashtag to learn more about all the cool things you can do with Quarto!</p>
+<p>Follow <a href="https://twitter.com/quarto_pub">@quarto_pub</a> and check out the <a href="https://twitter.com/hashtag/quartotip?src=hashtag_click">#quartotip</a> hashtag to learn more about all the cool things you can do with Quarto!</p>
 </div>
 </div>
 </section>
 <section id="i.-create-the-scaffolding-for-your-website" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="i.-create-the-scaffolding-for-your-website">I. Create the scaffolding for your website</h2>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Before getting started:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Be sure to have R/RStudio (<a href="https://rstudio.com/products/rstudio/download/">RStudio v2022.02</a> or later) and <a href="https://quarto.org/docs/get-started/">Quarto</a> installed on your computer.</p>
+</div>
+</div>
 <p>We’ll review two ways to get started with building your website.</p>
 <ol type="a">
 <li>Through the command line</li>
@@ -181,7 +194,19 @@ Twitter is a great place to stay atop Quarto (and all-things <a href="https://tw
 <li>You’ll start to get more comfortable working in a command line interface (CLI)</li>
 <li>You’re able to interact with Quarto via the command line regardless of which language or IDE you might find yourself working with (R, Python, Julia, ObservableJS)</li>
 </ol>
-<p><strong>Prerequisites:</strong> In order to interact with GitHub from the command line, you’ll need to install GitHub CLI first. You can do so in your terminal by running <code>brew install gh</code> or download and install from the <a href="https://cli.github.com/">GitHub CLI website</a>.</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Prerequisite:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In order to interact with GitHub from the command line, you’ll need to install GitHub CLI first. You can do so in your terminal by running <code>brew install gh</code> or download and install from the <a href="https://cli.github.com/">GitHub CLI website</a>.</p>
+</div>
+</div>
 <p><strong>Steps:</strong></p>
 <ol type="1">
 <li><p>Open up a terminal (Mac) or git bash (Windows) window.</p></li>
@@ -197,7 +222,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>To stay organized, I save all my git repositories to a folder called <code>git</code> in my computer’s root directory (e.g.&nbsp;<code>Users/samanthacsik/git/</code>).</p>
+<p>To stay organized, I save all my git repositories to a folder called <code>git</code> in my computer’s home directory (e.g.&nbsp;<code>Users/samanthacsik/git/</code>).</p>
 </div>
 </div>
 <ol start="3" type="1">
@@ -298,7 +323,10 @@ Tip
 <ol start="8" type="1">
 <li>Create a repository for your project on GitHub using the subcommand:</li>
 </ol>
-<div class="cell">
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><strong>Git vs.&nbsp;Github:</strong> <a href="https://git-scm.com/"><em>Git</em></a> is a version control system that allows you to manage and track your file version control history while <a href="https://github.com/"><em>GitHub</em></a> is a cloud-based hosting service that allows you to manage Git repositories. As Jenny Bryan describes in her book <a href="https://happygitwithr.com/index.html">Happy Git and GitHub for the useR</a>, hosting services like GitHub <em>“provide a home for your Git-based projects on the internet.”</em> These services not only help to facilitate collaboration, but they also protect you in the event your computer suddenly dies – just “clone” your GitHub repository back onto your new computer and voila! you’re able to pick right back up where you left off.</p>
+</div></div><div class="cell">
 <div class="sourceCode" id="cb8"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> repo create</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>When prompted, select <strong>Push an existing local repository to GitHub</strong>, then enter the desired name of your repository.</p>
@@ -358,20 +386,14 @@ come back to this
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/vRStudio4.png" class="img-fluid figure-img" width="1215"></p>
+<p><img src="media/vRStudio4.png" class="img-fluid figure-img" width="1325"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>You should now see a folder called <code>mysite</code> (or whatever you named your Quarto project) with a series of files (<code>_quarto.yml</code>, <code>about.qmd</code>, <code>index.qmd</code>, <code>styles.css</code>) that provide the scaffolding for your website.</p>
+<p>You should now see a folder called <code>mysite</code> (or whatever you named your Quarto project) with a series of files (<code>_quarto.yml</code>, <code>about.qmd</code>, <code>index.qmd</code>, <code>styles.css</code>) that provide the scaffolding for your website in the <strong>Files</strong> tab (in the bottom right panel in RStudio, if you haven’t altered the pane layout).</p>
 <div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="media/mysite_scaffolding.png" class="img-fluid figure-img" width="1215"></p>
-</figure>
-</div>
-</div>
+
 </div>
 <ol start="4" type="1">
 <li>At this point you’ve created a directory (folder) with the website scaffolding files, but it’s not yet being tracked by git, nor is it connected to a remote repository on GitHub. To start setting this up, first install the <a href="https://usethis.r-lib.org/index.html"><code>{usethis}</code></a> package if you don’t already have it.</li>
@@ -380,14 +402,41 @@ come back to this
 <div class="sourceCode" id="cb9"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"usethis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="5" type="1">
-<li><p>In the Console (while in your website project in RStudio), run <code>usethis::use_git()</code> to create a local git repo. Choose yes when asked if it’s okay to commit any uncommitted files. If asked to restart R, choose yes.</p></li>
-<li><p>Then, in the Console, run <code>usethis::use_github()</code> to create an upstream remote repo. Notice that you’re automatically navigated to the repo, and a <code>.nojekyll</code> file is already there.</p></li>
+<li>In the Console (while in your website project in RStudio), run <code>usethis::use_git()</code> to create a local git repo. Choose yes when asked if it’s okay to commit any uncommitted files. If asked to restart R, choose yes. Once complete, you should see the <strong>Git</strong> tab appear in your top left pane in RStudio.</li>
 </ol>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/branch_button.png" class="img-fluid figure-img" width="621"></p>
+<p><img src="media/mysite_scaffolding_git.png" class="img-fluid figure-img" width="1215"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We’re using the <code>usethis</code> workflow here because it’s a super useful package to begin learning for project setup. However, rather than using the <code>usethis::use_git()</code> function here to create your local git repo, you could have also checked the box where it says <strong>Create a git repository</strong> when initially setting up your Quarto website (see step 3 above).</p>
+</div>
+</div>
+<ol start="6" type="1">
+<li>Then, in the Console, run <code>usethis::use_github()</code> to create an upstream remote repo. Your web browser should open up to your new GitHub repository, with the same name as your local git repo/R project.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><strong>Git vs.&nbsp;Github:</strong> <a href="https://git-scm.com/"><em>Git</em></a> is a version control system that allows you to manage and track your file version control history while <a href="https://github.com/"><em>GitHub</em></a> is a cloud-based hosting service that allows you to manage Git repositories. As Jenny Bryan describes in her book <a href="https://happygitwithr.com/index.html">Happy Git and GitHub for the useR</a>, hosting services like GitHub <em>“provide a home for your Git-based projects on the internet.”</em> These services not only help to facilitate collaboration, but they also protect you in the event your computer suddenly dies – just “clone” your GitHub repository back onto your new computer and voila! you’re able to pick right back up where you left off.</p>
+</div></div><div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="media/mysite_remote.png" class="img-fluid figure-img" width="1245"></p>
 </figure>
 </div>
 </div>
@@ -452,7 +501,7 @@ come back to this
 <h2 class="anchored" data-anchor-id="ii.-publish-your-site-with-github-pages">II. Publish your site with GitHub Pages</h2>
 <p>There are a <a href="https://quarto.org/docs/websites/publishing-websites.html">lots of options to publish your website</a>. We’ll use the <a href="https://quarto.org/docs/websites/publishing-websites.html#github-pages">GitHub Pages option</a>, which allows you to publish a website from any GitHub repository. To do so, there are a few configuration steps:</p>
 <ol type="1">
-<li>Create a file named <code>.nojekyll</code> in your repository, which is required to disable some processign of HTML files that GitHub does by default. Do this from your terminal (you can use the terminal tab in RStudio or a separate terminal window – just make sure you’re in the correct directory) using the following command:</li>
+<li>Create a file named <code>.nojekyll</code> in your repository, which is required to disable some processing of HTML files that GitHub does by default. Do this from your terminal (you can use the terminal tab in RStudio or a separate terminal window – just make sure you’re in the correct directory) using the following command:</li>
 </ol>
 <div class="cell">
 <div class="sourceCode" id="cb10"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> .nojekyll</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -492,7 +541,7 @@ Note
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  output<span class="sc">-</span>dir<span class="sc">:</span> docs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="3" type="1">
-<li>Build your site by clicking on the <strong>Build</strong> tab, then <strong>Render Website.</strong> Your rendered site should appear in the RStudio Viewer. <strong>Stage</strong> files your files by checking the boxes in the <strong>Git</strong> tab (this is analogous to the <code>git add .</code> command used in the terminal for staging all files). <strong>Commit</strong> your files by clicking the Commit button, adding a commit message, and clicking “Commit” (analogous to <code>git commit -m "my commit message"</code>). <strong>Push</strong> your files to the remote repository (on GitHub) by clicking the “Push” button with the green upward facing arrow (analogous to <code>git commit</code>).</li>
+<li>Build your site by clicking on the <strong>Build</strong> tab, then <strong>Render Website.</strong> You should see a minimal, albeit functional soon-to-be website appear in the RStudio <strong>Viewer</strong> tab. Click on the <img src="media/view_in_browser.png" alt="A browser window overlaid by an arrow pointing up and angled to the right." style="display: inline-block; margin: 0; position: relative; top: 0px; width:25px;height:20px;"> button to open your file in your web browser. <strong>Note:</strong> your website is currently being hosted by your local machine, not at a shareable URL. We’ll get there soon though!</li>
 </ol>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -504,7 +553,8 @@ Note
 </div>
 </div>
 <ol start="4" type="1">
-<li>Configure GitHub pages to serve content from the “docs” directory by clicking on the Settings tab in the top menu bar, then Pages tab from the left hand menu bar. Make sure that Branch is set to <code>main</code> and Select folder is set to <code>/docs</code>. Click “Save”. Your website’s url will appear inside a blue banner at the top of the page. Give it a few minutes to render (you’ll get a 404 error message if it’s not ready yet), then explore your site!</li>
+<li><p>Your rendered site should appear in the RStudio Viewer. <strong>Stage</strong> files your files by checking the boxes in the <strong>Git</strong> tab (this is analogous to the <code>git add .</code> command used in the terminal for staging all files). <strong>Commit</strong> your files by clicking the Commit button, adding a commit message, and clicking “Commit” (analogous to <code>git commit -m "my commit message"</code>). <strong>Push</strong> your files to the remote repository (on GitHub) by clicking the “Push” button with the green upward facing arrow (analogous to <code>git push</code>).</p></li>
+<li><p>Configure GitHub pages to serve content from the “docs” directory by clicking on the Settings tab in the top menu bar, then Pages tab from the left hand menu bar. Make sure that Branch is set to <code>main</code> and Select folder is set to <code>/docs</code>. Click “Save”. Your website’s url will appear inside a blue banner at the top of the page. Give it a few minutes to render (you’ll get a 404 error message if it’s not ready yet), then explore your site!</p></li>
 </ol>
 <div class="cell column-page quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">

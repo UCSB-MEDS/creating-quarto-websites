@@ -31,15 +31,21 @@ This instructional document was built using Quarto!
 
 Nope! There are a number of R-based tools that make building websites and blogs fun and easy, including the still-widely-used [`{blogdown}`](https://bookdown.org/yihui/blogdown/) and [`{distill}`](https://rstudio.github.io/distill/website.html) packages.
 
-Though still relatively new, Quarto has the data science community (particularly on Twitter) abuzz -- it's versatile, user-friendly, and looks great out-of-the-box. 
+Though still relatively new, Quarto has the data science community (particularly on Twitter) abuzz -- it's versatile, user-friendly, and looks great out-of-the-box.
 
 ::: callout-note
 ## Twitter is a great place to stay atop Quarto (and all-things [#rstats](https://twitter.com/search?q=%23rstats&src=typed_query)) news
 
-Follow [@quarto_pub](https://twitter.com/quarto_pub) and check out the [#quartotip](https://twitter.com/hashtag/quartotip?src=hashtag_click) hashtag to learn more about all the cool things you can do with Quarto!
+Follow [\@quarto_pub](https://twitter.com/quarto_pub) and check out the [#quartotip](https://twitter.com/hashtag/quartotip?src=hashtag_click) hashtag to learn more about all the cool things you can do with Quarto!
 :::
 
 ## I. Create the scaffolding for your website
+
+::: callout-important
+## Before getting started:
+
+Be sure to have R/RStudio ([RStudio v2022.02](https://rstudio.com/products/rstudio/download/) or later) and [Quarto](https://quarto.org/docs/get-started/) installed on your computer.
+:::
 
 We'll review two ways to get started with building your website.
 
@@ -56,7 +62,11 @@ The order of operations is slightly different depending on which approach you de
 1.  You'll start to get more comfortable working in a command line interface (CLI)
 2.  You're able to interact with Quarto via the command line regardless of which language or IDE you might find yourself working with (R, Python, Julia, ObservableJS)
 
-**Prerequisites:** In order to interact with GitHub from the command line, you'll need to install GitHub CLI first. You can do so in your terminal by running `brew install gh` or download and install from the [GitHub CLI website](https://cli.github.com/).
+::: callout-important
+## Prerequisite:
+
+In order to interact with GitHub from the command line, you'll need to install GitHub CLI first. You can do so in your terminal by running `brew install gh` or download and install from the [GitHub CLI website](https://cli.github.com/).
+:::
 
 **Steps:**
 
@@ -65,7 +75,7 @@ The order of operations is slightly different depending on which approach you de
 2.  Determine where you are in your file system using the `pwd` (print working directory). Use `cd` (change directory) to navigate your file system to whatever directory you'd like your quarto project to live.
 
 ::: callout-tip
-To stay organized, I save all my git repositories to a folder called `git` in my computer's root directory (e.g. `Users/samanthacsik/git/`).
+To stay organized, I save all my git repositories to a folder called `git` in my computer's home directory (e.g. `Users/samanthacsik/git/`).
 :::
 
 3.  Use the following commands to create a quarto project directory that contains the files necessary for building your website:
@@ -163,6 +173,10 @@ git commit -m "your descriptive commit message here"
 
 8.  Create a repository for your project on GitHub using the subcommand:
 
+::: {.column-margin}
+**Git vs. Github:** [*Git*](https://git-scm.com/) is a version control system that allows you to manage and track your file version control history while [*GitHub*](https://github.com/) is a cloud-based hosting service that allows you to manage Git repositories. As Jenny Bryan describes in her book [Happy Git and GitHub for the useR](https://happygitwithr.com/index.html), hosting services like GitHub *"provide a home for your Git-based projects on the internet."* These services not only help to facilitate collaboration, but they also protect you in the event your computer suddenly dies -- just "clone" your GitHub repository back onto your new computer and voila! you're able to pick right back up where you left off.
+:::
+
 ```{bash}
 #| eval: false
 gh repo create
@@ -214,12 +228,12 @@ knitr::include_graphics("media/vRStudio3.png")
 knitr::include_graphics("media/vRStudio4.png")
 ```
 
-You should now see a folder called `mysite` (or whatever you named your Quarto project) with a series of files (`_quarto.yml`, `about.qmd`, `index.qmd`, `styles.css`) that provide the scaffolding for your website.
+You should now see a folder called `mysite` (or whatever you named your Quarto project) with a series of files (`_quarto.yml`, `about.qmd`, `index.qmd`, `styles.css`) that provide the scaffolding for your website in the **Files** tab (in the bottom right panel in RStudio, if you haven't altered the pane layout). 
 
 ```{r}
 #| echo: false
 #| fig-align: center
-knitr::include_graphics("media/mysite_scaffolding.png")
+# knitr::include_graphics("media/mysite_scaffolding.png")
 ```
 
 4.  At this point you've created a directory (folder) with the website scaffolding files, but it's not yet being tracked by git, nor is it connected to a remote repository on GitHub. To start setting this up, first install the [`{usethis}`](https://usethis.r-lib.org/index.html) package if you don't already have it.
@@ -229,14 +243,28 @@ knitr::include_graphics("media/mysite_scaffolding.png")
 install.packages("usethis")
 ```
 
-5.  In the Console (while in your website project in RStudio), run `usethis::use_git()` to create a local git repo. Choose yes when asked if it's okay to commit any uncommitted files. If asked to restart R, choose yes.
-
-6.  Then, in the Console, run `usethis::use_github()` to create an upstream remote repo. Notice that you're automatically navigated to the repo, and a `.nojekyll` file is already there.
+5.  In the Console (while in your website project in RStudio), run `usethis::use_git()` to create a local git repo. Choose yes when asked if it's okay to commit any uncommitted files. If asked to restart R, choose yes. Once complete, you should see the **Git** tab appear in your top left pane in RStudio.
 
 ```{r}
 #| echo: false
 #| fig-align: center
-knitr::include_graphics("media/branch_button.png")
+knitr::include_graphics("media/mysite_scaffolding_git.png")
+```
+
+::: callout-note
+We're using the `usethis` workflow here because it's a super useful package to begin learning for project setup. However, rather than using the `usethis::use_git()` function here to create your local git repo, you could have also checked the box where it says **Create a git repository** when initially setting up your Quarto website (see step 3 above).
+:::
+
+6.  Then, in the Console, run `usethis::use_github()` to create an upstream remote repo. Your web browser should open up to your new GitHub repository, with the same name as your local git repo/R project.
+
+::: {.column-margin}
+**Git vs. Github:** [*Git*](https://git-scm.com/) is a version control system that allows you to manage and track your file version control history while [*GitHub*](https://github.com/) is a cloud-based hosting service that allows you to manage Git repositories. As Jenny Bryan describes in her book [Happy Git and GitHub for the useR](https://happygitwithr.com/index.html), hosting services like GitHub *"provide a home for your Git-based projects on the internet."* These services not only help to facilitate collaboration, but they also protect you in the event your computer suddenly dies -- just "clone" your GitHub repository back onto your new computer and voila! you're able to pick right back up where you left off.
+:::
+
+```{r}
+#| echo: false
+#| fig-align: center
+knitr::include_graphics("media/mysite_remote.png")
 ```
 
 7.  Next, we'll switch the branch name from `master` to `main`. Why? The racist "master" terminology for git branches motivates us to update our default branch to "main" instead. *Note: If you create a repo in GitHub FIRST, the default now has been updated to make the default branch 'main'. However, the `usethis::use_github()` method for creating a repo hasn't yet been updated, so we'll do it manually.* In RStudio, click on the branch button in the Git tab (the diamond with purple rectangle "branches"):
@@ -280,7 +308,7 @@ knitr::include_graphics("media/switch_main.png")
 
 There are a [lots of options to publish your website](https://quarto.org/docs/websites/publishing-websites.html). We'll use the [GitHub Pages option](https://quarto.org/docs/websites/publishing-websites.html#github-pages), which allows you to publish a website from any GitHub repository. To do so, there are a few configuration steps:
 
-1.  Create a file named `.nojekyll` in your repository, which is required to disable some processign of HTML files that GitHub does by default. Do this from your terminal (you can use the terminal tab in RStudio or a separate terminal window -- just make sure you're in the correct directory) using the following command:
+1.  Create a file named `.nojekyll` in your repository, which is required to disable some processing of HTML files that GitHub does by default. Do this from your terminal (you can use the terminal tab in RStudio or a separate terminal window -- just make sure you're in the correct directory) using the following command:
 
 ```{bash}
 #| eval: false
@@ -304,7 +332,7 @@ project:
   output-dir: docs
 ```
 
-3.  Build your site by clicking on the **Build** tab, then **Render Website.** Your rendered site should appear in the RStudio Viewer. **Stage** files your files by checking the boxes in the **Git** tab (this is analogous to the `git add .` command used in the terminal for staging all files). **Commit** your files by clicking the Commit button, adding a commit message, and clicking "Commit" (analogous to `git commit -m "my commit message"`). **Push** your files to the remote repository (on GitHub) by clicking the "Push" button with the green upward facing arrow (analogous to `git commit`).
+3.  Build your site by clicking on the **Build** tab, then **Render Website.** You should see a minimal, albeit functional soon-to-be website appear in the RStudio **Viewer** tab. Click on the <img src="media/view_in_browser.png" alt="A browser window overlaid by an arrow pointing up and angled to the right." style="display: inline-block; margin: 0; position: relative; top: 0px; width:25px;height:20px;"/> button to open your file in your web browser. **Note:** your website is currently being hosted by your local machine, not at a shareable URL. We'll get there soon though!
 
 ```{r}
 #| echo: false
@@ -312,7 +340,9 @@ project:
 knitr::include_graphics("media/build_site.png")
 ```
 
-4.  Configure GitHub pages to serve content from the "docs" directory by clicking on the Settings tab in the top menu bar, then Pages tab from the left hand menu bar. Make sure that Branch is set to `main` and Select folder is set to `/docs`. Click "Save". Your website's url will appear inside a blue banner at the top of the page. Give it a few minutes to render (you'll get a 404 error message if it's not ready yet), then explore your site!
+4.  **Stage** files your files by checking the boxes in the **Git** tab (this is analogous to the `git add .` command used in the terminal for staging all files). **Commit** your files by clicking the Commit button, adding a commit message, and clicking "Commit" (analogous to `git commit -m "my commit message"`). **Push** your files to the remote repository (on GitHub) by clicking the "Push" button with the green upward facing arrow (analogous to `git push`).
+
+5.  Configure GitHub pages to serve content from the "docs" directory by clicking on the Settings tab in the top menu bar, then Pages tab from the left hand menu bar. Make sure that Branch is set to `main` and that the selected folder is set to `/docs`. Click "Save". Your website's URL will appear inside a blue banner at the top of the page. Give it a few minutes to render (you'll get a 404 error message if it's not ready yet), then explore your site!
 
 ```{r}
 #| echo: false
