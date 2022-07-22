@@ -98,7 +98,7 @@
   <nav id="TOC" role="doc-toc">
 <h2 id="toc-title">Table of contents</h2>
 <ul>
-<li><a href="#what-is-quarto" class="nav-link active" data-scroll-target="#what-is-quarto">What is Quarto?</a></li>
+<li><a href="#what-is" class="nav-link active" data-scroll-target="#what-is">What is <img src="media/quarto.png" alt="A blue circle divided into four quadrants, followed by the name 'quarto'." style="display: inline-block; margin: 0; position: relative; top: 0px; width:110px;height:30px;"> ?</a></li>
 <li><a href="#do-i-need-to-use-quarto-to-build-my-website" class="nav-link" data-scroll-target="#do-i-need-to-use-quarto-to-build-my-website">Do I need to use Quarto to build my website?</a></li>
 <li><a href="#i.-create-the-scaffolding-for-your-website" class="nav-link" data-scroll-target="#i.-create-the-scaffolding-for-your-website">I. Create the scaffolding for your website</a></li>
 <li><a href="#ii.-publish-your-site-with-github-pages" class="nav-link" data-scroll-target="#ii.-publish-your-site-with-github-pages">II. Publish your site with GitHub Pages</a></li>
@@ -127,15 +127,42 @@ Warning
 <p>UNDER DEVELOPMENT</p>
 </div>
 </div>
-<section id="what-is-quarto" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-quarto">What is Quarto?</h2>
+<section id="what-is" class="level2">
+<h2 class="anchored" data-anchor-id="what-is">What is <img src="media/quarto.png" alt="A blue circle divided into four quadrants, followed by the name 'quarto'." style="display: inline-block; margin: 0; position: relative; top: 0px; width:110px;height:30px;"> ?</h2>
 <p><a href="https://quarto.org/">Quarto</a> is a publishing system built on Pandoc that allows users to create dynamic content using R, Python, Julia, and ObservableJS (with plans to add more languages too!).</p>
 <p>R users have long loved <a href="https://rmarkdown.rstudio.com/">RMarkdown</a> for combining prose, code, and outputs into single “knitted” documents. Quarto extends all of RMarkdown’s best features (plus many more!) to additional languages.</p>
-<p>You can explore <a href="https://quarto.org/docs/guide/">Quarto documentation</a> to learn more about created documents, websites, blogs, books, slides, etc.</p>
-<p><strong>Note:</strong> This instructional document was built using Quarto!</p>
+<p>You can explore <a href="https://quarto.org/docs/guide/">Quarto’s documentation</a> to learn more about creating documents, websites, blogs, books, slides, etc.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Fun fact!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This instructional document was built using Quarto!</p>
+</div>
+</div>
 </section>
 <section id="do-i-need-to-use-quarto-to-build-my-website" class="level2">
 <h2 class="anchored" data-anchor-id="do-i-need-to-use-quarto-to-build-my-website">Do I need to use Quarto to build my website?</h2>
+<p>Nope! There are a number of R-based tools that make building websites and blogs fun and easy, including the still-widely-used <a href="https://bookdown.org/yihui/blogdown/"><code>{blogdown}</code></a> and <a href="https://rstudio.github.io/distill/website.html"><code>{distill}</code></a> packages.</p>
+<p>Though still relatively new, Quarto has the data science community (particularly on Twitter) abuzz – it’s versatile, user-friendly, and looks great out-of-the-box.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Twitter is a great place to stay atop Quarto (and all-things <a href="https://twitter.com/search?q=%23rstats&amp;src=typed_query">#rstats</a>) news
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Follow <a href="https://twitter.com/quarto_pub"><span class="citation" data-cites="quarto_pub">@quarto_pub</span></a> and check out the <a href="https://twitter.com/hashtag/quartotip?src=hashtag_click">#quartotip</a> hashtag to learn more about all the cool things you can do with Quarto!</p>
+</div>
+</div>
 </section>
 <section id="i.-create-the-scaffolding-for-your-website" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="i.-create-the-scaffolding-for-your-website">I. Create the scaffolding for your website</h2>
@@ -347,7 +374,7 @@ come back to this
 </div>
 </div>
 <ol start="4" type="1">
-<li>At this point you’ve created a directory (folder) with the website scaffolding files, but it’s yet being tracked by git, nor is it connected to a remote repository on GitHub. To start, install the <a href="https://usethis.r-lib.org/index.html"><code>{usethis}</code></a> package if you don’t already have it.</li>
+<li>At this point you’ve created a directory (folder) with the website scaffolding files, but it’s not yet being tracked by git, nor is it connected to a remote repository on GitHub. To start setting this up, first install the <a href="https://usethis.r-lib.org/index.html"><code>{usethis}</code></a> package if you don’t already have it.</li>
 </ol>
 <div class="cell">
 <div class="sourceCode" id="cb9"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"usethis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -415,7 +442,7 @@ come back to this
 </div>
 </div>
 <ol start="11" type="1">
-<li>Once you’ve updated the default to main, delete the <code>master</code> branch. Cool. Now you’re working just in main.</li>
+<li>Once you’ve updated the default to main, delete the <code>master</code> branch. Cool. Now you’re working just on main.</li>
 </ol>
 </div>
 </div>

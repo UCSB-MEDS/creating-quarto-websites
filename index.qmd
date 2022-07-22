@@ -13,17 +13,31 @@ editor: visual
 UNDER DEVELOPMENT
 :::
 
-## What is Quarto?
+## What is <img src="media/quarto.png" alt="A blue circle divided into four quadrants, followed by the name &apos;quarto&apos;." style="display: inline-block; margin: 0; position: relative; top: 0px; width:110px;height:30px;"/> ?
 
 [Quarto](https://quarto.org/) is a publishing system built on Pandoc that allows users to create dynamic content using R, Python, Julia, and ObservableJS (with plans to add more languages too!).
 
 R users have long loved [RMarkdown](https://rmarkdown.rstudio.com/) for combining prose, code, and outputs into single "knitted" documents. Quarto extends all of RMarkdown's best features (plus many more!) to additional languages.
 
-You can explore [Quarto documentation](https://quarto.org/docs/guide/) to learn more about created documents, websites, blogs, books, slides, etc.
+You can explore [Quarto's documentation](https://quarto.org/docs/guide/) to learn more about creating documents, websites, blogs, books, slides, etc.
 
-**Note:** This instructional document was built using Quarto!
+::: callout-note
+## Fun fact!
+
+This instructional document was built using Quarto!
+:::
 
 ## Do I need to use Quarto to build my website?
+
+Nope! There are a number of R-based tools that make building websites and blogs fun and easy, including the still-widely-used [`{blogdown}`](https://bookdown.org/yihui/blogdown/) and [`{distill}`](https://rstudio.github.io/distill/website.html) packages.
+
+Though still relatively new, Quarto has the data science community (particularly on Twitter) abuzz -- it's versatile, user-friendly, and looks great out-of-the-box. 
+
+::: callout-note
+## Twitter is a great place to stay atop Quarto (and all-things [#rstats](https://twitter.com/search?q=%23rstats&src=typed_query)) news
+
+Follow [@quarto_pub](https://twitter.com/quarto_pub) and check out the [#quartotip](https://twitter.com/hashtag/quartotip?src=hashtag_click) hashtag to learn more about all the cool things you can do with Quarto!
+:::
 
 ## I. Create the scaffolding for your website
 
@@ -208,7 +222,7 @@ You should now see a folder called `mysite` (or whatever you named your Quarto p
 knitr::include_graphics("media/mysite_scaffolding.png")
 ```
 
-4.  At this point you've created a directory (folder) with the website scaffolding files, but it's yet being tracked by git, nor is it connected to a remote repository on GitHub. To start, install the [`{usethis}`](https://usethis.r-lib.org/index.html) package if you don't already have it.
+4.  At this point you've created a directory (folder) with the website scaffolding files, but it's not yet being tracked by git, nor is it connected to a remote repository on GitHub. To start setting this up, first install the [`{usethis}`](https://usethis.r-lib.org/index.html) package if you don't already have it.
 
 ```{r}
 #| eval: false
@@ -225,7 +239,7 @@ install.packages("usethis")
 knitr::include_graphics("media/branch_button.png")
 ```
 
-7. Next, we'll switch the branch name from `master` to `main`. Why? The racist "master" terminology for git branches motivates us to update our default branch to "main" instead. *Note: If you create a repo in GitHub FIRST, the default now has been updated to make the default branch 'main'. However, the `usethis::use_github()` method for creating a repo hasn't yet been updated, so we'll do it manually.* In RStudio, click on the branch button in the Git tab (the diamond with purple rectangle "branches"):
+7.  Next, we'll switch the branch name from `master` to `main`. Why? The racist "master" terminology for git branches motivates us to update our default branch to "main" instead. *Note: If you create a repo in GitHub FIRST, the default now has been updated to make the default branch 'main'. However, the `usethis::use_github()` method for creating a repo hasn't yet been updated, so we'll do it manually.* In RStudio, click on the branch button in the Git tab (the diamond with purple rectangle "branches"):
 
 ```{r}
 #| echo: false
@@ -259,7 +273,7 @@ knitr::include_graphics("media/default_branch.png")
 knitr::include_graphics("media/switch_main.png")
 ```
 
-11. Once you've updated the default to main, delete the `master` branch. Cool. Now you're working just in main.
+11. Once you've updated the default to main, delete the `master` branch. Cool. Now you're working just on main.
 :::
 
 ## II. Publish your site with GitHub Pages
