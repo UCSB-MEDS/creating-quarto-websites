@@ -102,6 +102,7 @@
 <li><a href="#do-i-need-to-use-quarto-to-build-my-website" class="nav-link" data-scroll-target="#do-i-need-to-use-quarto-to-build-my-website">Do I need to use Quarto to build my website?</a></li>
 <li><a href="#i.-create-the-scaffolding-for-your-website" class="nav-link" data-scroll-target="#i.-create-the-scaffolding-for-your-website">I. Create the scaffolding for your website</a></li>
 <li><a href="#ii.-publish-your-site-with-github-pages" class="nav-link" data-scroll-target="#ii.-publish-your-site-with-github-pages">II. Publish your site with GitHub Pages</a></li>
+<li><a href="#iii.-where-you-should-start-changing-stuff" class="nav-link" data-scroll-target="#iii.-where-you-should-start-changing-stuff">III. Where you should start changing stuff</a></li>
 </ul>
 </nav>
 </div>
@@ -156,11 +157,11 @@ Fun fact!
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Twitter is a great place to stay atop Quarto (and all-things <a href="https://twitter.com/search?q=%23rstats&amp;src=typed_query">#rstats</a>) news
+Twitter is a great place to stay atop Quarto (and all-things <a href="https://twitter.com/search?q=%23rstats&amp;src=typed_query">#rstats</a>) news.
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Follow <a href="https://twitter.com/quarto_pub">@quarto_pub</a> and check out the <a href="https://twitter.com/hashtag/quartotip?src=hashtag_click">#quartotip</a> hashtag to learn more about all the cool things you can do with Quarto!</p>
+<p>Follow <a href="https://twitter.com/quarto_pub">@quarto_pub</a> and check out <a href="https://mine-cr.com/">Mine Çentinkaya-Rundel</a>’s #quartotip tweets, which are collected and published as blog posts at the <a href="https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/about.html">A Quarto tip a day keeps the docs away</a> website.</p>
 </div>
 </div>
 </section>
@@ -190,10 +191,10 @@ Before getting started:
 <div class="tab-content page-columns page-full">
 <div id="tabset-1-1" class="tab-pane active page-columns page-full" role="tabpanel" aria-labeledby="tabset-1-1-tab">
 <p><strong>Why use the command line to set up your Quarto website?</strong></p>
-<ol type="1">
-<li>You’ll start to get more comfortable working in a command line interface (CLI)</li>
-<li>You’re able to interact with Quarto via the command line regardless of which language or IDE you might find yourself working with (R, Python, Julia, ObservableJS)</li>
-</ol>
+<ul>
+<li><p>You’ll start to get more comfortable working in a command line interface (CLI)</p></li>
+<li><p>You’re able to interact with Quarto via the command line regardless of which language or IDE you might find yourself working with (R, Python, Julia, ObservableJS)</p></li>
+</ul>
 <div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -349,9 +350,9 @@ come back to this
 </div>
 <div id="tabset-1-2" class="tab-pane page-columns page-full" role="tabpanel" aria-labeledby="tabset-1-2-tab">
 <p><strong>Why use RStudio to set up your Quarto website?</strong></p>
-<ol type="1">
-<li>It’s <em>super</em> easy to do with the click of just a few buttons! <strong>Remember</strong>, the commands we typed out in our terminal window underlie the buttons we’re clicking on in the RStudio IDE! RStudio simply provides a user-friendly interface for executing those commands.</li>
-</ol>
+<ul>
+<li>It’s <em>super</em> easy to do with the click of just a few buttons! <strong>Remember</strong>, the commands we type out in our terminal window underlie the buttons we’re clicking on in the RStudio IDE! RStudio simply provides a user-friendly interface for executing those commands.</li>
+</ul>
 <p><strong>Steps:</strong></p>
 <ol type="1">
 <li>Open up RStudio and click on the <img src="media/project.png" class="img-fluid" alt="A blue cube symbol with 'R' in the center is on the left. To the right are the words 'Project: (None)' in white, with a downward facing arrow, signifying a drop down menu" style="display: inline-block; margin: 0; position: relative; top: 0px; width:80px;height:18px;"> button in the top right corner. Select <strong>New Project…</strong></li>
@@ -379,7 +380,7 @@ come back to this
 </div>
 </div>
 <ol start="3" type="1">
-<li>Fill out the <strong>Directory name:</strong> field (this is the name of your R project, and eventually, your GitHub repo name), choose where to save your directory using the <strong>Browse</strong> button. Be sure to check the box that says <strong>Create a git repository</strong>. Click <strong>Create Project</strong>.</li>
+<li>Fill out the <strong>Directory name:</strong> field (this is the name of your R project, and eventually, your GitHub repo name), choose where to save your directory using the <strong>Browse</strong> button. Click <strong>Create Project</strong>.</li>
 </ol>
 <p><strong>Recommended:</strong> Name the project <strong>yourusername.github.io</strong> if you want that to be the site name (this is a “freebie” in GitHub). Otherwise, name it something reasonable (this will become the slug for your site if publishing with GitHub pages, so choose carefully). I’m calling my project <strong>mysite</strong> just for tutorial purposes only – you should definitely give yours a more practical/creative name.</p>
 <div class="cell" data-layout-align="center">
@@ -437,12 +438,19 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/mysite_remote.png" class="img-fluid figure-img" width="1245"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">After running <code>usethis::use_github()</code> your browser window should open up to your new GitHub repository and look similar to the browswer above.</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
 <ol start="7" type="1">
-<li>Next, we’ll switch the branch name from <code>master</code> to <code>main</code>. Why? The racist “master” terminology for git branches motivates us to update our default branch to “main” instead. <em>Note: If you create a repo in GitHub FIRST, the default now has been updated to make the default branch ‘main’. However, the <code>usethis::use_github()</code> method for creating a repo hasn’t yet been updated, so we’ll do it manually.</em> In RStudio, click on the branch button in the Git tab (the diamond with purple rectangle “branches”):</li>
+<li><p>Next, let’s check the name of our default branch – that is, the branch that all changes eventually get merged back into (if you’re building a website, this branch is typically the one you’ll want to deploy). There are two ways to check this:</p>
+<ol type="a">
+<li><p>open your Terminal window from RStudio and type <code>git status</code> – the first printed line should say <strong>On branch ___</strong>.</p></li>
+<li><p>click on the <strong>Git</strong> tab in the top right pane of RStudio. Next to the <img src="media/branch.png" class="img-fluid" alt="A white diamond with two purple squares, one directly above and one directly to the right, connected to the diamond by a line." style="display: inline-block; margin: 0; position: relative; top: 0px; width:20px;height:18px;"> symbol, you should see a dropdown menu that displays the name of your current branch.</p></li>
+</ol>
+<p><strong>If your current branch is named <em>master</em>, follow steps 8-12 below. If your branch is named <em>main</em>, you’re good to go! You can continue to part <em>II. Publish your site with GitHub Pages</em>.</strong></p></li>
+<li><p>The next few steps will walk through how to switch the default branch name from <code>master</code> to <code>main</code>. Why? The racist “master” terminology for git branches motivates us to update our default branch to “main” instead. <em>Note: Git/GitHub/R tools are in the process of migrating away from <code>master</code>. If you create a repo in GitHub FIRST, the default branch is now <code>main</code>. However, the <code>usethis::use_github()</code> method for creating a repo hasn’t yet been updated, so we’ll do it manually.</em> In RStudio, click on the branch button in the Git tab (the diamond with purple rectangle “branches”):</p></li>
 </ol>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -453,7 +461,7 @@ Note
 </div>
 </div>
 </div>
-<ol start="8" type="1">
+<ol start="9" type="1">
 <li>In the new window, enter the new branch name “main”. Make sure that <strong>Sync branch with remote</strong> IS CHECKED. Then click “Create.”</li>
 </ol>
 <div class="cell" data-layout-align="center">
@@ -465,7 +473,7 @@ Note
 </div>
 </div>
 </div>
-<ol start="9" type="1">
+<ol start="10" type="1">
 <li>Head back to your GitHub repo, refresh, then click where it now says <strong>2 branches</strong>:</li>
 </ol>
 <div class="cell" data-layout-align="center">
@@ -477,7 +485,7 @@ Note
 </div>
 </div>
 </div>
-<ol start="10" type="1">
+<ol start="11" type="1">
 <li>Click on the “switchy arrows” in the top right of the panel that says “Default branch” (if you hover, the tooltip says “switch default branch”). Click on those arrows to update the default branch to ‘main’.</li>
 </ol>
 <div class="cell column-page quarto-layout-panel">
@@ -490,7 +498,7 @@ Note
 </div>
 </div>
 </div>
-<ol start="11" type="1">
+<ol start="12" type="1">
 <li>Once you’ve updated the default to main, delete the <code>master</code> branch. Cool. Now you’re working just on main.</li>
 </ol>
 </div>
@@ -541,7 +549,7 @@ Note
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  output<span class="sc">-</span>dir<span class="sc">:</span> docs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="3" type="1">
-<li>Build your site by clicking on the <strong>Build</strong> tab, then <strong>Render Website.</strong> You should see a minimal, albeit functional soon-to-be website appear in the RStudio <strong>Viewer</strong> tab. Click on the <img src="media/view_in_browser.png" alt="A browser window overlaid by an arrow pointing up and angled to the right." style="display: inline-block; margin: 0; position: relative; top: 0px; width:25px;height:20px;"> button to open your file in your web browser. <strong>Note:</strong> your website is currently being hosted by your local machine, not at a shareable URL. We’ll get there soon though!</li>
+<li>Build your site by clicking on the <strong>Build</strong> tab, then <strong>Render Website.</strong> You should see a minimal, albeit functional, soon-to-be website appear in the RStudio <strong>Viewer</strong> tab. Click on the <img src="media/view_in_browser.png" alt="A browser window overlaid by an arrow pointing up and angled to the right." style="display: inline-block; margin: 0; position: relative; top: 0px; width:25px;height:20px;"> button to open your file in your web browser. <strong>Note:</strong> your website is currently being hosted by your local machine, not at a shareable URL. We’ll get there soon though!</li>
 </ol>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -553,8 +561,13 @@ Note
 </div>
 </div>
 <ol start="4" type="1">
-<li><p>Your rendered site should appear in the RStudio Viewer. <strong>Stage</strong> files your files by checking the boxes in the <strong>Git</strong> tab (this is analogous to the <code>git add .</code> command used in the terminal for staging all files). <strong>Commit</strong> your files by clicking the Commit button, adding a commit message, and clicking “Commit” (analogous to <code>git commit -m "my commit message"</code>). <strong>Push</strong> your files to the remote repository (on GitHub) by clicking the “Push” button with the green upward facing arrow (analogous to <code>git push</code>).</p></li>
-<li><p>Configure GitHub pages to serve content from the “docs” directory by clicking on the Settings tab in the top menu bar, then Pages tab from the left hand menu bar. Make sure that Branch is set to <code>main</code> and Select folder is set to <code>/docs</code>. Click “Save”. Your website’s url will appear inside a blue banner at the top of the page. Give it a few minutes to render (you’ll get a 404 error message if it’s not ready yet), then explore your site!</p></li>
+<li><p>Now we need to send all of our files in our local git repository to our remote GitHub repository:</p>
+<ol type="a">
+<li><strong>Stage</strong> your files by checking the boxes in the <strong>Git</strong> tab (this is analogous to the <code>git add .</code> command used in the terminal for staging all files)</li>
+<li><strong>Commit</strong> your files by clicking the Commit button, adding a commit message, and clicking “Commit” (analogous to <code>git commit -m "my commit message"</code>)</li>
+<li><strong>Push</strong> your files to the remote repository (on GitHub) by clicking the “Push” button with the green upward facing arrow (analogous to <code>git push</code>).</li>
+</ol></li>
+<li><p>Configure GitHub pages to serve content from the “docs” directory by clicking on the <strong>Settings</strong> tab in the top menu bar, then <strong>Pages</strong> tab from the left hand menu bar. Make sure that Branch is set to <code>main</code> and that the selected folder is set to <code>/docs</code>. Click “Save”. Your website’s URL will appear inside a blue banner at the top of the page. Give it a few minutes to render (you’ll get a 404 error message if it’s not ready yet), then explore your site!</p></li>
 </ol>
 <div class="cell column-page quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
@@ -576,6 +589,56 @@ Note
 </div>
 </div>
 </div>
+</section>
+<section id="iii.-where-you-should-start-changing-stuff" class="level2">
+<h2 class="anchored" data-anchor-id="iii.-where-you-should-start-changing-stuff">III. Where you should start changing stuff</h2>
+<p>Right now, our website is built using Quarto default styling. Let’s learn about where things live and how to start customizing some stuff.</p>
+<ol type="1">
+<li><p><strong>Don’t mess with stuff in <code>/docs</code>.</strong> When you Render your site (by clicking Build &gt; Render Website), Quarto takes all your <code>.qmd</code> files, converts them to <code>.html</code> files (along with some other important stuff) and saves everything to your <code>/docs</code> folder. Your site now deploys from this folder, so you really don’t want to mess with anything in here directly.</p></li>
+<li><p>**Edit your landing page (<code>index.html</code>). Give your landing/home page a makeover by trying out some of the following:</p>
+<ul>
+<li><p>Update the yaml <code>title</code> in your <code>index.html</code> file. Here, I changed mine from “mysite” to my name, “Samantha Csik”</p></li>
+<li><p>Delete the sample text and code and begin adding your own content.</p></li>
+</ul></li>
+<li><p><strong>Turn your landing page (<code>index.html</code>) into an “<a href="https://quarto.org/docs/websites/website-about.html">About Page</a>” with a photo</strong>. When the <code>about</code> option is added to a document’s yaml, a special template will be used to layout the content of that page. Choose from one of Quarto’s five <a href="https://quarto.org/docs/websites/website-about.html#templates">built-in templates</a>, each with a slightly different layout style. Some yaml options to play around with:</p>
+<ul>
+<li><p><code>template</code>: choose from Quarto’s built-in template options</p></li>
+<li><p><code>image</code> (<em>note that this is a document-level option</em>): supply it the file path to your photo</p></li>
+<li><p><code>image-width</code> &amp; <code>image-shape</code>: adjust your image’s size and shape (<code>round</code>, <code>rounded</code>, <code>rectangle</code>)</p></li>
+<li><p><code>links</code>: add buttons with links to your social media pages</p></li>
+</ul></li>
+</ol>
+<pre><code>title: "Samantha Csik"
+    image: headshot.jpg
+    about: 
+      template: trestles
+      image-shape: rounded
+      image-width: 10em
+      links:
+        - text: LinkedIn
+          href: https://www.linkedin.com/in/samanthacsik/
+        - text: Twitter
+          href: https://twitter.com/SamanthaCsik
+        - text: GitHub
+          href: https://github.com/samanthacsik
+        - text: Email
+          href: mailto:scsik@ucsb.edu</code></pre>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="media/about_page.png" class="img-fluid figure-img" width="1246"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="4" type="1">
+<li><p><strong>Add additional pages to your website.</strong> In the default Quarto website skeleton, there are two items in the navbar that appear as “Home” and “About”. Those navbar tabs link to two <code>.html</code> files (<code>index.html</code> and <code>about.html</code>) and are automatically rendered when when you Build to <code>/docs</code> (i.e.&nbsp;you don’t need to knit them manually to create the html). Adding a new page to your website requires two steps:</p>
+<p>a. <strong>Create a new <code>.qmd</code> file</strong> (New File &gt; Quarto Document and save it to your project’s root directory) and add any content that you want to appear on that page. Here, I’m creating a new page called “All of my favorite resources!” and saved it to my root directory as <code>resources.qmd</code>.</p>
+<p>b. <strong>Update <code>_quarto.yml</code></strong></p></li>
+<li></li>
+<li><p><strong><em>Each nav bar page should be its own <code>.qmd</code> file.</em></strong></p></li>
+</ol>
 
 </section>
 </main>
