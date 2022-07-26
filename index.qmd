@@ -58,13 +58,13 @@ Please refer to the MEDS Installation Guide for [Mac](https://ucsb-meds.github.i
 
 We'll review two ways to get started on building your website.
 
-a.  Through the command line 
-b.  Using the RStudio IDE
+a.  `r fontawesome::fa("terminal", fill = "#78C2AD", a11y = "sem")` Through the command line 
+b.  `r fontawesome::fa("r-project", fill = "#78C2AD", a11y = "sem")` Using the RStudio IDE 
 
 The order of operations is slightly different depending on which approach you decide to take, but the concepts remain the same.
 
 ::: panel-tabset
-## **a. Through the command line**
+## **a. `r fontawesome::fa("terminal", fill = "#78C2AD", a11y = "sem")` Through the command line**
 
 **Why use the command line to set up your Quarto website?**
 
@@ -220,7 +220,7 @@ When prompted, select **Push an existing local repository to GitHub**, then ente
 TO BE CONTINUED....
 :::
 
-## **b. Using the RStudio IDE**
+## **b. `r fontawesome::fa("r-project", fill = "#78C2AD", a11y = "sem")` Using the RStudio IDE**
 
 **Why use RStudio to set up your Quarto website?**
 

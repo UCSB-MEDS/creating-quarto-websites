@@ -1,120 +1,148 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-  <meta charset="utf-8">
-  <meta name="generator" content="quarto-0.9.172">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <meta name="author" content="Sam Csik">
-  <meta name="dcterms.date" content="2022-08-05">
-  <title>Creating your personal website using Quarto</title>
-  <style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      {   }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-    code span.at { color: #7d9029; } /* Attribute */
-    code span.bn { color: #40a070; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #4070a0; } /* Char */
-    code span.cn { color: #880000; } /* Constant */
-    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-    code span.dt { color: #902000; } /* DataType */
-    code span.dv { color: #40a070; } /* DecVal */
-    code span.er { color: #ff0000; font-weight: bold; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #40a070; } /* Float */
-    code span.fu { color: #06287e; } /* Function */
-    code span.im { } /* Import */
-    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-    code span.op { color: #666666; } /* Operator */
-    code span.ot { color: #007020; } /* Other */
-    code span.pp { color: #bc7a00; } /* Preprocessor */
-    code span.sc { color: #4070a0; } /* SpecialChar */
-    code span.ss { color: #bb6688; } /* SpecialString */
-    code span.st { color: #4070a0; } /* String */
-    code span.va { color: #19177c; } /* Variable */
-    code span.vs { color: #4070a0; } /* VerbatimString */
-    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-  </style>
 
-  <script src="index_files/libs/clipboard/clipboard.min.js"></script>
-  <script src="index_files/libs/quarto-html/quarto.js"></script>
-  <script src="index_files/libs/quarto-html/popper.min.js"></script>
-  <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
-  <script src="index_files/libs/quarto-html/anchor.min.js"></script>
-  <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
-  <link id="quarto-text-highlighting-styles" href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
-  <script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
-  <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-  <link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet">
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Sam Csik">
+<meta name="dcterms.date" content="2022-08-05">
+
+<title>Creating your personal website using Quarto</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/quarto.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="index_files/libs/quarto-html/anchor.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
 </head>
+
 <body>
+
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
   <nav id="TOC" role="doc-toc">
-<h2 id="toc-title">Table of contents</h2>
-<ul>
-<li><a href="#what-is" class="nav-link active" data-scroll-target="#what-is">What is <img src="media/quarto.png" alt="A blue circle divided into four quadrants, followed by the name 'quarto'." style="display: inline-block; margin: 0; position: relative; top: 0px; width:110px;height:30px;"> ?</a></li>
-<li><a href="#do-i-need-to-use-quarto-to-build-my-website" class="nav-link" data-scroll-target="#do-i-need-to-use-quarto-to-build-my-website">Do I need to use Quarto to build my website?</a></li>
-<li><a href="#i.-create-the-scaffolding-for-your-website" class="nav-link" data-scroll-target="#i.-create-the-scaffolding-for-your-website">I. Create the scaffolding for your website</a></li>
-<li><a href="#ii.-publish-your-site-with-github-pages" class="nav-link" data-scroll-target="#ii.-publish-your-site-with-github-pages">II. Publish your site with GitHub Pages</a></li>
-<li><a href="#iii.-where-you-should-start-changing-stuff" class="nav-link" data-scroll-target="#iii.-where-you-should-start-changing-stuff">III. Where you should start changing stuff</a></li>
-<li><a href="#iii.-looking-forward" class="nav-link" data-scroll-target="#iii.-looking-forward">III. Looking forward</a></li>
-</ul>
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#what-is" id="toc-what-is" class="nav-link active" data-scroll-target="#what-is">What is <img src="media/quarto.png" alt="A blue circle divided into four quadrants, followed by the name 'quarto'." style="display: inline-block; margin: 0; position: relative; top: 0px; width:110px;height:30px;"> ?</a></li>
+  <li><a href="#do-i-need-to-use-quarto-to-build-my-website" id="toc-do-i-need-to-use-quarto-to-build-my-website" class="nav-link" data-scroll-target="#do-i-need-to-use-quarto-to-build-my-website">Do I need to use Quarto to build my website?</a></li>
+  <li><a href="#i.-create-the-scaffolding-for-your-website" id="toc-i.-create-the-scaffolding-for-your-website" class="nav-link" data-scroll-target="#i.-create-the-scaffolding-for-your-website">I. Create the scaffolding for your website</a></li>
+  <li><a href="#ii.-publish-your-site-with-github-pages" id="toc-ii.-publish-your-site-with-github-pages" class="nav-link" data-scroll-target="#ii.-publish-your-site-with-github-pages">II. Publish your site with GitHub Pages</a></li>
+  <li><a href="#iii.-where-you-should-start-changing-stuff" id="toc-iii.-where-you-should-start-changing-stuff" class="nav-link" data-scroll-target="#iii.-where-you-should-start-changing-stuff">III. Where you should start changing stuff</a></li>
+  <li><a href="#iii.-looking-forward" id="toc-iii.-looking-forward" class="nav-link" data-scroll-target="#iii.-looking-forward">III. Looking forward</a></li>
+  </ul>
 </nav>
 </div>
 <main class="content page-columns page-full" id="quarto-document-content">
+
 <header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Creating your personal website using Quarto</h1>
+</div>
 
 
 
-<div class="quarto-title"><h1 class="title display-7">Creating your personal website using Quarto</h1></div><div class="quarto-title-meta"><div><div class="quarto-title-meta-heading">Author</div><div class="quarto-title-meta-contents"><div class="quarto-title-authors"><div><div>
-<p>Sam Csik</p>
-</div></div></div></div></div><div><div class="quarto-title-meta-heading">Published</div><div class="quarto-title-meta-contents"><p class="date">August 5, 2022</p></div></div></div></header>
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Sam Csik </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 5, 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
 
 <div class="callout-warning callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -191,14 +219,14 @@ Before getting started…
 </div>
 <p>We’ll review two ways to get started on building your website.</p>
 <ol type="a">
-<li>Through the command line</li>
-<li>Using the RStudio IDE</li>
+<li><svg aria-label="Terminal" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#78C2AD;overflow:visible;position:relative;"><title>Terminal</title><path d="M257.981 272.971L63.638 467.314c-9.373 9.373-24.569 9.373-33.941 0L7.029 444.647c-9.357-9.357-9.375-24.522-.04-33.901L161.011 256 6.99 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L257.981 239.03c9.373 9.372 9.373 24.568 0 33.941zM640 456v-32c0-13.255-10.745-24-24-24H312c-13.255 0-24 10.745-24 24v32c0 13.255 10.745 24 24 24h304c13.255 0 24-10.745 24-24z"></path></svg> Through the command line</li>
+<li><svg aria-label="R Project" role="img" viewbox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#78C2AD;overflow:visible;position:relative;"><title>R Project</title><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg> Using the RStudio IDE</li>
 </ol>
 <p>The order of operations is slightly different depending on which approach you decide to take, but the concepts remain the same.</p>
 <div class="panel-tabset page-columns page-full">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true"><strong>a. Through the command line</strong></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><strong>b. Using the RStudio IDE</strong></a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href=""><strong>a. <svg aria-label="Terminal" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#78C2AD;overflow:visible;position:relative;"><title>Terminal</title><path d="M257.981 272.971L63.638 467.314c-9.373 9.373-24.569 9.373-33.941 0L7.029 444.647c-9.357-9.357-9.375-24.522-.04-33.901L161.011 256 6.99 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L257.981 239.03c9.373 9.372 9.373 24.568 0 33.941zM640 456v-32c0-13.255-10.745-24-24-24H312c-13.255 0-24 10.745-24 24v32c0 13.255 10.745 24 24 24h304c13.255 0 24-10.745 24-24z"></path></svg> Through the command line</strong></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href=""><strong>b. <svg aria-label="R Project" role="img" viewbox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#78C2AD;overflow:visible;position:relative;"><title>R Project</title><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg> Using the RStudio IDE</strong></a></li></ul>
 <div class="tab-content page-columns page-full">
-<div id="tabset-1-1" class="tab-pane active page-columns page-full" role="tabpanel" aria-labeledby="tabset-1-1-tab">
+<div id="tabset-1-1" class="tab-pane active page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <p><strong>Why use the command line to set up your Quarto website?</strong></p>
 <ul>
 <li><p>You’ll start to get more comfortable working in a command line interface (CLI)</p></li>
@@ -239,7 +267,7 @@ Tip
 <li>Use the following commands to create a quarto project directory that contains the files necessary for building your website:</li>
 </ol>
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> create-project mysite <span class="at">--type</span> website</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> create-project mysite <span class="at">--type</span> website</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><strong>Recommended:</strong> Name the project <strong>yourusername.github.io</strong> if you want that to be the site name (this is a “freebie” in GitHub). Otherwise, name it something reasonable (this will become the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Slug">slug</a> for your site if publishing with GitHub pages, so choose carefully). I’m calling my project <strong>mysite</strong> just for tutorial purposes only – you should definitely give yours a more practical/creative name.</p>
 <div class="cell column-page quarto-layout-panel">
@@ -248,7 +276,7 @@ Tip
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/pwd_cd.png" class="img-fluid figure-img" width="780"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Use <code>pwd</code> to see your current working directory. Use <code>cd</code> to change directories.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Use <code>pwd</code> to see your current working directory. Use <code>cd</code> to change directories.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -256,7 +284,7 @@ Tip
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/CLI_create_website.png" class="img-fluid figure-img" width="780"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Create a new quarto project using the <code>quarto create-project your_project_name --type website</code> commands.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Create a new quarto project using the <code>quarto create-project your_project_name --type website</code> commands.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -275,7 +303,7 @@ Tip
 <li>You can preview your very basic, but functional website straight from the terminal by typing:</li>
 </ol>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview mysite</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview mysite</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Your site preview should open up in your browser. Quit your preview by pressing <code>control</code> + <code>C</code></p>
 <div class="callout-important callout callout-style-default callout-captioned">
@@ -295,7 +323,7 @@ Important
 <li>At this point you’ve created a directory (folder) but it’s not yet being tracked by git. First be sure to <code>cd</code> into your website folder. Then, initialize this folder as a git repository using the <code>git init</code> command in the terminal window.</li>
 </ol>
 <div class="cell">
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="6" type="1">
 <li>Next, let’s check the name of our default branch – that is, the branch that all changes eventually get merged back into (if you’re building a website, this branch is typically the one you’ll want to deploy). In your Terminal window, type <code>git status</code>. You should see something that looks like this, where the first line tells you which branch you’re currently on:</li>
@@ -304,7 +332,7 @@ Important
 <div class="no-row-height column-margin column-container"><div class="">
 <p><code>git status</code> is a super useful command which displays the state of your working directory and staging area. I use this command <em>often</em> when working on the command line to double check that I’m actually where I think I am, and to see tracked files and untracked or changed files. It’s a good habit run <code>git status</code> after switching branches or before/after adding files to commit.</p>
 </div></div><div class="cell">
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">base</span><span class="kw">)</span> <span class="ex">Samanthas-MacBook-Air:mysite</span> samanthacsik$ git status</span>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">base</span><span class="kw">)</span> <span class="ex">Samanthas-MacBook-Air:mysite</span> samanthacsik$ git status</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">On</span> branch master</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ex">No</span> commits yet</span>
@@ -325,7 +353,7 @@ Important
 <li>Let’s switch our default branch name from <code>master</code> to <code>main</code>. <em>Why? The racist “master” terminology for git branches motivates us to update our default branch to “main” instead.</em> <strong>Note:</strong> If you create a repo in GitHub FIRST, the default now has been updated to make the default branch ‘main’. However, you’ll need to update the branch name if you create a local git repository first (like we’ve just done). Update the branch name from <code>master</code> to <code>main</code> by running the following line in the terminal window:</li>
 </ol>
 <div class="cell">
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> init.defaultBranch main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> init.defaultBranch main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><strong><em>This sets the default branch name to <code>main</code> for any new repositories you create moving forward (it does not rename branches in existing projects).</em></strong></p>
 <p>You can double check that this worked by typing out the <code>git status</code> command again. The first printed line should now read, <code>On branch main</code>.</p>
@@ -333,7 +361,7 @@ Important
 <li>Add the files in your <code>mysite</code> directory (analogous to checking the boxes next to your files in the RStudio Git tab)…</li>
 </ol>
 <div class="cell">
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this adds all untracked or changed files at once</span></span>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this adds all untracked or changed files at once</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add . </span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># alternatively, you can add files individually</span></span>
@@ -354,7 +382,7 @@ Tip
 </div>
 <p>…and commit them:</p>
 <div class="cell">
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"your descriptive commit message here"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"your descriptive commit message here"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="8" type="1">
 <li>At this point, you’ve created a local Git repository that contains the basic files needed to build your Quarto website. Now, we need to create a “remote” repository (i.e.&nbsp;a version of your project that is hosted on the Internet) on GitHub. We can do that by using the subcommand:</li>
@@ -363,7 +391,7 @@ Tip
 <div class="no-row-height column-margin column-container"><div class="">
 <p><strong>Git vs.&nbsp;Github:</strong> <a href="https://git-scm.com/"><em>Git</em></a> is a version control system that allows you to manage and track your file version control history while <a href="https://github.com/"><em>GitHub</em></a> is a cloud-based hosting service that allows you to manage Git repositories. As Jenny Bryan describes in her book <a href="https://happygitwithr.com/index.html">Happy Git and GitHub for the useR</a>, hosting services like GitHub <em>“provide a home for your Git-based projects on the internet.”</em> These services not only help to facilitate collaboration, but they also protect you in the event your computer suddenly dies – just “clone” your GitHub repository back onto your new computer and voila! You’re able to pick right back up where you left off.</p>
 </div></div><div class="cell">
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> repo create</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> repo create</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>When prompted, select <strong>Push an existing local repository to GitHub</strong>, then enter the desired name of your repository.</p>
 <ol start="9" type="1">
@@ -383,7 +411,7 @@ come back to this
 </div>
 </div>
 </div>
-<div id="tabset-1-2" class="tab-pane page-columns page-full" role="tabpanel" aria-labeledby="tabset-1-2-tab">
+<div id="tabset-1-2" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <p><strong>Why use RStudio to set up your Quarto website?</strong></p>
 <ul>
 <li>It’s <em>super</em> easy to do with the click of just a few buttons! <strong>Remember</strong>, the commands we type out in our terminal window underlie the buttons we’re clicking on in the RStudio IDE! RStudio simply provides a user-friendly interface for executing those commands.</li>
@@ -435,7 +463,7 @@ come back to this
 <li>At this point you’ve created a directory (folder) with the website scaffolding files, but it’s not yet being tracked by git, nor is it connected to a remote repository on GitHub. To start setting this up, first install the <a href="https://usethis.r-lib.org/index.html"><code>{usethis}</code></a> package if you don’t already have it.</li>
 </ol>
 <div class="cell">
-<div class="sourceCode" id="cb9"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"usethis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"usethis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="5" type="1">
 <li>In the Console (while in your website project in RStudio), run <code>usethis::use_git()</code> to create a local git repo. Choose yes when asked if it’s okay to commit any uncommitted files. If asked to restart R, choose yes. Once complete, you should see the <strong>Git</strong> tab appear in your top left pane in RStudio.</li>
@@ -473,7 +501,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/mysite_remote.png" class="img-fluid figure-img" width="1245"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">After running <code>usethis::use_github()</code> your browser window should open up to your new GitHub repository and look similar to the browser above.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">After running <code>usethis::use_github()</code> your browser window should open up to your new GitHub repository and look similar to the browser above.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -547,7 +575,7 @@ Note
 <li>Create a file named <code>.nojekyll</code> in your repository, which is required to disable some processing of HTML files that GitHub does by default. Do this from your terminal (you can use the terminal tab in RStudio or a separate terminal window – just make sure you’re in the correct directory) using the following command:</li>
 </ol>
 <div class="cell">
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> .nojekyll</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> .nojekyll</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -567,7 +595,7 @@ Note
 <li>Set the <code>output-dir</code> in your <code>_quarto.yml</code> file to “docs”:</li>
 </ol>
 <div class="cell">
-<div class="sourceCode" id="cb11"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>project<span class="sc">:</span></span>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>project<span class="sc">:</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  type<span class="sc">:</span> website</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  output<span class="sc">-</span>dir<span class="sc">:</span> docs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -598,7 +626,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/gh_pages.png" class="img-fluid figure-img" width="654"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Your website’s URL will appear at the top of the page once you’ve configured GitHub pages to host your Quarto site</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Your website’s URL will appear at the top of the page once you’ve configured GitHub pages to host your Quarto site</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -606,7 +634,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/rendered_site.png" class="img-fluid figure-img" width="654"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">A hosted Quarto website! Now time to customize and add content.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">A hosted Quarto website! Now time to customize and add content.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -632,7 +660,7 @@ Note
 </ul></li>
 </ol>
 <div class="cell">
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">title:</span> <span class="st">"Samantha Csik"</span></span>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">title:</span> <span class="st">"Samantha Csik"</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="ex">image:</span> headshot.jpg</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="ex">about:</span> </span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>      <span class="ex">template:</span> trestles</span>
@@ -653,7 +681,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/about_page.png" class="img-fluid figure-img" width="1246"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">My Quarto website after updating my landing page with the built-in <code>trestles</code> template, adding an image, links, and some content. Note: You can also update the text that appears in the top left corner by editing the “title” option in your <code>_quarto.yml</code> file.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">My Quarto website after updating my landing page with the built-in <code>trestles</code> template, adding an image, links, and some content. Note: You can also update the text that appears in the top left corner by editing the “title” option in your <code>_quarto.yml</code> file.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -664,7 +692,7 @@ Note
 <p>b. <strong>Update <code>_quarto.yml</code></strong> by adding your new <code>.qmd</code> to the list of navbar pages. My website’s <code>_quarto.yml</code> file now looks like this:</p></li>
 </ol>
 <div class="cell">
-<div class="sourceCode" id="cb13"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">project:</span></span>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">project:</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="ex">type:</span> website</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="ex">output-dir:</span> docs</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -689,14 +717,14 @@ Note
 <li><strong>Change the theme</strong> by choosing one of the 25 predefined <a href="https://bootswatch.com/">Bootswatch themes</a>. By default, Quarto sites are built using the <a href="https://bootswatch.com/cosmo/">cosmo</a> theme. Supply just one theme name to the <code>theme</code> option in your <code>_quarto.qmd</code> file, <em>or</em> supply both a dark and a light theme for users to toggle between:</li>
 </ol>
 <div class="cell">
-<div class="sourceCode" id="cb14"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># supplying just one theme ("minty")</span></span>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># supplying just one theme ("minty")</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="ex">format:</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="ex">html:</span></span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">theme:</span> minty</span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="ex">css:</span> styles.css</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb15"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># supplying a light ("minty") and dark ("slate") theme to toggle between</span></span>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># supplying a light ("minty") and dark ("slate") theme to toggle between</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ex">format:</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="ex">html:</span></span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">theme:</span> </span>
@@ -710,7 +738,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/light.png" class="img-fluid figure-img" width="1261"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Toggle on<code>light</code> theme, which is set to the <code>minty</code>, a prebuilt <a href="https://bootswatch.com/">Bootswatch theme</a></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Toggle on<code>light</code> theme, which is set to the <code>minty</code>, a prebuilt <a href="https://bootswatch.com/">Bootswatch theme</a></figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -718,7 +746,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/dark.png" class="img-fluid figure-img" width="1261"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Toggle on <code>dark</code> theme, which is set to <code>slate</code>, a prebuilt <a href="https://bootswatch.com/">Bootswatch theme</a></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Toggle on <code>dark</code> theme, which is set to <code>slate</code>, a prebuilt <a href="https://bootswatch.com/">Bootswatch theme</a></figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -732,12 +760,30 @@ Note
 <p>b. create custom themes</p>
 <p>c. continue developing your online “brand”</p>
 <p>In the meantime, explore some <a href="https://ucsb-meds.github.io/student_websites.html">alumni websites</a> (last year’s students used the <a href="https://rstudio.github.io/distill/website.html"><code>{distill}</code></a> package to build their websites) for inspiration, or dig into the <a href="https://quarto.org/docs/websites/">Quarto Website documentation</a> if you’re hoping to get started now on further customization.</p>
-
 </section>
+
 </main>
 <!-- /main column -->
-<script type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -757,7 +803,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.blur();
     // flash "checked"
     button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
     setTimeout(function() {
+      button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
     // clear code selection
@@ -813,6 +862,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 </body></html>
