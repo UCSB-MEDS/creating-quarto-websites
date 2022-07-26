@@ -101,7 +101,11 @@ knitr::include_graphics("media/pwd_cd.png")
 knitr::include_graphics("media/CLI_create_website.png")
 ```
 
-You should now see a folder called `mysite` (or whatever you named your Quarto project) with a series of files (`_quarto.yml`, `about.qmd`, `index.qmd`, `styles.css`) that provide the scaffolding for your website.
+If you `cd` into your new `mysite` directory (or whatever you named your Quarto project), and use the `ls` command to list out all the contents of that directory, you should see a series of files (`_quarto.yml`, `about.qmd`, `index.qmd`, `styles.css`) that provide the scaffolding for your website. Alternatively, you can use Finder (Mac) or Windows Explorer (Windows) to view your new directory and files.
+
+::: column-margin
+Throughout this document, we'll use the words **directory** and **folder** interchangeably. 
+:::
 
 ```{r}
 #| echo: false
@@ -117,6 +121,10 @@ quarto preview mysite
 
 Your site preview should open up in your browser. Quit your preview by pressing `control` + `C`
 
+::: callout-important
+In order to preview your website, you must be in the directory **one level higher** than your website. For example, if my Quarto website directory is at `User/samanthacsik/git/mysite`, I must be in `User/samanthacsik/git` when I run the `quarto preview mysite` command in the terminal. To navigate up one directory level (e.g. move from `User/samanthacsik/git/mysite` to `User/samanthacsik/git` , use `cd ..` .
+:::
+
 5.  At this point you've created a directory (folder) but it's not yet being tracked by git. First be sure to `cd` into your website folder. Then, initialize this folder as a git repository using the `git init` command in the terminal window.
 
 ```{bash}
@@ -124,19 +132,12 @@ Your site preview should open up in your browser. Quit your preview by pressing 
 git init
 ```
 
-6.Next, we'll switch the branch name from `master` to `main`. *Why? The racist "master" terminology for git branches motivates us to update our default branch to "main" instead.* **Note:** If you create a repo in GitHub FIRST, the default now has been updated to make the default branch 'main'. However, you'll need to update the branch name if you create a local git repository first (like we've just done). Update the branch name from `master` to `main` by running the following line in the terminal window:
-
-```{bash}
-#| eval: false
-git config --global init.defaultBranch main
-```
-
-You can double check that this worked by typing out the `git status` command, which displays the state of the working directory and the staging area (this is a command I find myself using often when working on the command line!). You should see something that looks like this:
+6.  Next, let's check the name of our default branch -- that is, the branch that all changes eventually get merged back into (if you're building a website, this branch is typically the one you'll want to deploy). In your Terminal window, type `git status`, which displays the state of the working directory and the staging area (this is a command I find myself using often when working on the command line!). You should see something that looks like this, where the first line tells you which branch you're currently on:
 
 ```{bash}
 #| eval: false
 (base) Samanthas-MacBook-Air:mysite samanthacsik$ git status
-On branch main
+On branch master
 
 No commits yet
 
@@ -151,6 +152,19 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
+
+**If your current branch is named *`master`*, follow step 7 below. If your branch is named *`main`*, you can head straight to step 8.**
+
+7. Let's switch our default branch name from `master` to `main`. *Why? The racist "master" terminology for git branches motivates us to update our default branch to "main" instead.* **Note:** If you create a repo in GitHub FIRST, the default now has been updated to make the default branch 'main'. However, you'll need to update the branch name if you create a local git repository first (like we've just done). Update the branch name from `master` to `main` by running the following line in the terminal window:
+
+```{bash}
+#| eval: false
+git config --global init.defaultBranch main
+```
+
+***This sets the default branch name to `main` for any new repositories you create moving forward (it does not rename branches in existing projects).***
+
+You can double check that this worked by typing out the `git status` command again. The first printed line should now read, `On branch main`.
 
 7.  `add` (analogous to checking the boxes next to your files in the RStudio Git tab) the files in your `mysite` directory...
 
@@ -277,7 +291,7 @@ knitr::include_graphics("media/mysite_remote.png")
 
     b.  click on the **Git** tab in the top right pane of RStudio. Next to the ![A white diamond with two purple squares, one directly above and one directly to the right, connected to the diamond by a line.](media/branch.png){alt="A white diamond with two purple squares, one directly above and one directly to the right, connected to the diamond by a line." style="display: inline-block; margin: 0; position: relative; top: 0px; width:20px;height:18px;"} symbol, you should see a dropdown menu that displays the name of your current branch.
 
-    **If your current branch is named *master*, follow steps 8-12 below. If your branch is named *main*, you're good to go! You can continue to part [*II. Publish your site with GitHub Pages*](http://localhost:3262/#ii.-publish-your-site-with-github-pages).**
+    **If your current branch is named *`master`*, follow steps 8-12 below. If your branch is named *`main`*, you're good to go! You can continue to part [*II. Publish your site with GitHub Pages*](http://localhost:3262/#ii.-publish-your-site-with-github-pages).**
 
 8.  The next few steps will walk through how to switch the default branch name from `master` to `main`. Why? The racist "master" terminology for git branches motivates us to update our default branch to "main" instead. *Note: Git/GitHub/R tools are in the process of migrating away from `master`. If you create a repo in GitHub FIRST, the default branch is now `main`. However, the `usethis::use_github()` method for creating a repo hasn't yet been updated, so we'll do it manually.* In RStudio, click on the branch button in the Git tab (the diamond with purple rectangle "branches"):
 

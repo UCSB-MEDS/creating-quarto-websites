@@ -255,8 +255,11 @@ Tip
 </div>
 </div>
 </div>
-<p>You should now see a folder called <code>mysite</code> (or whatever you named your Quarto project) with a series of files (<code>_quarto.yml</code>, <code>about.qmd</code>, <code>index.qmd</code>, <code>styles.css</code>) that provide the scaffolding for your website.</p>
-<div class="cell">
+<p>If you <code>cd</code> into your new <code>mysite</code> directory (or whatever you named your Quarto project), and use the <code>ls</code> command to list out all the contents of that directory, you should see a series of files (<code>_quarto.yml</code>, <code>about.qmd</code>, <code>index.qmd</code>, <code>styles.css</code>) that provide the scaffolding for your website. Alternatively, you can use Finder (Mac) or Windows Explorer (Windows) to view your new directory and files.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Throughout this document, we’ll use the words <strong>directory</strong> and <strong>folder</strong> interchangeably.</p>
+</div></div><div class="cell">
 <div class="cell-output-display">
 <p><img src="media/mysite_finder.png" class="img-fluid" width="945"></p>
 </div>
@@ -268,34 +271,54 @@ Tip
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview mysite</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Your site preview should open up in your browser. Quit your preview by pressing <code>control</code> + <code>C</code></p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In order to preview your website, you must be in the directory <strong>one level higher</strong> than your website. For example, if my Quarto website directory is at <code>User/samanthacsik/git/mysite</code>, I must be in <code>User/samanthacsik/git</code> when I run the <code>quarto preview mysite</code> command in the terminal. To navigate up one directory level (e.g.&nbsp;move from <code>User/samanthacsik/git/mysite</code> to <code>User/samanthacsik/git</code> , use <code>cd ..</code> .</p>
+</div>
+</div>
 <ol start="5" type="1">
 <li>At this point you’ve created a directory (folder) but it’s not yet being tracked by git. First be sure to <code>cd</code> into your website folder. Then, initialize this folder as a git repository using the <code>git init</code> command in the terminal window.</li>
 </ol>
 <div class="cell">
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>6.Next, we’ll switch the branch name from <code>master</code> to <code>main</code>. <em>Why? The racist “master” terminology for git branches motivates us to update our default branch to “main” instead.</em> <strong>Note:</strong> If you create a repo in GitHub FIRST, the default now has been updated to make the default branch ‘main’. However, you’ll need to update the branch name if you create a local git repository first (like we’ve just done). Update the branch name from <code>master</code> to <code>main</code> by running the following line in the terminal window:</p>
+<ol start="6" type="1">
+<li>Next, let’s check the name of our default branch – that is, the branch that all changes eventually get merged back into (if you’re building a website, this branch is typically the one you’ll want to deploy). In your Terminal window, type <code>git status</code>, which displays the state of the working directory and the staging area (this is a command I find myself using often when working on the command line!). You should see something that looks like this, where the first line tells you which branch you’re currently on:</li>
+</ol>
 <div class="cell">
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> init.defaultBranch main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">base</span><span class="kw">)</span> <span class="ex">Samanthas-MacBook-Air:mysite</span> samanthacsik$ git status</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">On</span> branch master</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ex">No</span> commits yet</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ex">Untracked</span> files:</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">(</span><span class="ex">use</span> <span class="st">"git add &lt;file&gt;..."</span> to include in what will be committed<span class="kw">)</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="ex">.quarto/</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="ex">_quarto.yml</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="ex">_site/</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="ex">about.qmd</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="ex">index.qmd</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="ex">styles.css</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="ex">nothing</span> added to commit but untracked files present <span class="er">(</span><span class="ex">use</span> <span class="st">"git add"</span> to track<span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>You can double check that this worked by typing out the <code>git status</code> command, which displays the state of the working directory and the staging area (this is a command I find myself using often when working on the command line!). You should see something that looks like this:</p>
+<p><strong>If your current branch is named <em><code>master</code></em>, follow step 7 below. If your branch is named <em><code>main</code></em>, you can head straight to step 8.</strong></p>
+<ol start="7" type="1">
+<li>Let’s switch our default branch name from <code>master</code> to <code>main</code>. <em>Why? The racist “master” terminology for git branches motivates us to update our default branch to “main” instead.</em> <strong>Note:</strong> If you create a repo in GitHub FIRST, the default now has been updated to make the default branch ‘main’. However, you’ll need to update the branch name if you create a local git repository first (like we’ve just done). Update the branch name from <code>master</code> to <code>main</code> by running the following line in the terminal window:</li>
+</ol>
 <div class="cell">
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">base</span><span class="kw">)</span> <span class="ex">Samanthas-MacBook-Air:mysite</span> samanthacsik$ git status</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">On</span> branch main</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ex">No</span> commits yet</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="ex">Untracked</span> files:</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">(</span><span class="ex">use</span> <span class="st">"git add &lt;file&gt;..."</span> to include in what will be committed<span class="kw">)</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="ex">.quarto/</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="ex">_quarto.yml</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="ex">_site/</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="ex">about.qmd</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="ex">index.qmd</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="ex">styles.css</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="ex">nothing</span> added to commit but untracked files present <span class="er">(</span><span class="ex">use</span> <span class="st">"git add"</span> to track<span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> init.defaultBranch main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p><strong><em>This sets the default branch name to <code>main</code> for any new repositories you create moving forward (it does not rename branches in existing projects).</em></strong></p>
+<p>You can double check that this worked by typing out the <code>git status</code> command again, The first printed line should now read, <code>On branch main</code>.</p>
 <ol start="7" type="1">
 <li><code>add</code> (analogous to checking the boxes next to your files in the RStudio Git tab) the files in your <code>mysite</code> directory…</li>
 </ol>
