@@ -22,9 +22,11 @@ R users have long loved [RMarkdown](https://rmarkdown.rstudio.com/) for combinin
 You can explore [Quarto's documentation](https://quarto.org/docs/guide/) to learn more about creating documents, websites, blogs, books, slides, etc.
 
 ::: callout-note
-## Fun fact!
+## Want to learn about some of the cool ways that Quarto is being used to enable open science?
 
-This instructional document was built using Quarto!
+In June 2022, [R-Ladies Santa Barbara](https://www.meetup.com/rladies-santa-barbara/) met virtually with [NASA Openscapes Champions](https://nasa-openscapes.github.io/) and RStudio CEO & Quarto developer, J.J. Allaire, to chat about their experiences as some of the first researchers to use Quarto to document, collaborate, and share as they migrate data-intensive workflows to the cloud.
+
+Read our [blogpost](https://www.openscapes.org/blog/2022/06/22/hello-quarto/) to learn more and to find additional resources, or watch the [event recording](https://www.youtube.com/watch?v=azVAl343CIU) to hear first-hand just how awesome Quarto is :)
 :::
 
 ## Do I need to use Quarto to build my website?
@@ -47,7 +49,7 @@ Follow [\@quarto_pub](https://twitter.com/quarto_pub) and check out [Mine Çenti
 Be sure to have R/RStudio ([RStudio v2022.02](https://rstudio.com/products/rstudio/download/) or later) and [Quarto](https://quarto.org/docs/get-started/) installed on your computer.
 :::
 
-We'll review two ways to get started with building your website.
+We'll review two ways to get started on building your website.
 
 a.  Through the command line
 b.  Using the RStudio IDE
@@ -86,7 +88,7 @@ To stay organized, I save all my git repositories to a folder called `git` in my
 quarto create-project mysite --type website
 ```
 
-**Recommended:** Name the project **yourusername.github.io** if you want that to be the site name (this is a "freebie" in GitHub). Otherwise, name it something reasonable (this will become the slug for your site if publishing with GitHub pages, so choose carefully). I'm calling my project **mysite** just for tutorial purposes only -- you should definitely give yours a more practical/creative name.
+**Recommended:** Name the project **yourusername.github.io** if you want that to be the site name (this is a "freebie" in GitHub). Otherwise, name it something reasonable (this will become the [slug](https://developer.mozilla.org/en-US/docs/Glossary/Slug) for your site if publishing with GitHub pages, so choose carefully). I'm calling my project **mysite** just for tutorial purposes only -- you should definitely give yours a more practical/creative name.
 
 ```{r}
 #| echo: false
@@ -175,7 +177,7 @@ git commit -m "your descriptive commit message here"
 8.  Create a repository for your project on GitHub using the subcommand:
 
 ::: column-margin
-**Git vs. Github:** [*Git*](https://git-scm.com/) is a version control system that allows you to manage and track your file version control history while [*GitHub*](https://github.com/) is a cloud-based hosting service that allows you to manage Git repositories. As Jenny Bryan describes in her book [Happy Git and GitHub for the useR](https://happygitwithr.com/index.html), hosting services like GitHub *"provide a home for your Git-based projects on the internet."* These services not only help to facilitate collaboration, but they also protect you in the event your computer suddenly dies -- just "clone" your GitHub repository back onto your new computer and voila! you're able to pick right back up where you left off.
+**Git vs. Github:** [*Git*](https://git-scm.com/) is a version control system that allows you to manage and track your file version control history while [*GitHub*](https://github.com/) is a cloud-based hosting service that allows you to manage Git repositories. As Jenny Bryan describes in her book [Happy Git and GitHub for the useR](https://happygitwithr.com/index.html), hosting services like GitHub *"provide a home for your Git-based projects on the internet."* These services not only help to facilitate collaboration, but they also protect you in the event your computer suddenly dies -- just "clone" your GitHub repository back onto your new computer and voila! You're able to pick right back up where you left off.
 :::
 
 ```{bash}
@@ -221,7 +223,7 @@ knitr::include_graphics("media/vRStudio3.png")
 
 3.  Fill out the **Directory name:** field (this is the name of your R project, and eventually, your GitHub repo name), choose where to save your directory using the **Browse** button. Click **Create Project**.
 
-**Recommended:** Name the project **yourusername.github.io** if you want that to be the site name (this is a "freebie" in GitHub). Otherwise, name it something reasonable (this will become the slug for your site if publishing with GitHub pages, so choose carefully). I'm calling my project **mysite** just for tutorial purposes only -- you should definitely give yours a more practical/creative name.
+**Recommended:** Name the project **yourusername.github.io** if you want that to be the site name (this is a "freebie" in GitHub). Otherwise, name it something reasonable (this will become the [slug](https://developer.mozilla.org/en-US/docs/Glossary/Slug) for your site if publishing with GitHub pages, so choose carefully). I'm calling my project **mysite** just for tutorial purposes only -- you should definitely give yours a more practical/creative name.
 
 ```{r}
 #| echo: false
@@ -253,19 +255,19 @@ knitr::include_graphics("media/mysite_scaffolding_git.png")
 ```
 
 ::: callout-note
-We're using the `usethis` workflow here because it's a super useful package to begin learning for project setup. However, rather than using the `usethis::use_git()` function here to create your local git repo, you could have also checked the box where it says **Create a git repository** when initially setting up your Quarto website (see step 3 above).
+We're using the `{usethis}` workflow here because it's a super useful package to begin learning for project setup. However, rather than using the `usethis::use_git()` function here to create your local git repo, you could have also checked the box where it says **Create a git repository** when initially setting up your Quarto website (see step 3 above).
 :::
 
 6.  Then, in the Console, run `usethis::use_github()` to create an upstream remote repo. Your web browser should open up to your new GitHub repository, with the same name as your local git repo/R project.
 
 ::: column-margin
-**Git vs. Github:** [*Git*](https://git-scm.com/) is a version control system that allows you to manage and track your file version control history while [*GitHub*](https://github.com/) is a cloud-based hosting service that allows you to manage Git repositories. As Jenny Bryan describes in her book [Happy Git and GitHub for the useR](https://happygitwithr.com/index.html), hosting services like GitHub *"provide a home for your Git-based projects on the internet."* These services not only help to facilitate collaboration, but they also protect you in the event your computer suddenly dies -- just "clone" your GitHub repository back onto your new computer and voila! you're able to pick right back up where you left off.
+**Git vs. Github:** [*Git*](https://git-scm.com/) is a version control system that allows you to manage and track your file version control history while [*GitHub*](https://github.com/) is a cloud-based hosting service that allows you to manage Git repositories. As Jenny Bryan describes in her book [Happy Git and GitHub for the useR](https://happygitwithr.com/index.html), hosting services like GitHub *"provide a home for your Git-based projects on the internet."* These services not only help to facilitate collaboration, but they also protect you in the event your computer suddenly dies -- just "clone" your GitHub repository back onto your new computer and voila! You're able to pick right back up where you left off.
 :::
 
 ```{r}
 #| echo: false
 #| fig-align: center
-#| fig-cap: "After running `usethis::use_github()` your browser window should open up to your new GitHub repository and look similar to the browswer above."
+#| fig-cap: "After running `usethis::use_github()` your browser window should open up to your new GitHub repository and look similar to the browser above."
 knitr::include_graphics("media/mysite_remote.png")
 ```
 
@@ -275,7 +277,7 @@ knitr::include_graphics("media/mysite_remote.png")
 
     b.  click on the **Git** tab in the top right pane of RStudio. Next to the ![A white diamond with two purple squares, one directly above and one directly to the right, connected to the diamond by a line.](media/branch.png){alt="A white diamond with two purple squares, one directly above and one directly to the right, connected to the diamond by a line." style="display: inline-block; margin: 0; position: relative; top: 0px; width:20px;height:18px;"} symbol, you should see a dropdown menu that displays the name of your current branch.
 
-    **If your current branch is named *master*, follow steps 8-12 below. If your branch is named *main*, you're good to go! You can continue to part *II. Publish your site with GitHub Pages*.**
+    **If your current branch is named *master*, follow steps 8-12 below. If your branch is named *main*, you're good to go! You can continue to part [*II. Publish your site with GitHub Pages*](http://localhost:3262/#ii.-publish-your-site-with-github-pages).**
 
 8.  The next few steps will walk through how to switch the default branch name from `master` to `main`. Why? The racist "master" terminology for git branches motivates us to update our default branch to "main" instead. *Note: Git/GitHub/R tools are in the process of migrating away from `master`. If you create a repo in GitHub FIRST, the default branch is now `main`. However, the `usethis::use_github()` method for creating a repo hasn't yet been updated, so we'll do it manually.* In RStudio, click on the branch button in the Git tab (the diamond with purple rectangle "branches"):
 
@@ -327,10 +329,8 @@ touch .nojekyll
 
 ::: callout-note
 The `touch` command creates a new, empty file.
-:::
 
-::: callout-note
-You're creating a *hidden* file, which won't visibly appear in your directory. You *should* see it show up as a file to track with git under the **Git** tab in RStudio. You can also view hidden files in Finder (Mac) using the keyboard shortcut `Command` + `Shift` + `.`, or follow [these instructions](https://support.microsoft.com/en-us/windows/show-hidden-files-0320fe58-0117-fd59-6851-9b7f9840fdb2) for Windows 10, 8.1, and 7.
+`.nojekyll` is a *hidden* file which won't visibly appear in your directory. You *should* see it show up as a file to track with git under the **Git** tab in RStudio. You can also view hidden files in Finder (Mac) using the keyboard shortcut `Command` + `Shift` + `.`, or follow [these instructions](https://support.microsoft.com/en-us/windows/show-hidden-files-0320fe58-0117-fd59-6851-9b7f9840fdb2) for Windows 10, 8.1, and 7.
 :::
 
 2.  Set the `output-dir` in your `_quarto.yml` file to "docs":
@@ -352,7 +352,7 @@ knitr::include_graphics("media/build_site.png")
 
 4.  Now we need to send all of our files in our local git repository to our remote GitHub repository:
 
-    a.  **Stage** your files by checking the boxes in the **Git** tab (this is analogous to the `git add .` command used in the terminal for staging all files)
+    a.  **Stage** your files by checking all the boxes in the **Git** tab (this is analogous to the `git add .` command used in the terminal for staging all files)
     b.  **Commit** your files by clicking the Commit button, adding a commit message, and clicking "Commit" (analogous to `git commit -m "my commit message"`)
     c.  **Push** your files to the remote repository (on GitHub) by clicking the "Push" button with the green upward facing arrow (analogous to `git push`).
 
@@ -364,7 +364,7 @@ knitr::include_graphics("media/build_site.png")
 #| column: page
 #| fig-subcap: 
 #|  - "Your website's URL will appear at the top of the page once you've configured GitHub pages to host your Quarto site"
-#|  - "A hosted Quarto website! Now time to add customize and add content."
+#|  - "A hosted Quarto website! Now time to customize and add content."
 knitr::include_graphics("media/gh_pages.png")
 knitr::include_graphics("media/rendered_site.png")
 ```
@@ -375,11 +375,11 @@ Right now, our website is built using Quarto default styling. Let's learn about 
 
 1.  **Don't mess with stuff in `/docs`.** When you Render your site (by clicking Build \> Render Website), Quarto takes all your `.qmd` files, converts them to `.html` files (along with some other important stuff) and saves everything to your `/docs` folder. Your site now deploys from this folder, so you really don't want to mess with anything in here directly.
 
-2.  **Edit your landing page (`index.html`)**. Give your landing/home page a makeover by trying out some of the following:
+2.  **Add content to your landing page (`index.html`)**. Give your landing/home page a makeover by trying out some of the following:
 
     -   Update the yaml `title` in your `index.html` file. Here, I changed mine from "mysite" to my name, "Samantha Csik"
 
-    -   Delete the sample text and code and begin adding your own content -- a great place to start is a short blurb introducing yourself!
+    -   Delete the sample text and code and begin adding your own content -- a great place to start is a short blurb introducing yourself! (**Note:** using three dashes, `---`, creates a page divider, as seen in the screenshot below)
 
 3.  **Turn your landing page (`index.html`) into an "[About Page](https://quarto.org/docs/websites/website-about.html)" with a photo**. When the `about` option is added to a document's yaml, a special template will be used to layout the content of that page. Choose from one of Quarto's five [built-in templates](https://quarto.org/docs/websites/website-about.html#templates), each with a slightly different layout style. Some yaml options to play around with:
 
@@ -421,8 +421,73 @@ knitr::include_graphics("media/about_page.png")
 
     a\. **Create a new `.qmd` file** (New File \> Quarto Document and save it to your project's root directory) and add any content that you want to appear on that page. Here, I'm creating a new page called "All of my favorite resources!" and saved it to my root directory as `resources.qmd`.
 
-    b\. **Update `_quarto.yml`**
+    b\. **Update `_quarto.yml`** by adding your new `.qmd` to the list of navbar pages. My website's `_quarto.yml` file now looks like this:
 
-5.  
+```{bash}
+#| eval: false
+project:
+  type: website
+  output-dir: docs
 
-6.  ***Each nav bar page should be its own `.qmd` file.***
+website:
+  title: "Samantha Csik"
+  navbar:
+   background: primary
+   left:
+     - href: index.qmd
+       text: Home
+     - about.qmd
+     - resources.qmd # my new navbar page
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+
+editor: visual
+```
+
+5.  **Change the theme** by choosing one of the 25 predefined [Bootswatch themes](https://bootswatch.com/). By default, Quarto sites are built using the [cosmo](https://bootswatch.com/cosmo/) theme. Supply just one theme name to the `theme` option in your `_quarto.qmd` file, *or* supply both a dark and a light theme for users to toggle between:
+
+```{bash}
+#| eval: false
+# supplying just one theme ("minty")
+format:
+  html:
+    theme: minty
+    css: styles.css
+```
+
+```{bash}
+#| eval: false
+# supplying a light ("minty") and dark ("slate") theme to toggle between
+format:
+  html:
+    theme: 
+      light: minty
+      dark: slate
+    css: styles.css
+```
+
+```{r}
+#| echo: false
+#| layout-ncol: 2
+#| column: page
+#| fig-subcap: 
+#|  - "Toggle on`light` theme, which is set to the `minty`, a prebuilt [Bootswatch theme](https://bootswatch.com/)"
+#|  - "Toggle on `dark` theme, which is set to `slate`, a prebuilt [Bootswatch theme](https://bootswatch.com/)"
+knitr::include_graphics("media/light.png")
+knitr::include_graphics("media/dark.png")
+```
+
+## III. Looking forward
+
+You should now have a basic version of your website up and running 🎉 In Fall quarter, we'll learn how to:
+
+a\. add a blog and blog posts to our websites
+
+b\. create custom themes
+
+c\. continue developing your online "brand"
+
+In the meantime, explore some [alumni websites](https://ucsb-meds.github.io/student_websites.html) (last year's students used the [`{distill}`](https://rstudio.github.io/distill/website.html) package to build their websites) for inspiration, or dig into the [Quarto Website documentation](https://quarto.org/docs/websites/) if you're hoping to get started now on further customization.

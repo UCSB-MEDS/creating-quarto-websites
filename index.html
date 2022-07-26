@@ -103,6 +103,7 @@
 <li><a href="#i.-create-the-scaffolding-for-your-website" class="nav-link" data-scroll-target="#i.-create-the-scaffolding-for-your-website">I. Create the scaffolding for your website</a></li>
 <li><a href="#ii.-publish-your-site-with-github-pages" class="nav-link" data-scroll-target="#ii.-publish-your-site-with-github-pages">II. Publish your site with GitHub Pages</a></li>
 <li><a href="#iii.-where-you-should-start-changing-stuff" class="nav-link" data-scroll-target="#iii.-where-you-should-start-changing-stuff">III. Where you should start changing stuff</a></li>
+<li><a href="#iii.-looking-forward" class="nav-link" data-scroll-target="#iii.-looking-forward">III. Looking forward</a></li>
 </ul>
 </nav>
 </div>
@@ -139,11 +140,12 @@ Warning
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Fun fact!
+Want to learn about some of the cool ways that Quarto is being used to enable open science?
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This instructional document was built using Quarto!</p>
+<p>In June 2022, <a href="https://www.meetup.com/rladies-santa-barbara/">R-Ladies Santa Barbara</a> met virtually with <a href="https://nasa-openscapes.github.io/">NASA Openscapes Champions</a> and RStudio CEO &amp; Quarto developer, J.J. Allaire, to chat about their experiences as some of the first researchers to use Quarto to document, collaborate, and share as they migrate data-intensive workflows to the cloud.</p>
+<p>Read our <a href="https://www.openscapes.org/blog/2022/06/22/hello-quarto/">blogpost</a> to learn more and to find additional resources, or watch the <a href="https://www.youtube.com/watch?v=azVAl343CIU">event recording</a> to hear first-hand just how awesome Quarto is :)</p>
 </div>
 </div>
 </section>
@@ -180,7 +182,7 @@ Before getting started:
 <p>Be sure to have R/RStudio (<a href="https://rstudio.com/products/rstudio/download/">RStudio v2022.02</a> or later) and <a href="https://quarto.org/docs/get-started/">Quarto</a> installed on your computer.</p>
 </div>
 </div>
-<p>We’ll review two ways to get started with building your website.</p>
+<p>We’ll review two ways to get started on building your website.</p>
 <ol type="a">
 <li>Through the command line</li>
 <li>Using the RStudio IDE</li>
@@ -232,7 +234,7 @@ Tip
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> create-project mysite <span class="at">--type</span> website</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><strong>Recommended:</strong> Name the project <strong>yourusername.github.io</strong> if you want that to be the site name (this is a “freebie” in GitHub). Otherwise, name it something reasonable (this will become the slug for your site if publishing with GitHub pages, so choose carefully). I’m calling my project <strong>mysite</strong> just for tutorial purposes only – you should definitely give yours a more practical/creative name.</p>
+<p><strong>Recommended:</strong> Name the project <strong>yourusername.github.io</strong> if you want that to be the site name (this is a “freebie” in GitHub). Otherwise, name it something reasonable (this will become the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Slug">slug</a> for your site if publishing with GitHub pages, so choose carefully). I’m calling my project <strong>mysite</strong> just for tutorial purposes only – you should definitely give yours a more practical/creative name.</p>
 <div class="cell column-page quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -326,7 +328,7 @@ Tip
 </ol>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p><strong>Git vs.&nbsp;Github:</strong> <a href="https://git-scm.com/"><em>Git</em></a> is a version control system that allows you to manage and track your file version control history while <a href="https://github.com/"><em>GitHub</em></a> is a cloud-based hosting service that allows you to manage Git repositories. As Jenny Bryan describes in her book <a href="https://happygitwithr.com/index.html">Happy Git and GitHub for the useR</a>, hosting services like GitHub <em>“provide a home for your Git-based projects on the internet.”</em> These services not only help to facilitate collaboration, but they also protect you in the event your computer suddenly dies – just “clone” your GitHub repository back onto your new computer and voila! you’re able to pick right back up where you left off.</p>
+<p><strong>Git vs.&nbsp;Github:</strong> <a href="https://git-scm.com/"><em>Git</em></a> is a version control system that allows you to manage and track your file version control history while <a href="https://github.com/"><em>GitHub</em></a> is a cloud-based hosting service that allows you to manage Git repositories. As Jenny Bryan describes in her book <a href="https://happygitwithr.com/index.html">Happy Git and GitHub for the useR</a>, hosting services like GitHub <em>“provide a home for your Git-based projects on the internet.”</em> These services not only help to facilitate collaboration, but they also protect you in the event your computer suddenly dies – just “clone” your GitHub repository back onto your new computer and voila! You’re able to pick right back up where you left off.</p>
 </div></div><div class="cell">
 <div class="sourceCode" id="cb8"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> repo create</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -382,7 +384,7 @@ come back to this
 <ol start="3" type="1">
 <li>Fill out the <strong>Directory name:</strong> field (this is the name of your R project, and eventually, your GitHub repo name), choose where to save your directory using the <strong>Browse</strong> button. Click <strong>Create Project</strong>.</li>
 </ol>
-<p><strong>Recommended:</strong> Name the project <strong>yourusername.github.io</strong> if you want that to be the site name (this is a “freebie” in GitHub). Otherwise, name it something reasonable (this will become the slug for your site if publishing with GitHub pages, so choose carefully). I’m calling my project <strong>mysite</strong> just for tutorial purposes only – you should definitely give yours a more practical/creative name.</p>
+<p><strong>Recommended:</strong> Name the project <strong>yourusername.github.io</strong> if you want that to be the site name (this is a “freebie” in GitHub). Otherwise, name it something reasonable (this will become the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Slug">slug</a> for your site if publishing with GitHub pages, so choose carefully). I’m calling my project <strong>mysite</strong> just for tutorial purposes only – you should definitely give yours a more practical/creative name.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -424,7 +426,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>We’re using the <code>usethis</code> workflow here because it’s a super useful package to begin learning for project setup. However, rather than using the <code>usethis::use_git()</code> function here to create your local git repo, you could have also checked the box where it says <strong>Create a git repository</strong> when initially setting up your Quarto website (see step 3 above).</p>
+<p>We’re using the <code>{usethis}</code> workflow here because it’s a super useful package to begin learning for project setup. However, rather than using the <code>usethis::use_git()</code> function here to create your local git repo, you could have also checked the box where it says <strong>Create a git repository</strong> when initially setting up your Quarto website (see step 3 above).</p>
 </div>
 </div>
 <ol start="6" type="1">
@@ -432,13 +434,13 @@ Note
 </ol>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p><strong>Git vs.&nbsp;Github:</strong> <a href="https://git-scm.com/"><em>Git</em></a> is a version control system that allows you to manage and track your file version control history while <a href="https://github.com/"><em>GitHub</em></a> is a cloud-based hosting service that allows you to manage Git repositories. As Jenny Bryan describes in her book <a href="https://happygitwithr.com/index.html">Happy Git and GitHub for the useR</a>, hosting services like GitHub <em>“provide a home for your Git-based projects on the internet.”</em> These services not only help to facilitate collaboration, but they also protect you in the event your computer suddenly dies – just “clone” your GitHub repository back onto your new computer and voila! you’re able to pick right back up where you left off.</p>
+<p><strong>Git vs.&nbsp;Github:</strong> <a href="https://git-scm.com/"><em>Git</em></a> is a version control system that allows you to manage and track your file version control history while <a href="https://github.com/"><em>GitHub</em></a> is a cloud-based hosting service that allows you to manage Git repositories. As Jenny Bryan describes in her book <a href="https://happygitwithr.com/index.html">Happy Git and GitHub for the useR</a>, hosting services like GitHub <em>“provide a home for your Git-based projects on the internet.”</em> These services not only help to facilitate collaboration, but they also protect you in the event your computer suddenly dies – just “clone” your GitHub repository back onto your new computer and voila! You’re able to pick right back up where you left off.</p>
 </div></div><div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/mysite_remote.png" class="img-fluid figure-img" width="1245"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">After running <code>usethis::use_github()</code> your browser window should open up to your new GitHub repository and look similar to the browswer above.</figcaption><p></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">After running <code>usethis::use_github()</code> your browser window should open up to your new GitHub repository and look similar to the browser above.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -449,7 +451,7 @@ Note
 <li><p>open your Terminal window from RStudio and type <code>git status</code> – the first printed line should say <strong>On branch ___</strong>.</p></li>
 <li><p>click on the <strong>Git</strong> tab in the top right pane of RStudio. Next to the <img src="media/branch.png" class="img-fluid" alt="A white diamond with two purple squares, one directly above and one directly to the right, connected to the diamond by a line." style="display: inline-block; margin: 0; position: relative; top: 0px; width:20px;height:18px;"> symbol, you should see a dropdown menu that displays the name of your current branch.</p></li>
 </ol>
-<p><strong>If your current branch is named <em>master</em>, follow steps 8-12 below. If your branch is named <em>main</em>, you’re good to go! You can continue to part <em>II. Publish your site with GitHub Pages</em>.</strong></p></li>
+<p><strong>If your current branch is named <em>master</em>, follow steps 8-12 below. If your branch is named <em>main</em>, you’re good to go! You can continue to part <a href="http://localhost:3262/#ii.-publish-your-site-with-github-pages"><em>II. Publish your site with GitHub Pages</em></a>.</strong></p></li>
 <li><p>The next few steps will walk through how to switch the default branch name from <code>master</code> to <code>main</code>. Why? The racist “master” terminology for git branches motivates us to update our default branch to “main” instead. <em>Note: Git/GitHub/R tools are in the process of migrating away from <code>master</code>. If you create a repo in GitHub FIRST, the default branch is now <code>main</code>. However, the <code>usethis::use_github()</code> method for creating a repo hasn’t yet been updated, so we’ll do it manually.</em> In RStudio, click on the branch button in the Git tab (the diamond with purple rectangle “branches”):</p></li>
 </ol>
 <div class="cell" data-layout-align="center">
@@ -525,19 +527,7 @@ Note
 </div>
 <div class="callout-body-container callout-body">
 <p>The <code>touch</code> command creates a new, empty file.</p>
-</div>
-</div>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You’re creating a <em>hidden</em> file, which won’t visibly appear in your directory. You <em>should</em> see it show up as a file to track with git under the <strong>Git</strong> tab in RStudio. You can also view hidden files in Finder (Mac) using the keyboard shortcut <code>Command</code> + <code>Shift</code> + <code>.</code>, or follow <a href="https://support.microsoft.com/en-us/windows/show-hidden-files-0320fe58-0117-fd59-6851-9b7f9840fdb2">these instructions</a> for Windows 10, 8.1, and 7.</p>
+<p><code>.nojekyll</code> is a <em>hidden</em> file which won’t visibly appear in your directory. You <em>should</em> see it show up as a file to track with git under the <strong>Git</strong> tab in RStudio. You can also view hidden files in Finder (Mac) using the keyboard shortcut <code>Command</code> + <code>Shift</code> + <code>.</code>, or follow <a href="https://support.microsoft.com/en-us/windows/show-hidden-files-0320fe58-0117-fd59-6851-9b7f9840fdb2">these instructions</a> for Windows 10, 8.1, and 7.</p>
 </div>
 </div>
 <ol start="2" type="1">
@@ -563,7 +553,7 @@ Note
 <ol start="4" type="1">
 <li><p>Now we need to send all of our files in our local git repository to our remote GitHub repository:</p>
 <ol type="a">
-<li><strong>Stage</strong> your files by checking the boxes in the <strong>Git</strong> tab (this is analogous to the <code>git add .</code> command used in the terminal for staging all files)</li>
+<li><strong>Stage</strong> your files by checking all the boxes in the <strong>Git</strong> tab (this is analogous to the <code>git add .</code> command used in the terminal for staging all files)</li>
 <li><strong>Commit</strong> your files by clicking the Commit button, adding a commit message, and clicking “Commit” (analogous to <code>git commit -m "my commit message"</code>)</li>
 <li><strong>Push</strong> your files to the remote repository (on GitHub) by clicking the “Push” button with the green upward facing arrow (analogous to <code>git push</code>).</li>
 </ol></li>
@@ -583,22 +573,22 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/rendered_site.png" class="img-fluid figure-img" width="654"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">A hosted Quarto website! Now time to add customize and add content.</figcaption><p></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">A hosted Quarto website! Now time to customize and add content.</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="iii.-where-you-should-start-changing-stuff" class="level2">
+<section id="iii.-where-you-should-start-changing-stuff" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="iii.-where-you-should-start-changing-stuff">III. Where you should start changing stuff</h2>
 <p>Right now, our website is built using Quarto default styling. Let’s learn about where things live and how to start customizing some stuff.</p>
 <ol type="1">
 <li><p><strong>Don’t mess with stuff in <code>/docs</code>.</strong> When you Render your site (by clicking Build &gt; Render Website), Quarto takes all your <code>.qmd</code> files, converts them to <code>.html</code> files (along with some other important stuff) and saves everything to your <code>/docs</code> folder. Your site now deploys from this folder, so you really don’t want to mess with anything in here directly.</p></li>
-<li><p><strong>Edit your landing page (<code>index.html</code>)</strong>. Give your landing/home page a makeover by trying out some of the following:</p>
+<li><p><strong>Add content to your landing page (<code>index.html</code>)</strong>. Give your landing/home page a makeover by trying out some of the following:</p>
 <ul>
 <li><p>Update the yaml <code>title</code> in your <code>index.html</code> file. Here, I changed mine from “mysite” to my name, “Samantha Csik”</p></li>
-<li><p>Delete the sample text and code and begin adding your own content – a great place to start is a short blurb introducing yourself!</p></li>
+<li><p>Delete the sample text and code and begin adding your own content – a great place to start is a short blurb introducing yourself! (<strong>Note:</strong> using three dashes, <code>---</code>, creates a page divider, as seen in the screenshot below)</p></li>
 </ul></li>
 <li><p><strong>Turn your landing page (<code>index.html</code>) into an “<a href="https://quarto.org/docs/websites/website-about.html">About Page</a>” with a photo</strong>. When the <code>about</code> option is added to a document’s yaml, a special template will be used to layout the content of that page. Choose from one of Quarto’s five <a href="https://quarto.org/docs/websites/website-about.html#templates">built-in templates</a>, each with a slightly different layout style. Some yaml options to play around with:</p>
 <ul>
@@ -636,12 +626,79 @@ Note
 </div>
 </div>
 <ol start="4" type="1">
-<li><p><strong>Add additional pages to your website.</strong> In the default Quarto website skeleton, there are two items in the navbar that appear as “Home” and “About”. Those navbar tabs link to two <code>.html</code> files (<code>index.html</code> and <code>about.html</code>) and are automatically rendered when when you Build to <code>/docs</code> (i.e.&nbsp;you don’t need to knit them manually to create the html). Adding a new page to your website requires two steps:</p>
+<li><p><strong>Add additional pages to your website.</strong> In the default Quarto website skeleton, there are two items in the navbar that appear as “Home” and “About” (<strong>Note:</strong> don’t confuse the special-formatted “About Page” we created in <code>index.qmd</code> with the navbar page currently titled “About”). Those navbar tabs link to two <code>.html</code> files (<code>index.html</code> and <code>about.html</code>) and are automatically rendered when when you Build to <code>/docs</code> (i.e.&nbsp;you don’t need to knit them manually to create the html). Adding a new page to your website requires two steps:</p>
 <p>a. <strong>Create a new <code>.qmd</code> file</strong> (New File &gt; Quarto Document and save it to your project’s root directory) and add any content that you want to appear on that page. Here, I’m creating a new page called “All of my favorite resources!” and saved it to my root directory as <code>resources.qmd</code>.</p>
-<p>b. <strong>Update <code>_quarto.yml</code></strong></p></li>
-<li></li>
-<li><p><strong><em>Each nav bar page should be its own <code>.qmd</code> file.</em></strong></p></li>
+<p>b. <strong>Update <code>_quarto.yml</code></strong> by adding your new <code>.qmd</code> to the list of navbar pages. My website’s <code>_quarto.yml</code> file now looks like this:</p></li>
 </ol>
+<div class="cell">
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">project:</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="ex">type:</span> website</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="ex">output-dir:</span> docs</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="ex">website:</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="ex">title:</span> <span class="st">"Samantha Csik"</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="ex">navbar:</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>   <span class="ex">background:</span> primary</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>   <span class="ex">left:</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>     <span class="ex">-</span> href: index.qmd</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>       <span class="ex">text:</span> Home</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>     <span class="ex">-</span> about.qmd</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>     <span class="ex">-</span> resources.qmd <span class="co"># my new navbar page</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="ex">format:</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>  <span class="ex">html:</span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>    <span class="ex">theme:</span> cosmo</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>    <span class="ex">css:</span> styles.css</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a><span class="ex">editor:</span> visual</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="5" type="1">
+<li><strong>Change the theme</strong> by choosing one of the 25 predefined <a href="https://bootswatch.com/">Bootswatch themes</a>. By default, Quarto sites are built using the <a href="https://bootswatch.com/cosmo/">cosmo</a> theme. Supply just one theme name to the <code>theme</code> option in your <code>_quarto.qmd</code> file, <em>or</em> supply both a dark and a light theme for users to toggle between:</li>
+</ol>
+<div class="cell">
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># supplying just one theme ("minty")</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="ex">format:</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="ex">html:</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">theme:</span> minty</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="ex">css:</span> styles.css</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># supplying a light ("minty") and dark ("slate") theme to toggle between</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ex">format:</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="ex">html:</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">theme:</span> </span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>      <span class="ex">light:</span> minty</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>      <span class="ex">dark:</span> slate</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    <span class="ex">css:</span> styles.css</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell column-page quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="media/light.png" class="img-fluid figure-img" width="1261"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Toggle on<code>light</code> theme, which is set to the <code>minty</code>, a prebuilt <a href="https://bootswatch.com/">Bootswatch theme</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="media/dark.png" class="img-fluid figure-img" width="1261"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Toggle on <code>dark</code> theme, which is set to <code>slate</code>, a prebuilt <a href="https://bootswatch.com/">Bootswatch theme</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="iii.-looking-forward" class="level2">
+<h2 class="anchored" data-anchor-id="iii.-looking-forward">III. Looking forward</h2>
+<p>You should now have a basic version of your website up and running 🎉 In Fall quarter, we’ll learn how to:</p>
+<p>a. add a blog and blog posts to our websites</p>
+<p>b. create custom themes</p>
+<p>c. continue developing your online “brand”</p>
+<p>In the meantime, explore some <a href="https://ucsb-meds.github.io/student_websites.html">alumni websites</a> (last year’s students used the <a href="https://rstudio.github.io/distill/website.html"><code>{distill}</code></a> package to build their websites) for inspiration, or dig into the <a href="https://quarto.org/docs/websites/">Quarto Website documentation</a> if you’re hoping to get started now on further customization.</p>
 
 </section>
 </main>
