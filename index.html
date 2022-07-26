@@ -595,10 +595,10 @@ Note
 <p>Right now, our website is built using Quarto default styling. Let’s learn about where things live and how to start customizing some stuff.</p>
 <ol type="1">
 <li><p><strong>Don’t mess with stuff in <code>/docs</code>.</strong> When you Render your site (by clicking Build &gt; Render Website), Quarto takes all your <code>.qmd</code> files, converts them to <code>.html</code> files (along with some other important stuff) and saves everything to your <code>/docs</code> folder. Your site now deploys from this folder, so you really don’t want to mess with anything in here directly.</p></li>
-<li><p>**Edit your landing page (<code>index.html</code>). Give your landing/home page a makeover by trying out some of the following:</p>
+<li><p><strong>Edit your landing page (<code>index.html</code>)</strong>. Give your landing/home page a makeover by trying out some of the following:</p>
 <ul>
 <li><p>Update the yaml <code>title</code> in your <code>index.html</code> file. Here, I changed mine from “mysite” to my name, “Samantha Csik”</p></li>
-<li><p>Delete the sample text and code and begin adding your own content.</p></li>
+<li><p>Delete the sample text and code and begin adding your own content – a great place to start is a short blurb introducing yourself!</p></li>
 </ul></li>
 <li><p><strong>Turn your landing page (<code>index.html</code>) into an “<a href="https://quarto.org/docs/websites/website-about.html">About Page</a>” with a photo</strong>. When the <code>about</code> option is added to a document’s yaml, a special template will be used to layout the content of that page. Choose from one of Quarto’s five <a href="https://quarto.org/docs/websites/website-about.html#templates">built-in templates</a>, each with a slightly different layout style. Some yaml options to play around with:</p>
 <ul>
@@ -608,26 +608,29 @@ Note
 <li><p><code>links</code>: add buttons with links to your social media pages</p></li>
 </ul></li>
 </ol>
-<pre><code>title: "Samantha Csik"
-    image: headshot.jpg
-    about: 
-      template: trestles
-      image-shape: rounded
-      image-width: 10em
-      links:
-        - text: LinkedIn
-          href: https://www.linkedin.com/in/samanthacsik/
-        - text: Twitter
-          href: https://twitter.com/SamanthaCsik
-        - text: GitHub
-          href: https://github.com/samanthacsik
-        - text: Email
-          href: mailto:scsik@ucsb.edu</code></pre>
+<div class="cell">
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">title:</span> <span class="st">"Samantha Csik"</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="ex">image:</span> headshot.jpg</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="ex">about:</span> </span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>      <span class="ex">template:</span> trestles</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>      <span class="ex">image-shape:</span> rounded</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>      <span class="ex">image-width:</span> 15em</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>      <span class="ex">links:</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>        <span class="ex">-</span> text: LinkedIn</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>          <span class="ex">href:</span> https://www.linkedin.com/in/samanthacsik/</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>        <span class="ex">-</span> text: Twitter</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>          <span class="ex">href:</span> https://twitter.com/SamanthaCsik</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>        <span class="ex">-</span> text: GitHub</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>          <span class="ex">href:</span> https://github.com/samanthacsik</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>        <span class="ex">-</span> text: Email</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>          <span class="ex">href:</span> mailto:scsik@ucsb.edu</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/about_page.png" class="img-fluid figure-img" width="1246"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">My Quarto website after updating my landing page with the built-in <code>trestles</code> template, adding an image, links, and some content. Note: You can also update the text that appears in the top left corner by editing the “title” option in your <code>_quarto.yml</code> file.</figcaption><p></p>
 </figure>
 </div>
 </div>
