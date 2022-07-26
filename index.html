@@ -175,11 +175,18 @@ Twitter is a great place to stay atop Quarto (and all-things <a href="https://tw
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Before getting started:
+Before getting started…
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Be sure to have R/RStudio (<a href="https://rstudio.com/products/rstudio/download/">RStudio v2022.02</a> or later) and <a href="https://quarto.org/docs/get-started/">Quarto</a> installed on your computer.</p>
+<p>To follow along, you’ll need:</p>
+<ul>
+<li>R/RStudio (<a href="https://rstudio.com/products/rstudio/download/">RStudio v2022.02</a> or later) installed</li>
+<li><a href="https://quarto.org/docs/get-started/">Quarto</a> installed</li>
+<li>A GitHub account &amp; your personal access token (PAT) stored</li>
+<li>Git installed/configured</li>
+</ul>
+<p>Please refer to the MEDS Installation Guide for <a href="https://ucsb-meds.github.io/meds-install-mac.html">Mac</a> and <a href="https://ucsb-meds.github.io/meds-install-windows.html">Windows</a> machines for detailed instructions (follow steps 1-7).</p>
 </div>
 </div>
 <p>We’ll review two ways to get started on building your website.</p>
@@ -291,9 +298,12 @@ Important
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="6" type="1">
-<li>Next, let’s check the name of our default branch – that is, the branch that all changes eventually get merged back into (if you’re building a website, this branch is typically the one you’ll want to deploy). In your Terminal window, type <code>git status</code>, which displays the state of the working directory and the staging area (this is a command I find myself using often when working on the command line!). You should see something that looks like this, where the first line tells you which branch you’re currently on:</li>
+<li>Next, let’s check the name of our default branch – that is, the branch that all changes eventually get merged back into (if you’re building a website, this branch is typically the one you’ll want to deploy). In your Terminal window, type <code>git status</code>. You should see something that looks like this, where the first line tells you which branch you’re currently on:</li>
 </ol>
-<div class="cell">
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><code>git status</code> is a super useful command which displays the state of your working directory and staging area. I use this command <em>often</em> when working on the command line to double check that I’m actually where I think I am, and to see tracked files and untracked or changed files. It’s a good habit run <code>git status</code> after switching branches or before/after adding files to commit.</p>
+</div></div><div class="cell">
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">base</span><span class="kw">)</span> <span class="ex">Samanthas-MacBook-Air:mysite</span> samanthacsik$ git status</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">On</span> branch master</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -318,9 +328,9 @@ Important
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> init.defaultBranch main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><strong><em>This sets the default branch name to <code>main</code> for any new repositories you create moving forward (it does not rename branches in existing projects).</em></strong></p>
-<p>You can double check that this worked by typing out the <code>git status</code> command again, The first printed line should now read, <code>On branch main</code>.</p>
+<p>You can double check that this worked by typing out the <code>git status</code> command again. The first printed line should now read, <code>On branch main</code>.</p>
 <ol start="7" type="1">
-<li><code>add</code> (analogous to checking the boxes next to your files in the RStudio Git tab) the files in your <code>mysite</code> directory…</li>
+<li>Add the files in your <code>mysite</code> directory (analogous to checking the boxes next to your files in the RStudio Git tab)…</li>
 </ol>
 <div class="cell">
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this adds all untracked or changed files at once</span></span>
@@ -347,7 +357,7 @@ Tip
 <div class="sourceCode" id="cb7"><pre class="sourceCode bash cell-code code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"your descriptive commit message here"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="8" type="1">
-<li>Create a repository for your project on GitHub using the subcommand:</li>
+<li>At this point, you’ve created a local Git repository that contains the basic files needed to build your Quarto website. Now, we need to create a “remote” repository (i.e.&nbsp;a version of your project that is hosted on the Internet) on GitHub. We can do that by using the subcommand:</li>
 </ol>
 
 <div class="no-row-height column-margin column-container"><div class="">
@@ -474,7 +484,7 @@ Note
 <li><p>open your Terminal window from RStudio and type <code>git status</code> – the first printed line should say <strong>On branch ___</strong>.</p></li>
 <li><p>click on the <strong>Git</strong> tab in the top right pane of RStudio. Next to the <img src="media/branch.png" class="img-fluid" alt="A white diamond with two purple squares, one directly above and one directly to the right, connected to the diamond by a line." style="display: inline-block; margin: 0; position: relative; top: 0px; width:20px;height:18px;"> symbol, you should see a dropdown menu that displays the name of your current branch.</p></li>
 </ol>
-<p><strong>If your current branch is named <em>master</em>, follow steps 8-12 below. If your branch is named <em>main</em>, you’re good to go! You can continue to part <a href="http://localhost:3262/#ii.-publish-your-site-with-github-pages"><em>II. Publish your site with GitHub Pages</em></a>.</strong></p></li>
+<p><strong>If your current branch is named <em><code>master</code></em>, follow steps 8-12 below. If your branch is named <em><code>main</code></em>, you’re good to go! You can continue to part <a href="http://localhost:3262/#ii.-publish-your-site-with-github-pages"><em>II. Publish your site with GitHub Pages</em></a>.</strong></p></li>
 <li><p>The next few steps will walk through how to switch the default branch name from <code>master</code> to <code>main</code>. Why? The racist “master” terminology for git branches motivates us to update our default branch to “main” instead. <em>Note: Git/GitHub/R tools are in the process of migrating away from <code>master</code>. If you create a repo in GitHub FIRST, the default branch is now <code>main</code>. However, the <code>usethis::use_github()</code> method for creating a repo hasn’t yet been updated, so we’ll do it manually.</em> In RStudio, click on the branch button in the Git tab (the diamond with purple rectangle “branches”):</p></li>
 </ol>
 <div class="cell" data-layout-align="center">

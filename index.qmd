@@ -44,14 +44,21 @@ Follow [\@quarto_pub](https://twitter.com/quarto_pub) and check out [Mine Çenti
 ## I. Create the scaffolding for your website
 
 ::: callout-important
-## Before getting started:
+## Before getting started...
 
-Be sure to have R/RStudio ([RStudio v2022.02](https://rstudio.com/products/rstudio/download/) or later) and [Quarto](https://quarto.org/docs/get-started/) installed on your computer.
+To follow along, you'll need:
+
+-  R/RStudio ([RStudio v2022.02](https://rstudio.com/products/rstudio/download/) or later) installed 
+-  [Quarto](https://quarto.org/docs/get-started/) installed
+-  A GitHub account & your personal access token (PAT) stored
+-  Git installed/configured
+
+Please refer to the MEDS Installation Guide for [Mac](https://ucsb-meds.github.io/meds-install-mac.html) and [Windows](https://ucsb-meds.github.io/meds-install-windows.html) machines for detailed instructions (follow steps 1-7). 
 :::
 
 We'll review two ways to get started on building your website.
 
-a.  Through the command line
+a.  Through the command line 
 b.  Using the RStudio IDE
 
 The order of operations is slightly different depending on which approach you decide to take, but the concepts remain the same.
@@ -132,7 +139,11 @@ In order to preview your website, you must be in the directory **one level highe
 git init
 ```
 
-6.  Next, let's check the name of our default branch -- that is, the branch that all changes eventually get merged back into (if you're building a website, this branch is typically the one you'll want to deploy). In your Terminal window, type `git status`, which displays the state of the working directory and the staging area (this is a command I find myself using often when working on the command line!). You should see something that looks like this, where the first line tells you which branch you're currently on:
+6.  Next, let's check the name of our default branch -- that is, the branch that all changes eventually get merged back into (if you're building a website, this branch is typically the one you'll want to deploy). In your Terminal window, type `git status`. You should see something that looks like this, where the first line tells you which branch you're currently on:
+
+::: column-margin
+`git status` is a super useful command which displays the state of your working directory and staging area. I use this command *often* when working on the command line to double check that I'm actually where I think I am, and to see tracked files and untracked or changed files. It's a good habit run `git status` after switching branches or before/after adding files to commit.
+:::
 
 ```{bash}
 #| eval: false
@@ -166,7 +177,7 @@ git config --global init.defaultBranch main
 
 You can double check that this worked by typing out the `git status` command again. The first printed line should now read, `On branch main`.
 
-7.  `add` (analogous to checking the boxes next to your files in the RStudio Git tab) the files in your `mysite` directory...
+7.  Add the files in your `mysite` directory (analogous to checking the boxes next to your files in the RStudio Git tab)...
 
 ```{bash}
 #| eval: false
@@ -188,7 +199,7 @@ Use the `git status` command again to see if your files have been successfully a
 git commit -m "your descriptive commit message here"
 ```
 
-8.  Create a repository for your project on GitHub using the subcommand:
+8.  At this point, you've created a local Git repository that contains the basic files needed to build your Quarto website. Now, we need to create a "remote" repository (i.e. a version of your project that is hosted on the Internet) on GitHub. We can do that by using the subcommand: 
 
 ::: column-margin
 **Git vs. Github:** [*Git*](https://git-scm.com/) is a version control system that allows you to manage and track your file version control history while [*GitHub*](https://github.com/) is a cloud-based hosting service that allows you to manage Git repositories. As Jenny Bryan describes in her book [Happy Git and GitHub for the useR](https://happygitwithr.com/index.html), hosting services like GitHub *"provide a home for your Git-based projects on the internet."* These services not only help to facilitate collaboration, but they also protect you in the event your computer suddenly dies -- just "clone" your GitHub repository back onto your new computer and voila! You're able to pick right back up where you left off.
