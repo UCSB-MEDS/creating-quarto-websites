@@ -142,11 +142,11 @@ Throughout this document, we'll use the words **directory** and **folder** inter
 git init
 ```
 
-6.  Next, let's check the name of our default branch -- that is, the branch that all changes eventually get merged back into (if you're building a website, this branch is typically the one you'll want to deploy). In your Terminal window, type `git status`. You should see something that looks like this, where the first line tells you which branch you're currently on:
-
 ::: column-margin
 `git status` is a super useful command which displays the state of your working directory and staging area. I use this command *often* when working on the command line to double check that I'm actually where I think I am, and to see tracked files and untracked or changed files. It's a good habit run `git status` after switching branches or before/after adding files to commit.
 :::
+
+6.  Next, let's check the name of our default branch -- that is, the branch that all changes eventually get merged back into (if you're building a website, this branch is typically the one you'll want to deploy). In your Terminal window, type `git status`. You should see something that looks like this, where the first line tells you which branch you're currently on:
 
 ```{bash}
 #| eval: false
@@ -216,11 +216,9 @@ Avoid doing this when you create your new GitHub repo to avoid errors. You can a
 
 10.  Copy the remote repository URL, found at the top of your repository on GitHub.com's Quick Setup Page, to your clipboard.
 
-**[ADD SCREENSHOT HERE]**
-
 ```{r}
 #| echo: false
-# knitr::include_graphics("media/GH_quick_setup.png")
+knitr::include_graphics("media/GH_quick_setup.png")
 ```
 
 11.  In Terminal, add the URL for the remote repository where your local repository will be pushed: 
@@ -234,16 +232,18 @@ git remote add origin <REMOTE_URL>
 git remote -v
 ```
 
-12. Push the changes in your local repository to your remote repository on GitHub using the command `git push -u origin main`:
+12. Push the changes in your local repository to your remote repository on GitHub:
 
 ```{bash}
 #| eval: false
 git push -u origin main
 ```
 
+You should see something similar to this print out, if successful!
+
 ```{bash}
 #| eval: false
-# you should see something similar to this print out, if successful!
+(base) Samanthas-MacBook-Air:mysite samanthacsik$ git push -u origin main
 Enumerating objects: 33, done.
 Counting objects: 100% (33/33), done.
 Delta compression using up to 8 threads

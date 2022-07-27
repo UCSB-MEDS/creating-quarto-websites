@@ -314,13 +314,13 @@ Important
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<ol start="6" type="1">
-<li>Next, let’s check the name of our default branch – that is, the branch that all changes eventually get merged back into (if you’re building a website, this branch is typically the one you’ll want to deploy). In your Terminal window, type <code>git status</code>. You should see something that looks like this, where the first line tells you which branch you’re currently on:</li>
-</ol>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p><code>git status</code> is a super useful command which displays the state of your working directory and staging area. I use this command <em>often</em> when working on the command line to double check that I’m actually where I think I am, and to see tracked files and untracked or changed files. It’s a good habit run <code>git status</code> after switching branches or before/after adding files to commit.</p>
-</div></div><div class="cell">
+</div></div><ol start="6" type="1">
+<li>Next, let’s check the name of our default branch – that is, the branch that all changes eventually get merged back into (if you’re building a website, this branch is typically the one you’ll want to deploy). In your Terminal window, type <code>git status</code>. You should see something that looks like this, where the first line tells you which branch you’re currently on:</li>
+</ol>
+<div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">base</span><span class="kw">)</span> <span class="ex">Samanthas-MacBook-Air:mysite</span> samanthacsik$ git status</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">On</span> branch master</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -395,9 +395,10 @@ Do not initialize with a README, license, or <code>.gitignore</code> files!
 <ol start="10" type="1">
 <li>Copy the remote repository URL, found at the top of your repository on GitHub.com’s Quick Setup Page, to your clipboard.</li>
 </ol>
-<p><strong>[ADD SCREENSHOT HERE]</strong></p>
 <div class="cell">
-
+<div class="cell-output-display">
+<p><img src="media/GH_quick_setup.png" class="img-fluid" width="1150"></p>
+</div>
 </div>
 <ol start="11" type="1">
 <li>In Terminal, add the URL for the remote repository where your local repository will be pushed:</li>
@@ -410,13 +411,14 @@ Do not initialize with a README, license, or <code>.gitignore</code> files!
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="12" type="1">
-<li>Push the changes in your local repository to your remote repository on GitHub using the command <code>git push -u origin main</code>:</li>
+<li>Push the changes in your local repository to your remote repository on GitHub:</li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>You should see something similar to this print out, if successful!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># you should see something similar to this print out, if successful!</span></span>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">base</span><span class="kw">)</span> <span class="ex">Samanthas-MacBook-Air:mysite</span> samanthacsik$ git push <span class="at">-u</span> origin main</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Enumerating</span> objects: 33, done.</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Counting</span> objects: 100% <span class="er">(</span><span class="ex">33/33</span><span class="kw">)</span><span class="ex">,</span> done.</span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Delta</span> compression using up to 8 threads</span>
