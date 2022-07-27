@@ -29,7 +29,7 @@ In June 2022, [R-Ladies Santa Barbara](https://www.meetup.com/rladies-santa-barb
 Read our [blogpost](https://www.openscapes.org/blog/2022/06/22/hello-quarto/) to learn more and to find additional resources, or watch the [event recording](https://www.youtube.com/watch?v=azVAl343CIU) to hear first-hand just how awesome Quarto is :)
 :::
 
-## Do I need to use Quarto to build my website?
+## `r fontawesome::fa("question", fill = "#5A5A5A", a11y = "sem")` Do I need to use Quarto to build my website?
 
 Nope! There are a number of R-based tools that make building websites and blogs fun and easy, including the still-widely-used [`{blogdown}`](https://bookdown.org/yihui/blogdown/) and [`{distill}`](https://rstudio.github.io/distill/website.html) packages.
 
@@ -41,7 +41,7 @@ Though still relatively new, Quarto has the data science community (particularly
 Follow [\@quarto_pub](https://twitter.com/quarto_pub) and check out [Mine Çentinkaya-Rundel](https://mine-cr.com/)'s #quartotip tweets, which are collected and published as blog posts at the [A Quarto tip a day keeps the docs away](https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/about.html) website.
 :::
 
-## I. Create the scaffolding for your website
+## I. `r fontawesome::fa("tools", fill = "#5A5A5A", a11y = "sem")` Create the scaffolding for your website
 
 ::: callout-important
 ## Before getting started...
@@ -58,13 +58,13 @@ Please refer to the MEDS Installation Guide for [Mac](https://ucsb-meds.github.i
 
 We'll review two ways to get started on building your website.
 
-a.  `r fontawesome::fa("terminal", fill = "#78C2AD", a11y = "sem")` Through the command line 
-b.  `r fontawesome::fa("r-project", fill = "#78C2AD", a11y = "sem")` Using the RStudio IDE 
+(1) `r fontawesome::fa("terminal", fill = "#5A5A5A", a11y = "sem")` Through the command line  
+(2) `r fontawesome::fa("r-project", fill = "#5A5A5A", a11y = "sem")` Using the RStudio IDE 
 
 The order of operations is slightly different depending on which approach you decide to take, but the concepts remain the same.
 
 ::: panel-tabset
-## **a. `r fontawesome::fa("terminal", fill = "#78C2AD", a11y = "sem")` Through the command line**
+## **`r fontawesome::fa("terminal", fill = "#5A5A5A", a11y = "sem")` Through the command line**
 
 **Why use the command line to set up your Quarto website?**
 
@@ -220,7 +220,7 @@ When prompted, select **Push an existing local repository to GitHub**, then ente
 TO BE CONTINUED....
 :::
 
-## **b. `r fontawesome::fa("r-project", fill = "#78C2AD", a11y = "sem")` Using the RStudio IDE**
+## **`r fontawesome::fa("r-project", fill = "#5A5A5A", a11y = "sem")` Using the RStudio IDE**
 
 **Why use RStudio to set up your Quarto website?**
 
@@ -341,7 +341,7 @@ knitr::include_graphics("media/switch_main.png")
 12. Once you've updated the default to main, delete the `master` branch. Cool. Now you're working just on main.
 :::
 
-## II. Publish your site with GitHub Pages
+## II. `r fontawesome::fa("github", fill = "#5A5A5A", a11y = "sem")` Publish your site with GitHub Pages
 
 There are a [lots of options to publish your website](https://quarto.org/docs/websites/publishing-websites.html). We'll use the [GitHub Pages option](https://quarto.org/docs/websites/publishing-websites.html#github-pages), which allows you to publish a website from any GitHub repository. To do so, there are a few configuration steps:
 
@@ -394,7 +394,7 @@ knitr::include_graphics("media/gh_pages.png")
 knitr::include_graphics("media/rendered_site.png")
 ```
 
-## III. Where you should start changing stuff
+## III. `r fontawesome::fa("edit", fill = "#5A5A5A", a11y = "sem")` Where you should start changing stuff
 
 Right now, our website is built using Quarto default styling. Let's learn about where things live and how to start customizing some stuff.
 
@@ -505,9 +505,9 @@ knitr::include_graphics("media/light.png")
 knitr::include_graphics("media/dark.png")
 ```
 
-## III. Looking forward
+## III. `r fontawesome::fa("forward", fill = "#5A5A5A", a11y = "sem")` Looking forward
 
-You should now have a basic version of your website up and running 🎉 In Fall quarter, we'll learn how to:
+You should now have a basic version of your website up and running 🎉 During Fall quarter, we'll learn how to:
 
 a\. add a blog and blog posts to our websites
 
