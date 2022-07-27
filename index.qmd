@@ -113,10 +113,6 @@ _quarto.yml	_site		about.qmd   index.qmd   styles.css
 
 Alternatively, you can use Finder (Mac) or Windows Explorer (Windows) to view your new directory and files.
 
-::: column-margin
-Throughout this document, we'll use the words **directory** and **folder** interchangeably.
-:::
-
 ```{r}
 #| echo: false
 knitr::include_graphics("media/mysite_finder.png")
@@ -133,6 +129,10 @@ Your site preview should open up in your browser. Quit your preview by pressing 
 
 ::: callout-important
 In order to preview your website, you must be in the directory **one level higher** than your website. For example, if my Quarto website directory is at `User/samanthacsik/git/mysite`, I must be in `User/samanthacsik/git` when I run the `quarto preview mysite` command in the terminal. To navigate up one directory level (e.g. move from `User/samanthacsik/git/mysite` to `User/samanthacsik/git` , use `cd ..` .
+:::
+
+::: column-margin
+Throughout this document, we'll use the words **directory** and **folder** interchangeably.
 :::
 
 5.  At this point you've created a directory (folder) but it's not yet being tracked by git. First be sure to `cd` into your website folder. Then, initialize this folder as a git repository using the `git init` command in the terminal window.
