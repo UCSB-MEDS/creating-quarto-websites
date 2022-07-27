@@ -223,25 +223,26 @@ Avoid doing this when you create your new GitHub repo to avoid errors. You can a
 # knitr::include_graphics("media/GH_quick_setup.png")
 ```
 
-11.  In Terminal, add the URL for the remote repository where your local repository will be pushed using `git remote add origin`. For example: 
+11.  In Terminal, add the URL for the remote repository where your local repository will be pushed: 
 
 ```{bash}
 #| eval: false
 # set the new remote using your GitHub repo URL
-(base) Samanthas-MacBook-Air:mywebsite samanthacsik$ git remote add origin https://github.com/samanthacsik/mysite.git
+git remote add origin <REMOTE_URL>
 
 # verify the new remote URL is correct (this just prints out the URL you added)
-(base) Samanthas-MacBook-Air:mywebsite samanthacsik$ git remote -v
-origin	https://github.com/samanthacsik/mysite.git (fetch)
+git remote -v
 ```
 
 12. Push the changes in your local repository to your remote repository on GitHub using the command `git push -u origin main`:
 
 ```{bash}
 #| eval: false
-# Pushes the changes in your local repository up to the remote repository you specified as the origin
-(base) Samanthas-MacBook-Air:mysite samanthacsik$ git push -u origin main
+git push -u origin main
+```
 
+```{bash}
+#| eval: false
 # you should see something similar to this print out, if successful!
 Enumerating objects: 33, done.
 Counting objects: 100% (33/33), done.
@@ -256,7 +257,7 @@ Branch 'main' set up to track remote branch 'main' from 'origin'.
 (base) Samanthas-MacBook-Air:mysite samanthacsik$ 
 ```
 
-**TO BE CONTINUED....**
+Refresh your GitHub repository (in your web browser) to see that your updates have been successfully pushed!
 
 ## **`r fontawesome::fa("r-project", fill = "#5A5A5A", a11y = "sem")` Using the RStudio IDE**
 
