@@ -21,14 +21,6 @@ R users have long loved [RMarkdown](https://rmarkdown.rstudio.com/) for combinin
 
 You can explore [Quarto's documentation](https://quarto.org/docs/guide/) to learn more about creating documents, websites, blogs, books, slides, etc.
 
-::: callout-note
-## Want to learn about some of the cool ways that Quarto is being used to enable open science?
-
-In June 2022, [R-Ladies Santa Barbara](https://www.meetup.com/rladies-santa-barbara/) met virtually with [NASA Openscapes Champions](https://nasa-openscapes.github.io/) and RStudio CEO & Quarto developer, J.J. Allaire, to chat about their experiences as some of the first researchers to use Quarto to document, collaborate, and share as they migrate data-intensive workflows to the cloud.
-
-Read our [blogpost](https://www.openscapes.org/blog/2022/06/22/hello-quarto/) to learn more and to find additional resources, or watch the [event recording](https://www.youtube.com/watch?v=azVAl343CIU) to hear first-hand just how awesome Quarto is :)
-:::
-
 ## `r fontawesome::fa("question", fill = "#5A5A5A", a11y = "sem")` Do I need to use Quarto to build my website?
 
 Nope! There are a number of R-based tools that make building websites and blogs fun and easy, including the still-widely-used [`{blogdown}`](https://bookdown.org/yihui/blogdown/) and [`{distill}`](https://rstudio.github.io/distill/website.html) packages.
@@ -41,7 +33,7 @@ Though still relatively new, Quarto has the data science community (particularly
 Follow [\@quarto_pub](https://twitter.com/quarto_pub) and check out [Mine Çentinkaya-Rundel](https://mine-cr.com/)'s #quartotip tweets, which are collected and published as blog posts at the [A Quarto tip a day keeps the docs away](https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/about.html) website.
 :::
 
-## I. `r fontawesome::fa("tools", fill = "#5A5A5A", a11y = "sem")` Create the scaffolding for your website
+## `r fontawesome::fa("tools", fill = "#5A5A5A", a11y = "sem")` Create the scaffolding for your website
 
 ::: callout-important
 ## Before getting started...
@@ -56,12 +48,12 @@ To follow along, you'll need:
 Please refer to the MEDS Installation Guide for [Mac](https://ucsb-meds.github.io/meds-install-mac.html) and [Windows](https://ucsb-meds.github.io/meds-install-windows.html) machines for detailed instructions (follow steps 1-7). 
 :::
 
-We'll review two ways to get started on building your website.
+This document reviews two ways to get started with using Quarto to build your website.
 
 (1) `r fontawesome::fa("terminal", fill = "#5A5A5A", a11y = "sem")` Through the command line  
 (2) `r fontawesome::fa("r-project", fill = "#5A5A5A", a11y = "sem")` Using the RStudio IDE 
 
-The order of operations is slightly different depending on which approach you decide to take, but the concepts remain the same.
+The order of operations is slightly different depending on which approach you decide to take, but the concepts remain the same. 
 
 ::: panel-tabset
 ## **`r fontawesome::fa("terminal", fill = "#5A5A5A", a11y = "sem")` Through the command line**
@@ -71,12 +63,6 @@ The order of operations is slightly different depending on which approach you de
 -   You'll start to get more comfortable working in a command line interface (CLI)
 
 -   You're able to interact with Quarto via the command line regardless of which language or IDE you might find yourself working with (R, Python, Julia, ObservableJS)
-
-::: callout-important
-## Prerequisite:
-
-In order to interact with GitHub from the command line, you'll need to install GitHub CLI first. You can do so in your terminal by running `brew install gh` or download and install from the [GitHub CLI website](https://cli.github.com/).
-:::
 
 **Steps:**
 
@@ -92,7 +78,7 @@ To stay organized, I save all my git repositories to a folder called `git` in my
 
 ```{bash}
 #| eval: false
-quarto create-project mysite --type website
+quarto create-project mysite --type website 
 ```
 
 **Recommended:** Name the project **yourusername.github.io** if you want that to be the site name (this is a "freebie" in GitHub). Otherwise, name it something reasonable (this will become the [slug](https://developer.mozilla.org/en-US/docs/Glossary/Slug) for your site if publishing with GitHub pages, so choose carefully). I'm calling my project **mysite** just for tutorial purposes only -- you should definitely give yours a more practical/creative name.
@@ -177,7 +163,7 @@ git config --global init.defaultBranch main
 
 You can double check that this worked by typing out the `git status` command again. The first printed line should now read, `On branch main`.
 
-7.  Add the files in your `mysite` directory (analogous to checking the boxes next to your files in the RStudio Git tab)...
+8.  Add the files in your `mysite` directory (analogous to checking the boxes next to your files in the RStudio Git tab)...
 
 ```{bash}
 #| eval: false
@@ -199,7 +185,7 @@ Use the `git status` command again to see if your files have been successfully a
 git commit -m "your descriptive commit message here"
 ```
 
-8.  At this point, you've created a local Git repository that contains the basic files needed to build your Quarto website. Now, we need to create a "remote" repository (i.e. a version of your project that is hosted on the Internet) on GitHub. We can do that by using the subcommand: 
+9.  At this point, you've created a local Git repository that contains the basic files needed to build your Quarto website. Now, we need to create a "remote" repository (i.e. a version of your project that is hosted on the Internet) on GitHub. We can do that by using the subcommand: 
 
 ::: column-margin
 **Git vs. Github:** [*Git*](https://git-scm.com/) is a version control system that allows you to manage and track your file version control history while [*GitHub*](https://github.com/) is a cloud-based hosting service that allows you to manage Git repositories. As Jenny Bryan describes in her book [Happy Git and GitHub for the useR](https://happygitwithr.com/index.html), hosting services like GitHub *"provide a home for your Git-based projects on the internet."* These services not only help to facilitate collaboration, but they also protect you in the event your computer suddenly dies -- just "clone" your GitHub repository back onto your new computer and voila! You're able to pick right back up where you left off.
@@ -212,7 +198,7 @@ gh repo create
 
 When prompted, select **Push an existing local repository to GitHub**, then enter the desired name of your repository.
 
-9.  
+
 
 ::: callout-warning
 ## come back to this
@@ -341,7 +327,7 @@ knitr::include_graphics("media/switch_main.png")
 12. Once you've updated the default to main, delete the `master` branch. Cool. Now you're working just on main.
 :::
 
-## II. `r fontawesome::fa("github", fill = "#5A5A5A", a11y = "sem")` Publish your site with GitHub Pages
+## `r fontawesome::fa("github", fill = "#5A5A5A", a11y = "sem")` Publish your site with GitHub Pages
 
 There are a [lots of options to publish your website](https://quarto.org/docs/websites/publishing-websites.html). We'll use the [GitHub Pages option](https://quarto.org/docs/websites/publishing-websites.html#github-pages), which allows you to publish a website from any GitHub repository. To do so, there are a few configuration steps:
 
@@ -394,7 +380,7 @@ knitr::include_graphics("media/gh_pages.png")
 knitr::include_graphics("media/rendered_site.png")
 ```
 
-## III. `r fontawesome::fa("edit", fill = "#5A5A5A", a11y = "sem")` Where you should start changing stuff
+## `r fontawesome::fa("edit", fill = "#5A5A5A", a11y = "sem")` Where you should start changing stuff
 
 Right now, our website is built using Quarto default styling. Let's learn about where things live and how to start customizing some stuff.
 
@@ -505,7 +491,7 @@ knitr::include_graphics("media/light.png")
 knitr::include_graphics("media/dark.png")
 ```
 
-## III. `r fontawesome::fa("forward", fill = "#5A5A5A", a11y = "sem")` Looking forward
+## `r fontawesome::fa("forward", fill = "#5A5A5A", a11y = "sem")` Looking forward
 
 You should now have a basic version of your website up and running 🎉 During Fall quarter, we'll learn how to:
 
@@ -516,3 +502,16 @@ b\. create custom themes
 c\. continue developing your online "brand"
 
 In the meantime, explore some [alumni websites](https://ucsb-meds.github.io/student_websites.html) (last year's students used the [`{distill}`](https://rstudio.github.io/distill/website.html) package to build their websites) for inspiration, or dig into the [Quarto Website documentation](https://quarto.org/docs/websites/) if you're hoping to get started now on further customization.
+
+## `r fontawesome::fa("star", fill = "#5A5A5A", a11y = "sem")` Additional resources to get you stoked about Quarto
+
+- We dont' talk about Quarto, by Alison Hill | [`r fontawesome::fa("blog", fill = "#5A5A5A", a11y = "sem")` blog post](https://www.apreshill.com/blog/2022-04-we-dont-talk-about-quarto/)
+
+- Reproducible Authoring with Quarto, by Mine Çetinkaya-Rundel | [`r fontawesome::fa("desktop", fill = "#5A5A5A", a11y = "sem")` slides](https://mine-cetinkaya-rundel.github.io/2022-repro-toronto/#/title-slide) | [`r fontawesome::fa("video", fill = "#5A5A5A", a11y = "sem")` recording](https://www.youtube.com/watch?v=6p4vOKS6Xls) 
+
+- Hello Quarto! A Chat with NASA Openscapes, Co-Hosted with R-Ladies Santa Barbara | [`r fontawesome::fa("blog", fill = "#5A5A5A", a11y = "sem")` blog post](https://www.openscapes.org/blog/2022/06/22/hello-quarto/) | [`r fontawesome::fa("video", fill = "#5A5A5A", a11y = "sem")` recording](https://www.youtube.com/watch?v=azVAl343CIU)
+    
+- Upcoming rstudio::conf 2022 keynote, Hello Quarto, by Julie Lowndes and Mine Çetinkaya-Rundel | recording coming soon!
+
+
+
