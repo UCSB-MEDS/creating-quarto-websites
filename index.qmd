@@ -40,20 +40,20 @@ Follow [\@quarto_pub](https://twitter.com/quarto_pub) and check out [Mine Çenti
 
 To follow along, you'll need:
 
--  R/RStudio ([RStudio v2022.02](https://rstudio.com/products/rstudio/download/) or later) installed 
--  [Quarto](https://quarto.org/docs/get-started/) installed
--  A GitHub account & your personal access token (PAT) stored
--  Git installed/configured
+-   R/RStudio ([RStudio v2022.02](https://rstudio.com/products/rstudio/download/) or later) installed
+-   [Quarto](https://quarto.org/docs/get-started/) installed
+-   A GitHub account & your personal access token (PAT) stored
+-   Git installed/configured
 
-Please refer to the MEDS Installation Guide for [Mac](https://ucsb-meds.github.io/meds-install-mac.html) and [Windows](https://ucsb-meds.github.io/meds-install-windows.html) machines for detailed instructions (follow steps 1-7). 
+Please refer to the MEDS Installation Guide for [Mac](https://ucsb-meds.github.io/meds-install-mac.html) and [Windows](https://ucsb-meds.github.io/meds-install-windows.html) machines for detailed instructions (follow steps 1-7).
 :::
 
 This document reviews two ways to get started with using Quarto to build your website.
 
-(1) `r fontawesome::fa("terminal", fill = "#5A5A5A", a11y = "sem")` Through the command line  
-(2) `r fontawesome::fa("r-project", fill = "#5A5A5A", a11y = "sem")` Using the RStudio IDE 
+(1) `r fontawesome::fa("terminal", fill = "#5A5A5A", a11y = "sem")` Through the command line\
+(2) `r fontawesome::fa("r-project", fill = "#5A5A5A", a11y = "sem")` Using the RStudio IDE
 
-The order of operations is slightly different depending on which approach you decide to take, but the concepts remain the same. 
+The order of operations is slightly different depending on which approach you decide to take, but the concepts remain the same.
 
 ::: panel-tabset
 ## **`r fontawesome::fa("terminal", fill = "#5A5A5A", a11y = "sem")` Through the command line**
@@ -94,10 +94,27 @@ knitr::include_graphics("media/pwd_cd.png")
 knitr::include_graphics("media/CLI_create_website.png")
 ```
 
-If you `cd` into your new `mysite` directory (or whatever you named your Quarto project), and use the `ls` command to list out all the contents of that directory, you should see a series of files (`_quarto.yml`, `about.qmd`, `index.qmd`, `styles.css`) that provide the scaffolding for your website. Alternatively, you can use Finder (Mac) or Windows Explorer (Windows) to view your new directory and files.
+If you `cd` into your new `mysite` directory (or whatever you named your Quarto project), and use the `ls` command to list out all the contents of that directory, you should see a series of files (`_quarto.yml`, `about.qmd`, `index.qmd`, `styles.css`) that provide the scaffolding for your website. For example:
+
+```{bash}
+#| eval: false
+# print current working directory
+(base) Samanthas-MacBook-Air:git samanthacsik$ pwd 
+/Users/samanthacsik/git
+
+# move into `mysite` directory
+(base) Samanthas-MacBook-Air:git samanthacsik$ cd mysite/ 
+(base) Samanthas-MacBook-Air:mysite samanthacsik$ 
+
+# list out all files in the `mysite` directory
+(base) Samanthas-MacBook-Air:mysite samanthacsik$ ls
+_quarto.yml	_site		about.qmd   index.qmd   styles.css
+```
+
+Alternatively, you can use Finder (Mac) or Windows Explorer (Windows) to view your new directory and files.
 
 ::: column-margin
-Throughout this document, we'll use the words **directory** and **folder** interchangeably. 
+Throughout this document, we'll use the words **directory** and **folder** interchangeably.
 :::
 
 ```{r}
@@ -152,7 +169,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 **If your current branch is named *`master`*, follow step 7 below. If your branch is named *`main`*, you can head straight to step 8.**
 
-7. Let's switch our default branch name from `master` to `main`. *Why? The racist "master" terminology for git branches motivates us to update our default branch to "main" instead.* **Note:** If you create a repo in GitHub FIRST, the default now has been updated to make the default branch 'main'. However, you'll need to update the branch name if you create a local git repository first (like we've just done). Update the branch name from `master` to `main` by running the following line in the terminal window:
+7.  Let's switch our default branch name from `master` to `main`. *Why? The racist "master" terminology for git branches motivates us to update our default branch to "main" instead.* **Note:** If you create a repo in GitHub FIRST, the default now has been updated to make the default branch 'main'. However, you'll need to update the branch name if you create a local git repository first (like we've just done). Update the branch name from `master` to `main` by running the following line in the terminal window:
 
 ```{bash}
 #| eval: false
@@ -175,36 +192,71 @@ git add <file_name>
 ```
 
 ::: callout-tip
-Use the `git status` command again to see if your files have been successfully added *before* committing them.
+Use the `git status` command again to see if your files have been successfully added *before* committing them -- any untracked or changed files that were once printed in **red** should now appear in **green**.
 :::
 
 ...and commit them:
 
 ```{bash}
 #| eval: false
-git commit -m "your descriptive commit message here"
+git commit -m "initial commit"
 ```
 
-9.  At this point, you've created a local Git repository that contains the basic files needed to build your Quarto website. Now, we need to create a "remote" repository (i.e. a version of your project that is hosted on the Internet) on GitHub. We can do that by using the subcommand: 
+9.  At this point, you've created a local Git repository that contains the basic files needed to build your Quarto website. Now, we need to create a "remote" repository (i.e. a version of your project that is hosted on the Internet) on GitHub. Open up/log in to [GitHub](https://github.com/) and [create a new repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository).
 
 ::: column-margin
 **Git vs. Github:** [*Git*](https://git-scm.com/) is a version control system that allows you to manage and track your file version control history while [*GitHub*](https://github.com/) is a cloud-based hosting service that allows you to manage Git repositories. As Jenny Bryan describes in her book [Happy Git and GitHub for the useR](https://happygitwithr.com/index.html), hosting services like GitHub *"provide a home for your Git-based projects on the internet."* These services not only help to facilitate collaboration, but they also protect you in the event your computer suddenly dies -- just "clone" your GitHub repository back onto your new computer and voila! You're able to pick right back up where you left off.
 :::
 
-```{bash}
-#| eval: false
-gh repo create
+::: callout-important
+## Do not initialize with a README, license, or `.gitignore` files!
+
+Avoid doing this when you create your new GitHub repo to avoid errors. You can add these after your project as been pushed.
+:::
+
+10.  Copy the remote repository URL, found at the top of your repository on GitHub.com's Quick Setup Page, to your clipboard.
+
+**[ADD SCREENSHOT HERE]**
+
+```{r}
+#| echo: false
+# knitr::include_graphics("media/GH_quick_setup.png")
 ```
 
-When prompted, select **Push an existing local repository to GitHub**, then enter the desired name of your repository.
+11.  In Terminal, add the URL for the remote repository where your local repository will be pushed using `git remote add origin`. For example: 
 
+```{bash}
+#| eval: false
+# set the new remote using your GitHub repo URL
+(base) Samanthas-MacBook-Air:mywebsite samanthacsik$ git remote add origin https://github.com/samanthacsik/mysite.git
 
+# verify the new remote URL is correct (this just prints out the URL you added)
+(base) Samanthas-MacBook-Air:mywebsite samanthacsik$ git remote -v
+origin	https://github.com/samanthacsik/mysite.git (fetch)
+```
 
-::: callout-warning
-## come back to this
+12. Push the changes in your local repository to your remote repository on GitHub using the command `git push -u origin main`:
 
-TO BE CONTINUED....
-:::
+```{bash}
+#| eval: false
+# Pushes the changes in your local repository up to the remote repository you specified as the origin
+(base) Samanthas-MacBook-Air:mysite samanthacsik$ git push -u origin main
+
+# you should see something similar to this print out, if successful!
+Enumerating objects: 33, done.
+Counting objects: 100% (33/33), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (29/29), done.
+Writing objects: 100% (33/33), 273.20 KiB | 13.66 MiB/s, done.
+Total 33 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/samanthacsik/mysite.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+(base) Samanthas-MacBook-Air:mysite samanthacsik$ 
+```
+
+**TO BE CONTINUED....**
 
 ## **`r fontawesome::fa("r-project", fill = "#5A5A5A", a11y = "sem")` Using the RStudio IDE**
 
@@ -233,6 +285,10 @@ knitr::include_graphics("media/vRStudio3.png")
 ```
 
 3.  Fill out the **Directory name:** field (this is the name of your R project, and eventually, your GitHub repo name), choose where to save your directory using the **Browse** button. Click **Create Project**.
+
+::: callout-tip
+To stay organized, I save all my git repositories to a folder called `git` in my computer's home directory (e.g. `Users/samanthacsik/git/`).
+:::
 
 **Recommended:** Name the project **yourusername.github.io** if you want that to be the site name (this is a "freebie" in GitHub). Otherwise, name it something reasonable (this will become the [slug](https://developer.mozilla.org/en-US/docs/Glossary/Slug) for your site if publishing with GitHub pages, so choose carefully). I'm calling my project **mysite** just for tutorial purposes only -- you should definitely give yours a more practical/creative name.
 
@@ -505,13 +561,10 @@ In the meantime, explore some [alumni websites](https://ucsb-meds.github.io/stud
 
 ## `r fontawesome::fa("star", fill = "#5A5A5A", a11y = "sem")` Additional resources to get you stoked about Quarto
 
-- We dont' talk about Quarto, by Alison Hill | [`r fontawesome::fa("blog", fill = "#5A5A5A", a11y = "sem")` blog post](https://www.apreshill.com/blog/2022-04-we-dont-talk-about-quarto/)
+-   We dont' talk about Quarto, by Alison Hill \| [`r fontawesome::fa("blog", fill = "#5A5A5A", a11y = "sem")` blog post](https://www.apreshill.com/blog/2022-04-we-dont-talk-about-quarto/)
 
-- Reproducible Authoring with Quarto, by Mine Çetinkaya-Rundel | [`r fontawesome::fa("desktop", fill = "#5A5A5A", a11y = "sem")` slides](https://mine-cetinkaya-rundel.github.io/2022-repro-toronto/#/title-slide) | [`r fontawesome::fa("video", fill = "#5A5A5A", a11y = "sem")` recording](https://www.youtube.com/watch?v=6p4vOKS6Xls) 
+-   Reproducible Authoring with Quarto, by Mine Çetinkaya-Rundel \| [`r fontawesome::fa("desktop", fill = "#5A5A5A", a11y = "sem")` slides](https://mine-cetinkaya-rundel.github.io/2022-repro-toronto/#/title-slide) \| [`r fontawesome::fa("video", fill = "#5A5A5A", a11y = "sem")` recording](https://www.youtube.com/watch?v=6p4vOKS6Xls)
 
-- Hello Quarto! A Chat with NASA Openscapes, Co-Hosted with R-Ladies Santa Barbara | [`r fontawesome::fa("blog", fill = "#5A5A5A", a11y = "sem")` blog post](https://www.openscapes.org/blog/2022/06/22/hello-quarto/) | [`r fontawesome::fa("video", fill = "#5A5A5A", a11y = "sem")` recording](https://www.youtube.com/watch?v=azVAl343CIU)
-    
-- Upcoming rstudio::conf 2022 keynote, Hello Quarto, by Julie Lowndes and Mine Çetinkaya-Rundel | recording coming soon!
+-   Hello Quarto! A Chat with NASA Openscapes, Co-Hosted with R-Ladies Santa Barbara \| [`r fontawesome::fa("blog", fill = "#5A5A5A", a11y = "sem")` blog post](https://www.openscapes.org/blog/2022/06/22/hello-quarto/) \| [`r fontawesome::fa("video", fill = "#5A5A5A", a11y = "sem")` recording](https://www.youtube.com/watch?v=azVAl343CIU)
 
-
-
+-   Upcoming rstudio::conf 2022 keynote, Hello Quarto, by Julie Lowndes and Mine Çetinkaya-Rundel \| recording coming soon!
