@@ -401,7 +401,7 @@ The `touch` command creates a new, empty file.
 `.nojekyll` is a *hidden* file which won't visibly appear in your directory. You *should* see it show up as a file to track with git under the **Git** tab in RStudio. You can also view hidden files in Finder (Mac) using the keyboard shortcut `Command` + `Shift` + `.`, or follow [these instructions](https://support.microsoft.com/en-us/windows/show-hidden-files-0320fe58-0117-fd59-6851-9b7f9840fdb2) for Windows 10, 8.1, and 7.
 :::
 
-2.  Set the `output-dir` in your `_quarto.yml` file to "docs":
+2. Set the `output-dir` in your `_quarto.yml` file to "docs" (it's easiest to do this from RStudio):
 
 ```{r}
 #| eval: false
@@ -410,7 +410,7 @@ project:
   output-dir: docs
 ```
 
-3.  Build your site by clicking on the **Build** tab, then **Render Website.** You should see a minimal, albeit functional, soon-to-be website appear in the RStudio **Viewer** tab. Click on the <img src="media/view_in_browser.png" alt="A browser window overlaid by an arrow pointing up and angled to the right." style="display: inline-block; margin: 0; position: relative; top: 0px; width:25px;height:20px;"/> button to open your file in your web browser. **Note:** your website is currently being hosted by your local machine, not at a shareable URL. We'll get there soon though!
+3.  Build your site by clicking on the **Build** tab (top left quadrant in RStudio), then **Render Website.** You should see a minimal, albeit functional, soon-to-be website appear in the **Viewer** tab. Click on the <img src="media/view_in_browser.png" alt="A browser window overlaid by an arrow pointing up and angled to the right." style="display: inline-block; margin: 0; position: relative; top: 0px; width:25px;height:20px;"/> button to open your file in your web browser. **Note:** your website is currently being hosted by your local machine, not at a searchable URL. We'll get there soon though!
 
 ```{r}
 #| echo: false
@@ -420,9 +420,9 @@ knitr::include_graphics("media/build_site.png")
 
 4.  Now we need to send all of our files in our local git repository to our remote GitHub repository:
 
-    a.  **Stage** your files by checking all the boxes in the **Git** tab (this is analogous to the `git add .` command used in the terminal for staging all files)
-    b.  **Commit** your files by clicking the Commit button, adding a commit message, and clicking "Commit" (analogous to `git commit -m "my commit message"`)
-    c.  **Push** your files to the remote repository (on GitHub) by clicking the "Push" button with the green upward facing arrow (analogous to `git push`).
+    a.  **Stage** your files by checking all the boxes in the **Git** tab (*this is analogous to the `git add .` command used in the Terminal for staging all files*)
+    b.  **Commit** your files by clicking the Commit button, adding a commit message, and clicking "Commit" (*analogous to `git commit -m "my commit message"`*)
+    c.  **Push** your files to the remote repository (on GitHub) by clicking the "Push" button with the green upward facing arrow (*analogous to `git push`*).
 
 5.  Configure GitHub pages to serve content from the "docs" directory by clicking on the **Settings** tab in the top menu bar, then **Pages** tab from the left hand menu bar. Make sure that Branch is set to `main` and that the selected folder is set to `/docs`. Click "Save". Your website's URL will appear inside a blue banner at the top of the page. Give it a few minutes to render (you'll get a 404 error message if it's not ready yet), then explore your site!
 

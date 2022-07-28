@@ -627,7 +627,7 @@ Note
 </div>
 </div>
 <ol start="2" type="1">
-<li>Set the <code>output-dir</code> in your <code>_quarto.yml</code> file to “docs”:</li>
+<li>Set the <code>output-dir</code> in your <code>_quarto.yml</code> file to “docs” (it’s easiest to do this from RStudio):</li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>project<span class="sc">:</span></span>
@@ -635,7 +635,7 @@ Note
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  output<span class="sc">-</span>dir<span class="sc">:</span> docs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="3" type="1">
-<li>Build your site by clicking on the <strong>Build</strong> tab, then <strong>Render Website.</strong> You should see a minimal, albeit functional, soon-to-be website appear in the RStudio <strong>Viewer</strong> tab. Click on the <img src="media/view_in_browser.png" alt="A browser window overlaid by an arrow pointing up and angled to the right." style="display: inline-block; margin: 0; position: relative; top: 0px; width:25px;height:20px;"> button to open your file in your web browser. <strong>Note:</strong> your website is currently being hosted by your local machine, not at a shareable URL. We’ll get there soon though!</li>
+<li>Build your site by clicking on the <strong>Build</strong> tab (top left quadrant in RStudio), then <strong>Render Website.</strong> You should see a minimal, albeit functional, soon-to-be website appear in the <strong>Viewer</strong> tab. Click on the <img src="media/view_in_browser.png" alt="A browser window overlaid by an arrow pointing up and angled to the right." style="display: inline-block; margin: 0; position: relative; top: 0px; width:25px;height:20px;"> button to open your file in your web browser. <strong>Note:</strong> your website is currently being hosted by your local machine, not at a searchable URL. We’ll get there soon though!</li>
 </ol>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -649,9 +649,9 @@ Note
 <ol start="4" type="1">
 <li><p>Now we need to send all of our files in our local git repository to our remote GitHub repository:</p>
 <ol type="a">
-<li><strong>Stage</strong> your files by checking all the boxes in the <strong>Git</strong> tab (this is analogous to the <code>git add .</code> command used in the terminal for staging all files)</li>
-<li><strong>Commit</strong> your files by clicking the Commit button, adding a commit message, and clicking “Commit” (analogous to <code>git commit -m "my commit message"</code>)</li>
-<li><strong>Push</strong> your files to the remote repository (on GitHub) by clicking the “Push” button with the green upward facing arrow (analogous to <code>git push</code>).</li>
+<li><strong>Stage</strong> your files by checking all the boxes in the <strong>Git</strong> tab (<em>this is analogous to the <code>git add .</code> command used in the Terminal for staging all files</em>)</li>
+<li><strong>Commit</strong> your files by clicking the Commit button, adding a commit message, and clicking “Commit” (<em>analogous to <code>git commit -m "my commit message"</code></em>)</li>
+<li><strong>Push</strong> your files to the remote repository (on GitHub) by clicking the “Push” button with the green upward facing arrow (<em>analogous to <code>git push</code></em>).</li>
 </ol></li>
 <li><p>Configure GitHub pages to serve content from the “docs” directory by clicking on the <strong>Settings</strong> tab in the top menu bar, then <strong>Pages</strong> tab from the left hand menu bar. Make sure that Branch is set to <code>main</code> and that the selected folder is set to <code>/docs</code>. Click “Save”. Your website’s URL will appear inside a blue banner at the top of the page. Give it a few minutes to render (you’ll get a 404 error message if it’s not ready yet), then explore your site!</p></li>
 </ol>
