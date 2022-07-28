@@ -62,13 +62,13 @@ The order of operations is slightly different depending on which approach you de
 
 -   You'll start to get more comfortable working in a command line interface (CLI)
 
--   You're able to interact with Quarto via the command line regardless of which language or IDE you might find yourself working with (R, Python, Julia, ObservableJS)
+-   You're able to interact with Quarto via the command line regardless of which language (R, Python, Julia, ObservableJS) or IDE (**I**ntegrated **D**evelopment **E**nvironment) you might find yourself working with
 
 **Steps:**
 
-1.  Open up a terminal (Mac) or git bash (Windows) window.
+1.  Open up Terminal (Mac) or Git Bash (Windows).
 
-2.  Determine where you are in your file system using the `pwd` (print working directory). Use `cd` (change directory) to navigate your file system to whatever directory you'd like your quarto project to live.
+2.  Determine where you are in your file system using `pwd` (print working directory). Use `cd` (change directory) to navigate your file system to wherever you'd like your quarto project to live.
 
 ::: callout-tip
 To stay organized, I save all my git repositories to a folder called `git` in my computer's home directory (e.g. `Users/samanthacsik/git/`).
@@ -80,6 +80,10 @@ To stay organized, I save all my git repositories to a folder called `git` in my
 #| eval: false
 quarto create-project mysite --type website 
 ```
+
+::: column-margin
+Throughout this document, we'll use the words **directory** and **folder** interchangeably.
+:::
 
 **Recommended:** Name the project **yourusername.github.io** if you want that to be the site name (this is a "freebie" in GitHub). Otherwise, name it something reasonable (this will become the [slug](https://developer.mozilla.org/en-US/docs/Glossary/Slug) for your site if publishing with GitHub pages, so choose carefully). I'm calling my project **mysite** just for tutorial purposes only -- you should definitely give yours a more practical/creative name.
 
@@ -131,10 +135,6 @@ Your site preview should open up in your browser. Quit your preview by pressing 
 In order to preview your website, you must be in the directory **one level higher** than your website. For example, if my Quarto website directory is at `User/samanthacsik/git/mysite`, I must be in `User/samanthacsik/git` when I run the `quarto preview mysite` command in the terminal. To navigate up one directory level (e.g. move from `User/samanthacsik/git/mysite` to `User/samanthacsik/git` , use `cd ..` .
 :::
 
-::: column-margin
-Throughout this document, we'll use the words **directory** and **folder** interchangeably.
-:::
-
 5.  At this point you've created a directory (folder) but it's not yet being tracked by git. First be sure to `cd` into your website folder. Then, initialize this folder as a git repository using the `git init` command in the terminal window.
 
 ```{bash}
@@ -180,7 +180,7 @@ git config --global init.defaultBranch main
 
 You can double check that this worked by typing out the `git status` command again. The first printed line should now read, `On branch main`.
 
-8.  Add the files in your `mysite` directory (analogous to checking the boxes next to your files in the RStudio Git tab)...
+8.  Add the files in your `mysite` directory (*analogous to checking the boxes next to your files in the RStudio Git tab*)...
 
 ```{bash}
 #| eval: false
@@ -195,7 +195,7 @@ git add <file_name>
 Use the `git status` command again to see if your files have been successfully added *before* committing them -- any untracked or changed files that were once printed in **red** should now appear in **green**.
 :::
 
-...and commit them:
+...and commit them (*analogous to pressing the "Commit" button in RStudio and typing your commit message into the popup window*):
 
 ```{bash}
 #| eval: false
@@ -214,14 +214,14 @@ git commit -m "initial commit"
 Avoid doing this when you create your new GitHub repo to avoid errors. You can add these after your project as been pushed.
 :::
 
-10.  Copy the remote repository URL, found at the top of your repository on GitHub.com's Quick Setup Page, to your clipboard.
+10. Copy the remote repository URL (found at the top of the Quick Setup Page) to your clipboard.
 
 ```{r}
 #| echo: false
 knitr::include_graphics("media/GH_quick_setup.png")
 ```
 
-11.  In Terminal, add the URL for the remote repository where your local repository will be pushed: 
+11. In Terminal, add the URL for the remote repository where your local repository will be pushed:
 
 ```{bash}
 #| eval: false
@@ -232,7 +232,7 @@ git remote add origin <REMOTE_URL>
 git remote -v
 ```
 
-12. Push the changes in your local repository to your remote repository on GitHub:
+12. Push the changes in your local repository to your remote repository on GitHub (*analogous to pressing the "Push" button with the upward facing green arrow in RStudio*):
 
 ```{bash}
 #| eval: false

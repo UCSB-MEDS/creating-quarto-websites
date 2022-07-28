@@ -218,12 +218,12 @@ Before getting started…
 <p><strong>Why use the command line to set up your Quarto website?</strong></p>
 <ul>
 <li><p>You’ll start to get more comfortable working in a command line interface (CLI)</p></li>
-<li><p>You’re able to interact with Quarto via the command line regardless of which language or IDE you might find yourself working with (R, Python, Julia, ObservableJS)</p></li>
+<li><p>You’re able to interact with Quarto via the command line regardless of which language (R, Python, Julia, ObservableJS) or IDE (<strong>I</strong>ntegrated <strong>D</strong>evelopment <strong>E</strong>nvironment) you might find yourself working with</p></li>
 </ul>
 <p><strong>Steps:</strong></p>
 <ol type="1">
-<li><p>Open up a terminal (Mac) or git bash (Windows) window.</p></li>
-<li><p>Determine where you are in your file system using the <code>pwd</code> (print working directory). Use <code>cd</code> (change directory) to navigate your file system to whatever directory you’d like your quarto project to live.</p></li>
+<li><p>Open up Terminal (Mac) or Git Bash (Windows).</p></li>
+<li><p>Determine where you are in your file system using <code>pwd</code> (print working directory). Use <code>cd</code> (change directory) to navigate your file system to wherever you’d like your quarto project to live.</p></li>
 </ol>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -244,7 +244,10 @@ Tip
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> create-project mysite <span class="at">--type</span> website </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><strong>Recommended:</strong> Name the project <strong>yourusername.github.io</strong> if you want that to be the site name (this is a “freebie” in GitHub). Otherwise, name it something reasonable (this will become the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Slug">slug</a> for your site if publishing with GitHub pages, so choose carefully). I’m calling my project <strong>mysite</strong> just for tutorial purposes only – you should definitely give yours a more practical/creative name.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Throughout this document, we’ll use the words <strong>directory</strong> and <strong>folder</strong> interchangeably.</p>
+</div></div><p><strong>Recommended:</strong> Name the project <strong>yourusername.github.io</strong> if you want that to be the site name (this is a “freebie” in GitHub). Otherwise, name it something reasonable (this will become the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Slug">slug</a> for your site if publishing with GitHub pages, so choose carefully). I’m calling my project <strong>mysite</strong> just for tutorial purposes only – you should definitely give yours a more practical/creative name.</p>
 <div class="cell column-page quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -305,10 +308,7 @@ Important
 <p>In order to preview your website, you must be in the directory <strong>one level higher</strong> than your website. For example, if my Quarto website directory is at <code>User/samanthacsik/git/mysite</code>, I must be in <code>User/samanthacsik/git</code> when I run the <code>quarto preview mysite</code> command in the terminal. To navigate up one directory level (e.g.&nbsp;move from <code>User/samanthacsik/git/mysite</code> to <code>User/samanthacsik/git</code> , use <code>cd ..</code> .</p>
 </div>
 </div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Throughout this document, we’ll use the words <strong>directory</strong> and <strong>folder</strong> interchangeably.</p>
-</div></div><ol start="5" type="1">
+<ol start="5" type="1">
 <li>At this point you’ve created a directory (folder) but it’s not yet being tracked by git. First be sure to <code>cd</code> into your website folder. Then, initialize this folder as a git repository using the <code>git init</code> command in the terminal window.</li>
 </ol>
 <div class="cell">
@@ -347,7 +347,7 @@ Important
 <p><strong><em>This sets the default branch name to <code>main</code> for any new repositories you create moving forward (it does not rename branches in existing projects).</em></strong></p>
 <p>You can double check that this worked by typing out the <code>git status</code> command again. The first printed line should now read, <code>On branch main</code>.</p>
 <ol start="8" type="1">
-<li>Add the files in your <code>mysite</code> directory (analogous to checking the boxes next to your files in the RStudio Git tab)…</li>
+<li>Add the files in your <code>mysite</code> directory (<em>analogous to checking the boxes next to your files in the RStudio Git tab</em>)…</li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this adds all untracked or changed files at once</span></span>
@@ -369,7 +369,7 @@ Tip
 <p>Use the <code>git status</code> command again to see if your files have been successfully added <em>before</em> committing them – any untracked or changed files that were once printed in <strong>red</strong> should now appear in <strong>green</strong>.</p>
 </div>
 </div>
-<p>…and commit them:</p>
+<p>…and commit them (<em>analogous to pressing the “Commit” button in RStudio and typing your commit message into the popup window</em>):</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"initial commit"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -393,7 +393,7 @@ Do not initialize with a README, license, or <code>.gitignore</code> files!
 </div>
 </div>
 <ol start="10" type="1">
-<li>Copy the remote repository URL, found at the top of your repository on GitHub.com’s Quick Setup Page, to your clipboard.</li>
+<li>Copy the remote repository URL (found at the top of the Quick Setup Page) to your clipboard.</li>
 </ol>
 <div class="cell">
 <div class="cell-output-display">
@@ -411,7 +411,7 @@ Do not initialize with a README, license, or <code>.gitignore</code> files!
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="12" type="1">
-<li>Push the changes in your local repository to your remote repository on GitHub:</li>
+<li>Push the changes in your local repository to your remote repository on GitHub (<em>analogous to pressing the “Push” button with the upward facing green arrow in RStudio</em>):</li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
