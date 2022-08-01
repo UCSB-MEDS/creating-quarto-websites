@@ -21,6 +21,8 @@ R users have long loved [RMarkdown](https://rmarkdown.rstudio.com/) for combinin
 
 You can explore [Quarto's documentation](https://quarto.org/docs/guide/) to learn more about creating documents, websites, blogs, books, slides, etc.
 
+---
+
 ## `r fontawesome::fa("question", fill = "#5A5A5A", a11y = "sem")` Do I need to use Quarto to build my website?
 
 Nope! There are a number of R-based tools that make building websites and blogs fun and easy, including the still-widely-used [`{blogdown}`](https://bookdown.org/yihui/blogdown/) and [`{distill}`](https://rstudio.github.io/distill/website.html) packages.
@@ -33,6 +35,8 @@ Though still relatively new, Quarto has the data science community (particularly
 Follow [\@quarto_pub](https://twitter.com/quarto_pub) and check out [Mine Çentinkaya-Rundel](https://mine-cr.com/)'s #quartotip tweets, which are collected and published as blog posts at the [A Quarto tip a day keeps the docs away](https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/about.html) website.
 :::
 
+---
+
 ## `r fontawesome::fa("tools", fill = "#5A5A5A", a11y = "sem")` Create the scaffolding for your website
 
 ::: callout-important
@@ -41,8 +45,8 @@ Follow [\@quarto_pub](https://twitter.com/quarto_pub) and check out [Mine Çenti
 To follow along, you'll need:
 
 -   R & RStudio installed (find the latest RStudio release [here](https://www.rstudio.com/products/rstudio/download/#download))
--   [Quarto](https://quarto.org/docs/get-started/) installed -- **Quarto is now included with RStudio v2022.07.1+ i.e. no need for a separate download/install if you have the latest version of RStudio** 
--   A GitHub account & your personal access token (PAT) stored 
+-   [Quarto](https://quarto.org/docs/get-started/) installed -- **Quarto is now included with RStudio v2022.07.1+ i.e. no need for a separate download/install if you have the latest version of RStudio**
+-   A GitHub account & your personal access token (PAT) stored
 -   Git installed/configured
 
 Please refer to the MEDS Installation Guide for [Mac](https://ucsb-meds.github.io/meds-install-mac.html) and [Windows](https://ucsb-meds.github.io/meds-install-windows.html) machines for detailed instructions (follow steps 1-7).
@@ -58,13 +62,13 @@ The order of operations is slightly different depending on which approach you de
 ::: panel-tabset
 ## **`r fontawesome::fa("terminal", fill = "#5A5A5A", a11y = "sem")` Through the command line**
 
-**Why use the command line to set up your Quarto website?**
+### **Why use the command line to set up your Quarto website?**
 
 -   You'll start to get more comfortable working in a command line interface (CLI)
 
 -   You're able to interact with Quarto via the command line regardless of which language (R, Python, Julia, ObservableJS) or IDE (**I**ntegrated **D**evelopment **E**nvironment) you might find yourself working with
 
-**Steps:**
+### **Steps:**
 
 1.  Open up Terminal (Mac) or Git Bash (Windows).
 
@@ -85,7 +89,7 @@ quarto create-project mysite --type website
 Throughout this document, we'll use the words **directory** and **folder** interchangeably.
 :::
 
-**Recommended:** Name the project **yourusername.github.io** if you want that to be the site name (this is a "freebie" in GitHub). Otherwise, name it something reasonable (this will become the [slug](https://developer.mozilla.org/en-US/docs/Glossary/Slug) for your site if publishing with GitHub pages, so choose carefully). I'm calling my project **mysite** just for tutorial purposes only -- you should definitely give yours a more practical/creative name.
+-   **Recommended:** Name the project **yourusername.github.io** if you want that to be the site name (this is a "freebie" in GitHub). Otherwise, name it something reasonable (this will become the [slug](https://developer.mozilla.org/en-US/docs/Glossary/Slug) for your site if publishing with GitHub pages, so choose carefully). I'm calling my project **mysite** just for tutorial purposes only -- you should definitely give yours a more practical/creative name.
 
 ```{r}
 #| echo: false
@@ -98,7 +102,7 @@ knitr::include_graphics("media/pwd_cd.png")
 knitr::include_graphics("media/CLI_create_website.png")
 ```
 
-If you `cd` into your new `mysite` directory (or whatever you named your quarto project), and use the `ls` command to list out all the contents of that directory, you should see a series of files (`_quarto.yml`, `about.qmd`, `index.qmd`, `styles.css`) that provide the scaffolding for your website. For example:
+-   If you `cd` into your new `mysite` directory (or whatever you named your quarto project), and use the `ls` command to list out all the contents of that directory, you should see a series of files (`_quarto.yml`, `about.qmd`, `index.qmd`, `styles.css`) that provide the scaffolding for your website. For example:
 
 ```{bash}
 #| eval: false
@@ -115,7 +119,7 @@ If you `cd` into your new `mysite` directory (or whatever you named your quarto 
 _quarto.yml	_site		about.qmd   index.qmd   styles.css
 ```
 
-Alternatively, you can use Finder (Mac) or Windows Explorer (Windows) to view your new directory and files.
+-   Alternatively, you can use Finder (Mac) or Windows Explorer (Windows) to view your new directory and files.
 
 ```{r}
 #| echo: false
@@ -129,7 +133,7 @@ knitr::include_graphics("media/mysite_finder.png")
 quarto preview mysite
 ```
 
-Your site preview should open up in your browser. Quit your preview by pressing `control` + `C`
+-   Your site preview should open up in your browser. Quit your preview by pressing `control` + `C`
 
 ::: callout-important
 In order to preview your website, you must be in the directory **one level higher** than your website. For example, if my Quarto website directory is at `User/samanthacsik/git/mysite`, I must be in `User/samanthacsik/git` when I run the `quarto preview mysite` command in the terminal. To navigate up one directory level (e.g. move from `User/samanthacsik/git/mysite` to `User/samanthacsik/git` , use `cd ..` .
@@ -167,16 +171,19 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-**If your current branch is named `master`, follow step 7 below to update the name to `main`.** Why? The racist “master” terminology for git branches motivates us to update our default branch to “main” instead. If your branch is already named `main`, you can head straight to step 8. 
+-   **If your current branch is named `master`, follow step 7 below to update the name to `main`.** Why? The racist "master" terminology for git branches motivates us to update our default branch to "main" instead. If your branch is already named `main`, you can head straight to step 8.
 
 ::: column-margin
-**Note:** If you create a repo in *GitHub first*, the default now has been updated to make the default branch `main`. However, if you create a *local git repository first* (as we've done here) you'll need to update your default branch name to `main`. 
+**Note:** If you create a repo in *GitHub first*, the default now has been updated to make the default branch `main`. However, if you create a *local git repository first* (as we've done here) you'll need to update your default branch name to `main`.
 :::
 
-7.  Let's switch our default branch name from `master` to `main`. Choose your workflow below based on your Git version (check your version by running `git --version` in your Terminal:
+7.  Let's switch our default branch name from `master` to `main`. Choose your workflow below based on your Git version (check your version by running `git --version` in your Terminal):
 
-**For Git version 2.28 or later**, you can update the default branch to `main` by running the following line in the Terminal window:
-    
+::: panel-tabset
+## **`r fontawesome::fa("git-alt", fill = "#5A5A5A", a11y = "sem")` For Git version 2.28 or later**
+
+You can update the default branch to `main` by running the following line in the Terminal window:
+
 ```{bash}
 #| eval: false
 git config --global init.defaultBranch main
@@ -186,7 +193,13 @@ git config --global init.defaultBranch main
 
 You can double check that this worked by typing out the `git status` command again. The first printed line should now read, `On branch main`.
 
-**If you are running an earlier version of Git**, rename the default branch as `main` by running the following line in the Terminal window:
+::: callout-important
+Be mindful that your workflow for updating `master` to `main` will look different if you've already created both a local git repo (first) AND an upstream remote i.e. GitHub repo (second). Check out [this post](https://gitbetter.substack.com/p/how-to-change-git-default-branch) for more info.
+:::
+
+## **`r fontawesome::fa("git-alt", fill = "#5A5A5A", a11y = "sem")` For older versions of Git**
+
+Rename the default branch as `main` by running the following line in the Terminal window:
 
 ```{bash}
 #| eval: false
@@ -197,8 +210,11 @@ The `-m` attribute is used to rename the branch without affecting the branch's h
 
 ***This sets the default branch name to `main` ONLY for this repository (so you'll need to do this with any new local git repositories that you create.***
 
-:::callout-important
-Be mindful that your workflow for updating `master` to `main` will look different if you've already created an upstream remote (GitHub repo). Check out [this post](https://gitbetter.substack.com/p/how-to-change-git-default-branch) for more info.
+You can double check that this worked by typing out the `git status` command again. The first printed line should now read, `On branch main`.
+
+::: callout-important
+Be mindful that your workflow for updating `master` to `main` will look different if you've already created both a local git repo (first) AND an upstream remote i.e. GitHub repo (second). Check out [this post](https://gitbetter.substack.com/p/how-to-change-git-default-branch) for more info.
+:::
 :::
 
 8.  Add the files in your `mysite` directory (*analogous to checking the boxes next to your files in the RStudio Git tab*)...
@@ -282,11 +298,11 @@ Refresh your GitHub repository (in your web browser) to see that your updates ha
 
 ## **`r fontawesome::fa("r-project", fill = "#5A5A5A", a11y = "sem")` Using the RStudio IDE**
 
-**Why use RStudio to set up your Quarto website?**
+### **Why use RStudio to set up your Quarto website?**
 
 -   It's *super* easy to do with the click of just a few buttons! **Remember**, the commands we type out in our terminal window underlie the buttons we're clicking on in the RStudio IDE! RStudio simply provides a user-friendly interface for executing those commands.
 
-**Steps:**
+### **Steps:**
 
 1.  Open up RStudio and click on the ![A blue cube symbol with 'R' in the center is on the left. To the right are the words 'Project: (None)' in white, with a downward facing arrow, signifying a drop down menu](media/project.png){alt="A blue cube symbol with 'R' in the center is on the left. To the right are the words 'Project: (None)' in white, with a downward facing arrow, signifying a drop down menu" style="display: inline-block; margin: 0; position: relative; top: 0px; width:80px;height:18px;"} button in the top right corner. Select **New Project...**
 
@@ -366,13 +382,13 @@ knitr::include_graphics("media/mysite_remote.png")
 
     b.  click on the **Git** tab in the top right pane of RStudio. Next to the ![A white diamond with two purple squares, one directly above and one directly to the right, connected to the diamond by a line.](media/branch.png){alt="A white diamond with two purple squares, one directly above and one directly to the right, connected to the diamond by a line." style="display: inline-block; margin: 0; position: relative; top: 0px; width:20px;height:18px;"} symbol, you should see a dropdown menu that displays the name of your current branch.
 
-**If your current branch is named *`master`*, follow step 8-12 below.** *Why?* The racist "master" terminology for git branches motivates us to update our default branch to "main" instead. If your branch is named *`main`*, you’re good to go! You can continue to the next section, [Publish your site with GitHub Pages](https://ucsb-meds.github.io/creating-quarto-websites/#publish-your-site-with-github-pages).
+**If your current branch is named *`master`*, follow step 8-12 below.** *Why?* The racist "master" terminology for git branches motivates us to update our default branch to "main" instead. If your branch is named *`main`*, you're good to go! You can continue to the next section, [Publish your site with GitHub Pages](https://ucsb-meds.github.io/creating-quarto-websites/#publish-your-site-with-github-pages).
 
 ::: column-margin
-**Note:** If you create a repo in *GitHub first*, the default now has been updated to make the default branch `main`. However, if you create a *local git repository first* (as we've done here) you'll need to update your default branch name to `main`. 
+**Note:** If you create a repo in *GitHub first*, the default now has been updated to make the default branch `main`. However, if you create a *local git repository first* (as we've done here) you'll need to update your default branch name to `main`.
 :::
 
-8.  Let’s switch our default branch name from `master` to `main`. In RStudio, click on the branch button in the Git tab (the diamond with purple rectangle "branches"):
+8.  Let's switch our default branch name from `master` to `main`. In RStudio, click on the branch button in the Git tab (the diamond with purple rectangle "branches"):
 
 ```{r}
 #| echo: false
@@ -409,6 +425,8 @@ knitr::include_graphics("media/switch_main.png")
 12. Once you've updated the default to main, delete the `master` branch. Cool. Now you're working just on `main`.
 :::
 
+---
+
 ## `r fontawesome::fa("github", fill = "#5A5A5A", a11y = "sem")` Publish your site with GitHub Pages
 
 There are a [lots of options to publish your website](https://quarto.org/docs/websites/publishing-websites.html). We'll use the [GitHub Pages option](https://quarto.org/docs/websites/publishing-websites.html#github-pages), which allows you to publish a website from any GitHub repository. To do so, there are a few configuration steps:
@@ -426,7 +444,7 @@ The `touch` command creates a new, empty file.
 `.nojekyll` is a *hidden* file which won't visibly appear in your directory. You *should* see it show up as a file to track with git under the **Git** tab in RStudio. You can also view hidden files in Finder (Mac) using the keyboard shortcut `Command` + `Shift` + `.`, or follow [these instructions](https://support.microsoft.com/en-us/windows/show-hidden-files-0320fe58-0117-fd59-6851-9b7f9840fdb2) for Windows 10, 8.1, and 7.
 :::
 
-2. Set the `output-dir` in your `_quarto.yml` file to "docs" (it's easiest to do this from RStudio):
+2.  Set the `output-dir` in your `_quarto.yml` file to "docs" (it's easiest to do this from RStudio):
 
 ```{r}
 #| eval: false
@@ -462,6 +480,8 @@ knitr::include_graphics("media/gh_pages.png")
 knitr::include_graphics("media/rendered_site.png")
 ```
 
+---
+
 ## `r fontawesome::fa("edit", fill = "#5A5A5A", a11y = "sem")` Where you should start changing stuff
 
 Right now, our website is built using Quarto default styling. Let's learn about where things live and how to start customizing some stuff.
@@ -482,7 +502,7 @@ Right now, our website is built using Quarto default styling. Let's learn about 
 
     -   `image-width` & `image-shape`: adjust your image's size and shape (`round`, `rounded`, `rectangle`)
 
-    -   `links`: add buttons with links to your social media pages 
+    -   `links`: add buttons with links to your social media pages
 
 ```{bash}
 #| eval: false
@@ -503,7 +523,7 @@ title: "Samantha Csik"
           href: mailto:scsik@ucsb.edu
 ```
 
-:::column-margin
+::: column-margin
 **Fun Tip:** Install the [Font Awesome Extension for Quarto](https://github.com/quarto-ext/fontawesome) to add free [Font Awesome](https://fontawesome.com/) `r fontawesome::fa("font-awesome", fill = "#5A5A5A", a11y = "sem")` icons to your site! Be sure to check out the `icon` option when adding linked buttons to your About Page.
 :::
 
@@ -576,6 +596,8 @@ format:
 knitr::include_graphics("media/light.png")
 knitr::include_graphics("media/dark.png")
 ```
+
+---
 
 ## `r fontawesome::fa("forward", fill = "#5A5A5A", a11y = "sem")` Looking forward
 
