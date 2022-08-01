@@ -363,7 +363,7 @@ knitr::include_graphics("media/mysite_scaffolding_git.png")
 We're using the `{usethis}` workflow here because it's a super useful package to begin learning for project setup. However, rather than using the `usethis::use_git()` function here to create your local git repo, you could have also checked the box where it says **Create a git repository** when initially setting up your Quarto website (see step 3 above).
 :::
 
-6.  Then, in the Console, run `usethis::use_github()` to create an upstream remote repo. Your web browser should open up to your new GitHub repository, with the same name as your local git repo/R project.
+6.  Then, in the Console, run `usethis::use_github()` to create an upstream remote repository (i.e. GitHub repo). Your web browser should open up to your new GitHub repository, with the same name as your local git repo/R project.
 
 ::: column-margin
 **Git vs. Github:** [*Git*](https://git-scm.com/) is a version control system that allows you to manage and track your file version control history while [*GitHub*](https://github.com/) is a cloud-based hosting service that allows you to manage Git repositories. As Jenny Bryan describes in her book [Happy Git and GitHub for the useR](https://happygitwithr.com/index.html), hosting services like GitHub *"provide a home for your Git-based projects on the internet."* These services not only help to facilitate collaboration, but they also protect you in the event your computer suddenly dies -- just "clone" your GitHub repository back onto your new computer and voila! You're able to pick right back up where you left off.
