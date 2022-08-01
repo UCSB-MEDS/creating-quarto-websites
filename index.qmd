@@ -68,13 +68,13 @@ The order of operations is slightly different depending on which approach you de
 
 1.  Open up Terminal (Mac) or Git Bash (Windows).
 
-2.  Determine where you are in your file system using `pwd` (print working directory). Use `cd` (change directory) to navigate your file system to wherever you'd like your quarto project to live.
+2.  Determine where you are in your file system using `pwd` (print working directory). Use `cd` (change directory) to navigate your file system to wherever you'd like your project to live.
 
 ::: callout-tip
 To stay organized, I save all my git repositories to a folder called `git` in my computer's home directory (e.g. `Users/samanthacsik/git/`).
 :::
 
-3.  Use the following commands to create a quarto project directory that contains the files necessary for building your website:
+3.  Use the following commands to create a quarto website project directory that contains the files necessary for building your website:
 
 ```{bash}
 #| eval: false
@@ -98,7 +98,7 @@ knitr::include_graphics("media/pwd_cd.png")
 knitr::include_graphics("media/CLI_create_website.png")
 ```
 
-If you `cd` into your new `mysite` directory (or whatever you named your Quarto project), and use the `ls` command to list out all the contents of that directory, you should see a series of files (`_quarto.yml`, `about.qmd`, `index.qmd`, `styles.css`) that provide the scaffolding for your website. For example:
+If you `cd` into your new `mysite` directory (or whatever you named your quarto project), and use the `ls` command to list out all the contents of that directory, you should see a series of files (`_quarto.yml`, `about.qmd`, `index.qmd`, `styles.css`) that provide the scaffolding for your website. For example:
 
 ```{bash}
 #| eval: false
@@ -339,15 +339,19 @@ We're using the `{usethis}` workflow here because it's a super useful package to
 knitr::include_graphics("media/mysite_remote.png")
 ```
 
-7.  Next, let's check the name of our default branch -- that is, the branch that all changes eventually get merged back into (if you're building a website, this branch is typically the one you'll want to deploy). There are two ways to check this:
+7.  Next, let's check the name of our default branch -- that is, the branch that all changes eventually get merged back into (if you're building a website, this branch is typically the one you'll want to deploy). There are multiple ways to check this -- here are two easy options:
 
-    a.  open your Terminal window from RStudio and type `git status` -- the first printed line should say **On branch \_\_\_**.
+    a.  open your Terminal window from RStudio and type `git status` -- the first printed line should say **`On branch <branch_name>`**.
 
     b.  click on the **Git** tab in the top right pane of RStudio. Next to the ![A white diamond with two purple squares, one directly above and one directly to the right, connected to the diamond by a line.](media/branch.png){alt="A white diamond with two purple squares, one directly above and one directly to the right, connected to the diamond by a line." style="display: inline-block; margin: 0; position: relative; top: 0px; width:20px;height:18px;"} symbol, you should see a dropdown menu that displays the name of your current branch.
 
-    **If your current branch is named *`master`*, follow steps 8-12 below. If your branch is named *`main`*, you're good to go! You can continue to part [*II. Publish your site with GitHub Pages*](http://localhost:3262/#ii.-publish-your-site-with-github-pages).**
+    **If your current branch is named *`master`*, follow step 8-12 below. *Why?* The racist "master" terminology for git branches motivates us to update our default branch to "main" instead. If your branch is named *`main`*, you’re good to go! You can continue to the next section, [Publish your site with GitHub Pages](https://ucsb-meds.github.io/creating-quarto-websites/#publish-your-site-with-github-pages).
 
-8.  The next few steps will walk through how to switch the default branch name from `master` to `main`. Why? The racist "master" terminology for git branches motivates us to update our default branch to "main" instead. *Note: Git/GitHub/R tools are in the process of migrating away from `master`. If you create a repo in GitHub FIRST, the default branch is now `main`. However, the `usethis::use_github()` method for creating a repo hasn't yet been updated, so we'll do it manually.* In RStudio, click on the branch button in the Git tab (the diamond with purple rectangle "branches"):
+::: column-margin
+    **Note:** If you create a repo in *GitHub first*, the default now has been updated to make the default branch `main`. However, if you create a *local git repository first* (as we've just done) you'll need to update your default branch name to `main`. 
+:::
+
+8.  Let’s switch our default branch name from `master` to `main`. In RStudio, click on the branch button in the Git tab (the diamond with purple rectangle "branches"):
 
 ```{r}
 #| echo: false
