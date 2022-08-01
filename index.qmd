@@ -6,7 +6,7 @@ format:
   html:
     theme: minty
     toc: true
-    toc-float: true
+    toc-location: left
 ---
 
 ::: callout-warning
@@ -21,9 +21,11 @@ R users have long loved [RMarkdown](https://rmarkdown.rstudio.com/) for combinin
 
 You can explore [Quarto's documentation](https://quarto.org/docs/guide/) to learn more about creating documents, websites, blogs, books, slides, etc.
 
+**I'm new to Quarto (like many of us!) -- if you have suggestions on how to correct or improve these instructions, please feel free to file an issue on [`r fontawesome::fa("github", fill = "#5A5A5A", a11y = "sem")` GitHub](https://github.com/UCSB-MEDS/creating-quarto-websites/issues/new).**
+
 ---
 
-## `r fontawesome::fa("question", fill = "#5A5A5A", a11y = "sem")` Do I need to use Quarto to build my website?
+## `r fontawesome::fa("question", fill = "#5A5A5A", a11y = "sem")` Do I *need* to use Quarto to build my website?
 
 Nope! There are a number of R-based tools that make building websites and blogs fun and easy, including the still-widely-used [`{blogdown}`](https://bookdown.org/yihui/blogdown/) and [`{distill}`](https://rstudio.github.io/distill/website.html) packages.
 
