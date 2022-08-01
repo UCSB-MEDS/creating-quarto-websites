@@ -477,7 +477,9 @@ Do not initialize with a README, license, or <code>.gitignore</code> files!
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>You should see something similar to this print out, if successful!</p>
+<ul>
+<li>You should see something similar to this print out, if successful!</li>
+</ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">base</span><span class="kw">)</span> <span class="ex">Samanthas-MacBook-Air:mysite</span> samanthacsik$ git push <span class="at">-u</span> origin main</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Enumerating</span> objects: 33, done.</span>
@@ -492,14 +494,16 @@ Do not initialize with a README, license, or <code>.gitignore</code> files!
 <span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="ex">Branch</span> <span class="st">'main'</span> set up to track remote branch <span class="st">'main'</span> from <span class="st">'origin'</span>.</span>
 <span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">base</span><span class="kw">)</span> <span class="ex">Samanthas-MacBook-Air:mysite</span> samanthacsik$ </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Refresh your GitHub repository (in your web browser) to see that your updates have been successfully pushed!</p>
+<ul>
+<li>Refresh your GitHub repository (in your web browser) to see that your updates have been successfully pushed!</li>
+</ul>
 </section>
 </div>
 <div id="tabset-2-2" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-2-2-tab">
 <section id="why-use-rstudio-to-set-up-your-quarto-website" class="level3">
 <h3 class="anchored" data-anchor-id="why-use-rstudio-to-set-up-your-quarto-website"><strong>Why use RStudio to set up your Quarto website?</strong></h3>
 <ul>
-<li>It’s <em>super</em> easy to do with the click of just a few buttons! <strong>Remember</strong>, the commands we type out in our terminal window underlie the buttons we’re clicking on in the RStudio IDE! RStudio simply provides a user-friendly interface for executing those commands.</li>
+<li>It’s <em>super</em> easy to do with the click of just a few buttons! <strong>Remember</strong>, the commands we type out in our terminal window underlie the buttons we’re clicking on in the RStudio IDE – RStudio simply provides a user-friendly interface for executing those commands.</li>
 </ul>
 </section>
 <section id="steps-1" class="level3 page-columns page-full">
@@ -545,7 +549,9 @@ Tip
 <p>To stay organized, I save all my git repositories to a folder called <code>git</code> in my computer’s home directory (e.g.&nbsp;<code>Users/samanthacsik/git/</code>).</p>
 </div>
 </div>
-<p><strong>Recommended:</strong> Name the project <strong>yourusername.github.io</strong> if you want that to be the site name (this is a “freebie” in GitHub). Otherwise, name it something reasonable (this will become the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Slug">slug</a> for your site if publishing with GitHub pages, so choose carefully). I’m calling my project <strong>mysite</strong> just for tutorial purposes only – you should definitely give yours a more practical/creative name.</p>
+<ul>
+<li><strong>Recommended:</strong> Name the project <strong>yourusername.github.io</strong> if you want that to be the site name (this is a “freebie” in GitHub). Otherwise, name it something reasonable (this will become the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Slug">slug</a> for your site if publishing with GitHub pages, so choose carefully). I’m calling my project <strong>mysite</strong> just for tutorial purposes only – you should definitely give yours a more practical/creative name.</li>
+</ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -555,7 +561,9 @@ Tip
 </div>
 </div>
 </div>
-<p>You should now see a folder called <code>mysite</code> (or whatever you named your Quarto project) with a series of files (<code>_quarto.yml</code>, <code>about.qmd</code>, <code>index.qmd</code>, <code>styles.css</code>) that provide the scaffolding for your website in the <strong>Files</strong> tab (in the bottom right panel in RStudio, if you haven’t altered the pane layout).</p>
+<ul>
+<li>You should now see a folder called <code>mysite</code> (or whatever you named your Quarto project) with a series of files (<code>_quarto.yml</code>, <code>about.qmd</code>, <code>index.qmd</code>, <code>styles.css</code>) that provide the scaffolding for your website in the <strong>Files</strong> tab (in the bottom right panel in RStudio, if you haven’t altered the pane layout).</li>
+</ul>
 <div class="cell" data-layout-align="center">
 
 </div>
@@ -613,7 +621,9 @@ Note
 <li><p>click on the <strong>Git</strong> tab in the top right pane of RStudio. Next to the <img src="media/branch.png" class="img-fluid" alt="A white diamond with two purple squares, one directly above and one directly to the right, connected to the diamond by a line." style="display: inline-block; margin: 0; position: relative; top: 0px; width:20px;height:18px;"> symbol, you should see a dropdown menu that displays the name of your current branch.</p></li>
 </ol></li>
 </ol>
-<p><strong>If your current branch is named <em><code>master</code></em>, follow step 8-12 below.</strong> <em>Why?</em> The racist “master” terminology for git branches motivates us to update our default branch to “main” instead. If your branch is named <em><code>main</code></em>, you’re good to go! You can continue to the next section, <a href="https://ucsb-meds.github.io/creating-quarto-websites/#publish-your-site-with-github-pages">Publish your site with GitHub Pages</a>.</p>
+<ul>
+<li><strong>If your current branch is named <em><code>master</code></em>, follow step 8-12 below.</strong> <em>Why?</em> The racist “master” terminology for git branches motivates us to update our default branch to “main” instead. If your branch is named <em><code>main</code></em>, you’re good to go! You can continue to the next section, <a href="https://ucsb-meds.github.io/creating-quarto-websites/#publish-your-site-with-github-pages">Publish your site with GitHub Pages</a>.</li>
+</ul>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p><strong>Note:</strong> If you create a repo in <em>GitHub first</em>, the default now has been updated to make the default branch <code>main</code>. However, if you create a <em>local git repository first</em> (as we’ve done here) you’ll need to update your default branch name to <code>main</code>.</p>
