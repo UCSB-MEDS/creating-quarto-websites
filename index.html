@@ -337,15 +337,19 @@ Important
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="ex">nothing</span> added to commit but untracked files present <span class="er">(</span><span class="ex">use</span> <span class="st">"git add"</span> to track<span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><strong>If your current branch is named <em><code>master</code></em>, follow step 7 below. If your branch is named <em><code>main</code></em>, you can head straight to step 8.</strong></p>
-<ol start="7" type="1">
-<li>Let’s switch our default branch name from <code>master</code> to <code>main</code>. <em>Why? The racist “master” terminology for git branches motivates us to update our default branch to “main” instead.</em> <strong>Note:</strong> If you create a repo in GitHub FIRST, the default now has been updated to make the default branch ‘main’. However, you’ll need to update the branch name if you create a local git repository first (like we’ve just done). Update the branch name from <code>master</code> to <code>main</code> by running the following line in the terminal window:</li>
+<p><strong>If your current branch is named <code>master</code>, follow step 7 below to update the name to <code>main</code>.</strong> Why? The racist “master” terminology for git branches motivates us to update our default branch to “main” instead. If your branch is already named <code>main</code>, you can head straight to step 8.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><strong>Note:</strong> If you create a repo in <em>GitHub first</em>, the default now has been updated to make the default branch <code>main</code>. However, if you create a <em>local git repository first</em> (as we’ve done here) you’ll need to update your default branch name to <code>main</code>.</p>
+</div></div><ol start="7" type="1">
+<li>Let’s switch our default branch name from <code>master</code> to <code>main</code>. For Git version 2.28+ (check your version by running <code>git --version</code> in your Terminal), you can update the default branch to <code>main</code> by running the following line in the Terminal window:</li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> init.defaultBranch main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><strong><em>This sets the default branch name to <code>main</code> for any new repositories you create moving forward (it does not rename branches in existing projects).</em></strong></p>
 <p>You can double check that this worked by typing out the <code>git status</code> command again. The first printed line should now read, <code>On branch main</code>.</p>
+<p>If you are running an earlier version of Git, <strong>TBD ON WHAT THOSE STEPS ARE</strong></p>
 <ol start="8" type="1">
 <li>Add the files in your <code>mysite</code> directory (<em>analogous to checking the boxes next to your files in the RStudio Git tab</em>)…</li>
 </ol>
@@ -551,7 +555,7 @@ Note
 </ol>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<pre><code>**Note:** If you create a repo in *GitHub first*, the default now has been updated to make the default branch `main`. However, if you create a *local git repository first* (as we've just done) you'll need to update your default branch name to `main`. </code></pre>
+<p><strong>Note:</strong> If you create a repo in <em>GitHub first</em>, the default now has been updated to make the default branch <code>main</code>. However, if you create a <em>local git repository first</em> (as we’ve just done) you’ll need to update your default branch name to <code>main</code>.</p>
 </div></div><ol start="8" type="1">
 <li>Let’s switch our default branch name from <code>master</code> to <code>main</code>. In RStudio, click on the branch button in the Git tab (the diamond with purple rectangle “branches”):</li>
 </ol>
@@ -602,7 +606,7 @@ Note
 </div>
 </div>
 <ol start="12" type="1">
-<li>Once you’ve updated the default to main, delete the <code>master</code> branch. Cool. Now you’re working just on main.</li>
+<li>Once you’ve updated the default to main, delete the <code>master</code> branch. Cool. Now you’re working just on <code>main</code>.</li>
 </ol>
 </div>
 </div>
@@ -615,7 +619,7 @@ Note
 <li>Create a file named <code>.nojekyll</code> in your repository, which is required to disable some processing of HTML files that GitHub does by default. Do this from your terminal (you can use the terminal tab in RStudio or a separate terminal window – just make sure you’re in the correct directory) using the following command:</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> .nojekyll</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> .nojekyll</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -635,9 +639,9 @@ Note
 <li>Set the <code>output-dir</code> in your <code>_quarto.yml</code> file to “docs” (it’s easiest to do this from RStudio):</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>project<span class="sc">:</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  type<span class="sc">:</span> website</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  output<span class="sc">-</span>dir<span class="sc">:</span> docs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>project<span class="sc">:</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  type<span class="sc">:</span> website</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  output<span class="sc">-</span>dir<span class="sc">:</span> docs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="3" type="1">
 <li>Build your site by clicking on the <strong>Build</strong> tab (top left quadrant in RStudio), then <strong>Render Website.</strong> You should see a minimal, albeit functional, soon-to-be website appear in the <strong>Viewer</strong> tab. Click on the <img src="media/view_in_browser.png" alt="A browser window overlaid by an arrow pointing up and angled to the right." style="display: inline-block; margin: 0; position: relative; top: 0px; width:25px;height:20px;"> button to open your file in your web browser. <strong>Note:</strong> your website is currently being hosted by your local machine, not at a searchable URL. We’ll get there soon though!</li>
@@ -652,7 +656,7 @@ Note
 </div>
 </div>
 <ol start="4" type="1">
-<li><p>Now we need to send all of our files in our local git repository to our remote GitHub repository:</p>
+<li><p>Now we need to send all of the files in our local git repository to our remote GitHub repository:</p>
 <ol type="a">
 <li><strong>Stage</strong> your files by checking all the boxes in the <strong>Git</strong> tab (<em>this is analogous to the <code>git add .</code> command used in the Terminal for staging all files</em>)</li>
 <li><strong>Commit</strong> your files by clicking the Commit button, adding a commit message, and clicking “Commit” (<em>analogous to <code>git commit -m "my commit message"</code></em>)</li>
@@ -700,23 +704,26 @@ Note
 </ul></li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">title:</span> <span class="st">"Samantha Csik"</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="ex">image:</span> headshot.jpg</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="ex">about:</span> </span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>      <span class="ex">template:</span> trestles</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>      <span class="ex">image-shape:</span> rounded</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>      <span class="ex">image-width:</span> 15em</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>      <span class="ex">links:</span></span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>        <span class="ex">-</span> text: LinkedIn</span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>          <span class="ex">href:</span> https://www.linkedin.com/in/samanthacsik/</span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>        <span class="ex">-</span> text: Twitter</span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>          <span class="ex">href:</span> https://twitter.com/SamanthaCsik</span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>        <span class="ex">-</span> text: GitHub</span>
-<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>          <span class="ex">href:</span> https://github.com/samanthacsik</span>
-<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>        <span class="ex">-</span> text: Email</span>
-<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>          <span class="ex">href:</span> mailto:scsik@ucsb.edu</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">title:</span> <span class="st">"Samantha Csik"</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="ex">image:</span> headshot.jpg</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="ex">about:</span> </span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>      <span class="ex">template:</span> trestles</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>      <span class="ex">image-shape:</span> rounded</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>      <span class="ex">image-width:</span> 15em</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>      <span class="ex">links:</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>        <span class="ex">-</span> text: LinkedIn</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>          <span class="ex">href:</span> https://www.linkedin.com/in/samanthacsik/</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>        <span class="ex">-</span> text: Twitter</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>          <span class="ex">href:</span> https://twitter.com/SamanthaCsik</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>        <span class="ex">-</span> text: GitHub</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>          <span class="ex">href:</span> https://github.com/samanthacsik</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>        <span class="ex">-</span> text: Email</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>          <span class="ex">href:</span> mailto:scsik@ucsb.edu</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-layout-align="center">
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><strong>Fun Tip:</strong> Install the <a href="https://github.com/quarto-ext/fontawesome">Font Awesome Extension for Quarto</a> to add free <a href="https://fontawesome.com/">Font Awesome</a> <svg aria-label="Font Awesome" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5A5A5A;overflow:visible;position:relative;"><title>Font Awesome</title><path d="M397.8 32H50.2C22.7 32 0 54.7 0 82.2v347.6C0 457.3 22.7 480 50.2 480h347.6c27.5 0 50.2-22.7 50.2-50.2V82.2c0-27.5-22.7-50.2-50.2-50.2zm-45.4 284.3c0 4.2-3.6 6-7.8 7.8-16.7 7.2-34.6 13.7-53.8 13.7-26.9 0-39.4-16.7-71.7-16.7-23.3 0-47.8 8.4-67.5 17.3-1.2.6-2.4.6-3.6 1.2V385c0 1.8 0 3.6-.6 4.8v1.2c-2.4 8.4-10.2 14.3-19.1 14.3-11.3 0-20.3-9-20.3-20.3V166.4c-7.8-6-13.1-15.5-13.1-26.3 0-18.5 14.9-33.5 33.5-33.5 18.5 0 33.5 14.9 33.5 33.5 0 10.8-4.8 20.3-13.1 26.3v18.5c1.8-.6 3.6-1.2 5.4-2.4 18.5-7.8 40.6-14.3 61.5-14.3 22.7 0 40.6 6 60.9 13.7 4.2 1.8 8.4 2.4 13.1 2.4 22.7 0 47.8-16.1 53.8-16.1 4.8 0 9 3.6 9 7.8v140.3z"></path></svg> icons to your site! Be sure to check out the <code>icon</code> option when adding linked buttons to your About Page.</p>
+</div></div><div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -732,45 +739,45 @@ Note
 <p>b. <strong>Update <code>_quarto.yml</code></strong> by adding your new <code>.qmd</code> to the list of navbar pages. My website’s <code>_quarto.yml</code> file now looks like this:</p></li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">project:</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="ex">type:</span> website</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="ex">output-dir:</span> docs</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="ex">website:</span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="ex">title:</span> <span class="st">"Samantha Csik"</span></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  <span class="ex">navbar:</span></span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>   <span class="ex">background:</span> primary</span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>   <span class="ex">left:</span></span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>     <span class="ex">-</span> href: index.qmd</span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>       <span class="ex">text:</span> Home</span>
-<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>     <span class="ex">-</span> about.qmd</span>
-<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>     <span class="ex">-</span> resources.qmd <span class="co"># my new navbar page</span></span>
-<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a><span class="ex">format:</span></span>
-<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>  <span class="ex">html:</span></span>
-<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>    <span class="ex">theme:</span> cosmo</span>
-<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>    <span class="ex">css:</span> styles.css</span>
-<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a><span class="ex">editor:</span> visual</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">project:</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="ex">type:</span> website</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="ex">output-dir:</span> docs</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="ex">website:</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="ex">title:</span> <span class="st">"Samantha Csik"</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  <span class="ex">navbar:</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>   <span class="ex">background:</span> primary</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>   <span class="ex">left:</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>     <span class="ex">-</span> href: index.qmd</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>       <span class="ex">text:</span> Home</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>     <span class="ex">-</span> about.qmd</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>     <span class="ex">-</span> resources.qmd <span class="co"># my new navbar page</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="ex">format:</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>  <span class="ex">html:</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>    <span class="ex">theme:</span> cosmo</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>    <span class="ex">css:</span> styles.css</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a><span class="ex">editor:</span> visual</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="5" type="1">
 <li><strong>Change the theme</strong> by choosing one of the 25 predefined <a href="https://bootswatch.com/">Bootswatch themes</a>. By default, Quarto sites are built using the <a href="https://bootswatch.com/cosmo/">cosmo</a> theme. Supply just one theme name to the <code>theme</code> option in your <code>_quarto.qmd</code> file, <em>or</em> supply both a dark and a light theme for users to toggle between:</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># supplying just one theme ("minty")</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="ex">format:</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="ex">html:</span></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">theme:</span> minty</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    <span class="ex">css:</span> styles.css</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># supplying just one theme ("minty")</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="ex">format:</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="ex">html:</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">theme:</span> minty</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="ex">css:</span> styles.css</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># supplying a light ("minty") and dark ("slate") theme to toggle between</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="ex">format:</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="ex">html:</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">theme:</span> </span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>      <span class="ex">light:</span> minty</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>      <span class="ex">dark:</span> slate</span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    <span class="ex">css:</span> styles.css</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># supplying a light ("minty") and dark ("slate") theme to toggle between</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="ex">format:</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="ex">html:</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">theme:</span> </span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>      <span class="ex">light:</span> minty</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>      <span class="ex">dark:</span> slate</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    <span class="ex">css:</span> styles.css</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell column-page quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
@@ -807,7 +814,7 @@ Note
 <li><p>We don’t talk about Quarto, by Alison Hill | <a href="https://www.apreshill.com/blog/2022-04-we-dont-talk-about-quarto/"><svg aria-label="Blog" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5A5A5A;overflow:visible;position:relative;"><title>Blog</title><path d="M172.2 226.8c-14.6-2.9-28.2 8.9-28.2 23.8V301c0 10.2 7.1 18.4 16.7 22 18.2 6.8 31.3 24.4 31.3 45 0 26.5-21.5 48-48 48s-48-21.5-48-48V120c0-13.3-10.7-24-24-24H24c-13.3 0-24 10.7-24 24v248c0 89.5 82.1 160.2 175 140.7 54.4-11.4 98.3-55.4 109.7-109.7 17.4-82.9-37-157.2-112.5-172.2zM209 0c-9.2-.5-17 6.8-17 16v31.6c0 8.5 6.6 15.5 15 15.9 129.4 7 233.4 112 240.9 241.5.5 8.4 7.5 15 15.9 15h32.1c9.2 0 16.5-7.8 16-17C503.4 139.8 372.2 8.6 209 0zm.3 96c-9.3-.7-17.3 6.7-17.3 16.1v32.1c0 8.4 6.5 15.3 14.8 15.9 76.8 6.3 138 68.2 144.9 145.2.8 8.3 7.6 14.7 15.9 14.7h32.2c9.3 0 16.8-8 16.1-17.3-8.4-110.1-96.5-198.2-206.6-206.7z"></path></svg> blog post</a></p></li>
 <li><p>Reproducible Authoring with Quarto, by Mine Çetinkaya-Rundel | <a href="https://mine-cetinkaya-rundel.github.io/2022-repro-toronto/#/title-slide"><svg aria-label="Desktop" role="img" viewbox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5A5A5A;overflow:visible;position:relative;"><title>Desktop</title><path d="M528 0H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h192l-16 48h-72c-13.3 0-24 10.7-24 24s10.7 24 24 24h272c13.3 0 24-10.7 24-24s-10.7-24-24-24h-72l-16-48h192c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm-16 352H64V64h448v288z"></path></svg> slides</a> | <a href="https://www.youtube.com/watch?v=6p4vOKS6Xls"><svg aria-label="Video" role="img" viewbox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5A5A5A;overflow:visible;position:relative;"><title>Video</title><path d="M336.2 64H47.8C21.4 64 0 85.4 0 111.8v288.4C0 426.6 21.4 448 47.8 448h288.4c26.4 0 47.8-21.4 47.8-47.8V111.8c0-26.4-21.4-47.8-47.8-47.8zm189.4 37.7L416 177.3v157.4l109.6 75.5c21.2 14.6 50.4-.3 50.4-25.8V127.5c0-25.4-29.1-40.4-50.4-25.8z"></path></svg> recording</a></p></li>
 <li><p>Hello Quarto! A Chat with NASA Openscapes, Co-Hosted with R-Ladies Santa Barbara | <a href="https://www.openscapes.org/blog/2022/06/22/hello-quarto/"><svg aria-label="Blog" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5A5A5A;overflow:visible;position:relative;"><title>Blog</title><path d="M172.2 226.8c-14.6-2.9-28.2 8.9-28.2 23.8V301c0 10.2 7.1 18.4 16.7 22 18.2 6.8 31.3 24.4 31.3 45 0 26.5-21.5 48-48 48s-48-21.5-48-48V120c0-13.3-10.7-24-24-24H24c-13.3 0-24 10.7-24 24v248c0 89.5 82.1 160.2 175 140.7 54.4-11.4 98.3-55.4 109.7-109.7 17.4-82.9-37-157.2-112.5-172.2zM209 0c-9.2-.5-17 6.8-17 16v31.6c0 8.5 6.6 15.5 15 15.9 129.4 7 233.4 112 240.9 241.5.5 8.4 7.5 15 15.9 15h32.1c9.2 0 16.5-7.8 16-17C503.4 139.8 372.2 8.6 209 0zm.3 96c-9.3-.7-17.3 6.7-17.3 16.1v32.1c0 8.4 6.5 15.3 14.8 15.9 76.8 6.3 138 68.2 144.9 145.2.8 8.3 7.6 14.7 15.9 14.7h32.2c9.3 0 16.8-8 16.1-17.3-8.4-110.1-96.5-198.2-206.6-206.7z"></path></svg> blog post</a> | <a href="https://www.youtube.com/watch?v=azVAl343CIU"><svg aria-label="Video" role="img" viewbox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5A5A5A;overflow:visible;position:relative;"><title>Video</title><path d="M336.2 64H47.8C21.4 64 0 85.4 0 111.8v288.4C0 426.6 21.4 448 47.8 448h288.4c26.4 0 47.8-21.4 47.8-47.8V111.8c0-26.4-21.4-47.8-47.8-47.8zm189.4 37.7L416 177.3v157.4l109.6 75.5c21.2 14.6 50.4-.3 50.4-25.8V127.5c0-25.4-29.1-40.4-50.4-25.8z"></path></svg> recording</a></p></li>
-<li><p>Upcoming rstudio::conf 2022 keynote, Hello Quarto, by Julie Lowndes and Mine Çetinkaya-Rundel | recording coming soon!</p></li>
+<li><p>rstudio::conf 2022 keynote, Hello Quarto, by Julie Lowndes and Mine Çetinkaya-Rundel | recording coming soon!</p></li>
 </ul>
 </section>
 

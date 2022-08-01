@@ -167,9 +167,13 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-**If your current branch is named *`master`*, follow step 7 below. If your branch is named *`main`*, you can head straight to step 8.**
+**If your current branch is named `master`, follow step 7 below to update the name to `main`.** Why? The racist “master” terminology for git branches motivates us to update our default branch to “main” instead. If your branch is already named `main`, you can head straight to step 8. 
 
-7.  Let's switch our default branch name from `master` to `main`. *Why? The racist "master" terminology for git branches motivates us to update our default branch to "main" instead.* **Note:** If you create a repo in GitHub FIRST, the default now has been updated to make the default branch 'main'. However, you'll need to update the branch name if you create a local git repository first (like we've just done). Update the branch name from `master` to `main` by running the following line in the terminal window:
+::: column-margin
+**Note:** If you create a repo in *GitHub first*, the default now has been updated to make the default branch `main`. However, if you create a *local git repository first* (as we've done here) you'll need to update your default branch name to `main`. 
+:::
+
+7.  Let's switch our default branch name from `master` to `main`. For Git version 2.28+ (check your version by running `git --version` in your Terminal), you can update the default branch to `main` by running the following line in the Terminal window:
 
 ```{bash}
 #| eval: false
@@ -179,6 +183,8 @@ git config --global init.defaultBranch main
 ***This sets the default branch name to `main` for any new repositories you create moving forward (it does not rename branches in existing projects).***
 
 You can double check that this worked by typing out the `git status` command again. The first printed line should now read, `On branch main`.
+
+If you are running an earlier version of Git, **TBD ON WHAT THOSE STEPS ARE**
 
 8.  Add the files in your `mysite` directory (*analogous to checking the boxes next to your files in the RStudio Git tab*)...
 
@@ -348,7 +354,7 @@ knitr::include_graphics("media/mysite_remote.png")
     **If your current branch is named *`master`*, follow step 8-12 below.** *Why?* The racist "master" terminology for git branches motivates us to update our default branch to "main" instead. If your branch is named *`main`*, you’re good to go! You can continue to the next section, [Publish your site with GitHub Pages](https://ucsb-meds.github.io/creating-quarto-websites/#publish-your-site-with-github-pages).
 
 ::: column-margin
-    **Note:** If you create a repo in *GitHub first*, the default now has been updated to make the default branch `main`. However, if you create a *local git repository first* (as we've just done) you'll need to update your default branch name to `main`. 
+**Note:** If you create a repo in *GitHub first*, the default now has been updated to make the default branch `main`. However, if you create a *local git repository first* (as we've just done) you'll need to update your default branch name to `main`. 
 :::
 
 8.  Let’s switch our default branch name from `master` to `main`. In RStudio, click on the branch button in the Git tab (the diamond with purple rectangle "branches"):
@@ -385,7 +391,7 @@ knitr::include_graphics("media/default_branch.png")
 knitr::include_graphics("media/switch_main.png")
 ```
 
-12. Once you've updated the default to main, delete the `master` branch. Cool. Now you're working just on main.
+12. Once you've updated the default to main, delete the `master` branch. Cool. Now you're working just on `main`.
 :::
 
 ## `r fontawesome::fa("github", fill = "#5A5A5A", a11y = "sem")` Publish your site with GitHub Pages
@@ -422,7 +428,7 @@ project:
 knitr::include_graphics("media/build_site.png")
 ```
 
-4.  Now we need to send all of our files in our local git repository to our remote GitHub repository:
+4.  Now we need to send all of the files in our local git repository to our remote GitHub repository:
 
     a.  **Stage** your files by checking all the boxes in the **Git** tab (*this is analogous to the `git add .` command used in the Terminal for staging all files*)
     b.  **Commit** your files by clicking the Commit button, adding a commit message, and clicking "Commit" (*analogous to `git commit -m "my commit message"`*)
@@ -461,7 +467,7 @@ Right now, our website is built using Quarto default styling. Let's learn about 
 
     -   `image-width` & `image-shape`: adjust your image's size and shape (`round`, `rounded`, `rectangle`)
 
-    -   `links`: add buttons with links to your social media pages
+    -   `links`: add buttons with links to your social media pages 
 
 ```{bash}
 #| eval: false
@@ -481,6 +487,10 @@ title: "Samantha Csik"
         - text: Email
           href: mailto:scsik@ucsb.edu
 ```
+
+:::column-margin
+**Fun Tip:** Install the [Font Awesome Extension for Quarto](https://github.com/quarto-ext/fontawesome) to add free [Font Awesome](https://fontawesome.com/) `r fontawesome::fa("font-awesome", fill = "#5A5A5A", a11y = "sem")` icons to your site! Be sure to check out the `icon` option when adding linked buttons to your About Page.
+:::
 
 ```{r}
 #| echo: false
@@ -572,4 +582,4 @@ In the meantime, explore some [alumni websites](https://ucsb-meds.github.io/stud
 
 -   Hello Quarto! A Chat with NASA Openscapes, Co-Hosted with R-Ladies Santa Barbara \| [`r fontawesome::fa("blog", fill = "#5A5A5A", a11y = "sem")` blog post](https://www.openscapes.org/blog/2022/06/22/hello-quarto/) \| [`r fontawesome::fa("video", fill = "#5A5A5A", a11y = "sem")` recording](https://www.youtube.com/watch?v=azVAl343CIU)
 
--   Upcoming rstudio::conf 2022 keynote, Hello Quarto, by Julie Lowndes and Mine Çetinkaya-Rundel \| recording coming soon!
+-   rstudio::conf 2022 keynote, Hello Quarto, by Julie Lowndes and Mine Çetinkaya-Rundel \| recording coming soon!
