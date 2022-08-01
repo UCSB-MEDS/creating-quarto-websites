@@ -173,8 +173,10 @@ nothing added to commit but untracked files present (use "git add" to track)
 **Note:** If you create a repo in *GitHub first*, the default now has been updated to make the default branch `main`. However, if you create a *local git repository first* (as we've done here) you'll need to update your default branch name to `main`. 
 :::
 
-7.  Let's switch our default branch name from `master` to `main`. For Git version 2.28+ (check your version by running `git --version` in your Terminal), you can update the default branch to `main` by running the following line in the Terminal window:
+7.  Let's switch our default branch name from `master` to `main`. Choose your workflow below based on your Git version (check your version by running `git --version` in your Terminal:
 
+**For Git version 2.28 or later**, you can update the default branch to `main` by running the following line in the Terminal window:
+    
 ```{bash}
 #| eval: false
 git config --global init.defaultBranch main
@@ -184,7 +186,20 @@ git config --global init.defaultBranch main
 
 You can double check that this worked by typing out the `git status` command again. The first printed line should now read, `On branch main`.
 
-If you are running an earlier version of Git, **TBD ON WHAT THOSE STEPS ARE**
+**If you are running an earlier version of Git**, rename the default branch as `main` by running the following line in the Terminal window:
+
+```{bash}
+#| eval: false
+git branch -m master main
+```
+
+The `-m` attribute is used to rename the branch without affecting the branch's history.
+
+***This sets the default branch name to `main` ONLY for this repository (so you'll need to do this with any new local git repositories that you create.***
+
+:::callout-important
+Be mindful that your workflow for updating `master` to `main` will look different if you've already created an upstream remote (GitHub repo). Check out [this post](https://gitbetter.substack.com/p/how-to-change-git-default-branch) for more info.
+:::
 
 8.  Add the files in your `mysite` directory (*analogous to checking the boxes next to your files in the RStudio Git tab*)...
 
