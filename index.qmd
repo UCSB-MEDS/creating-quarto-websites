@@ -176,7 +176,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 -   **If your current branch is named `master`, follow step 7 below to update the name to `main`.** Why? The racist "master" terminology for git branches motivates us to update our default branch to "main" instead. If your branch is already named `main`, you can head straight to step 8.
 
 ::: column-margin
-**Note:** If you create a repo in *GitHub first*, the default now has been updated to make the default branch `main`. However, if you create a *local git repository first* (as we've done here) you'll need to update your default branch name to `main`.
+**Note:** If you create a repo in *GitHub first*, the default now has been updated to make the default branch `main`. However, if you create a *local git repository first* (as we've done here) you may need to update your default branch name to `main` (depending on your version of Git and its configuration settings).
 :::
 
 7.  Let's switch our default branch name from `master` to `main`. Choose your workflow below based on your Git version (check your version by running `git --version` in your Terminal):
@@ -384,47 +384,14 @@ knitr::include_graphics("media/mysite_remote.png")
 
     b.  click on the **Git** tab in the top right pane of RStudio. Next to the ![A white diamond with two purple squares, one directly above and one directly to the right, connected to the diamond by a line.](media/branch.png){alt="A white diamond with two purple squares, one directly above and one directly to the right, connected to the diamond by a line." style="display: inline-block; margin: 0; position: relative; top: 0px; width:20px;height:18px;"} symbol, you should see a dropdown menu that displays the name of your current branch.
 
--  **If your current branch is named *`master`*, follow steps 8-12 below.** *Why?* The racist "master" terminology for git branches motivates us to update our default branch to "main" instead. If your branch is named *`main`*, you're good to go! You can continue to the next section, [Publish your site with GitHub Pages](https://ucsb-meds.github.io/creating-quarto-websites/#publish-your-site-with-github-pages).
+-  **If your current branch is named *`master`*, follow step 8 below.** *Why?* The racist "master" terminology for git branches motivates us to update our default branch to "main" instead. If your branch is named *`main`*, you're good to go! You can continue to the next section, [Publish your site with GitHub Pages](https://ucsb-meds.github.io/creating-quarto-websites/#publish-your-site-with-github-pages).
 
 ::: column-margin
-**Note:** If you create a repo in *GitHub first*, the default now has been updated to make the default branch `main`. However, if you create a *local git repository first* (as we've done here) you'll need to update your default branch name to `main`.
+**Note:** If you create a repo in *GitHub first*, the default now has been updated to make the default branch `main`. However, if you create a *local git repository first* (as we've done here) you may need to update your default branch name to `main` (depending on your version of Git and its configuration settings).
 :::
 
-8.  Let's switch our default branch name from `master` to `main`. In RStudio, click on the branch button in the Git tab (the diamond with purple rectangle "branches"):
+8.  Let's switch our default branch name from `master` to `main`. In the console, run `usethis::git_default_branch_rename(from = "master", to = "main")` to update your default branch name. Confirm that it updated **(a)** locally by running `git status` again in your Terminal -- the first printed line should now read, `On branch main`, and **(b)** on your remote by refreshing your GitHub repo (in your web browser) -- you should see the updated default branch name at the top of your repo.
 
-```{r}
-#| echo: false
-#| fig-align: center
-knitr::include_graphics("media/branch_button.png")
-```
-
-9.  In the new window, enter the new branch name "main". Make sure that **Sync branch with remote** IS CHECKED. Then click "Create."
-
-```{r}
-#| echo: false
-#| fig-align: center
-knitr::include_graphics("media/new_branch.png")
-```
-
-10. Head back to your GitHub repo, refresh, then click where it now says **2 branches**:
-
-```{r}
-#| echo: false
-#| fig-align: center
-knitr::include_graphics("media/two_branches.png")
-```
-
-11. Click on the "switchy arrows" in the top right of the panel that says "Default branch" (if you hover, the tooltip says "switch default branch"). Click on those arrows to update the default branch to 'main'.
-
-```{r}
-#| echo: false
-#| layout-ncol: 2
-#| column: page
-knitr::include_graphics("media/default_branch.png")
-knitr::include_graphics("media/switch_main.png")
-```
-
-12. Once you've updated the default to main, delete the `master` branch. Cool. Now you're working just on `main`.
 :::
 
 

@@ -358,7 +358,7 @@ Important
 </ul>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p><strong>Note:</strong> If you create a repo in <em>GitHub first</em>, the default now has been updated to make the default branch <code>main</code>. However, if you create a <em>local git repository first</em> (as we’ve done here) you’ll need to update your default branch name to <code>main</code>.</p>
+<p><strong>Note:</strong> If you create a repo in <em>GitHub first</em>, the default now has been updated to make the default branch <code>main</code>. However, if you create a <em>local git repository first</em> (as we’ve done here) you may need to update your default branch name to <code>main</code> (depending on your version of Git and its configuration settings).</p>
 </div></div><ol start="7" type="1">
 <li>Let’s switch our default branch name from <code>master</code> to <code>main</code>. Choose your workflow below based on your Git version (check your version by running <code>git --version</code> in your Terminal):</li>
 </ol>
@@ -625,62 +625,13 @@ Note
 </ol></li>
 </ol>
 <ul>
-<li><strong>If your current branch is named <em><code>master</code></em>, follow steps 8-12 below.</strong> <em>Why?</em> The racist “master” terminology for git branches motivates us to update our default branch to “main” instead. If your branch is named <em><code>main</code></em>, you’re good to go! You can continue to the next section, <a href="https://ucsb-meds.github.io/creating-quarto-websites/#publish-your-site-with-github-pages">Publish your site with GitHub Pages</a>.</li>
+<li><strong>If your current branch is named <em><code>master</code></em>, follow step 8 below.</strong> <em>Why?</em> The racist “master” terminology for git branches motivates us to update our default branch to “main” instead. If your branch is named <em><code>main</code></em>, you’re good to go! You can continue to the next section, <a href="https://ucsb-meds.github.io/creating-quarto-websites/#publish-your-site-with-github-pages">Publish your site with GitHub Pages</a>.</li>
 </ul>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p><strong>Note:</strong> If you create a repo in <em>GitHub first</em>, the default now has been updated to make the default branch <code>main</code>. However, if you create a <em>local git repository first</em> (as we’ve done here) you’ll need to update your default branch name to <code>main</code>.</p>
+<p><strong>Note:</strong> If you create a repo in <em>GitHub first</em>, the default now has been updated to make the default branch <code>main</code>. However, if you create a <em>local git repository first</em> (as we’ve done here) you may need to update your default branch name to <code>main</code> (depending on your version of Git and its configuration settings).</p>
 </div></div><ol start="8" type="1">
-<li>Let’s switch our default branch name from <code>master</code> to <code>main</code>. In RStudio, click on the branch button in the Git tab (the diamond with purple rectangle “branches”):</li>
-</ol>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="media/branch_button.png" class="img-fluid figure-img" width="621"></p>
-</figure>
-</div>
-</div>
-</div>
-<ol start="9" type="1">
-<li>In the new window, enter the new branch name “main”. Make sure that <strong>Sync branch with remote</strong> IS CHECKED. Then click “Create.”</li>
-</ol>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="media/new_branch.png" class="img-fluid figure-img" width="394"></p>
-</figure>
-</div>
-</div>
-</div>
-<ol start="10" type="1">
-<li>Head back to your GitHub repo, refresh, then click where it now says <strong>2 branches</strong>:</li>
-</ol>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="media/two_branches.png" class="img-fluid figure-img" width="276"></p>
-</figure>
-</div>
-</div>
-</div>
-<ol start="11" type="1">
-<li>Click on the “switchy arrows” in the top right of the panel that says “Default branch” (if you hover, the tooltip says “switch default branch”). Click on those arrows to update the default branch to ‘main’.</li>
-</ol>
-<div class="cell column-page quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="cell-output-display quarto-layout-cell" style="flex-basis: 58.1%;justify-content: center;">
-<p><img src="media/default_branch.png" class="img-fluid" width="986"></p>
-</div>
-<div class="cell-output-display quarto-layout-cell" style="flex-basis: 41.9%;justify-content: center;">
-<p><img src="media/switch_main.png" class="img-fluid" width="711"></p>
-</div>
-</div>
-</div>
-<ol start="12" type="1">
-<li>Once you’ve updated the default to main, delete the <code>master</code> branch. Cool. Now you’re working just on <code>main</code>.</li>
+<li>Let’s switch our default branch name from <code>master</code> to <code>main</code>. In the console, run <code>usethis::git_default_branch_rename(from = "master", to = "main")</code> to update your default branch name. Confirm that it updated <strong>(a)</strong> locally by running <code>git status</code> again in your Terminal – the first printed line should now read, <code>On branch main</code>, and <strong>(b)</strong> on your remote by refreshing your GitHub repo (in your web browser) – you should see the updated default branch name at the top of your repo.</li>
 </ol>
 </section>
 </div>
