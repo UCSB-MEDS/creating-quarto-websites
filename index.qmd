@@ -271,7 +271,7 @@ git remote add origin <REMOTE_URL>
 git remote -v
 ```
 
-12. Push the changes in your local repository to your remote repository on GitHub (*analogous to pressing the "Push" button with the upward facing green arrow in RStudio*):
+12. Push the changes in your local repository to your remote repository on GitHub:
 
 ```{bash}
 #| eval: false
