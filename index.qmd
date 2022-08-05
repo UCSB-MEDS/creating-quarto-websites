@@ -15,6 +15,17 @@ format:
 
 R users have long loved [RMarkdown](https://rmarkdown.rstudio.com/) for combining prose, code, and outputs into single "knitted" documents. Quarto extends all of RMarkdown's best features (plus many more!) to additional languages.
 
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-alt: "A schematic representing the multi-language input (e.g. Python, R, Observable, Julia) and multi-format output (e.g. PDF, html, Word documents, and more) versatility of Quarto."
+knitr::include_graphics("media/quarto_schematic.png")
+```
+
+::: column-margin
+`r fontawesome::fa("palette", fill = "#5A5A5A", a11y = "sem")` Art by [Allison Horst](https://twitter.com/allison_horst). Be sure to check out the rest of Allison's seriously cute Quarto penguin art in the #rstudioconf2022 keynote talk, [Hello Quarto](https://mine.quarto.pub/hello-quarto/#/hello-quarto-title), by [Julie Lowndes](https://twitter.com/juliesquid) & [Mine Çetinkaya-Rundel](https://twitter.com/minebocek)!
+:::
+
 You can explore [Quarto's documentation](https://quarto.org/docs/guide/) to learn more about creating documents, websites, blogs, books, slides, etc.
 
 **I'm new to Quarto (like many of us!) -- if you have suggestions on how to correct or improve these instructions, please feel free to file an issue on [`r fontawesome::fa("github", fill = "#5A5A5A", a11y = "sem")` GitHub](https://github.com/UCSB-MEDS/creating-quarto-websites/issues/new).**
@@ -23,7 +34,15 @@ You can explore [Quarto's documentation](https://quarto.org/docs/guide/) to lear
 
 ## `r fontawesome::fa("question", fill = "#5A5A5A", a11y = "sem")` Do I *need* to use Quarto to build my website?
 
-Nope! There are a number of R-based tools that make building websites and blogs fun and easy, including the still-widely-used [`{blogdown}`](https://bookdown.org/yihui/blogdown/) and [`{distill}`](https://rstudio.github.io/distill/website.html) packages. Alternatively, you can skip R altogether and build really beautiful sites using HTML templates (check out [this tutorial](https://rpubs.com/alatleephillips/science-website-tutorial) by NCEAS' Science Communication and Policy Officer, [Alex Phillips](https://www.alexandraatleephillips.com/)) or a variety of [static site generators](https://jamstack.org/generators/?utm_source=blog&utm_medium=about-ssgs-pnh&utm_campaign=devex) (e.g. [Hugo](https://gohugo.io/), [Jekyll](https://jekyllrb.com/)).
+Nope! There are a number of R-based tools that make building websites and blogs fun and easy, including the still-widely-used [`{blogdown}`](https://bookdown.org/yihui/blogdown/) and [`{distill}`](https://rstudio.github.io/distill/website.html) packages. 
+
+```{r}
+#| echo: false
+#| fig-align: center
+knitr::include_graphics("media/blogdown_distill.png")
+```
+
+Alternatively, you can skip R altogether and build really beautiful sites using HTML templates (check out [this tutorial](https://rpubs.com/alatleephillips/science-website-tutorial) by NCEAS' Science Communication and Policy Officer, [Alex Phillips](https://www.alexandraatleephillips.com/)) or a variety of [static site generators](https://jamstack.org/generators/?utm_source=blog&utm_medium=about-ssgs-pnh&utm_campaign=devex) (e.g. [Hugo](https://gohugo.io/), [Jekyll](https://jekyllrb.com/)).
 
 Though still relatively new, Quarto has the data science community (particularly on Twitter) abuzz -- it's versatile, user-friendly, and looks pretty great out-of-the-box (while still being customizable). 
 
@@ -68,12 +87,12 @@ The order of operations is slightly different depending on which approach you de
 
 ### **Steps:**
 
-1.  Open up Terminal (Mac) or Git Bash (Windows).
+1.  Open up your terminal.
 
 2.  Determine where you are in your file system using `pwd` (print working directory). Use `cd` (change directory) to navigate your file system to wherever you'd like your project to live.
 
 ::: callout-tip
-To stay organized, I save all my git repositories to a folder called `git` in my computer's home directory (e.g. `Users/samanthacsik/git/`).
+There are lots of differing opinions on how to keep your R projects/git repositories organized on your computer. I personally save all of mine to a folder called `git` in my computer's home directory (e.g. `Users/samanthacsik/git/`) so everything is in one place.
 :::
 
 3.  Use the following commands to create a quarto website project directory that contains the files necessary for building your website:
@@ -323,7 +342,7 @@ knitr::include_graphics("media/vRStudio3.png")
 3.  Fill out the **Directory name:** field (this is the name of your R project, and eventually, your GitHub repo name), choose where to save your directory using the **Browse** button. Click **Create Project**.
 
 ::: callout-tip
-To stay organized, I save all my git repositories to a folder called `git` in my computer's home directory (e.g. `Users/samanthacsik/git/`).
+There are lots of differing opinions on how to keep your R projects/git repositories organized on your computer. I personally save all of mine to a folder called `git` in my computer's home directory (e.g. `Users/samanthacsik/git/`) so everything is in one place.
 :::
 
 -  **Recommended:** Name the project **yourusername.github.io** if you want that to be the site name (this is a "freebie" in GitHub). Otherwise, name it something reasonable (this will become the [slug](https://developer.mozilla.org/en-US/docs/Glossary/Slug) for your site if publishing with GitHub pages, so choose carefully). I'm calling my project **mysite** just for tutorial purposes only -- you should definitely give yours a more practical/creative name.

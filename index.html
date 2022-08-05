@@ -147,17 +147,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="what-is" class="level2">
+<section id="what-is" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="what-is">What is <img src="media/quarto.png" alt="A blue circle divided into four quadrants, followed by the name 'quarto'." style="display: inline-block; margin: 0; position: relative; top: 0px; width:110px;height:30px;"> ?</h2>
 <p><a href="https://quarto.org/">Quarto</a> is a publishing system built on Pandoc that allows users to create dynamic content using R, Python, Julia, and ObservableJS (with plans to add more languages too!).</p>
 <p>R users have long loved <a href="https://rmarkdown.rstudio.com/">RMarkdown</a> for combining prose, code, and outputs into single “knitted” documents. Quarto extends all of RMarkdown’s best features (plus many more!) to additional languages.</p>
-<p>You can explore <a href="https://quarto.org/docs/guide/">Quarto’s documentation</a> to learn more about creating documents, websites, blogs, books, slides, etc.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="media/quarto_schematic.png" class="img-fluid figure-img" alt="A schematic representing the multi-language input (e.g. Python, R, Observable, Julia) and multi-format output (e.g. PDF, html, Word documents, and more) versatility of Quarto." width="4000"></p>
+</figure>
+</div>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><svg aria-label="Palette" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5A5A5A;overflow:visible;position:relative;"><title>Palette</title><path d="M204.3 5C104.9 24.4 24.8 104.3 5.2 203.4c-37 187 131.7 326.4 258.8 306.7 41.2-6.4 61.4-54.6 42.5-91.7-23.1-45.4 9.9-98.4 60.9-98.4h79.7c35.8 0 64.8-29.6 64.9-65.3C511.5 97.1 368.1-26.9 204.3 5zM96 320c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm32-128c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128-64c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 64c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"></path></svg> Art by <a href="https://twitter.com/allison_horst">Allison Horst</a>. Be sure to check out the rest of Allison’s seriously cute Quarto penguin art in the #rstudioconf2022 keynote talk, <a href="https://mine.quarto.pub/hello-quarto/#/hello-quarto-title">Hello Quarto</a>, by <a href="https://twitter.com/juliesquid">Julie Lowndes</a> &amp; <a href="https://twitter.com/minebocek">Mine Çetinkaya-Rundel</a>!</p>
+</div></div><p>You can explore <a href="https://quarto.org/docs/guide/">Quarto’s documentation</a> to learn more about creating documents, websites, blogs, books, slides, etc.</p>
 <p><strong>I’m new to Quarto (like many of us!) – if you have suggestions on how to correct or improve these instructions, please feel free to file an issue on <a href="https://github.com/UCSB-MEDS/creating-quarto-websites/issues/new"><svg aria-label="GitHub" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5A5A5A;overflow:visible;position:relative;"><title>GitHub</title><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg> GitHub</a>.</strong></p>
 <hr>
 </section>
 <section id="do-i-need-to-use-quarto-to-build-my-website" class="level2">
 <h2 class="anchored" data-anchor-id="do-i-need-to-use-quarto-to-build-my-website"><svg aria-label="Question" role="img" viewbox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5A5A5A;overflow:visible;position:relative;"><title>Question</title><path d="M202.021 0C122.202 0 70.503 32.703 29.914 91.026c-7.363 10.58-5.093 25.086 5.178 32.874l43.138 32.709c10.373 7.865 25.132 6.026 33.253-4.148 25.049-31.381 43.63-49.449 82.757-49.449 30.764 0 68.816 19.799 68.816 49.631 0 22.552-18.617 34.134-48.993 51.164-35.423 19.86-82.299 44.576-82.299 106.405V320c0 13.255 10.745 24 24 24h72.471c13.255 0 24-10.745 24-24v-5.773c0-42.86 125.268-44.645 125.268-160.627C377.504 66.256 286.902 0 202.021 0zM192 373.459c-38.196 0-69.271 31.075-69.271 69.271 0 38.195 31.075 69.27 69.271 69.27s69.271-31.075 69.271-69.271-31.075-69.27-69.271-69.27z"></path></svg> Do I <em>need</em> to use Quarto to build my website?</h2>
-<p>Nope! There are a number of R-based tools that make building websites and blogs fun and easy, including the still-widely-used <a href="https://bookdown.org/yihui/blogdown/"><code>{blogdown}</code></a> and <a href="https://rstudio.github.io/distill/website.html"><code>{distill}</code></a> packages. Alternatively, you can skip R altogether and build really beautiful sites using HTML templates (check out <a href="https://rpubs.com/alatleephillips/science-website-tutorial">this tutorial</a> by NCEAS’ Science Communication and Policy Officer, <a href="https://www.alexandraatleephillips.com/">Alex Phillips</a>) or a variety of <a href="https://jamstack.org/generators/?utm_source=blog&amp;utm_medium=about-ssgs-pnh&amp;utm_campaign=devex">static site generators</a> (e.g.&nbsp;<a href="https://gohugo.io/">Hugo</a>, <a href="https://jekyllrb.com/">Jekyll</a>).</p>
+<p>Nope! There are a number of R-based tools that make building websites and blogs fun and easy, including the still-widely-used <a href="https://bookdown.org/yihui/blogdown/"><code>{blogdown}</code></a> and <a href="https://rstudio.github.io/distill/website.html"><code>{distill}</code></a> packages.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="media/blogdown_distill.png" class="img-fluid figure-img" width="521"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Alternatively, you can skip R altogether and build really beautiful sites using HTML templates (check out <a href="https://rpubs.com/alatleephillips/science-website-tutorial">this tutorial</a> by NCEAS’ Science Communication and Policy Officer, <a href="https://www.alexandraatleephillips.com/">Alex Phillips</a>) or a variety of <a href="https://jamstack.org/generators/?utm_source=blog&amp;utm_medium=about-ssgs-pnh&amp;utm_campaign=devex">static site generators</a> (e.g.&nbsp;<a href="https://gohugo.io/">Hugo</a>, <a href="https://jekyllrb.com/">Jekyll</a>).</p>
 <p>Though still relatively new, Quarto has the data science community (particularly on Twitter) abuzz – it’s versatile, user-friendly, and looks pretty great out-of-the-box (while still being customizable).</p>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -217,7 +239,7 @@ Before getting started…
 <section id="steps" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="steps"><strong>Steps:</strong></h3>
 <ol type="1">
-<li><p>Open up Terminal (Mac) or Git Bash (Windows).</p></li>
+<li><p>Open up your terminal.</p></li>
 <li><p>Determine where you are in your file system using <code>pwd</code> (print working directory). Use <code>cd</code> (change directory) to navigate your file system to wherever you’d like your project to live.</p></li>
 </ol>
 <div class="callout-tip callout callout-style-default callout-captioned">
@@ -230,7 +252,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>To stay organized, I save all my git repositories to a folder called <code>git</code> in my computer’s home directory (e.g.&nbsp;<code>Users/samanthacsik/git/</code>).</p>
+<p>There are lots of differing opinions on how to keep your R projects/git repositories organized on your computer. I personally save all of mine to a folder called <code>git</code> in my computer’s home directory (e.g.&nbsp;<code>Users/samanthacsik/git/</code>) so everything is in one place.</p>
 </div>
 </div>
 <ol start="3" type="1">
@@ -536,7 +558,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>To stay organized, I save all my git repositories to a folder called <code>git</code> in my computer’s home directory (e.g.&nbsp;<code>Users/samanthacsik/git/</code>).</p>
+<p>There are lots of differing opinions on how to keep your R projects/git repositories organized on your computer. I personally save all of mine to a folder called <code>git</code> in my computer’s home directory (e.g.&nbsp;<code>Users/samanthacsik/git/</code>) so everything is in one place.</p>
 </div>
 </div>
 <ul>
