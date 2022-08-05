@@ -582,6 +582,8 @@ knitr::include_graphics("media/light.png")
 knitr::include_graphics("media/dark.png")
 ```
 
+Remember to **Build** your site before staging, committing, and pushing your files to GitHub!
+
 ---
 
 ## `r fontawesome::fa("forward", fill = "#5A5A5A", a11y = "sem")` Looking forward
