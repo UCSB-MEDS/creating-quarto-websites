@@ -30,11 +30,11 @@ You can explore [Quarto's documentation](https://quarto.org/docs/guide/) to lear
 
 **I'm new to Quarto (like many of us!) -- if you have suggestions on how to correct or improve these instructions, please feel free to file an issue on [`r fontawesome::fa("github", fill = "#5A5A5A", a11y = "sem")` GitHub](https://github.com/UCSB-MEDS/creating-quarto-websites/issues/new).**
 
----
+------------------------------------------------------------------------
 
 ## `r fontawesome::fa("question", fill = "#5A5A5A", a11y = "sem")` Do I *need* to use Quarto to build my website?
 
-Nope! There are a number of R-based tools that make building websites and blogs fun and easy, including the still-widely-used [`{blogdown}`](https://bookdown.org/yihui/blogdown/) and [`{distill}`](https://rstudio.github.io/distill/website.html) packages. 
+Nope! There are a number of R-based tools that make building websites and blogs fun and easy, including the still-widely-used [`{blogdown}`](https://bookdown.org/yihui/blogdown/) and [`{distill}`](https://rstudio.github.io/distill/website.html) packages.
 
 ```{r}
 #| echo: false
@@ -44,7 +44,7 @@ knitr::include_graphics("media/blogdown_distill.png")
 
 Alternatively, you can skip R altogether and build really beautiful sites using HTML templates (check out [this tutorial](https://rpubs.com/alatleephillips/science-website-tutorial) by NCEAS' Science Communication and Policy Officer, [Alex Phillips](https://www.alexandraatleephillips.com/)) or a variety of [static site generators](https://jamstack.org/generators/?utm_source=blog&utm_medium=about-ssgs-pnh&utm_campaign=devex) (e.g. [Hugo](https://gohugo.io/), [Jekyll](https://jekyllrb.com/)).
 
-Though still relatively new, Quarto has the data science community (particularly on Twitter) abuzz -- it's versatile, user-friendly, and looks pretty great out-of-the-box (while still being customizable). 
+Though still relatively new, Quarto has the data science community (particularly on Twitter) abuzz -- it's versatile, user-friendly, and looks pretty great out-of-the-box (while still being customizable).
 
 ::: callout-note
 ## Twitter is a great place to stay atop Quarto (and all-things [#rstats](https://twitter.com/search?q=%23rstats&src=typed_query)) news.
@@ -52,7 +52,7 @@ Though still relatively new, Quarto has the data science community (particularly
 Follow [\@quarto_pub](https://twitter.com/quarto_pub) and check out [Mine Çentinkaya-Rundel](https://mine-cr.com/)'s #quartotip tweets, which are collected and published as blog posts at the [A Quarto tip a day keeps the docs away](https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/about.html) website.
 :::
 
----
+------------------------------------------------------------------------
 
 ## `r fontawesome::fa("tools", fill = "#5A5A5A", a11y = "sem")` Create the scaffolding for your website
 
@@ -293,7 +293,7 @@ git remote -v
 git push -u origin main
 ```
 
--  You should see something similar to this print out, if successful!
+-   You should see something similar to this print out, if successful!
 
 ```{bash}
 #| eval: false
@@ -311,7 +311,7 @@ Branch 'main' set up to track remote branch 'main' from 'origin'.
 (base) Samanthas-MacBook-Air:mysite samanthacsik$ 
 ```
 
--  Refresh your GitHub repository (in your web browser) to see that your updates have been successfully pushed!
+-   Refresh your GitHub repository (in your web browser) to see that your updates have been successfully pushed!
 
 ## **`r fontawesome::fa("r-project", fill = "#5A5A5A", a11y = "sem")` Using the RStudio IDE**
 
@@ -345,7 +345,7 @@ knitr::include_graphics("media/vRStudio3.png")
 There are lots of differing opinions on how to keep your R projects/git repositories organized on your computer. I personally save all of mine to a folder called `git` in my computer's home directory (e.g. `Users/samanthacsik/git/`) so everything is in one place.
 :::
 
--  **Recommended:** Name the project **yourusername.github.io** if you want that to be the site name (this is a "freebie" in GitHub). Otherwise, name it something reasonable (this will become the [slug](https://developer.mozilla.org/en-US/docs/Glossary/Slug) for your site if publishing with GitHub pages, so choose carefully). I'm calling my project **mysite** just for tutorial purposes only -- you should definitely give yours a more practical/creative name.
+-   **Recommended:** Name the project **yourusername.github.io** if you want that to be the site name (this is a "freebie" in GitHub). Otherwise, name it something reasonable (this will become the [slug](https://developer.mozilla.org/en-US/docs/Glossary/Slug) for your site if publishing with GitHub pages, so choose carefully). I'm calling my project **mysite** just for tutorial purposes only -- you should definitely give yours a more practical/creative name.
 
 ```{r}
 #| echo: false
@@ -353,7 +353,7 @@ There are lots of differing opinions on how to keep your R projects/git reposito
 knitr::include_graphics("media/vRStudio4.png")
 ```
 
--  You should now see a folder called `mysite` (or whatever you named your Quarto project) with a series of files (`_quarto.yml`, `about.qmd`, `index.qmd`, `styles.css`) that provide the scaffolding for your website in the **Files** tab (in the bottom right panel in RStudio, if you haven't altered the pane layout).
+-   You should now see a folder called `mysite` (or whatever you named your Quarto project) with a series of files (`_quarto.yml`, `about.qmd`, `index.qmd`, `styles.css`) that provide the scaffolding for your website in the **Files** tab (in the bottom right panel in RStudio, if you haven't altered the pane layout).
 
 ```{r}
 #| echo: false
@@ -399,18 +399,16 @@ knitr::include_graphics("media/mysite_remote.png")
 
     b.  click on the **Git** tab in the top right pane of RStudio. Next to the ![A white diamond with two purple squares, one directly above and one directly to the right, connected to the diamond by a line.](media/branch.png){alt="A white diamond with two purple squares, one directly above and one directly to the right, connected to the diamond by a line." style="display: inline-block; margin: 0; position: relative; top: 0px; width:20px;height:18px;"} symbol, you should see a dropdown menu that displays the name of your current branch.
 
--  **If your current branch is named *`master`*, follow step 8 below.** *Why?* The racist "master" terminology for git branches motivates us to update our default branch to "main" instead. If your branch is named *`main`*, you're good to go! You can continue to the next section, [Publish your site with GitHub Pages](https://ucsb-meds.github.io/creating-quarto-websites/#publish-your-site-with-github-pages).
+-   **If your current branch is named *`master`*, follow step 8 below.** *Why?* The racist "master" terminology for git branches motivates us to update our default branch to "main" instead. If your branch is named *`main`*, you're good to go! You can continue to the next section, [Publish your site with GitHub Pages](https://ucsb-meds.github.io/creating-quarto-websites/#publish-your-site-with-github-pages).
 
 ::: column-margin
 **Note:** If you create a repo in *GitHub first*, the default now has been updated to make the default branch `main`. However, if you create a *local git repository first* (as we've done here) you may need to update your default branch name to `main` (depending on your version of Git and its configuration settings).
 :::
 
 8.  Let's switch our default branch name from `master` to `main`. In the console, run `usethis::git_default_branch_rename(from = "master", to = "main")` to update your default branch name. Confirm that it updated **(a)** locally by running `git status` again in your Terminal -- the first printed line should now read, `On branch main`, and **(b)** on your remote by refreshing your GitHub repo (in your web browser) -- you should see the updated default branch name at the top of your repo.
-
 :::
 
-
----
+------------------------------------------------------------------------
 
 ## `r fontawesome::fa("github", fill = "#5A5A5A", a11y = "sem")` Publish your site with GitHub Pages
 
@@ -465,7 +463,7 @@ knitr::include_graphics("media/gh_pages.png")
 knitr::include_graphics("media/rendered_site.png")
 ```
 
----
+------------------------------------------------------------------------
 
 ## `r fontawesome::fa("edit", fill = "#5A5A5A", a11y = "sem")` Where you should start changing stuff
 
@@ -582,9 +580,13 @@ knitr::include_graphics("media/light.png")
 knitr::include_graphics("media/dark.png")
 ```
 
-Remember to **Build** your site before staging, committing, and pushing your files to GitHub!
+::: callout-important
+## Always "Render Website" before pushing changes that you want to deploy!
 
----
+You *must* **Render Website** (under the **Build** tab) before pushing added/changed files to GitHub if you want to see those changes updated on your site. Rendering individual files alone will not work.
+:::
+
+------------------------------------------------------------------------
 
 ## `r fontawesome::fa("forward", fill = "#5A5A5A", a11y = "sem")` Looking forward
 
