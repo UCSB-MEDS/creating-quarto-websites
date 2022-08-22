@@ -727,12 +727,12 @@ Note
 <p>Right now, our website is built using Quarto default styling. Let’s learn about where things live and how to start customizing some stuff.</p>
 <ol type="1">
 <li><p><strong>Don’t mess with stuff in <code>/docs</code>.</strong> When you Render your site (by clicking Build &gt; Render Website), Quarto takes all your <code>.qmd</code> files, converts them to <code>.html</code> files (along with some other important stuff) and saves everything to your <code>/docs</code> folder. Your site now deploys from this folder, so you really don’t want to mess with anything in here directly.</p></li>
-<li><p><strong>Add content to your landing page (<code>index.html</code>)</strong>. Give your landing/home page a makeover by trying out some of the following:</p>
+<li><p><strong>Add content to your landing page (<code>index.qmd</code>)</strong>. Give your landing/home page a makeover by trying out some of the following:</p>
 <ul>
-<li><p>Update the yaml <code>title</code> in your <code>index.html</code> file. Here, I changed mine from “mysite” to my name, “Samantha Csik”</p></li>
+<li><p>Update the yaml <code>title</code> in your <code>index.qmd</code> file. Here, I changed mine from “mysite” to my name, “Samantha Csik”</p></li>
 <li><p>Delete the sample text and code and begin adding your own content – a great place to start is a short blurb introducing yourself! (<strong>Note:</strong> using three dashes, <code>---</code>, creates a page divider, as seen in the screenshot below)</p></li>
 </ul></li>
-<li><p><strong>Turn your landing page (<code>index.html</code>) into an “<a href="https://quarto.org/docs/websites/website-about.html">About Page</a>” with a photo</strong>. When the <code>about</code> option is added to a document’s yaml, a special template will be used to layout the content of that page. Choose from one of Quarto’s five <a href="https://quarto.org/docs/websites/website-about.html#templates">built-in templates</a>, each with a slightly different layout style. Some yaml options to play around with:</p>
+<li><p><strong>Turn your landing page (<code>index.qmd</code>) into an “<a href="https://quarto.org/docs/websites/website-about.html">About Page</a>” with a photo</strong>. When the <code>about</code> option is added to a document’s yaml, a special template will be used to layout the content of that page. Choose from one of Quarto’s five <a href="https://quarto.org/docs/websites/website-about.html#templates">built-in templates</a>, each with a slightly different layout style. Some yaml options to play around with:</p>
 <ul>
 <li><p><code>template</code>: choose from Quarto’s built-in template options</p></li>
 <li><p><code>image</code> (<em>note that this is a document-level option</em>): supply it the file path to your photo</p></li>
