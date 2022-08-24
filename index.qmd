@@ -490,20 +490,20 @@ Right now, our website is built using Quarto default styling. Let's learn about 
 ```{bash}
 #| eval: false
 title: "Samantha Csik"
-    image: headshot.jpg
-    about: 
-      template: trestles
-      image-shape: rounded
-      image-width: 15em
-      links:
-        - text: LinkedIn
-          href: https://www.linkedin.com/in/samanthacsik/
-        - text: Twitter
-          href: https://twitter.com/SamanthaCsik
-        - text: GitHub
-          href: https://github.com/samanthacsik
-        - text: Email
-          href: mailto:scsik@ucsb.edu
+image: headshot.jpg
+about: 
+  template: trestles
+  image-shape: rounded
+  image-width: 15em
+  links:
+    - text: LinkedIn
+      href: https://www.linkedin.com/in/samanthacsik/
+    - text: Twitter
+      href: https://twitter.com/SamanthaCsik
+    - text: GitHub
+      href: https://github.com/samanthacsik
+    - text: Email
+      href: mailto:scsik@ucsb.edu
 ```
 
 ::: column-margin
