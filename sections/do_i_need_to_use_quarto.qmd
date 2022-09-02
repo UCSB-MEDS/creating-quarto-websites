@@ -1,0 +1,23 @@
+---
+format: html
+---
+
+## `r fontawesome::fa("question", fill = "#5A5A5A", a11y = "sem")` Do I *need* to use Quarto to build my website?
+
+Nope! There are a number of R-based tools that make building websites and blogs fun and easy, including the still-widely-used [`{blogdown}`](https://bookdown.org/yihui/blogdown/) and [`{distill}`](https://rstudio.github.io/distill/website.html) packages.
+
+```{r}
+#| echo: false
+#| fig-align: center
+knitr::include_graphics("media/blogdown_distill.png")
+```
+
+Alternatively, you can skip R altogether and build really beautiful sites using HTML templates (check out [this tutorial](https://rpubs.com/alatleephillips/science-website-tutorial) by NCEAS' Science Communication and Policy Officer, [Alex Phillips](https://www.alexandraatleephillips.com/)) or a variety of [static site generators](https://jamstack.org/generators/?utm_source=blog&utm_medium=about-ssgs-pnh&utm_campaign=devex) (e.g. [Hugo](https://gohugo.io/), [Jekyll](https://jekyllrb.com/)).
+
+Though still relatively new, Quarto has the data science community (particularly on Twitter) abuzz -- it's versatile, user-friendly, and looks pretty great out-of-the-box (while still being customizable).
+
+::: callout-note
+## Twitter is a great place to stay atop Quarto (and all-things [#rstats](https://twitter.com/search?q=%23rstats&src=typed_query)) news.
+
+Follow [\@quarto_pub](https://twitter.com/quarto_pub) and check out [Mine Çentinkaya-Rundel](https://mine-cr.com/)'s #quartotip tweets, which are collected and published as blog posts at the [A Quarto tip a day keeps the docs away](https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/about.html) website.
+:::
