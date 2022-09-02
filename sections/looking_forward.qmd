@@ -1,0 +1,26 @@
+---
+format: html
+---
+
+## `r fontawesome::fa("forward", fill = "#5A5A5A", a11y = "sem")` Looking forward
+
+You should now have a basic version of your website up and running 🎉 During Fall quarter, we'll learn how to:
+
+a\. add a blog and blog posts to our websites
+
+b\. create custom themes
+
+c\. continue developing your online "brand"
+
+In the meantime, explore some [alumni websites](https://ucsb-meds.github.io/student_websites.html) (last year's students used the [`{distill}`](https://rstudio.github.io/distill/website.html) package to build their websites) for inspiration, or dig into the [Quarto Website documentation](https://quarto.org/docs/websites/) if you're hoping to get started now on further customization.
+
+## `r fontawesome::fa("star", fill = "#5A5A5A", a11y = "sem")` Additional resources to get you stoked about Quarto
+
+-   We don't talk about Quarto, by Alison Hill \| [`r fontawesome::fa("blog", fill = "#5A5A5A", a11y = "sem")` blog post](https://www.apreshill.com/blog/2022-04-we-dont-talk-about-quarto/)
+
+-   Reproducible Authoring with Quarto, by Mine Çetinkaya-Rundel \| [`r fontawesome::fa("desktop", fill = "#5A5A5A", a11y = "sem")` slides](https://mine-cetinkaya-rundel.github.io/2022-repro-toronto/#/title-slide) \| [`r fontawesome::fa("video", fill = "#5A5A5A", a11y = "sem")` recording](https://www.youtube.com/watch?v=6p4vOKS6Xls)
+
+-   Hello Quarto! A Chat with NASA Openscapes, Co-Hosted with R-Ladies Santa Barbara \| [`r fontawesome::fa("blog", fill = "#5A5A5A", a11y = "sem")` blog post](https://www.openscapes.org/blog/2022/06/22/hello-quarto/) \| [`r fontawesome::fa("video", fill = "#5A5A5A", a11y = "sem")` recording](https://www.youtube.com/watch?v=azVAl343CIU)
+
+-   rstudio::conf 2022 keynote, Hello Quarto, by Julie Lowndes and Mine Çetinkaya-Rundel \| [`r fontawesome::fa("video", fill = "#5A5A5A", a11y = "sem")` recording](https://www.rstudio.com/conference/2022/keynotes/collaborate-with-quarto/)
+
