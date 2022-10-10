@@ -6,7 +6,7 @@ format: html
 
 You should now have a basic version of your website up and running 🎉 During Fall quarter, we'll learn how to:
 
-a\. add a blog and blog posts to our websites
+a\. add a blog and blog posts to our websites 
 
 b\. create custom themes
 
@@ -24,3 +24,4 @@ In the meantime, explore some [alumni websites](https://ucsb-meds.github.io/stud
 
 -   rstudio::conf 2022 keynote, Hello Quarto, by Julie Lowndes and Mine Çetinkaya-Rundel \| [`r fontawesome::fa("video", fill = "#5A5A5A", a11y = "sem")` recording](https://www.rstudio.com/conference/2022/keynotes/collaborate-with-quarto/)
 
+- Customizing Quarto Websites: Make your website stand out using Sass & CSS, by yours truly | [`r fontawesome::fa("tv", fill = "#5A5A5A", a11y = "sem")` slides](https://ucsb-meds.github.io/customizing-quarto-websites/#/title-slide)
