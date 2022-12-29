@@ -9,35 +9,38 @@ format:
     toc-location: left
 ---
 
-{{< include /sections/what_is_quarto.qmd >}}
+{{< include /sections/1-what-is-quarto.qmd >}}
 
 ------------------------------------------------------------------------
 
-{{< include /sections/do_i_need_to_use_quarto.qmd >}}
+{{< include /sections/2-do-i-need-to-use-quarto.qmd >}}
 
 ------------------------------------------------------------------------
 
-{{< include /sections/create_scaffolding.qmd >}}
+{{< include /sections/3-create-scaffolding.qmd >}}
 
 ::: panel-tabset
 ## **`r fontawesome::fa("terminal", fill = "#5A5A5A", a11y = "sem")` Through the command line**
 
-{{< include /sections/command_line.qmd >}}
+{{< include /sections/4-command-line.qmd >}}
 
 ## **`r fontawesome::fa("r-project", fill = "#5A5A5A", a11y = "sem")` Using the RStudio IDE**
 
-{{< include /sections/RStudio.qmd >}}
+{{< include /sections/5-RStudio.qmd >}}
 :::
 
 ------------------------------------------------------------------------
 
-{{< include /sections/publish_with_github_pages.qmd >}}
+{{< include /sections/6-publish-with-github-pages.qmd >}}
 
 ------------------------------------------------------------------------
 
-{{< include /sections/change_stuff.qmd >}}
+{{< include /sections/7-change-stuff.qmd >}}
 
 ------------------------------------------------------------------------
 
-{{< include /sections/looking_forward.qmd >}}
+{{< include /sections/8-looking-forward.qmd >}}
 
+------------------------------------------------------------------------
+
+{{< include /sections/9-acknowledgements.qmd >}}

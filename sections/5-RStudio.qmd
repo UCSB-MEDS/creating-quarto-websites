@@ -32,7 +32,7 @@ knitr::include_graphics("media/vRStudio3.png")
 There are lots of differing opinions on how to keep your R projects/git repositories organized on your computer. I personally save all of mine to a folder called `git` in my computer's home directory (e.g. `Users/samanthacsik/git/`) so everything is in one place.
 :::
 
--   **Recommended:** Name the project **yourusername.github.io** if you want that to be the site name (this is a "freebie" in GitHub). Otherwise, name it something reasonable (this will become the [slug](https://developer.mozilla.org/en-US/docs/Glossary/Slug) for your site if publishing with GitHub pages, so choose carefully). I'm calling my project **mysite** just for tutorial purposes only -- you should definitely give yours a more practical/creative name.
+-   **Recommended:** Because we'll be using GitHub pages to publish/host our websites, it's recommended that you name your project **yourusername.github.io** (you're allowed **one** user website with the **github.io** suffix) -- for example, my personal website that is hosted via GitHub pages is named **samanthacsik.github.io**. Otherwise, name it something reasonable (this will become the [slug](https://developer.mozilla.org/en-US/docs/Glossary/Slug) for your site if publishing with GitHub pages, so choose carefully). I'm calling my project **mysite** *just for tutorial purposes only* -- you should definitely give yours a more practical/creative name.
 
 ```{r}
 #| echo: false

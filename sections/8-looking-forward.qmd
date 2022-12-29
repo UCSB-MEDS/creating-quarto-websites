@@ -6,9 +6,9 @@ format: html
 
 You should now have a basic version of your website up and running 🎉 During Fall quarter, we'll learn how to:
 
-a\. add a blog and blog posts to our websites 
+a\. [customize the appearance of our site using Sass & CSS](https://ucsb-meds.github.io/customizing-quarto-websites/#/title-slide)
 
-b\. create custom themes
+b\. [add a blog and blog posts to our websites](https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/) 
 
 c\. continue developing your online "brand"
 
@@ -23,5 +23,3 @@ In the meantime, explore some [alumni websites](https://ucsb-meds.github.io/stud
 -   Hello Quarto! A Chat with NASA Openscapes, Co-Hosted with R-Ladies Santa Barbara \| [`r fontawesome::fa("blog", fill = "#5A5A5A", a11y = "sem")` blog post](https://www.openscapes.org/blog/2022/06/22/hello-quarto/) \| [`r fontawesome::fa("video", fill = "#5A5A5A", a11y = "sem")` recording](https://www.youtube.com/watch?v=azVAl343CIU)
 
 -   rstudio::conf 2022 keynote, Hello Quarto, by Julie Lowndes and Mine Çetinkaya-Rundel \| [`r fontawesome::fa("video", fill = "#5A5A5A", a11y = "sem")` recording](https://www.rstudio.com/conference/2022/keynotes/collaborate-with-quarto/)
-
-- Customizing Quarto Websites: Make your website stand out using Sass & CSS, by yours truly | [`r fontawesome::fa("tv", fill = "#5A5A5A", a11y = "sem")` slides](https://ucsb-meds.github.io/customizing-quarto-websites/#/title-slide)

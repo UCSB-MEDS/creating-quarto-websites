@@ -29,7 +29,7 @@ quarto create-project mysite --type website
 Throughout this document, we'll use the words **directory** and **folder** interchangeably.
 :::
 
--   **Recommended:** Name the project **yourusername.github.io** if you want that to be the site name (this is a "freebie" in GitHub). Otherwise, name it something reasonable (this will become the [slug](https://developer.mozilla.org/en-US/docs/Glossary/Slug) for your site if publishing with GitHub pages, so choose carefully). I'm calling my project **mysite** just for tutorial purposes only -- you should definitely give yours a more practical/creative name.
+-   **Recommended:** Because we'll be using GitHub pages to publish/host our websites, it's recommended that you name your project **yourusername.github.io** (you're allowed **one** user website with the **github.io** suffix) -- for example, my personal website that is hosted via GitHub pages is named **samanthacsik.github.io**. Otherwise, name it something reasonable (this will become the [slug](https://developer.mozilla.org/en-US/docs/Glossary/Slug) for your site if publishing with GitHub pages, so choose carefully). I'm calling my project **mysite** *just for tutorial purposes only* -- you should definitely give yours a more practical/creative name.
 
 ```{r}
 #| echo: false
@@ -76,7 +76,7 @@ quarto preview mysite
 -   Your site preview should open up in your browser. Quit your preview by pressing `control` + `C`
 
 ::: callout-important
-In order to preview your website, you must be in the directory **one level higher** than your website. For example, if my Quarto website directory is at `User/samanthacsik/git/mysite`, I must be in `User/samanthacsik/git` when I run the `quarto preview mysite` command in the terminal. To navigate up one directory level (e.g. move from `User/samanthacsik/git/mysite` to `User/samanthacsik/git` , use `cd ..` .
+You will need to supply the path to your website directory when previewing from a different location. For example, if my Quarto website directory is at `User/samanthacsik/git/mysite`, but I am one directory above in `User/samanthacsik/git`, I can run `quarto preview mysite`. Alternatively I could provide the full path `quarto preview User/samanthacsik/git/mysite` or relative path quarto preview `~/git/mysite`, no matter which directory I am currently in.
 :::
 
 5.  At this point you've created a directory (folder) but it's not yet being tracked by git. First be sure to `cd` into your website folder. Then, initialize this folder as a git repository using the `git init` command in the terminal window.
