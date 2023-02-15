@@ -1,0 +1,19 @@
+---
+format: html
+---
+
+::: callout-important
+## Create a Quarto website inside an existing GitHub repository
+
+The above instructions follow the **"create local R project (and initialize as a git repo) first > create upstream remote repo (on GitHub) second"** workflow. However, if you already have a remote GitHub repository that you want to use for your website, clone the GitHub repo, then run the following command in your terminal:
+
+
+```{bash}
+#| eval: false
+quarto create-project --type website
+```
+
+This adds the the default files (`_quarto.yml`, `.gitignore`, `index.qmd`, `about.qmd`, `styles.css`) for getting started on your website.
+
+You may also use this approach if you already have an existing local directory of documents or R project that you'd like to use as the directory for your website. First, navigate to that direcotory/open that R project, then run the above command in your terminal. 
+:::

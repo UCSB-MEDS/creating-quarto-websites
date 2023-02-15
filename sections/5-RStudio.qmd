@@ -93,3 +93,5 @@ knitr::include_graphics("media/mysite_remote.png")
 :::
 
 8.  Let's switch our default branch name from `master` to `main`. In the console, run `usethis::git_default_branch_rename(from = "master", to = "main")` to update your default branch name. Confirm that it updated **(a)** locally by running `git status` again in your Terminal -- the first printed line should now read, `On branch main`, and **(b)** on your remote by refreshing your GitHub repo (in your web browser) -- you should see the updated default branch name at the top of your repo.
+
+{{< include /sections/NOTE.qmd >}}

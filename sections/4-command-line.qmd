@@ -235,3 +235,5 @@ Branch 'main' set up to track remote branch 'main' from 'origin'.
 ```
 
 -   Refresh your GitHub repository (in your web browser) to see that your updates have been successfully pushed!
+
+{{< include /sections/NOTE.qmd >}}
