@@ -1,5 +1,5 @@
 # Building your personal website using Quarto
-**Presenter:** Sam Csik & Allison Horst  
+**Presenter:** Sam Csik 
 **Organization:** UCSB MEDS  
 **Date:** August 5, 2022  
 **Duration:** 1 hour
