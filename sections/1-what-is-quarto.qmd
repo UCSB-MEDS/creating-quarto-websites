@@ -20,5 +20,3 @@ knitr::include_graphics("media/quarto_schematic.png")
 :::
 
 You can explore [Quarto's documentation](https://quarto.org/docs/guide/) to learn more about creating documents, websites, blogs, books, slides, etc.
-
-**I'm new to Quarto (like many of us!) -- if you have suggestions on how to correct or improve these instructions, please feel free to file an issue on [`r fontawesome::fa("github", fill = "#5A5A5A", a11y = "sem")` GitHub](https://github.com/UCSB-MEDS/creating-quarto-websites/issues/new).**

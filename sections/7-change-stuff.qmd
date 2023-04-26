@@ -27,24 +27,28 @@ Right now, our website is built using Quarto default styling. Let's learn about 
 ```{bash}
 #| eval: false
 title: "Samantha Csik"
-image: headshot.jpg
+image: headshot.jpg # <1>
 about: 
-  template: trestles
-  image-shape: rounded
-  image-width: 15em
-  links:
-    - text: LinkedIn
-      href: https://www.linkedin.com/in/samanthacsik/
-    - text: Twitter
-      href: https://twitter.com/SamanthaCsik
-    - text: GitHub
-      href: https://github.com/samanthacsik
-    - text: Email
-      href: mailto:scsik@ucsb.edu
+  template: trestles # <2>
+  image-shape: rounded # <3>
+  image-width: 15em # <3>
+  links: # <4>
+    - text: LinkedIn # <4>
+      href: https://www.linkedin.com/in/samanthacsik/ # <4>
+    - text: Twitter # <4>
+      href: https://twitter.com/SamanthaCsik # <4>
+    - text: GitHub # <4>
+      href: https://github.com/samanthacsik # <4>
+    - text: Email # <4>
+      href: mailto:scsik@ucsb.edu # <4>
 ```
+1. add a photo by supplying a file path & image name (here, `headshot.jpg` lives in my repo's root directory)
+2. use a [pre-built template](https://quarto.org/docs/websites/website-about.html#templates) (here, `trestles`) to update the layout of your landing page (or any page!)
+3. set image shape (`round`, `rounded`, `rectangle`) & size
+5. add button links to your favorite social media pages (e.g. LinkedIn, Twitter, GitHub, and even your email -- NOTE: the `mailto::` ahead of your email address, `mailto::youremail.com`)
 
 ::: column-margin
-**Fun Tip:** Install the [Font Awesome Extension for Quarto](https://github.com/quarto-ext/fontawesome) to add free [Font Awesome](https://fontawesome.com/) `r fontawesome::fa("font-awesome", fill = "#5A5A5A", a11y = "sem")` icons to your site! Be sure to check out the `icon` option when adding linked buttons to your About Page.
+**Fun Tip:** Install the [Font Awesome Extension for Quarto](https://github.com/quarto-ext/fontawesome) to add free [Font Awesome](https://fontawesome.com/) `r fontawesome::fa("font-awesome", fill = "#5A5A5A", a11y = "sem")` icons to your site! Be sure to check out the [`icon` option](https://quarto.org/docs/websites/website-about.html#links) when adding linked buttons to your About Page.
 :::
 
 ```{r}
@@ -74,7 +78,7 @@ website:
      - href: index.qmd
        text: Home
      - about.qmd
-     - resources.qmd # my new navbar page
+     - resources.qmd  # <1>
 
 format:
   html:
@@ -83,6 +87,7 @@ format:
 
 editor: visual
 ```
+1. A newly-added navbar page. **Note** the page name, as it appears in the navbar of your website, will be the same as whatever is listed in the `title` field in your file's yaml. For example, the in the yaml of `resources.qmd`, I have set `title: "All my favorite resources!"`. You can change how the page name appears in your navbar by setting `href` to your `qmd` file name and `text` to however you want your text to appear (e.g. see how `index.qmd` is rendered as `Home` in my website's navbar).
 
 5.  **Change the theme** by choosing one of the 25 predefined [Bootswatch themes](https://bootswatch.com/). By default, Quarto sites are built using the [cosmo](https://bootswatch.com/cosmo/) theme. Supply just one theme name to the `theme` option in your `_quarto.qmd` file, *or* supply both a dark and a light theme for users to toggle between:
 
