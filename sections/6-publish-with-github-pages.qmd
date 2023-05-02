@@ -2,7 +2,7 @@
 format: html
 ---
 
-## `r fontawesome::fa("github", fill = "#5A5A5A", a11y = "sem")` Publish your site with GitHub Pages
+## `r fontawesome::fa("github", fill = "#5A5A5A", a11y = "sem")` Build & publish your site with GitHub Pages
 
 There are a [lots of options to publish your website](https://quarto.org/docs/websites/publishing-websites.html). We'll use the [GitHub Pages option](https://quarto.org/docs/websites/publishing-websites.html#github-pages), which allows you to publish a website from any GitHub repository. To do so, there are a few configuration steps:
 
@@ -46,7 +46,7 @@ knitr::include_graphics("media/build_site.png")
     b.  **Commit** your files by clicking the Commit button, adding a commit message, and clicking "Commit" (*analogous to `git commit -m "my commit message"`*)
     c.  **Push** your files to the remote repository (on GitHub) by clicking the "Push" button with the green upward facing arrow (*analogous to `git push`*).
 
-5.  Configure GitHub pages to serve content from the "docs" directory by clicking on the **Settings** tab in the top menu bar, then **Pages** tab from the left hand menu bar. Make sure that Branch is set to `main` and that the selected folder is set to `/docs`. Click "Save". Your website's URL will appear inside a blue banner at the top of the page. Give it a few minutes to render (you'll get a 404 error message if it's not ready yet), then explore your site!
+5.  Configure GitHub pages to serve content from the "docs" directory by clicking on the **Settings** tab in the top menu bar, then **Pages** tab from the left hand menu bar. Make sure that Branch is set to `main` and that the selected folder is set to `/docs`. Click "Save". Once deployed (this may take a few minutes), your website's URL will appear inside a box at the top of the page (you may have to try refreshing a few times). 
 
 ```{r}
 #| echo: false
@@ -58,3 +58,12 @@ knitr::include_graphics("media/build_site.png")
 knitr::include_graphics("media/gh_pages.png")
 knitr::include_graphics("media/rendered_site.png")
 ```
+
+::: callout-tip
+## Check out the **Actions** tab on GitHub to view deployment status
+```{r}
+#| echo: false
+knitr::include_graphics("media/actions_tab.png")
+```
+You can also find failed deployments here (yes, it does happen on occasion) and take action on fixing them.
+:::
