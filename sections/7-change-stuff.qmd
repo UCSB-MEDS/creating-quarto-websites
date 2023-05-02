@@ -6,32 +6,46 @@ format: html
 
 Right now, our website is built using Quarto default styling. Let's learn about where things live and how to start customizing some stuff.
 
-1.  **Don't mess with stuff in `/docs`.** When you Render your site (by clicking Build \> Render Website), Quarto takes all your `.qmd` files, converts them to `.html` files (along with some other important stuff) and saves everything to your `/docs` folder. Your site now deploys from this folder, so you really don't want to mess with anything in here directly.
+### {{< fa arrow-right title="An arrow pointing to the right" >}} **Don't mess with stuff in `/docs`** 
 
-2.  **Add content to your landing page (`index.qmd`)**. Give your landing/home page a makeover by trying out some of the following:
+When you Render your site (by clicking Build \> Render Website), Quarto takes all your `.qmd` files, converts them to `.html` files (along with some other important stuff) and saves everything to your `/docs` folder. Your site now deploys from this folder, so you really don't want to mess with anything in here directly.
 
-    -   Update the yaml `title` in your `index.qmd` file. Here, I changed mine from "mysite" to my name, "Samantha Csik"
+### {{< fa arrow-right title="An arrow pointing to the right" >}} **Add content to your landing page (`index.qmd`)**
 
-    -   Delete the sample text and code and begin adding your own content -- a great place to start is a short blurb introducing yourself!
+Remember: `index.qmd` is the page people will arrive at when navigating to your website -- give this landing/home page a makeover by trying out some of the following:
 
-3.  **Turn your landing page (`index.qmd`) into an "[About Page](https://quarto.org/docs/websites/website-about.html)" with a photo**. When the `about` option is added to a document's yaml, a special template will be used to layout the content of that page. Choose from one of Quarto's five [built-in templates](https://quarto.org/docs/websites/website-about.html#templates), each with a slightly different layout style. Some yaml options to play around with:
+  -   Update the yaml `title` in your `index.qmd` file. Here, I changed mine from "mysite" to my name, "Samantha Csik"
 
-    -   `template`: choose from Quarto's built-in template options
+  -   Delete the sample text and code and begin adding your own content -- a great place to start is a short blurb introducing yourself!
 
-    -   `image` (*note that this is a document-level option*): supply it the file path to your photo
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-cap: "My Quarto website home page, which now includes my name and some content, but isn't super visually pleasing..."
+knitr::include_graphics("media/no_about_page.png")
+```
 
-    -   `image-width` & `image-shape`: adjust your image's size and shape (`round`, `rounded`, `rectangle`)
+### {{< fa arrow-right title="An arrow pointing to the right" >}} **Turn your landing page (`index.qmd`) into an "[About Page](https://quarto.org/docs/websites/website-about.html)" with a photo**
 
-    -   `links`: add buttons with links to your social media pages
+When the `about` option is added to a document's yaml, a special template will be used to layout the content of that page. Choose from one of Quarto's five [built-in templates](https://quarto.org/docs/websites/website-about.html#templates), each with a slightly different layout style. Some yaml options to play around with:
 
-```{bash}
+  -   `template`: choose from Quarto's built-in template options
+
+  -   `image` (*note that this is a document-level option* i.e. is not a sub-item of `about`): supply it the file path to your photo
+
+  -   `image-width` & `image-shape`: adjust your image's size and shape (`round`, `rounded`, `rectangle`)
+
+  -   `links`: add buttons with links to your social media pages
+
+```{r filename="index.qmd"}
 #| eval: false
+---
 title: "Samantha Csik"
 image: headshot.jpg # <1>
 about: 
   template: trestles # <2>
-  image-shape: rounded # <3>
-  image-width: 15em # <3>
+  image-shape: round # <3>
+  image-width: 23em # <3>
   links: # <4>
     - text: LinkedIn # <4>
       href: https://www.linkedin.com/in/samanthacsik/ # <4>
@@ -41,11 +55,12 @@ about:
       href: https://github.com/samanthacsik # <4>
     - text: Email # <4>
       href: mailto:scsik@ucsb.edu # <4>
+---
 ```
 1. add a photo by supplying a file path & image name (here, `headshot.jpg` lives in my repo's root directory)
 2. use a [pre-built template](https://quarto.org/docs/websites/website-about.html#templates) (here, `trestles`) to update the layout of your landing page (or any page!)
 3. set image shape (`round`, `rounded`, `rectangle`) & size
-5. add button links to your favorite social media pages (e.g. LinkedIn, Twitter, GitHub, and even your email -- NOTE: the `mailto::` ahead of your email address, `mailto::youremail.com`)
+5. add button links to your favorite social media pages (e.g. LinkedIn, Twitter, GitHub, and even your email -- **Note:** the `mailto::` ahead of your email address, `mailto::youremail.com`)
 
 ::: column-margin
 **Fun Tip:** Install the [Font Awesome Extension for Quarto](https://github.com/quarto-ext/fontawesome) to add free [Font Awesome](https://fontawesome.com/) `r fontawesome::fa("font-awesome", fill = "#5A5A5A", a11y = "sem")` icons to your site! Be sure to check out the [`icon` option](https://quarto.org/docs/websites/website-about.html#links) when adding linked buttons to your About Page.
@@ -54,18 +69,64 @@ about:
 ```{r}
 #| echo: false
 #| fig-align: center
-#| fig-cap: "My Quarto website after updating my landing page with the built-in `trestles` template, adding an image, links, and some content. Note: You can also update the text that appears in the top left corner by editing the “title” option in your `_quarto.yml` file."
+#| fig-cap: "My Quarto website after updating my landing page with the built-in `trestles` template, adding an image, links, and some content. (**Note:** using three dashes, `---`, creates a page divider, as seen between sections in the screenshot above.) Overall, a big improvement! However, our text is a bit squished in the center of the page -- we'll fix then in the next step."
 knitr::include_graphics("media/about_page.png")
 ```
 
-4.  **Add additional pages to your website.** In the default Quarto website skeleton, there are two items in the navbar that appear as "Home" and "About" (**Note:** don't confuse the special-formatted "About Page" we created in `index.qmd` with the navbar page currently titled "About"). Those navbar tabs link to two `.html` files (`index.html` and `about.html`) and are automatically rendered when when you Build to `/docs` (i.e. you don't need to knit them manually to create the html). Adding a new page to your website requires two steps:
+::: callout-note
+## Quarto supports creating completely custom page layouts -- but I recommend sticking with a template as you're getting started
 
-    a\. **Create a new `.qmd` file** (New File \> Quarto Document and save it to your project's root directory) and add any content that you want to appear on that page. Here, I'm creating a new page called "All of my favorite resources!" and saved it to my root directory as `resources.qmd`.
+Quarto's built-in [About Page templates](https://quarto.org/docs/websites/website-about.html#templates) are great for a couple reasons, primarily:
 
-    b\. **Update `_quarto.yml`** by adding your new `.qmd` to the list of navbar pages. My website's `_quarto.yml` file now looks like this:
+1. they provide a quick and easy way to create visually-pleasing web pages (particularly website landing pages)
+2. they take care of a lot of the finicky "under-the-hood" styling (e.g. creating "responsive" page elements i.e. automatically rearranging content to fit changing viewport sizes) that would otherwise require a fair bit of [CSS](https://www.w3schools.com/css/) knowledge
 
-```{bash}
-#| eval: false
+As you get more comfortable with the Quarto framework and CSS for styling webpages (we'll learn more about this in a later workshop!), you may decide to build a completely custom webpage layout. You can checkout the [Quarto documentation](https://quarto.org/docs/output-formats/page-layout.html) to learn more.
+:::
+
+### {{< fa arrow-right title="An arrow pointing to the right" >}} **Modify website appearance in `_quarto.yml`** 
+
+The `_quarto.yml` file is a configuration file -- any document rendered within the project directory will automatically inherit the metadata defined within this file. Some easy updates that make a big difference:
+
+```{.yaml filename="_quarto.yml"}
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Samantha Csik" # <1>
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    page-layout: full # <2>
+```
+1. Give your website a better title (e.g. your name)! This is the text that appears in the top left corner of your website (by default, it appears as your repo name) -- when clicked, a user will be brought back to the landing page.
+<!-- 2. Remove the floating table of contents that appears on any page with level 1-3 headers -- you're of course welcome to keep this here if you prefer, or adjust on a page-by-page basis -->
+2. Set your `page-layout` to `full` so that your page content takes up more of the page width
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-cap: "My website with a new title (see top left corner) and with `page-layout` set to `full`, so that content doesn't appear as squished in the middle of the page."
+knitr::include_graphics("media/full_page.png")
+```
+
+### {{< fa arrow-right title="An arrow pointing to the right" >}} **Add additional pages to your website** 
+
+In the default Quarto website skeleton, there are two items in the navbar that appear as "Home" and "About" (**Note:** don't confuse the special-formatted "About Page" we created in `index.qmd` with the navbar page currently titled "About"). Those navbar tabs link to two `.html` files (`index.html` and `about.html`) and are automatically rendered when when you Build to `/docs` (i.e. you don't need to knit them manually to create the html). Adding a new page to your website requires two steps:
+
+  a. **Create a new `.qmd` file** (New File \> Quarto Document and save it to your project's root directory) and add any content that you want to appear on that page. Here, I'm creating a new page called "All of my favorite resources!" and saved it to my root directory as `resources.qmd`.
+
+  b. **Update `_quarto.yml`** by adding your new `.qmd` to the list of navbar pages. My website's `_quarto.yml` file now looks like this:
+
+```{.yaml filename="_quarto.yml"}
 project:
   type: website
   output-dir: docs
@@ -87,12 +148,22 @@ format:
 
 editor: visual
 ```
-1. A newly-added navbar page. **Note** the page name, as it appears in the navbar of your website, will be the same as whatever is listed in the `title` field in your file's yaml. For example, the in the yaml of `resources.qmd`, I have set `title: "All my favorite resources!"`. You can change how the page name appears in your navbar by setting `href` to your `qmd` file name and `text` to however you want your text to appear (e.g. see how `index.qmd` is rendered as `Home` in my website's navbar).
+1. A newly-added navbar page. **Note:** The page name, as it appears in the navbar of your website, will be the same as whatever is listed in the `title` field in your file's yaml. For example, I have set `title: "All my favorite resources!"` in the yaml of `resources.qmd` -- this is how it will appear in my website's navbar. If you'd like the page name to appear differently in the navbar, use the `href` and `text` options (e.g. see how `index.qmd` is rendered as `Home` in my website's navbar).
 
-5.  **Change the theme** by choosing one of the 25 predefined [Bootswatch themes](https://bootswatch.com/). By default, Quarto sites are built using the [cosmo](https://bootswatch.com/cosmo/) theme. Supply just one theme name to the `theme` option in your `_quarto.qmd` file, *or* supply both a dark and a light theme for users to toggle between:
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-cap: "A newly added navpage page, titled 'All of my favorite resources!'"
+knitr::include_graphics("media/resources_page.png")
+```
 
-```{bash}
-#| eval: false
+## {{< fa arrow-right title="An arrow pointing to the right" >}} **Change the theme** 
+
+Update the appearance of your site by choosing from one of the 25 predefined [Bootswatch themes](https://bootswatch.com/). By default, Quarto sites are built using the [cosmo](https://bootswatch.com/cosmo/) theme. Supply just one theme name to the `theme` option in your `_quarto.qmd` file, *or* supply both a dark and a light theme for users to toggle between:
+
+```{.yaml filename="_quarto.yml"}
+# ~ additional metadata excluded for brevity ~
+
 # supplying just one theme ("minty")
 format:
   html:
@@ -100,8 +171,9 @@ format:
     css: styles.css
 ```
 
-```{bash}
-#| eval: false
+```{.yaml filename="_quarto.yml"}
+# ~ additional metadata excluded for brevity ~
+
 # supplying a light ("minty") and dark ("slate") theme to toggle between
 format:
   html:

@@ -12,7 +12,7 @@ b\. [add a blog and blog posts to our websites](https://samanthacsik.github.io/p
 
 c\. continue developing your online "brand"
 
-In the meantime, explore some [alumni websites](https://ucsb-meds.github.io/student_websites.html) (last year's students used the [`{distill}`](https://rstudio.github.io/distill/website.html) package to build their websites) for inspiration, or dig into the [Quarto Website documentation](https://quarto.org/docs/websites/) if you're hoping to get started now on further customization.
+In the meantime, explore some [current student & alumni websites](https://ucsb-meds.github.io/student_websites.html) (**Note:** MEDS class of 2022 used the [`{distill}`](https://rstudio.github.io/distill/website.html) package to build their websites) for inspiration, or dig into the [Quarto Website documentation](https://quarto.org/docs/websites/) if you're hoping to get started now on further customization.
 
 ## `r fontawesome::fa("star", fill = "#5A5A5A", a11y = "sem")` Additional resources to get you stoked about Quarto
 

@@ -23,9 +23,13 @@ The `touch` command creates a new, empty file.
 
 ```{r}
 #| eval: false
+---
 project:
   type: website
   output-dir: docs
+  
+# ~ additional metadata excluded for brevity ~
+---
 ```
 
 ::: callout-note
@@ -61,9 +65,11 @@ knitr::include_graphics("media/rendered_site.png")
 
 ::: callout-tip
 ## Check out the **Actions** tab on GitHub to view deployment status
+
+See deployment status, time of each deployment, and how long it took to deploy each run. You can also find failed deployments here (yes, it does happen on occasion) and take action on fixing them.
+
 ```{r}
 #| echo: false
 knitr::include_graphics("media/actions_tab.png")
 ```
-You can also find failed deployments here (yes, it does happen on occasion) and take action on fixing them.
 :::

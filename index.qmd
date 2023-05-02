@@ -7,6 +7,7 @@ format:
     theme: minty
     toc: true
     toc-location: left
+    toc-depth: 2
 ---
 
 {{< include /sections/1-what-is-quarto.qmd >}}
@@ -37,4 +38,4 @@ format:
 
 <br>
 
-[***Last Updated:** April 2023*]{style="color: #959494;"}
+[***Last Updated:** May 1, 2023*]{style="color: #959494;"}
