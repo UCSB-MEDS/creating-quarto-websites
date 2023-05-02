@@ -12,7 +12,7 @@ Right now, our website is built using Quarto default styling. Let's learn about 
 
     -   Update the yaml `title` in your `index.qmd` file. Here, I changed mine from "mysite" to my name, "Samantha Csik"
 
-    -   Delete the sample text and code and begin adding your own content -- a great place to start is a short blurb introducing yourself! (**Note:** using three dashes, `---`, creates a page divider, as seen in the screenshot below)
+    -   Delete the sample text and code and begin adding your own content -- a great place to start is a short blurb introducing yourself!
 
 3.  **Turn your landing page (`index.qmd`) into an "[About Page](https://quarto.org/docs/websites/website-about.html)" with a photo**. When the `about` option is added to a document's yaml, a special template will be used to layout the content of that page. Choose from one of Quarto's five [built-in templates](https://quarto.org/docs/websites/website-about.html#templates), each with a slightly different layout style. Some yaml options to play around with:
 
