@@ -16,7 +16,7 @@ Remember: `index.qmd` is the page people will arrive at when navigating to your 
 
   -   Update the yaml `title` in your `index.qmd` file. Here, I changed mine from "mysite" to my name, "Samantha Csik"
 
-  -   Delete the sample text and code and begin adding your own content -- a great place to start is a short blurb introducing yourself!
+  -   Delete the sample text and begin adding your own content -- a great place to start is a short blurb introducing yourself!
 
 ```{r}
 #| echo: false
@@ -69,7 +69,7 @@ about:
 ```{r}
 #| echo: false
 #| fig-align: center
-#| fig-cap: "My Quarto website after updating my landing page with the built-in `trestles` template, adding an image, links, and some content. (**Note:** using three dashes, `---`, creates a page divider, as seen between sections in the screenshot above.) Overall, a big improvement! However, our text is a bit squished in the center of the page -- we'll fix then in the next step."
+#| fig-cap: "My Quarto website after updating my landing page with the built-in `trestles` template, adding an image, and linked buttons. (**Note:** using three dashes, `---`, creates a page divider, as seen between sections in the screenshot above.) Overall, a big improvement! However, our text is a bit squished in the center of the page -- we'll fix then in the next step."
 knitr::include_graphics("media/about_page.png")
 ```
 
@@ -107,8 +107,7 @@ format:
     css: styles.css
     page-layout: full # <2>
 ```
-1. Give your website a better title (e.g. your name)! This is the text that appears in the top left corner of your website (by default, it appears as your repo name) -- when clicked, a user will be brought back to the landing page.
-<!-- 2. Remove the floating table of contents that appears on any page with level 1-3 headers -- you're of course welcome to keep this here if you prefer, or adjust on a page-by-page basis -->
+1. Give your website a better title (e.g. your name)! This is the text that appears in the top left corner of your website (by default, it appears as your repo name) -- when clicked, a user will be brought back to the landing page
 2. Set your `page-layout` to `full` so that your page content takes up more of the page width
 
 ```{r}
@@ -148,7 +147,7 @@ format:
 
 editor: visual
 ```
-1. A newly-added navbar page. **Note:** The page name, as it appears in the navbar of your website, will be the same as whatever is listed in the `title` field in your file's yaml. For example, I have set `title: "All my favorite resources!"` in the yaml of `resources.qmd` -- this is how it will appear in my website's navbar. If you'd like the page name to appear differently in the navbar, use the `href` and `text` options (e.g. see how `index.qmd` is rendered as `Home` in my website's navbar).
+1. A newly-added navbar page. **Note:** The page name, as it appears in the navbar of your website, will be the same as whatever is listed in the `title` field of that file's yaml. For example, I have set `title: "All my favorite resources!"` in the yaml of `resources.qmd` -- this is how it will appear in my website's navbar. If you'd like the page name to appear differently in the navbar, use the `href` and `text` options together (e.g. see how `index.qmd` is rendered as `Home` in my website's navbar).
 
 ```{r}
 #| echo: false
