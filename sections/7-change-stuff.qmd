@@ -56,6 +56,8 @@ about:
     - text: Email # <4>
       href: mailto:scsik@ucsb.edu # <4>
 ---
+        
+# page content excluded for brevity ~
 ```
 1. add a photo by supplying a file path & image name (here, `headshot.jpg` lives in my repo's root directory)
 2. use a [pre-built template](https://quarto.org/docs/websites/website-about.html#templates) (here, `trestles`) to update the layout of your landing page (or any page!)
