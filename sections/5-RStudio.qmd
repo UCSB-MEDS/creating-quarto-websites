@@ -26,13 +26,17 @@ knitr::include_graphics("media/vRStudio2.png")
 knitr::include_graphics("media/vRStudio3.png")
 ```
 
-3.  Fill out the **Directory name:** field (this is the name of your R project, and eventually, your GitHub repo name), choose where to save your directory using the **Browse** button. Click **Create Project**.
+3.  Fill out the **Directory name:** field (this is the name of your R project, and eventually, your GitHub repo name), and choose where to save your directory using the **Browse** button. Click **Create Project**.
 
-::: callout-tip
-There are lots of differing opinions on how to keep your R projects/git repositories organized on your computer. I personally save all of mine to a folder called `git` in my computer's home directory (e.g. `Users/samanthacsik/git/`) so everything is in one place.
+::: {.callout-important}
+## Name your project **yourusername.github.io** if you plan to deploy using GitHub pages
+Because we'll be using GitHub pages to publish/host our websites, it's recommended that you name your project **yourusername.github.io** (you're allowed **one** user website with the **github.io** suffix) -- for example, [the project/GitHub repository](https://github.com/samanthacsik/samanthacsik.github.io), which contains the code for [my personal website](https://samanthacsik.github.io/), is named **samanthacsik.github.io**. Otherwise, name it something reasonable (this will become the [slug](https://developer.mozilla.org/en-US/docs/Glossary/Slug) for your site if publishing with GitHub pages, so choose carefully). I'm calling my project **mysite** *just for tutorial purposes only* -- you should definitely give yours a more practical/creative name.
 :::
 
--   **Recommended:** Because we'll be using GitHub pages to publish/host our websites, it's recommended that you name your project **yourusername.github.io** (you're allowed **one** user website with the **github.io** suffix) -- for example, my personal website that is hosted via GitHub pages is named **samanthacsik.github.io**. Otherwise, name it something reasonable (this will become the [slug](https://developer.mozilla.org/en-US/docs/Glossary/Slug) for your site if publishing with GitHub pages, so choose carefully). I'm calling my project **mysite** *just for tutorial purposes only* -- you should definitely give yours a more practical/creative name.
+::: {.callout-tip}
+## Organizing R projects / git repositories
+There are lots of differing opinions on how to keep your R projects/git repositories organized on your computer. I personally save all of mine to a folder called `git` in my computer's home directory (e.g. `Users/samanthacsik/git/`) so everything is in one place.
+:::
 
 ```{r}
 #| echo: false
@@ -63,14 +67,16 @@ install.packages("usethis")
 knitr::include_graphics("media/mysite_scaffolding_git.png")
 ```
 
-::: callout-note
+::: {.callout-note}
+## `{usethis}` is a package that facilitates interactive workflows for R project creation and development
 We're using the `{usethis}` workflow here because it's a super useful package to begin learning for project setup. However, rather than using the `usethis::use_git()` function here to create your local git repo, you could have also checked the box where it says **Create a git repository** when initially setting up your Quarto website (see step 3 above).
 :::
 
 6.  Then, in the Console, run `usethis::use_github()` to create an upstream remote repository (i.e. GitHub repo). Your web browser should open up to your new GitHub repository, with the same name as your local git repo/R project.
 
-::: column-margin
-**Git vs. Github:** [*Git*](https://git-scm.com/) is a version control system that allows you to manage and track your file version control history while [*GitHub*](https://github.com/) is a cloud-based hosting service that allows you to manage Git repositories. As Jenny Bryan describes in her book [Happy Git and GitHub for the useR](https://happygitwithr.com/index.html), hosting services like GitHub *"provide a home for your Git-based projects on the internet."* These services not only help to facilitate collaboration, but they also protect you in the event your computer suddenly dies -- just "clone" your GitHub repository back onto your new computer and voila! You're able to pick right back up where you left off.
+::: {.callout-note}
+## Git vs. Github 
+[*Git*](https://git-scm.com/) is a version control system that allows you to manage and track your file version control history while [*GitHub*](https://github.com/) is a cloud-based hosting service that allows you to manage Git repositories. As Jenny Bryan describes in her book [Happy Git and GitHub for the useR](https://happygitwithr.com/index.html), hosting services like GitHub *"provide a home for your Git-based projects on the internet."* These services not only help to facilitate collaboration, but they also protect you in the event your computer suddenly dies -- just "clone" your GitHub repository back onto your new computer and voila! You're able to pick right back up where you left off.
 :::
 
 ```{r}
@@ -88,8 +94,9 @@ knitr::include_graphics("media/mysite_remote.png")
 
 -   **If your current branch is named *`master`*, follow step 8 below.** *Why?* The racist "master" terminology for git branches motivates us to update our default branch to "main" instead. If your branch is named *`main`*, you're good to go! You can continue to the next section, [Publish your site with GitHub Pages](https://ucsb-meds.github.io/creating-quarto-websites/#publish-your-site-with-github-pages).
 
-::: column-margin
-**Note:** If you create a repo in *GitHub first*, the default now has been updated to make the default branch `main`. However, if you create a *local git repository first* (as we've done here) you may need to update your default branch name to `main` (depending on your version of Git and its configuration settings).
+::: {.callout-note}
+## Order of operations may determine whether your default branch is named `main` or `master`
+If you create a repo in *GitHub first*, the default now has been updated to make the default branch `main`. However, if you create a *local git repository first* (as we've done here) you may need to update your default branch name to `main` (depending on your version of Git and its configuration settings).
 :::
 
 8.  Let's switch our default branch name from `master` to `main`. In the console, run `usethis::git_default_branch_rename(from = "master", to = "main")` to update your default branch name. Confirm that it updated **(a)** locally by running `git status` again in your Terminal -- the first printed line should now read, `On branch main`, and **(b)** on your remote by refreshing your GitHub repo (in your web browser) -- you should see the updated default branch name at the top of your repo.

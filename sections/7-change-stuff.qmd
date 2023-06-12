@@ -160,7 +160,7 @@ knitr::include_graphics("media/resources_page.png")
 
 ## {{< fa arrow-right title="An arrow pointing to the right" >}} **Change the theme** 
 
-Update the appearance of your site by choosing from one of the 25 predefined [Bootswatch themes](https://bootswatch.com/). By default, Quarto sites are built using the [cosmo](https://bootswatch.com/cosmo/) theme. Supply just one theme name to the `theme` option in your `_quarto.qmd` file, *or* supply both a dark and a light theme for users to toggle between:
+Update the appearance of your site by choosing from one of the 25 predefined [Bootswatch themes](https://bootswatch.com/). By default, Quarto sites are built using the [cosmo](https://bootswatch.com/cosmo/) theme. Supply just one theme name to the `theme` option in your `_quarto.qmd` file:
 
 ```{.yaml filename="_quarto.yml"}
 # ~ additional metadata excluded for brevity ~
@@ -171,6 +171,15 @@ format:
     theme: minty
     css: styles.css
 ```
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-cap: "With theme, 'minty', a prebuilt [Bootswatch theme](https://bootswatch.com/)"
+knitr::include_graphics("media/light.png")
+```
+
+*or* supply both a dark and a light theme for users to toggle between:
 
 ```{.yaml filename="_quarto.yml"}
 # ~ additional metadata excluded for brevity ~
@@ -186,12 +195,8 @@ format:
 
 ```{r}
 #| echo: false
-#| layout-ncol: 2
-#| column: page
-#| fig-subcap: 
-#|  - "Toggle on`light` theme, which is set to the `minty`, a prebuilt [Bootswatch theme](https://bootswatch.com/)"
-#|  - "Toggle on `dark` theme, which is set to `slate`, a prebuilt [Bootswatch theme](https://bootswatch.com/)"
-knitr::include_graphics("media/light.png")
+#| fig-align: center
+#| fig-cap: "With light/dark theme options applied; here, the `dark` theme, which is set to the prebuilt [Bootswatch theme](https://bootswatch.com/) theme, `slate`, is toggled on."
 knitr::include_graphics("media/dark.png")
 ```
 
