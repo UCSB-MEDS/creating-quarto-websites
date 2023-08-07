@@ -2,6 +2,7 @@
 title: "Creating your personal website using Quarto"
 author: Sam Csik
 date: August 5, 2022
+date-modified: last-modified
 format: 
   html:
     theme: minty
@@ -35,7 +36,3 @@ format:
 {{< include /sections/9-acknowledgements.qmd >}}
 
 {{< include /sections/10-contribute.qmd >}}
-
-<br>
-
-[***Last Updated:** May 1, 2023*]{style="color: #959494;"}
