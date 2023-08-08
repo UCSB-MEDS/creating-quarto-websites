@@ -83,7 +83,7 @@ Quarto's built-in [About Page templates](https://quarto.org/docs/websites/websit
 1. they provide a quick and easy way to create visually-pleasing web pages (particularly website landing pages)
 2. they take care of a lot of the finicky "under-the-hood" styling (e.g. creating "responsive" page elements i.e. automatically rearranging content to fit changing viewport sizes) that would otherwise require a fair bit of [CSS](https://www.w3schools.com/css/) knowledge
 
-As you get more comfortable with the Quarto framework and CSS for styling webpages (we'll learn more about this in a later workshop!), you may decide to build a completely custom webpage layout. You can checkout the [Quarto documentation](https://quarto.org/docs/output-formats/page-layout.html) to learn more.
+As you get more comfortable with the Quarto framework and CSS for styling webpages (we'll learn more about this in a later workshop!), you may decide to build a completely custom webpage layout. The [Openscapes website](https://openscapes.org/) ([{{< fa brands github >}} source code](https://github.com/Openscapes/website-new)) is just one example of a Quarto website with custom page layouts. You can check out the [Quarto documentation](https://quarto.org/docs/output-formats/page-layout.html) to learn more. 
 :::
 
 ### {{< fa arrow-right title="An arrow pointing to the right" >}} **Modify website appearance in `_quarto.yml`** 

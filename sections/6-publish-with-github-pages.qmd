@@ -6,15 +6,21 @@ format: html
 
 There are a [lots of options to publish your website](https://quarto.org/docs/websites/publishing-websites.html). We'll use the [GitHub Pages option](https://quarto.org/docs/websites/publishing-websites.html#github-pages), which allows you to publish a website from any GitHub repository. To do so, there are a few configuration steps:
 
-1.  Create a file named `.nojekyll` in your repository, which is required to disable some processing of HTML files that GitHub does by default. Do this from your **terminal** (you can use the terminal tab in RStudio or a separate terminal window -- just make sure you're in the correct directory) using the following command:
+1.  Create a file named `.nojekyll` in your repository, which is required to disable some processing of HTML files that GitHub does by default. There are two ways you can do this: 
 
-```{bash}
+    a. From your **terminal** (you can use the terminal tab in RStudio or a separate terminal window -- just make sure you're in the correct directory) using the following command:
+    
+    ```{bash}
 #| eval: false
 touch .nojekyll
 ```
 
+    b. From RStudio's **File** pane by clicking **New Blank File** > **Text File**, then typing in `.nojekyll`
+
 ::: callout-note
-The `touch` command creates a new, empty file.
+## Creating "non-standard" file types in RStudio (like a `.nojekyll` file)
+
+The `touch` command can be used to create a new, empty file from the terminal. Similarly, RStudio's **Text File** button allows you to define and create any file type. Since there's not default button in RStudio for creating a `.nojekyll` file, you'll want to use one of these approaches.
 
 `.nojekyll` is a *hidden* file which won't visibly appear in your directory. You *should* see it show up as a file to track with git under the **Git** tab in RStudio. You can also view hidden files in Finder (Mac) using the keyboard shortcut `Command` + `Shift` + `.`, or follow [these instructions](https://support.microsoft.com/en-us/windows/show-hidden-files-0320fe58-0117-fd59-6851-9b7f9840fdb2) for Windows 10, 8.1, and 7.
 :::
