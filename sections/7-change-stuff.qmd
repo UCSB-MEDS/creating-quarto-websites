@@ -158,7 +158,7 @@ editor: visual
 knitr::include_graphics("media/resources_page.png")
 ```
 
-## {{< fa arrow-right title="An arrow pointing to the right" >}} **Change the theme** 
+### {{< fa arrow-right title="An arrow pointing to the right" >}} **Change the theme** 
 
 Update the appearance of your site by choosing from one of the 25 predefined [Bootswatch themes](https://bootswatch.com/). By default, Quarto sites are built using the [cosmo](https://bootswatch.com/cosmo/) theme. Supply just one theme name to the `theme` option in your `_quarto.qmd` file:
 

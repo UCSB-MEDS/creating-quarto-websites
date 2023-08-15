@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.313">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -88,7 +88,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#create-the-scaffolding-for-your-website" id="toc-create-the-scaffolding-for-your-website" class="nav-link" data-scroll-target="#create-the-scaffolding-for-your-website"><svg aria-label="Screwdriver Wrench" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5A5A5A;overflow:visible;position:relative;"><title>Screwdriver Wrench</title><path d="M78.6 5C69.1-2.4 55.6-1.5 47 7L7 47c-8.5 8.5-9.4 22-2.1 31.6l80 104c4.5 5.9 11.6 9.4 19 9.4h54.1l109 109c-14.7 29-10 65.4 14.3 89.6l112 112c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-112-112c-24.2-24.2-60.6-29-89.6-14.3l-109-109V104c0-7.5-3.5-14.5-9.4-19L78.6 5zM19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L233.7 374.3c-7.8-20.9-9-43.6-3.6-65.1l-61.7-61.7L19.9 396.1zM512 144c0-10.5-1.1-20.7-3.2-30.5c-2.4-11.2-16.1-14.1-24.2-6l-63.9 63.9c-3 3-7.1 4.7-11.3 4.7H352c-8.8 0-16-7.2-16-16V102.6c0-4.2 1.7-8.3 4.7-11.3l63.9-63.9c8.1-8.1 5.2-21.8-6-24.2C388.7 1.1 378.5 0 368 0C288.5 0 224 64.5 224 144l0 .8 85.3 85.3c36-9.1 75.8 .5 104 28.7L429 274.5c49-23 83-72.8 83-130.5zM56 432a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"></path></svg> Create the scaffolding for your website</a></li>
   <li><a href="#build-publish-your-site-with-github-pages" id="toc-build-publish-your-site-with-github-pages" class="nav-link" data-scroll-target="#build-publish-your-site-with-github-pages"><svg aria-label="GitHub" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5A5A5A;overflow:visible;position:relative;"><title>GitHub</title><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg> Build &amp; publish your site with GitHub Pages</a></li>
   <li><a href="#where-you-should-start-changing-stuff" id="toc-where-you-should-start-changing-stuff" class="nav-link" data-scroll-target="#where-you-should-start-changing-stuff"><svg aria-label="Pen To Square" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5A5A5A;overflow:visible;position:relative;"><title>Pen To Square</title><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"></path></svg> Where you should start changing stuff</a></li>
-  <li><a href="#fa-arrow-right-titlean-arrow-pointing-to-the-right-change-the-theme" id="toc-fa-arrow-right-titlean-arrow-pointing-to-the-right-change-the-theme" class="nav-link" data-scroll-target="#fa-arrow-right-titlean-arrow-pointing-to-the-right-change-the-theme"><i class="fa-solid fa-arrow-right" title="An arrow pointing to the right" aria-hidden="true"></i> <strong>Change the theme</strong></a></li>
   <li><a href="#looking-forward" id="toc-looking-forward" class="nav-link" data-scroll-target="#looking-forward"><svg aria-label="Forward" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5A5A5A;overflow:visible;position:relative;"><title>Forward</title><path d="M52.5 440.6c-9.5 7.9-22.8 9.7-34.1 4.4S0 428.4 0 416V96C0 83.6 7.2 72.3 18.4 67s24.5-3.6 34.1 4.4L224 214.3V256v41.7L52.5 440.6zM256 352V256 128 96c0-12.4 7.2-23.7 18.4-29s24.5-3.6 34.1 4.4l192 160c7.3 6.1 11.5 15.1 11.5 24.6s-4.2 18.5-11.5 24.6l-192 160c-9.5 7.9-22.8 9.7-34.1 4.4s-18.4-16.6-18.4-29V352z"></path></svg> Looking forward</a></li>
   <li><a href="#additional-resources-to-get-you-stoked-about-quarto" id="toc-additional-resources-to-get-you-stoked-about-quarto" class="nav-link" data-scroll-target="#additional-resources-to-get-you-stoked-about-quarto"><svg aria-label="Star" role="img" viewbox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5A5A5A;overflow:visible;position:relative;"><title>Star</title><path d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.6 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z"></path></svg> Additional resources to get you stoked about Quarto</a></li>
   <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements"><svg aria-label="People Carry Box" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5A5A5A;overflow:visible;position:relative;"><title>People Carry Box</title><path d="M80 48a48 48 0 1 1 96 0A48 48 0 1 1 80 48zm64 193.7v65.1l51 51c7.1 7.1 11.8 16.2 13.4 26.1l15.2 90.9c2.9 17.4-8.9 33.9-26.3 36.8s-33.9-8.9-36.8-26.3l-14.3-85.9L66.8 320C54.8 308 48 291.7 48 274.7V186.6c0-32.4 26.2-58.6 58.6-58.6c24.1 0 46.5 12 59.9 32l47.4 71.1 10.1 5V160c0-17.7 14.3-32 32-32H384c17.7 0 32 14.3 32 32v76.2l10.1-5L473.5 160c13.3-20 35.8-32 59.9-32c32.4 0 58.6 26.2 58.6 58.6v88.1c0 17-6.7 33.3-18.7 45.3l-79.4 79.4-14.3 85.9c-2.9 17.4-19.4 29.2-36.8 26.3s-29.2-19.4-26.3-36.8l15.2-90.9c1.6-9.9 6.3-19 13.4-26.1l51-51V241.7l-19 28.5c-4.6 7-11 12.6-18.5 16.3l-59.6 29.8c-2.4 1.3-4.9 2.2-7.6 2.8c-2.6 .6-5.3 .9-7.9 .8H256.7c-2.5 .1-5-.2-7.5-.7c-2.9-.6-5.6-1.6-8.1-3l-59.5-29.8c-7.5-3.7-13.8-9.4-18.5-16.3l-19-28.5zM2.3 468.1L50.1 348.6l49.2 49.2-37.6 94c-6.6 16.4-25.2 24.4-41.6 17.8S-4.3 484.5 2.3 468.1zM512 0a48 48 0 1 1 0 96 48 48 0 1 1 0-96zm77.9 348.6l47.8 119.5c6.6 16.4-1.4 35-17.8 41.6s-35-1.4-41.6-17.8l-37.6-94 49.2-49.2z"></path></svg> Acknowledgements</a></li>
@@ -126,7 +125,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">August 7, 2023</p>
+      <p class="date-modified">August 15, 2023</p>
     </div>
   </div>
     
@@ -278,7 +277,7 @@ Name your project <strong>yourusername.github.io</strong> if you plan to deploy 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/pwd_cd.png" class="img-fluid figure-img" width="780"></p>
-<p></p><figcaption class="figure-caption">Use <code>pwd</code> to see your current working directory. Use <code>cd</code> to change directories.</figcaption><p></p>
+<figcaption class="figure-caption">Use <code>pwd</code> to see your current working directory. Use <code>cd</code> to change directories.</figcaption>
 </figure>
 </div>
 </div>
@@ -286,7 +285,7 @@ Name your project <strong>yourusername.github.io</strong> if you plan to deploy 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/CLI_create_website.png" class="img-fluid figure-img" width="780"></p>
-<p></p><figcaption class="figure-caption">Create a new quarto project using the <code>quarto create-project your_project_name --type website</code> commands.</figcaption><p></p>
+<figcaption class="figure-caption">Create a new quarto project using the <code>quarto create-project your_project_name --type website</code> commands.</figcaption>
 </figure>
 </div>
 </div>
@@ -694,7 +693,7 @@ Git vs.&nbsp;Github
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/mysite_remote.png" class="img-fluid figure-img" width="1245"></p>
-<p></p><figcaption class="figure-caption">After running <code>usethis::use_github()</code> your browser window should open up to your new GitHub repository and look similar to the browser above.</figcaption><p></p>
+<figcaption class="figure-caption">After running <code>usethis::use_github()</code> your browser window should open up to your new GitHub repository and look similar to the browser above.</figcaption>
 </figure>
 </div>
 </div>
@@ -829,7 +828,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/gh_pages.png" class="img-fluid figure-img" width="1552"></p>
-<p></p><figcaption class="figure-caption">Your website’s URL will appear at the top of the page once you’ve configured GitHub pages to host your Quarto site</figcaption><p></p>
+<figcaption class="figure-caption">Your website’s URL will appear at the top of the page once you’ve configured GitHub pages to host your Quarto site</figcaption>
 </figure>
 </div>
 </div>
@@ -837,7 +836,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/rendered_site.png" class="img-fluid figure-img" width="1552"></p>
-<p></p><figcaption class="figure-caption">A hosted Quarto website! Now time to customize and add content.</figcaption><p></p>
+<figcaption class="figure-caption">A hosted Quarto website! Now time to customize and add content.</figcaption>
 </figure>
 </div>
 </div>
@@ -881,7 +880,7 @@ Check out the <strong>Actions</strong> tab on GitHub to view deployment status
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/no_about_page.png" class="img-fluid figure-img" width="1552"></p>
-<p></p><figcaption class="figure-caption">My Quarto website home page, which now includes my name and some content, but isn’t super visually pleasing…</figcaption><p></p>
+<figcaption class="figure-caption">My Quarto website home page, which now includes my name and some content, but isn’t super visually pleasing…</figcaption>
 </figure>
 </div>
 </div>
@@ -950,7 +949,7 @@ Check out the <strong>Actions</strong> tab on GitHub to view deployment status
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/about_page.png" class="img-fluid figure-img" width="1571"></p>
-<p></p><figcaption class="figure-caption">My Quarto website after updating my landing page with the built-in <code>trestles</code> template, adding an image, and linked buttons. (<strong>Note:</strong> using three dashes, <code>---</code>, creates a page divider, as seen between sections in the screenshot above.) Overall, a big improvement! However, our text is a bit squished in the center of the page – we’ll fix then in the next step.</figcaption><p></p>
+<figcaption class="figure-caption">My Quarto website after updating my landing page with the built-in <code>trestles</code> template, adding an image, and linked buttons. (<strong>Note:</strong> using three dashes, <code>---</code>, creates a page divider, as seen between sections in the screenshot above.) Overall, a big improvement! However, our text is a bit squished in the center of the page – we’ll fix then in the next step.</figcaption>
 </figure>
 </div>
 </div>
@@ -1014,7 +1013,7 @@ Quarto supports creating completely custom page layouts – but I recommend stic
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/full_page.png" class="img-fluid figure-img" width="1508"></p>
-<p></p><figcaption class="figure-caption">My website with a new title (see top left corner) and with <code>page-layout</code> set to <code>full</code>, so that content doesn’t appear as squished in the middle of the page.</figcaption><p></p>
+<figcaption class="figure-caption">My website with a new title (see top left corner) and with <code>page-layout</code> set to <code>full</code>, so that content doesn’t appear as squished in the middle of the page.</figcaption>
 </figure>
 </div>
 </div>
@@ -1063,15 +1062,14 @@ Quarto supports creating completely custom page layouts – but I recommend stic
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/resources_page.png" class="img-fluid figure-img" width="1552"></p>
-<p></p><figcaption class="figure-caption">A newly added navpage page, titled ‘All of my favorite resources!’</figcaption><p></p>
+<figcaption class="figure-caption">A newly added navpage page, titled ‘All of my favorite resources!’</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </section>
-</section>
-<section id="fa-arrow-right-titlean-arrow-pointing-to-the-right-change-the-theme" class="level2">
-<h2 class="anchored" data-anchor-id="fa-arrow-right-titlean-arrow-pointing-to-the-right-change-the-theme"><i class="fa-solid fa-arrow-right" title="An arrow pointing to the right" aria-hidden="true"></i> <strong>Change the theme</strong></h2>
+<section id="fa-arrow-right-titlean-arrow-pointing-to-the-right-change-the-theme" class="level3">
+<h3 class="anchored" data-anchor-id="fa-arrow-right-titlean-arrow-pointing-to-the-right-change-the-theme"><i class="fa-solid fa-arrow-right" title="An arrow pointing to the right" aria-hidden="true"></i> <strong>Change the theme</strong></h3>
 <p>Update the appearance of your site by choosing from one of the 25 predefined <a href="https://bootswatch.com/">Bootswatch themes</a>. By default, Quarto sites are built using the <a href="https://bootswatch.com/cosmo/">cosmo</a> theme. Supply just one theme name to the <code>theme</code> option in your <code>_quarto.qmd</code> file:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -1090,7 +1088,7 @@ Quarto supports creating completely custom page layouts – but I recommend stic
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/light.png" class="img-fluid figure-img" width="1508"></p>
-<p></p><figcaption class="figure-caption">With theme, ‘minty’, a prebuilt <a href="https://bootswatch.com/">Bootswatch theme</a></figcaption><p></p>
+<figcaption class="figure-caption">With theme, ‘minty’, a prebuilt <a href="https://bootswatch.com/">Bootswatch theme</a></figcaption>
 </figure>
 </div>
 </div>
@@ -1115,7 +1113,7 @@ Quarto supports creating completely custom page layouts – but I recommend stic
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/dark.png" class="img-fluid figure-img" width="1552"></p>
-<p></p><figcaption class="figure-caption">With light/dark theme options applied; here, the <code>dark</code> theme, which is set to the prebuilt <a href="https://bootswatch.com/">Bootswatch theme</a> theme, <code>slate</code>, is toggled on.</figcaption><p></p>
+<figcaption class="figure-caption">With light/dark theme options applied; here, the <code>dark</code> theme, which is set to the prebuilt <a href="https://bootswatch.com/">Bootswatch theme</a> theme, <code>slate</code>, is toggled on.</figcaption>
 </figure>
 </div>
 </div>
@@ -1133,6 +1131,7 @@ Always “Render Website” before pushing changes that you want to deploy!
 <p>You <em>must</em> <strong>Render Website</strong> (under the <strong>Build</strong> tab) before pushing added/changed files to GitHub if you want to see those changes updated on your site. Rendering individual files alone will not work.</p>
 </div>
 </div>
+</section>
 </section>
 <section id="looking-forward" class="level2">
 <h2 class="anchored" data-anchor-id="looking-forward"><svg aria-label="Forward" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5A5A5A;overflow:visible;position:relative;"><title>Forward</title><path d="M52.5 440.6c-9.5 7.9-22.8 9.7-34.1 4.4S0 428.4 0 416V96C0 83.6 7.2 72.3 18.4 67s24.5-3.6 34.1 4.4L224 214.3V256v41.7L52.5 440.6zM256 352V256 128 96c0-12.4 7.2-23.7 18.4-29s24.5-3.6 34.1 4.4l192 160c7.3 6.1 11.5 15.1 11.5 24.6s-4.2 18.5-11.5 24.6l-192 160c-9.5 7.9-22.8 9.7-34.1 4.4s-18.4-16.6-18.4-29V352z"></path></svg> Looking forward</h2>
