@@ -5,11 +5,15 @@ date: August 5, 2022
 date-modified: last-modified
 format: 
   html:
-    theme: minty
+    theme: 
+      - minty
+      # - styles.scss
     toc: true
     toc-location: left
     toc-depth: 2
 ---
+
+{{< include /sections/0-using-this-doc.qmd >}}
 
 {{< include /sections/1-what-is-quarto.qmd >}}
 

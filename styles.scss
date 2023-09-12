@@ -1,0 +1,21 @@
+/*-- scss:defaults --*/
+
+// import Google font-size
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Nunito:wght@400;800&display=swap');
+
+// colors
+$black: #525452; 
+
+// font styles
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-family-serif: 'Arvo', serif; 
+
+// find all Quarto Sass vars here: https://quarto.org/docs/output-formats/html-themes.html#sass-variables
+$body-color: $black;
+$toc-color: $black; 
+// $link-color: $green; 
+// $toc-active-border: $yellow; 
+// $toc-inactive-border: $gray; 
+// $code-color: $light-green; 
+
+/*-- scss:rules --*/

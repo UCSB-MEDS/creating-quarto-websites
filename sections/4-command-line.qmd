@@ -10,16 +10,16 @@ format: html
 
 ### **Steps:**
 
-1.  Open up your terminal.
+1.  **Open up your command line interface** (often Terminal on Macs or Git Bash on Windows)
 
-2.  Determine where you are in your file system using `pwd` (print working directory). Use `cd` (change directory) to navigate your file system to wherever you'd like your project to live.
+2.  **Navigate to where on your computer you'd like your project to live.** Determine where you are in your file system using `pwd` (print working directory). Use `cd` (change directory) to navigate your file system to wherever you'd like your project to live.
 
 ::: {.callout-tip}
 ## Organizing R projects / git repositories
 There are lots of differing opinions on how to keep your R projects/git repositories organized on your computer. I personally save all of mine to a folder called `git` in my computer's home directory (e.g. `Users/samanthacsik/git/`) so everything is in one place.
 :::
 
-3.  Use the following commands to create a quarto website project directory that contains the files necessary for building your website:
+3.  **Create the scaffolding (i.e. folder structure & necessary files) for your website** by running the following in the command line:
 
 ::: {.callout-note}
 ## Directory == Folder
@@ -28,6 +28,7 @@ Throughout this document, we'll use the words **directory** and **folder** inter
 
 ```{bash}
 #| eval: false
+# substitute `mysite` with whatever name you want to give your repo (see important text in callout box below)
 quarto create-project mysite --type website 
 ```
 
@@ -47,7 +48,7 @@ knitr::include_graphics("media/pwd_cd.png")
 knitr::include_graphics("media/CLI_create_website.png")
 ```
 
--   If you `cd` into your new `mysite` directory (or whatever you named your quarto project), and use the `ls` command to list out all the contents of that directory, you should see a series of files (`_quarto.yml`, `about.qmd`, `index.qmd`, `styles.css`) that provide the scaffolding for your website. For example:
+-   If you `cd` into your new `mysite` directory, and use the `ls` command to list out all the contents of that directory, you should see a series of files (`_quarto.yml`, `about.qmd`, `index.qmd`, `styles.css`) that provide the scaffolding for your website. For example:
 
 ```{bash}
 #| eval: false
@@ -71,20 +72,21 @@ _quarto.yml	_site		about.qmd   index.qmd   styles.css
 knitr::include_graphics("media/mysite_finder.png")
 ```
 
-4.  You can preview your very basic, but functional website straight from the terminal by typing:
+4.  **Preview your very basic, but functional website** straight from the command line by typing (you'll need to navigate to your project directory (e.g `mysite/`):
 
 ```{bash}
 #| eval: false
-quarto preview mysite
+quarto preview
 ```
 
 -   Your site preview should open up in your browser. Quit your preview by pressing `control` + `C`
 
 ::: {.callout-important}
-You will need to supply the path to your website directory when previewing from a different location. For example, if my Quarto website directory is at `User/samanthacsik/git/mysite`, but I am one directory above in `User/samanthacsik/git`, I can run `quarto preview mysite`. Alternatively I could provide the full path `quarto preview User/samanthacsik/git/mysite` or relative path quarto preview `~/git/mysite`, no matter which directory I am currently in.
+## Preview your website from different locations using file paths
+You will need to supply the path to your website directory when previewing from a different location. For example, if my Quarto website directory is at `User/samanthacsik/git/mysite`, but I am one directory above in `User/samanthacsik/git`, I can run `quarto preview mysite`. Alternatively I could provide the full path `quarto preview User/samanthacsik/git/mysite` or relative path quarto preview `~/git/mysite`, no matter which directory I'm currently in.
 :::
 
-5.  At this point you've created a directory (folder) but it's not yet being tracked by git. First be sure to `cd` into your website folder. Then, initialize this folder as a git repository using the `git init` command in the terminal window.
+5.  **Initialize your project as a git repository.** At this point you've created a directory (folder) but it's not yet being tracked by Git. First be sure to `cd` into your website folder. Then, initialize this folder as a git repository using the `git init` command in the terminal window.
 
 ```{bash}
 #| eval: false

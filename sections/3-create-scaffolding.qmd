@@ -11,10 +11,10 @@ To follow along, you'll need:
 
 -   R & RStudio installed (find the latest RStudio release [here](https://www.rstudio.com/products/rstudio/download/#download))
 -   [Quarto](https://quarto.org/docs/get-started/) installed -- **Quarto is now included with RStudio v2022.07.1+ i.e. no need for a separate download/install if you have the latest version of RStudio**
--   A GitHub account & your personal access token (PAT) stored
 -   Git installed/configured
+-   A GitHub account & your personal access token (PAT) stored
 
-Please refer to the MEDS Installation Guide for [Mac](https://ucsb-meds.github.io/meds-install-mac.html) and [Windows](https://ucsb-meds.github.io/meds-install-windows.html) machines for detailed instructions (follow steps 1-7).
+Please refer to the MEDS Installation Guide for [Mac](https://ucsb-meds.github.io/meds-install-mac.html) and [Windows](https://ucsb-meds.github.io/meds-install-windows.html) machines to find detailed instructions on getting setup (follow steps 1-7).
 :::
 
 This document reviews two ways to get started with using Quarto to build your website.
