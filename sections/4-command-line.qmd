@@ -214,11 +214,9 @@ Doing so now can lead to merge conflicts. We can add them after our local and re
 
 10. **Connect your remote (GitHub) repository to your local Git repository.** Your empty GitHub repo conveniently includes instructions for doing so. Copy the code under "push an existing repository from the command line" to your clipboard, paste into the command line, and run.
 
-<!-- 10. Copy the remote repository URL (found at the top of the Quick Setup Page) to your clipboard. -->
-
 ```{r}
 #| echo: false
-knitr::include_graphics("media/GH_quick_setup.png")
+knitr::include_graphics("media/GH_quick_setup_options.png")
 ```
 
 ::: {.callout-note}
