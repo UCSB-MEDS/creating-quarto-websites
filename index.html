@@ -261,7 +261,7 @@ Before getting started…
 <h3 class="anchored" data-anchor-id="steps"><strong>Steps:</strong></h3>
 <ol type="1">
 <li><p><strong>Open up your command line interface</strong> (often Terminal on Macs or Git Bash on Windows)</p></li>
-<li><p><strong>Navigate to where on your computer you’d like your project to live.</strong> Determine where you are in your file system using <code>pwd</code> (print working directory). Use <code>cd</code> (change directory) to navigate your file system to wherever you’d like your project to live.</p></li>
+<li><p><strong>Navigate to the location on your computer where you’d like your project to live.</strong> Determine where you are in your file system using <code>pwd</code> (print working directory). Use <code>cd</code> (change directory) to navigate your file system to wherever you’d like your project to live.</p></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -368,15 +368,15 @@ Name your project <strong>yourusername.github.io</strong> if you plan to deploy 
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Previewing your website from different locations using file paths
+Preview your website from different locations using file paths
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>You will need to supply the path to your website directory when previewing from a different location. For example, if my Quarto website directory is at <code>User/samanthacsik/git/mysite</code>, but I am one directory above in <code>User/samanthacsik/git</code>, I can run <code>quarto preview mysite</code>. Alternatively I could provide the full path <code>quarto preview User/samanthacsik/git/mysite</code> or relative path quarto preview <code>~/git/mysite</code>, no matter which directory I am currently in.</p>
+<p>You will need to supply the path to your website directory when previewing from a different location. For example, if my Quarto website directory is at <code>User/samanthacsik/git/mysite</code>, but I am one directory above in <code>User/samanthacsik/git</code>, I can run <code>quarto preview mysite</code>. Alternatively I could provide the full path <code>quarto preview User/samanthacsik/git/mysite</code> or relative path quarto preview <code>~/git/mysite</code>, no matter which directory I’m currently in.</p>
 </div>
 </div>
 <ol start="5" type="1">
-<li>At this point you’ve created a directory (folder) but it’s not yet being tracked by git. First be sure to <code>cd</code> into your website folder. Then, initialize this folder as a git repository using the <code>git init</code> command in the terminal window.</li>
+<li><strong>Initialize your project as a git repository.</strong> At this point you’ve created a directory (folder) containing some important website scaffolding files, but they’re not yet being tracked by Git. First be sure to <code>cd</code> into your website folder. Then, initialize this folder as a git repository using the <code>git init</code> command in the terminal window.</li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -385,7 +385,7 @@ Previewing your website from different locations using file paths
 <!-- `git status` is a super useful command which displays the state of your working directory and staging area. I use this command *often* when working on the command line to double check that I'm actually where I think I am, and to see tracked files and untracked or changed files. It's a good habit run `git status` after switching branches or before/after adding files to commit. -->
 <!-- ::: -->
 <ol start="6" type="1">
-<li>Next, let’s check the name of our default branch – that is, the branch that all changes eventually get merged back into (if you’re building a website, this branch is typically the one you’ll want to deploy). In your Terminal window, type <code>git status</code>. You should see something that looks like this, where the first line tells you which branch you’re currently on:</li>
+<li><strong>Check the name of your default branch</strong> – that is, the branch that all changes eventually get merged back into (if you’re building a website, this branch is typically the one you’ll want to deploy). Run either <code>git branch</code> (this prints all local branches and highlights the one that you’re currently on) or <code>git status</code> (shown below) in the command line to identify the name of your default branch (this should be the only branch you have at the moment). Running <code>git status</code> will return something that looks like this, where the first line tells you which branch you’re currently on:</li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">base</span><span class="kw">)</span> <span class="ex">Samanthas-MacBook-Air:mysite</span> samanthacsik$ git status</span>
@@ -410,31 +410,19 @@ Previewing your website from different locations using file paths
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+<code>git status</code> provides lots of helpful information about the current state of your your working directory and staging area
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><code>git status</code> is a super useful command which displays the state of your working directory and staging area. I use this command <em>often</em> when working on the command line to double check that I’m actually where I think I am, and to see tracked files and untracked or changed files. It’s a good habit run <code>git status</code> after switching branches or before/after adding files to commit.</p>
+<p>I use this command <em>often</em> when working on the command line to double check that I’m actually where I think I am, and to see tracked files and untracked or changed files. It’s a good habit run <code>git status</code> after switching branches or before/after adding files to commit.</p>
 </div>
 </div>
-<ul>
-<li><strong>If your current branch is named <code>master</code>, follow step 7 below to update the name to <code>main</code>.</strong> Why? The racist “master” terminology for git branches motivates us to update our default branch to “main” instead. If your branch is already named <code>main</code>, you can head straight to step 8.</li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If you create a repo in <em>GitHub first</em>, the default now has been updated to make the default branch <code>main</code>. However, if you create a <em>local git repository first</em> (as we’ve done here) you may need to update your default branch name to <code>main</code> (depending on your version of Git and its configuration settings).</p>
-</div>
-</div>
+<!-- -   **If your current branch is named `master`, follow step 7 below to update the name to `main`.** Why? The racist "master" terminology for git branches motivates us to update our default branch to "main" instead. If your branch is already named `main`, you can head straight to step 8. -->
+<!-- ::: {.callout-note} -->
+<!-- If you create a repo in *GitHub first*, the default now has been updated to make the default branch `main`. However, if you create a *local git repository first* (as we've done here) you may need to update your default branch name to `main` (depending on your version of Git and its configuration settings). -->
+<!-- ::: -->
 <ol start="7" type="1">
-<li>Let’s switch our default branch name from <code>master</code> to <code>main</code>. Choose your workflow below based on your Git version (check your version by running <code>git --version</code> in your Terminal):</li>
+<li><strong>If your current branch is named <code>master</code>, update the name to <code>main</code>.</strong> If your branch is already named <code>main</code>, you can head straight to step 8. Choose your workflow below based on your Git version (check your version by running <code>git --version</code> in the command line):</li>
 </ol>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href=""><strong><svg aria-label="Git Alt" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5A5A5A;overflow:visible;position:relative;"><title>Git Alt</title><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg> For Git version 2.28 or later</strong></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href=""><strong><svg aria-label="Git Alt" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5A5A5A;overflow:visible;position:relative;"><title>Git Alt</title><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg> For older versions of Git</strong></a></li></ul>
@@ -446,19 +434,9 @@ Note
 </div>
 <p><strong><em>This sets the default branch name to <code>main</code> for any new repositories you create moving forward (it does not rename branches in existing projects).</em></strong></p>
 <p>You can double check that this worked by typing out the <code>git status</code> command again. The first printed line should now read, <code>On branch main</code>.</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Be mindful that your workflow for updating <code>master</code> to <code>main</code> will look different if you’ve already created both a local git repo (first) AND an upstream remote i.e.&nbsp;GitHub repo (second). Check out <a href="https://gitbetter.substack.com/p/how-to-change-git-default-branch">this post</a> for more info.</p>
-</div>
-</div>
+<!-- ::: {.callout-important} -->
+<!-- Be mindful that your workflow for updating `master` to `main` will look different if you've already created both a local git repo (first) AND an upstream remote i.e. GitHub repo (second). Check out [this post](https://gitbetter.substack.com/p/how-to-change-git-default-branch) for more info. -->
+<!-- ::: -->
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <p>Rename the default branch as <code>main</code> by running the following line in the Terminal window:</p>
@@ -468,24 +446,28 @@ Important
 <p>The <code>-m</code> attribute is used to rename the branch without affecting the branch’s history.</p>
 <p><strong><em>This sets the default branch name to <code>main</code> ONLY for this repository (so you’ll need to do this with any new local git repositories that you create.</em></strong></p>
 <p>You can double check that this worked by typing out the <code>git status</code> command again. The first printed line should now read, <code>On branch main</code>.</p>
-<div class="callout callout-style-default callout-important callout-titled">
+<!-- ::: {.callout-important} -->
+<!-- Be mindful that your workflow for updating `master` to `main` will look different if you've already created both a local git repo (first) AND an upstream remote i.e. GitHub repo (second). Check out [this post](https://gitbetter.substack.com/p/how-to-change-git-default-branch) for more info. -->
+<!-- ::: -->
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Important
+Why are we doing this?
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Be mindful that your workflow for updating <code>master</code> to <code>main</code> will look different if you’ve already created both a local git repo (first) AND an upstream remote i.e.&nbsp;GitHub repo (second). Check out <a href="https://gitbetter.substack.com/p/how-to-change-git-default-branch">this post</a> for more info.</p>
-</div>
-</div>
-</div>
+<p>The racist “master” terminology for git branches motivates us to update our default branch to “main” instead.</p>
+<p>There is a push across platforms and software to update this historical default branch name from <code>master</code> to <code>main</code>. GitHub has already done so – creating a remote repository <em>first</em> results in a default branch named <code>main</code>. Depending on your version of Git and/or your configuration settings, however, you may need to set update the name manually when creating a local git repository first (as we’re doing here).</p>
 </div>
 </div>
 <ol start="8" type="1">
-<li>Add the files in your <code>mysite</code> directory (<em>analogous to checking the boxes next to your files in the RStudio Git tab</em>)…</li>
+<li><strong>Stage/add your website’s scaffolding files</strong> in your <code>mysite</code> directory (<em>analogous to checking the boxes next to your files in RStudio’s Git tab</em>)…</li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this adds all untracked or changed files at once</span></span>
@@ -507,13 +489,26 @@ Tip
 <p>Use the <code>git status</code> command again to see if your files have been successfully added <em>before</em> committing them – any untracked or changed files that were once printed in <strong>red</strong> should now appear in <strong>green</strong>.</p>
 </div>
 </div>
-<p>…and commit them (<em>analogous to pressing the “Commit” button in RStudio and typing your commit message into the popup window</em>):</p>
+<p><strong>…and commit them</strong> (<em>analogous to pressing the “Commit” button in RStudio and typing your commit message into the dialog box that appears</em>):</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"initial commit"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="9" type="1">
-<li>At this point, you’ve created a local Git repository that contains the basic files needed to build your Quarto website. Now, we need to create a “remote” repository (i.e.&nbsp;a version of your project that is hosted on the Internet) on GitHub. There are multiple ways to do this, but we’ll cover the workflow that makes most intuitive sense to me. Open up/log in to <a href="https://github.com/">GitHub</a> and <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository">create a new repository</a>.</li>
+<li><strong>Create an empty remote repository on GitHub.</strong> At this point, we’ve created a local Git repository that contains the basic files needed to build our Quarto website. Now, we need to create a “remote” repository (i.e.&nbsp;a version of your project that is hosted on the internet) on GitHub. There are multiple ways to do this, but we’ll cover the workflow that makes most intuitive sense to me. <strong>Login to <a href="https://github.com/">GitHub</a>, <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository">create a new repository</a>, and give it the same name as your local repository/R Project (e.g.&nbsp;<code>yourusername.github.io</code>).</strong></li>
 </ol>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Do not initialize your remote repository (on GitHub) with a <code>README.md</code>, license, or <code>.gitignore</code> file!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Doing so now can lead to merge conflicts. We can add them after our local and remote repositories have been connected.</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -527,64 +522,87 @@ Tip
 <p><a href="https://git-scm.com/"><em>Git</em></a> is a version control system that allows you to manage and track your file version control history while <a href="https://github.com/"><em>GitHub</em></a> is a cloud-based hosting service that allows you to manage Git repositories. As Jenny Bryan describes in her book <a href="https://happygitwithr.com/index.html">Happy Git and GitHub for the useR</a>, hosting services like GitHub <em>“provide a home for your Git-based projects on the internet.”</em> These services not only help to facilitate collaboration, but they also protect you in the event your computer suddenly dies – just “clone” your GitHub repository back onto your new computer and voila! You’re able to pick right back up where you left off.</p>
 </div>
 </div>
-<div class="callout callout-style-default callout-important callout-titled">
+<ol start="10" type="1">
+<li><strong>Connect your remote (GitHub) repository to your local Git repository.</strong> Your empty GitHub repo conveniently includes instructions for doing so. Copy the code under “push an existing repository from the command line” to your clipboard, paste into the command line, and run.</li>
+</ol>
+<!-- 10. Copy the remote repository URL (found at the top of the Quick Setup Page) to your clipboard. -->
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="media/GH_quick_setup.png" class="img-fluid" width="720"></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Do not initialize with a README, license, or <code>.gitignore</code> files!
+The code that GitHub provides (as shown above) should look something like this:
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Avoid doing this when you create your new GitHub repo to avoid errors. You can add these after your project as been pushed.</p>
-</div>
-</div>
-<ol start="10" type="1">
-<li>Copy the remote repository URL (found at the top of the Quick Setup Page) to your clipboard.</li>
-</ol>
 <div class="cell">
-<div class="cell-output-display">
-<p><img src="media/GH_quick_setup.png" class="img-fluid" width="1150"></p>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin https://github.com/yourUserName/yourRepoName.git</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-M</span> main</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>It does three things:</p>
+<ul>
+<li>Adds the GitHub repository as the remote repository (i.e.&nbsp;connects your local repo to the remote repo)</li>
+<li>Renames the default branch to <code>main</code> (if you didn’t complete step 7, this will take care of it for you!)</li>
+<li>Pushes the <code>main</code> branch to the remote GitHub repository</li>
+</ul>
+</div>
+</div>
+<!-- 11. In Terminal, add the URL for the remote repository where your local repository will be pushed: -->
+<!-- ```{bash} -->
+<!-- #| eval: false -->
+<!-- # set the new remote using your GitHub repo URL -->
+<!-- git remote add origin <REMOTE_URL> -->
+<!-- # verify the new remote URL is correct (this just prints out the URL you added) -->
+<!-- git remote -v -->
+<!-- ``` -->
+<!-- 12. Push the changes in your local repository to your remote repository on GitHub: -->
+<!-- ```{bash} -->
+<!-- #| eval: false -->
+<!-- git push -u origin main -->
+<!-- ``` -->
+<p>You should see something similar to this print out, if successful!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">base</span><span class="kw">)</span> <span class="ex">Samanthas-Air:mysite</span> samanthacsik$ git remote add origin https://github.com/samanthacsik/mysite.git</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">base</span><span class="kw">)</span> <span class="ex">Samanthas-Air:mysite</span> samanthacsik$ git branch <span class="at">-M</span> main</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">base</span><span class="kw">)</span> <span class="ex">Samanthas-Air:mysite</span> samanthacsik$ git push <span class="at">-u</span> origin main</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Enumerating</span> objects: 42, done.</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Counting</span> objects: 100% <span class="er">(</span><span class="ex">42/42</span><span class="kw">)</span><span class="ex">,</span> done.</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="ex">Delta</span> compression using up to 8 threads</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="ex">Compressing</span> objects: 100% <span class="er">(</span><span class="ex">35/35</span><span class="kw">)</span><span class="ex">,</span> done.</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="ex">Writing</span> objects: 100% <span class="er">(</span><span class="ex">42/42</span><span class="kw">)</span><span class="ex">,</span> 311.78 KiB <span class="kw">|</span> <span class="ex">15.59</span> MiB/s, done.</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="ex">Total</span> 42 <span class="er">(</span><span class="ex">delta</span> 2<span class="kw">)</span><span class="ex">,</span> reused 0 <span class="er">(</span><span class="ex">delta</span> 0<span class="kw">)</span><span class="ex">,</span> pack-reused 0</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="ex">remote:</span> Resolving deltas: 100% <span class="er">(</span><span class="ex">2/2</span><span class="kw">)</span><span class="ex">,</span> done.</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="ex">To</span> https://github.com/samanthacsik/mysite.git</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a> <span class="ex">*</span> [new branch]      main <span class="at">-</span><span class="op">&gt;</span> main</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="ex">Branch</span> <span class="st">'main'</span> set up to track remote branch <span class="st">'main'</span> from <span class="st">'origin'</span>.</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">base</span><span class="kw">)</span> <span class="ex">Samanthas-Air:mysite</span> samanthacsik$ </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="11" type="1">
-<li>In Terminal, add the URL for the remote repository where your local repository will be pushed:</li>
+<li><strong>Refresh your GitHub repository (in your web browser)</strong> to see that your updates have been successfully pushed!</li>
 </ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># set the new remote using your GitHub repo URL</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin <span class="op">&lt;</span>REMOTE_URL<span class="op">&gt;</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># verify the new remote URL is correct (this just prints out the URL you added)</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="media/mysite-remote-cli.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
 </div>
 <ol start="12" type="1">
-<li>Push the changes in your local repository to your remote repository on GitHub:</li>
+<li><strong>(Optional) Add <code>.gitignore</code>, <code>LICENSE</code>, <code>README.md</code> files, which we chose not to initialize our remote repository with</strong>. The <code>touch</code> command can be used to create any file type that we want (just make sure you’re in the desired location – typically, you want to create these in your project’s root directory). For example:</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> .gitignore</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<ul>
-<li>You should see something similar to this print out, if successful!</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">base</span><span class="kw">)</span> <span class="ex">Samanthas-MacBook-Air:mysite</span> samanthacsik$ git push <span class="at">-u</span> origin main</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Enumerating</span> objects: 33, done.</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Counting</span> objects: 100% <span class="er">(</span><span class="ex">33/33</span><span class="kw">)</span><span class="ex">,</span> done.</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Delta</span> compression using up to 8 threads</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Compressing</span> objects: 100% <span class="er">(</span><span class="ex">29/29</span><span class="kw">)</span><span class="ex">,</span> done.</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="ex">Writing</span> objects: 100% <span class="er">(</span><span class="ex">33/33</span><span class="kw">)</span><span class="ex">,</span> 273.20 KiB <span class="kw">|</span> <span class="ex">13.66</span> MiB/s, done.</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="ex">Total</span> 33 <span class="er">(</span><span class="ex">delta</span> 1<span class="kw">)</span><span class="ex">,</span> reused 0 <span class="er">(</span><span class="ex">delta</span> 0<span class="kw">)</span><span class="ex">,</span> pack-reused 0</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="ex">remote:</span> Resolving deltas: 100% <span class="er">(</span><span class="ex">1/1</span><span class="kw">)</span><span class="ex">,</span> done.</span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="ex">To</span> https://github.com/samanthacsik/mysite.git</span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a> <span class="ex">*</span> [new branch]      main <span class="at">-</span><span class="op">&gt;</span> main</span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="ex">Branch</span> <span class="st">'main'</span> set up to track remote branch <span class="st">'main'</span> from <span class="st">'origin'</span>.</span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">base</span><span class="kw">)</span> <span class="ex">Samanthas-MacBook-Air:mysite</span> samanthacsik$ </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ul>
-<li>Refresh your GitHub repository (in your web browser) to see that your updates have been successfully pushed!</li>
-</ul>
-<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -594,12 +612,12 @@ Create a Quarto website inside an existing GitHub repository
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The above instructions follow the <strong>“create local R project (and initialize as a git repo) first &gt; create upstream remote repo (on GitHub) second”</strong> workflow. However, if you already have a remote GitHub repository that you want to use for your website, clone the GitHub repo, then run the following command in your terminal:</p>
+<p>The above instructions follow the <strong>“create local R project (and initialize as a git repo) <em>first</em> &gt; create upstream remote repo (on GitHub) <em>second</em>”</strong> workflow. However, if you already have a remote GitHub repository that you want to use for your website, clone the GitHub repo, then run the following command in the command line:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> create-project <span class="at">--type</span> website</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This adds the the default files (<code>_quarto.yml</code>, <code>.gitignore</code>, <code>index.qmd</code>, <code>about.qmd</code>, <code>styles.css</code>) for getting started on your website.</p>
-<p>You may also use this approach if you already have an existing local directory of documents or R project that you’d like to use as the directory for your website. First, navigate to that direcotory/open that R project, then run the above command in your terminal.</p>
+<p>You may also use this approach if you already have an existing local directory of documents or R project that you’d like to use as the directory for your website. First, navigate to that directory/open that R project, then run the above command in the command line.</p>
 </div>
 </div>
 </section>
@@ -762,7 +780,7 @@ Order of operations may determine whether your default branch is named <code>mai
 <ol start="8" type="1">
 <li>Let’s switch our default branch name from <code>master</code> to <code>main</code>. In the console, run <code>usethis::git_default_branch_rename(from = "master", to = "main")</code> to update your default branch name. Confirm that it updated <strong>(a)</strong> locally by running <code>git status</code> again in your Terminal – the first printed line should now read, <code>On branch main</code>, and <strong>(b)</strong> on your remote by refreshing your GitHub repo (in your web browser) – you should see the updated default branch name at the top of your repo.</li>
 </ol>
-<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -772,12 +790,12 @@ Create a Quarto website inside an existing GitHub repository
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The above instructions follow the <strong>“create local R project (and initialize as a git repo) first &gt; create upstream remote repo (on GitHub) second”</strong> workflow. However, if you already have a remote GitHub repository that you want to use for your website, clone the GitHub repo, then run the following command in your terminal:</p>
+<p>The above instructions follow the <strong>“create local R project (and initialize as a git repo) <em>first</em> &gt; create upstream remote repo (on GitHub) <em>second</em>”</strong> workflow. However, if you already have a remote GitHub repository that you want to use for your website, clone the GitHub repo, then run the following command in the command line:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> create-project <span class="at">--type</span> website</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This adds the the default files (<code>_quarto.yml</code>, <code>.gitignore</code>, <code>index.qmd</code>, <code>about.qmd</code>, <code>styles.css</code>) for getting started on your website.</p>
-<p>You may also use this approach if you already have an existing local directory of documents or R project that you’d like to use as the directory for your website. First, navigate to that direcotory/open that R project, then run the above command in your terminal.</p>
+<p>You may also use this approach if you already have an existing local directory of documents or R project that you’d like to use as the directory for your website. First, navigate to that directory/open that R project, then run the above command in the command line.</p>
 </div>
 </div>
 </section>
@@ -962,19 +980,19 @@ Check out the <strong>Actions</strong> tab on GitHub to view deployment status
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-2" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-lines="3" data-code-cell="annotated-cell-2" data-code-annotation="1">add a photo by supplying a file path &amp; image name (here, <code>headshot.jpg</code> lives in my repo’s root directory)</span>
+<span data-code-lines="3" data-code-annotation="1" data-code-cell="annotated-cell-2">add a photo by supplying a file path &amp; image name (here, <code>headshot.jpg</code> lives in my repo’s root directory)</span>
 </dd>
 <dt data-target-cell="annotated-cell-2" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-lines="5" data-code-cell="annotated-cell-2" data-code-annotation="2">use a <a href="https://quarto.org/docs/websites/website-about.html#templates">pre-built template</a> (here, <code>trestles</code>) to update the layout of your landing page (or any page!)</span>
+<span data-code-lines="5" data-code-annotation="2" data-code-cell="annotated-cell-2">use a <a href="https://quarto.org/docs/websites/website-about.html#templates">pre-built template</a> (here, <code>trestles</code>) to update the layout of your landing page (or any page!)</span>
 </dd>
 <dt data-target-cell="annotated-cell-2" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-lines="6,7" data-code-cell="annotated-cell-2" data-code-annotation="3">set image shape (<code>round</code>, <code>rounded</code>, <code>rectangle</code>) &amp; size</span>
+<span data-code-lines="6,7" data-code-annotation="3" data-code-cell="annotated-cell-2">set image shape (<code>round</code>, <code>rounded</code>, <code>rectangle</code>) &amp; size</span>
 </dd>
 <dt data-target-cell="annotated-cell-2" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-lines="8,9,10,11,12,13,14,15,16" data-code-cell="annotated-cell-2" data-code-annotation="4">add button links to your favorite social media pages (e.g.&nbsp;LinkedIn, Twitter, GitHub, and even your email – <strong>Note:</strong> the <code>mailto::</code> ahead of your email address, <code>mailto::youremail.com</code>)</span>
+<span data-code-lines="8,9,10,11,12,13,14,15,16" data-code-annotation="4" data-code-cell="annotated-cell-2">add button links to your favorite social media pages (e.g.&nbsp;LinkedIn, Twitter, GitHub, and even your email – <strong>Note:</strong> the <code>mailto::</code> ahead of your email address, <code>mailto::youremail.com</code>)</span>
 </dd>
 </dl>
 </div>
@@ -1039,11 +1057,11 @@ Quarto supports creating completely custom page layouts – but I recommend stic
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-3" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-lines="6" data-code-cell="annotated-cell-3" data-code-annotation="1">Give your website a better title (e.g.&nbsp;your name)! This is the text that appears in the top left corner of your website (by default, it appears as your repo name) – when clicked, a user will be brought back to the landing page</span>
+<span data-code-lines="6" data-code-annotation="1" data-code-cell="annotated-cell-3">Give your website a better title (e.g.&nbsp;your name)! This is the text that appears in the top left corner of your website (by default, it appears as your repo name) – when clicked, a user will be brought back to the landing page</span>
 </dd>
 <dt data-target-cell="annotated-cell-3" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-lines="17" data-code-cell="annotated-cell-3" data-code-annotation="2">Set your <code>page-layout</code> to <code>full</code> so that your page content takes up more of the page width</span>
+<span data-code-lines="17" data-code-annotation="2" data-code-cell="annotated-cell-3">Set your <code>page-layout</code> to <code>full</code> so that your page content takes up more of the page width</span>
 </dd>
 </dl>
 <div class="cell" data-layout-align="center">
@@ -1092,7 +1110,7 @@ Quarto supports creating completely custom page layouts – but I recommend stic
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-4" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-lines="13" data-code-cell="annotated-cell-4" data-code-annotation="1">A newly-added navbar page. <strong>Note:</strong> The page name, as it appears in the navbar of your website, will be the same as whatever is listed in the <code>title</code> field of that file’s yaml. For example, I have set <code>title: "All my favorite resources!"</code> in the yaml of <code>resources.qmd</code> – this is how it will appear in my website’s navbar. If you’d like the page name to appear differently in the navbar, use the <code>href</code> and <code>text</code> options together (e.g.&nbsp;see how <code>index.qmd</code> is rendered as <code>Home</code> in my website’s navbar).</span>
+<span data-code-lines="13" data-code-annotation="1" data-code-cell="annotated-cell-4">A newly-added navbar page. <strong>Note:</strong> The page name, as it appears in the navbar of your website, will be the same as whatever is listed in the <code>title</code> field of that file’s yaml. For example, I have set <code>title: "All my favorite resources!"</code> in the yaml of <code>resources.qmd</code> – this is how it will appear in my website’s navbar. If you’d like the page name to appear differently in the navbar, use the <code>href</code> and <code>text</code> options together (e.g.&nbsp;see how <code>index.qmd</code> is rendered as <code>Home</code> in my website’s navbar).</span>
 </dd>
 </dl>
 <div class="cell" data-layout-align="center">
