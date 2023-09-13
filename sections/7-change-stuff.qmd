@@ -12,6 +12,11 @@ When you Render your site (by clicking **Build** \> **Render Website**), Quarto 
 
 ### {{< fa arrow-right title="An arrow pointing to the right" >}} **Add content to your landing page (`index.qmd`)**
 
+::: {.callout-important}
+## Do *not* change the name of `index.qmd`
+This is the default/expected name given to website landing/home pages. If you change the name of this file, you risk breaking your deployment.
+:::
+
 Remember: `index.qmd` is the page people will arrive at when navigating to your website -- give this landing/home page a makeover by trying out some of the following:
 
   -   Update the yaml `title` in your `index.qmd` file. Here, I changed mine from "mysite" to my name, "Samantha Csik"
