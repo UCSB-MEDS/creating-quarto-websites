@@ -2,7 +2,9 @@
 format: html
 ---
 
-## What is <img src="media/quarto.png" alt="A blue circle divided into four quadrants, followed by the name &apos;quarto&apos;." style="display: inline-block; margin: 0; position: relative; top: 0px; width:110px;height:30px;"/> ?
+## {{< fa circle-question title="Question mark" >}} What is Quarto?
+
+<!-- <img src="media/quarto.png" alt="A blue circle divided into four quadrants, followed by the name &apos;quarto&apos;." style="display: inline-block; margin: 0; position: relative; top: 0px; width:110px;height:30px;"/> -->
 
 [Quarto](https://quarto.org/) is a publishing system built on Pandoc that allows users to create dynamic content using R, Python, Julia, and ObservableJS (with plans to add more languages too!).
 

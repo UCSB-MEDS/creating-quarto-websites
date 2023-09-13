@@ -2,7 +2,7 @@
 format: html
 ---
 
-## `r fontawesome::fa("tools", fill = "#5A5A5A", a11y = "sem")` Create the scaffolding for your website
+## {{< fa seedling title="Sprouted seedling" >}} Create the scaffolding for your website
 
 ::: callout-important
 ## Before getting started...

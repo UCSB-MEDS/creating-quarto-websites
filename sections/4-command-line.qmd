@@ -21,8 +21,8 @@ There are lots of differing opinions on how to keep your R projects/git reposito
 
 3.  **Create the scaffolding (i.e. folder structure & necessary files) for your website** by running the following in the command line:
 
-::: {.callout-note}
-## Directory == Folder
+::: {.callout-note collapse=true}
+## Data science jargon: Directory == Folder
 Throughout this document, we'll use the words **directory** and **folder** interchangeably.
 :::
 
@@ -118,7 +118,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-::: {.callout-note}
+::: {.callout-note collapse=true}
 ## `git status` provides lots of helpful information about the current state of your your working directory and staging area
 I use this command *often* when working on the command line to double check that I'm actually where I think I am, and to see tracked files and untracked or changed files. It's a good habit run `git status` after switching branches or before/after adding files to commit.
 :::
@@ -169,7 +169,7 @@ You can double check that this worked by typing out the `git status` command aga
 <!-- ::: -->
 :::
 
-::: {.callout-note}
+::: {.callout-note collapse=true}
 ## Why are we doing this?
 
 The racist “master” terminology for git branches motivates us to update our default branch to “main” instead.
@@ -207,9 +207,23 @@ git commit -m "initial commit"
 Doing so now can lead to merge conflicts. We can add them after our local and remote repositories have been connected.
 :::
 
-::: {.callout-note}
-## **Git vs. Github:** 
-[*Git*](https://git-scm.com/) is a version control system that allows you to manage and track your file version control history while [*GitHub*](https://github.com/) is a cloud-based hosting service that allows you to manage Git repositories. As Jenny Bryan describes in her book [Happy Git and GitHub for the useR](https://happygitwithr.com/index.html), hosting services like GitHub *"provide a home for your Git-based projects on the internet."* These services not only help to facilitate collaboration, but they also protect you in the event your computer suddenly dies -- just "clone" your GitHub repository back onto your new computer and voila! You're able to pick right back up where you left off.
+::: {.callout-note collapse=true}
+## Understanding the difference between Git vs. Github 
+[*Git*](https://git-scm.com/) is a **version control software** designed to manage the versioning and tracking of source code files and project history. It **operates locally** on your computer, allowing you to create repositories and track changes. It works directly with files on your computer, and is primarily used through the command-line interface (e.g. Terminal, Git Bash). Some GUIs (Graphical User Interfaces), like RStudio, provide user-friendly buttons to execute git commands as well.
+
+[*GitHub*](https://github.com/) is a **cloud-based** hosting service that allows you to **manage Git repositories** -- as Jenny Bryan describes in her book [Happy Git and GitHub for the useR](https://happygitwithr.com/index.html), hosting services like GitHub *"provide a home for your Git-based projects on the internet."* GitHub provides us with the tools for storing, managing, and collaborating on git repositories. It also offers additional features on top of Git, like issue tracking, project management tools, code review, pull requests, and more.
+
+The illustration below depicts how we use Git and GitHub together to version control our work locally (e.g. on our computer(s)), and send versions to and receive updates from a remote (i.e. GitHub) repository.
+
+```{r}
+#| eval: true
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+#| fig-cap: "Illustration by [Allison Horst](https://allisonhorst.com/)"
+#| fig-alt: "A basic git workflow represented as two islands, one with \"local repo\" and \"working directory\", and another with \"remote repo.\" Bunnies move file boxes from the working directory to the staging area, then with Commit move them to the local repo. Bunnies in rowboats move changes from the local repo to the remote repo (labeled \"PUSH\") and from the remote repo to the working directory (labeled \"PULL\")."
+knitr::include_graphics("media/ahorst-git-workflow.png")
+```
 :::
 
 10. **Connect your remote (GitHub) repository to your local Git repository.** Your empty GitHub repo conveniently includes instructions for doing so. Copy the code under "push an existing repository from the command line" to your clipboard, paste into the command line, and run.
@@ -219,7 +233,7 @@ Doing so now can lead to merge conflicts. We can add them after our local and re
 knitr::include_graphics("media/GH_quick_setup_options.png")
 ```
 
-::: {.callout-note}
+::: {.callout-note collapse=true}
 ## The code that GitHub provides (as shown above) should look something like this:
 
 ```{bash}

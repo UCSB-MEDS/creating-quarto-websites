@@ -2,7 +2,7 @@
 format: html
 ---
 
-## Some tips on navigating this document
+## {{< fa lightbulb title="Lightbulb">}} Some tips on navigating this document
 
 If you're here, welcome! Maybe you're excited to start on your website-building journey, or maybe you're just getting a feel for what Quarto is all about. Regardless, I hope you find these materials helpful. Some notes on what to expect:
 
@@ -10,7 +10,8 @@ This document is meant to introduce you to Quarto as a tool and framework for bu
 
 You'll encounter some callout boxes throughout these materials, which are meant to provide additional tips, considerations, contexts:
 
-::: {.callout-note}
+::: {.callout-note collapse=true}
+## Note (collapsed by default to minimize scrolling; click to expand)
 This is a **note**, often providing additional context, clarification, resources, etc.
 :::
 

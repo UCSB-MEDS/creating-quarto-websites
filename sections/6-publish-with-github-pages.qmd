@@ -2,47 +2,46 @@
 format: html
 ---
 
-## `r fontawesome::fa("github", fill = "#5A5A5A", a11y = "sem")` Build & publish your site with GitHub Pages
+## {{< fa brands github title="GitHub Octocat" >}} Build & publish your site with GitHub Pages
 
 There are a [lots of options to publish your website](https://quarto.org/docs/websites/publishing-websites.html). We'll use the [GitHub Pages option](https://quarto.org/docs/websites/publishing-websites.html#github-pages), which allows you to publish a website from any GitHub repository. To do so, there are a few configuration steps:
 
-1.  Create a file named `.nojekyll` in your repository, which is required to disable some processing of HTML files that GitHub does by default. There are two ways you can do this: 
+1.  **Create a file named `.nojekyll` in your repository's root directory (e.g. `mysite/`)**, which is required to disable some processing of HTML files that GitHub does by default. There are two ways you can do this: 
 
-    a. From your **terminal** (you can use the terminal tab in RStudio or a separate terminal window -- just make sure you're in the correct directory) using the following command:
+    a. From your **Terminal** (you can use the RStudio Terminal or a separate command-line interface -- just make sure you're in the correct directory) using the following command:
     
     ```{bash}
 #| eval: false
 touch .nojekyll
 ```
 
-    b. From RStudio's **File** pane by clicking **New Blank File** > **Text File**, then typing in `.nojekyll`
+    b. From RStudio's **File** pane by clicking **New Blank File** > **Text File**, then typing in `.nojekyll`.
 
-::: callout-note
+::: {.callout-note collapse=true}
 ## Creating "non-standard" file types in RStudio (like a `.nojekyll` file)
 
-The `touch` command can be used to create a new, empty file from the terminal. Similarly, RStudio's **Text File** button allows you to define and create any file type. Since there's not default button in RStudio for creating a `.nojekyll` file, you'll want to use one of these approaches.
+The `touch` command can be used to create a new, empty file from the command line. Similarly, RStudio's **Text File** button allows you to define and create any file type. Since there's no default button in RStudio for creating a `.nojekyll` file, you'll want to use one of these two approaches.
 
 `.nojekyll` is a *hidden* file which won't visibly appear in your directory. You *should* see it show up as a file to track with git under the **Git** tab in RStudio. You can also view hidden files in Finder (Mac) using the keyboard shortcut `Command` + `Shift` + `.`, or follow [these instructions](https://support.microsoft.com/en-us/windows/show-hidden-files-0320fe58-0117-fd59-6851-9b7f9840fdb2) for Windows 10, 8.1, and 7.
 :::
 
-2.  Set the `output-dir` in your `_quarto.yml` file to "docs" (it's easiest to do this from RStudio):
+2.  **Set the `output-dir` in your `_quarto.yml` file to `docs`** (it's easiest to open and edit this from RStudio):
 
-```{r}
+```{r filename="_quarto.yml"}
 #| eval: false
----
 project:
   type: website
   output-dir: docs
   
 # ~ additional metadata excluded for brevity ~
----
 ```
 
-::: callout-note
+::: {.callout-note collapse=true}
+## Your rendered website pages will be saved to `output-dir` (here, that's the `docs/` folder)
 The `output-dir` is the directory (i.e. folder) where your rendered `.html` (and other important) files will automatically be saved to when you "Build" your website (see the next step!) -- that is, when you convert all your `.qmd` files to the `.html` files that your web browser can interpret/display. 
 :::
 
-3.  Build your site by clicking on the **Build** tab (top left quadrant in RStudio), then **Render Website.** You should see a minimal, albeit functional, soon-to-be website appear in the **Viewer** tab. Click on the <img src="media/view_in_browser.png" alt="A browser window overlaid by an arrow pointing up and angled to the right." style="display: inline-block; margin: 0; position: relative; top: 0px; width:25px;height:20px;"/> button to open your file in your web browser. **Note:** your website is currently being hosted by your local machine, not at a searchable URL. We'll get there soon though!
+3.  **Build/render your website.** Click on the **Build** tab (top left pane in RStudio if you have the default layout), then **Render Website.** You should see a minimal, albeit functional, soon-to-be website appear in the **Viewer** tab. Click on the <img src="media/view_in_browser.png" alt="A browser window overlaid by an arrow pointing up and angled to the right." style="display: inline-block; margin: 0; position: relative; top: 0px; width:25px;height:20px;"/> button to open your file in your web browser. **Note:** your website is currently being hosted by your local machine, not at a searchable URL. We'll get there soon though!
 
 ```{r}
 #| echo: false
@@ -50,13 +49,13 @@ The `output-dir` is the directory (i.e. folder) where your rendered `.html` (and
 knitr::include_graphics("media/build_site.png")
 ```
 
-4.  Now we need to send all of the files in our local git repository to our remote GitHub repository:
+4.  **Send all of your website files from your local git repository to your remote GitHub repository:** 
 
     a.  **Stage** your files by checking all the boxes in the **Git** tab (*this is analogous to the `git add .` command used in the Terminal for staging all files*)
     b.  **Commit** your files by clicking the Commit button, adding a commit message, and clicking "Commit" (*analogous to `git commit -m "my commit message"`*)
     c.  **Push** your files to the remote repository (on GitHub) by clicking the "Push" button with the green upward facing arrow (*analogous to `git push`*).
 
-5.  Configure GitHub pages to serve content from the "docs" directory by clicking on the **Settings** tab in the top menu bar, then **Pages** tab from the left hand menu bar. Make sure that Branch is set to `main` and that the selected folder is set to `/docs`. Click "Save". Once deployed (this may take a few minutes), your website's URL will appear inside a box at the top of the page (you may have to try refreshing a few times). 
+5.  **Configure GitHub pages to serve content from the "docs" directory** by clicking on the **Settings** tab in the top menu bar, then the **Pages** tab from the left-hand menu bar. Make sure that **Branch** is set to `main` and that the selected folder is set to `/docs`. Click **Save**. Once deployed (this may take a few minutes), your website's URL will appear inside a box at the top of the page (you may have to try refreshing a few times). 
 
 ```{r}
 #| echo: false
@@ -69,7 +68,7 @@ knitr::include_graphics("media/gh_pages.png")
 knitr::include_graphics("media/rendered_site.png")
 ```
 
-::: callout-tip
+::: {.callout-tip}
 ## Check out the **Actions** tab on GitHub to view deployment status
 
 See deployment status, time of each deployment, and how long it took to deploy each run. You can also find failed deployments here (yes, it does happen on occasion) and take action on fixing them.

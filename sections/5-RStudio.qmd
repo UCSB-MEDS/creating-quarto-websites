@@ -8,7 +8,7 @@ format: html
 
 ### **Steps:**
 
-1.  Open up RStudio and click on the ![A blue cube symbol with 'R' in the center is on the left. To the right are the words 'Project: (None)' in white, with a downward facing arrow, signifying a drop down menu](media/project.png){alt="A blue cube symbol with 'R' in the center is on the left. To the right are the words 'Project: (None)' in white, with a downward facing arrow, signifying a drop down menu" style="display: inline-block; margin: 0; position: relative; top: 0px; width:80px;height:18px;"} button in the top right corner. Select **New Project...**
+1.  **Create a new R project with some necessary website files.** Start by opening up RStudio and clicking on the ![A blue cube symbol with 'R' in the center is on the left. To the right are the words 'Project: (None)' in white, with a downward facing arrow, signifying a drop down menu](media/project.png){alt="A blue cube symbol with 'R' in the center is on the left. To the right are the words 'Project: (None)' in white, with a downward facing arrow, signifying a drop down menu" style="display: inline-block; margin: 0; position: relative; top: 0px; width:80px;height:18px;"} button in the top right corner. Select **New Project...**
 
 ```{r}
 #| echo: false
@@ -16,7 +16,7 @@ format: html
 knitr::include_graphics("media/vRStudio1.png")
 ```
 
-2.  Click on **New Directory**, then **Quarto Website**
+Choose **New Directory**, then **Quarto Website.**
 
 ```{r}
 #| echo: false
@@ -26,7 +26,7 @@ knitr::include_graphics("media/vRStudio2.png")
 knitr::include_graphics("media/vRStudio3.png")
 ```
 
-3.  Fill out the **Directory name:** field (this is the name of your R project, and eventually, your GitHub repo name), and choose where to save your directory using the **Browse** button. Click **Create Project**.
+And finally, fill out the **Directory name:** field (this is the name of your R project, and eventually, your remote (i.e. GitHub) repo name), and choose where to save your directory to using the **Browse** button. Click **Create Project**.
 
 ::: {.callout-important}
 ## Name your project **yourusername.github.io** if you plan to deploy using GitHub pages
@@ -52,14 +52,20 @@ knitr::include_graphics("media/vRStudio4.png")
 # knitr::include_graphics("media/mysite_scaffolding.png")
 ```
 
-4.  At this point you've created a directory (folder) with the website scaffolding files, but it's not yet being tracked by git, nor is it connected to a remote repository on GitHub. To start setting this up, first install the [`{usethis}`](https://usethis.r-lib.org/index.html) package if you don't already have it.
+2.  **Install the [`{usethis}` package](https://usethis.r-lib.org/index.html).** At this point you've created a directory (folder) with the website scaffolding files, but it's not yet being tracked by git, nor is it connected to a remote repository on GitHub. We can use the `{usethis}` package to help us set this up. First, install the [`{usethis}`](https://usethis.r-lib.org/index.html) package if you don't already have it.
 
 ```{r}
 #| eval: false
 install.packages("usethis")
 ```
 
-5.  In the Console (while in your website project in RStudio), run `usethis::use_git()` to create a local git repo. Choose yes when asked if it's okay to commit any uncommitted files. If asked to restart R, choose yes. Once complete, you should see the **Git** tab appear in your top left pane in RStudio.
+::: {.callout-note collapse=true}
+## `{usethis}` is a package that facilitates interactive workflows for R project creation and development
+We're using the `{usethis}` workflow here because it's a super useful package to begin learning for project setup. Read more about the tooling this package offers on the [`usethis` documentation](https://usethis.r-lib.org/).
+<!-- However, rather than using the `usethis::use_git()` function here to create your local git repo, you could have also checked the box where it says **Create a git repository** when initially setting up your Quarto website (see step 3 above). -->
+:::
+
+3.  **Initialize your R Project folder as a git repository using `usethis::use_git()`:** In the Console, run `usethis::use_git()` to create a local git repository. Choose **yes** when asked if it's okay to commit any uncommitted files. If asked to restart R, choose **yes**. Once complete, you should see the **Git** tab appear in your top left pane in RStudio.
 
 ```{r}
 #| echo: false
@@ -67,16 +73,40 @@ install.packages("usethis")
 knitr::include_graphics("media/mysite_scaffolding_git.png")
 ```
 
-::: {.callout-note}
-## `{usethis}` is a package that facilitates interactive workflows for R project creation and development
-We're using the `{usethis}` workflow here because it's a super useful package to begin learning for project setup. However, rather than using the `usethis::use_git()` function here to create your local git repo, you could have also checked the box where it says **Create a git repository** when initially setting up your Quarto website (see step 3 above).
+::: {.callout-note collapse=true}
+## What is a git repository?
+When we initialize our R project, `mysite/` (or `youusername.github.io/`), as a git repository using `usethis::use_git()`, a hidden `.git/` folder is created *within* that project folder. This hidden `.git/` folder *is* the git repository. As you use git commands (or RStudio's GUI buttons) to capture versions or "snapshots" of your work, those versions (and their associated metadata) get stored within the `.git/` folder. This allows you to access and/or recover any previous versions of your work. If you delete `.git/`, you delete your project's history. Here is an example website repository, represented visually:
+
+```{r}
+#| eval: true
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics("media/git-repo-ex.png")
+```
 :::
 
-6.  Then, in the Console, run `usethis::use_github()` to create an upstream remote repository (i.e. GitHub repo). Your web browser should open up to your new GitHub repository, with the same name as your local git repo/R project.
+4.  **Create an upstream remote repository (i.e. GitHub repo) using `usethis::use_github()`.** Running `usethis::use_github()` in the Console will open up your web browser to your new remote repository on GitHub. It should automatically have
 
-::: {.callout-note}
-## Git vs. Github 
-[*Git*](https://git-scm.com/) is a version control system that allows you to manage and track your file version control history while [*GitHub*](https://github.com/) is a cloud-based hosting service that allows you to manage Git repositories. As Jenny Bryan describes in her book [Happy Git and GitHub for the useR](https://happygitwithr.com/index.html), hosting services like GitHub *"provide a home for your Git-based projects on the internet."* These services not only help to facilitate collaboration, but they also protect you in the event your computer suddenly dies -- just "clone" your GitHub repository back onto your new computer and voila! You're able to pick right back up where you left off.
+Then, in the Console, run `usethis::use_github()` to create an upstream remote repository (i.e. GitHub repo). Your web browser should open up to your new GitHub repository, with the same name as your local git repo/R project.
+
+::: {.callout-note collapse=true}
+## Understanding the difference between Git vs. Github 
+[*Git*](https://git-scm.com/) is a **version control software** designed to manage the versioning and tracking of source code files and project history. It **operates locally** on your computer, allowing you to create repositories and track changes. It works directly with files on your computer, and is primarily used through the command-line interface (e.g. Terminal, Git Bash). Some GUIs (Graphical User Interfaces), like RStudio, provide user-friendly buttons to execute git commands as well.
+
+[*GitHub*](https://github.com/) is a **cloud-based** hosting service that allows you to **manage Git repositories** -- as Jenny Bryan describes in her book [Happy Git and GitHub for the useR](https://happygitwithr.com/index.html), hosting services like GitHub *"provide a home for your Git-based projects on the internet."* GitHub provides us with the tools for storing, managing, and collaborating on git repositories. It also offers additional features on top of Git, like issue tracking, project management tools, code review, pull requests, and more.
+
+The illustration below depicts how we use Git and GitHub together to version control our work locally (e.g. on our computer(s)), and send versions to and receive updates from a remote (i.e. GitHub) repository.
+
+```{r}
+#| eval: true
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+#| fig-cap: "Illustration by [Allison Horst](https://allisonhorst.com/)"
+#| fig-alt: "A basic git workflow represented as two islands, one with \"local repo\" and \"working directory\", and another with \"remote repo.\" Bunnies move file boxes from the working directory to the staging area, then with Commit move them to the local repo. Bunnies in rowboats move changes from the local repo to the remote repo (labeled \"PUSH\") and from the remote repo to the working directory (labeled \"PULL\")."
+knitr::include_graphics("media/ahorst-git-workflow.png")
+```
 :::
 
 ```{r}
@@ -86,19 +116,28 @@ We're using the `{usethis}` workflow here because it's a super useful package to
 knitr::include_graphics("media/mysite_remote.png")
 ```
 
-7.  Next, let's check the name of our default branch -- that is, the branch that all changes eventually get merged back into (if you're building a website, this branch is typically the one you'll want to deploy). There are multiple ways to check this -- here are two easy options:
+5. **Check the name of your default branch (the only branch you should have at the moment)** -- that is, the branch that all changes eventually get merged back into (if you're building a website, this branch is typically the one you'll want to deploy). There are multiple ways to check this -- here are two easy options:
 
-    a.  open your Terminal window from RStudio and type `git status` -- the first printed line should say **`On branch <branch_name>`**.
+    a.  Open RStudio's Terminal window (next to the Console) and run either `git branch` (this prints all local branches and highlights the one that you're currently on) or `git status` (the first printed line should say `On branch <branch_name>`). 
 
-    b.  click on the **Git** tab in the top right pane of RStudio. Next to the ![A white diamond with two purple squares, one directly above and one directly to the right, connected to the diamond by a line.](media/branch.png){alt="A white diamond with two purple squares, one directly above and one directly to the right, connected to the diamond by a line." style="display: inline-block; margin: 0; position: relative; top: 0px; width:20px;height:18px;"} symbol, you should see a dropdown menu that displays the name of your current branch.
+    b.  Click on the **Git** tab in the top right pane of RStudio. Next to the ![A white diamond with two purple squares, one directly above and one directly to the right, connected to the diamond by a line.](media/branch.png){alt="A white diamond with two purple squares, one directly above and one directly to the right, connected to the diamond by a line." style="display: inline-block; margin: 0; position: relative; top: 0px; width:20px;height:18px;"} symbol, you should see a dropdown menu that displays the name of your current branch.
 
--   **If your current branch is named *`master`*, follow step 8 below.** *Why?* The racist "master" terminology for git branches motivates us to update our default branch to "main" instead. If your branch is named *`main`*, you're good to go! You can continue to the next section, [Publish your site with GitHub Pages](https://ucsb-meds.github.io/creating-quarto-websites/#publish-your-site-with-github-pages).
+6.  **If your current branch is named `master`, update the name to `main`.** (If your branch is named *`main`*, you're good to go! You can continue to the next section, [Publish your site with GitHub Pages](https://ucsb-meds.github.io/creating-quarto-websites/#publish-your-site-with-github-pages).) In the console, run `usethis::git_default_branch_rename(from = "master", to = "main")` to update your default branch name. Confirm that it updated **(a)** locally by running `git status` again in your Terminal -- the first printed line should now read, `On branch main`, and **(b)** on your remote by refreshing your GitHub repo (in your web browser) -- you should see the updated default branch name at the top of your repo.
 
-::: {.callout-note}
-## Order of operations may determine whether your default branch is named `main` or `master`
-If you create a repo in *GitHub first*, the default now has been updated to make the default branch `main`. However, if you create a *local git repository first* (as we've done here) you may need to update your default branch name to `main` (depending on your version of Git and its configuration settings).
+::: {.callout-note collapse=true}
+## Why are we doing this?
+
+The racist “master” terminology for git branches motivates us to update our default branch to “main” instead.
+
+There is a push across platforms and software to update this historical default branch name from `master` to `main`. GitHub has already done so –  creating a remote repository *first* results in a default branch named `main`. Depending on your version of Git and/or your configuration settings, however, you may need to set update the name manually when creating a local git repository first (as we’re doing here).
 :::
 
-8.  Let's switch our default branch name from `master` to `main`. In the console, run `usethis::git_default_branch_rename(from = "master", to = "main")` to update your default branch name. Confirm that it updated **(a)** locally by running `git status` again in your Terminal -- the first printed line should now read, `On branch main`, and **(b)** on your remote by refreshing your GitHub repo (in your web browser) -- you should see the updated default branch name at the top of your repo.
+
+<!-- ::: {.callout-note collapse=true} -->
+<!-- ## Order of operations may determine whether your default branch is named `main` or `master` -->
+<!-- If you create a repo in *GitHub first*, the default now has been updated to make the default branch `main`. However, if you create a *local git repository first* (as we've done here) you may need to update your default branch name to `main` (depending on your version of Git and its configuration settings). -->
+<!-- ::: -->
+
+<!-- 6.  Let's switch our default branch name from `master` to `main`. In the console, run `usethis::git_default_branch_rename(from = "master", to = "main")` to update your default branch name. Confirm that it updated **(a)** locally by running `git status` again in your Terminal -- the first printed line should now read, `On branch main`, and **(b)** on your remote by refreshing your GitHub repo (in your web browser) -- you should see the updated default branch name at the top of your repo. -->
 
 {{< include /sections/NOTE.qmd >}}
