@@ -8,7 +8,7 @@ There are a [lots of options to publish your website](https://quarto.org/docs/we
 
 1.  **Create a file named `.nojekyll` in your repository's root directory (e.g. `mysite/`)**, which is required to disable some processing of HTML files that GitHub does by default. There are two ways you can do this: 
 
-    a. From your **Terminal** (you can use the RStudio Terminal or a separate command-line interface -- just make sure you're in the correct directory) using the following command:
+    a. From your **Terminal** (you can use the RStudio Terminal or a separate command line interface -- just make sure you're in the correct directory) using the following command:
     
     ```{bash}
 #| eval: false

@@ -92,7 +92,7 @@ Then, in the Console, run `usethis::use_github()` to create an upstream remote r
 
 ::: {.callout-note collapse=true}
 ## Understanding the difference between Git vs. Github 
-[*Git*](https://git-scm.com/) is a **version control software** designed to manage the versioning and tracking of source code files and project history. It **operates locally** on your computer, allowing you to create repositories and track changes. It works directly with files on your computer, and is primarily used through the command-line interface (e.g. Terminal, Git Bash). Some GUIs (Graphical User Interfaces), like RStudio, provide user-friendly buttons to execute git commands as well.
+[*Git*](https://git-scm.com/) is a **version control software** designed to manage the versioning and tracking of source code files and project history. It **operates locally** on your computer, allowing you to create repositories and track changes. It works directly with files on your computer, and is primarily used through the command line interface (e.g. Terminal, Git Bash). Some GUIs (Graphical User Interfaces), like RStudio, provide user-friendly buttons to execute git commands as well.
 
 [*GitHub*](https://github.com/) is a **cloud-based** hosting service that allows you to **manage Git repositories** -- as Jenny Bryan describes in her book [Happy Git and GitHub for the useR](https://happygitwithr.com/index.html), hosting services like GitHub *"provide a home for your Git-based projects on the internet."* GitHub provides us with the tools for storing, managing, and collaborating on git repositories. It also offers additional features on top of Git, like issue tracking, project management tools, code review, pull requests, and more.
 
