@@ -159,7 +159,7 @@ editor: visual
 ```{r}
 #| echo: false
 #| fig-align: center
-#| fig-cap: "A newly added navpage page, titled 'All of my favorite resources!'"
+#| fig-cap: "A newly added navpage page, titled \"All of my favorite resources!\""
 knitr::include_graphics("media/resources_page.png")
 ```
 
