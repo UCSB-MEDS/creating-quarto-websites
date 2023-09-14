@@ -281,7 +281,7 @@ Organizing R projects / git repositories
 </div>
 </div>
 <ol start="3" type="1">
-<li><strong>Create the scaffolding (i.e.&nbsp;folder structure &amp; necessary files) for your website</strong> by running the following in the command line:</li>
+<li><strong>Create the scaffolding (i.e.&nbsp;folder structure &amp; necessary files) for your website</strong> by running the following in the command line (substitute <code>mysite</code> with whatever name you want to give your repo):</li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
@@ -300,8 +300,7 @@ Data science jargon: Directory == Folder
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># substitute `mysite` with whatever name you want to give your repo (see important text in callout box below)</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> create-project mysite <span class="at">--type</span> website </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> create-project mysite <span class="at">--type</span> website </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -309,11 +308,11 @@ Data science jargon: Directory == Folder
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Name your project <strong>yourusername.github.io</strong> if you plan to deploy using GitHub pages
+Name your project <strong>username.github.io</strong> if you plan to deploy using GitHub pages
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Because we’ll be using GitHub pages to publish/host our websites, it’s recommended that you name your project <strong>yourusername.github.io</strong> (you’re allowed <strong>one</strong> user website with the <strong>github.io</strong> suffix) – for example, <a href="https://github.com/samanthacsik/samanthacsik.github.io">the project/GitHub repository</a>, which contains the code for <a href="https://samanthacsik.github.io/">my personal website</a>, is named <strong>samanthacsik.github.io</strong>. Otherwise, name it something reasonable (this will become the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Slug">slug</a> for your site if publishing with GitHub pages, so choose carefully). I’m calling my project <strong>mysite</strong> <em>just for tutorial purposes only</em> – you should definitely give yours a more practical/creative name.</p>
+<p>Because we’ll be using GitHub pages to publish/host our websites, it’s recommended that you name your project <strong>username.github.io</strong> (you’re allowed <strong>one</strong> user website with the <strong>github.io</strong> suffix) – for example, <a href="https://github.com/samanthacsik/samanthacsik.github.io">the project/GitHub repository</a>, which contains the code for <a href="https://samanthacsik.github.io/">my personal website</a>, is named <strong>samanthacsik.github.io</strong>. Otherwise, name it something reasonable (this will become the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Slug">slug</a> for your site if publishing with GitHub pages, so choose carefully). I’m calling my project <strong>mysite</strong> <em>just for tutorial purposes only</em> – you should definitely give yours a more practical/creative name.</p>
 </div>
 </div>
 <div class="cell column-page quarto-layout-panel">
@@ -400,7 +399,7 @@ What is a git repository?
 </div>
 <div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>When we initialize our R project, <code>mysite/</code> (or <code>youusername.github.io/</code>), as a git repository using <code>usethis::use_git()</code>, a hidden <code>.git/</code> folder is created <em>within</em> that project folder. This hidden <code>.git/</code> folder <em>is</em> the git repository. As you use git commands (or RStudio’s GUI buttons) to capture versions or “snapshots” of your work, those versions (and their associated metadata) get stored within the <code>.git/</code> folder. This allows you to access and/or recover any previous versions of your work. If you delete <code>.git/</code>, you delete your project’s history. Here is an example website repository, represented visually:</p>
+<p>When we initialize our R project, <code>mysite/</code> (or <code>username.github.io/</code>), as a git repository using <code>git init</code>, a hidden <code>.git/</code> folder is created <em>within</em> that project folder. This hidden <code>.git/</code> folder <em>is</em> the git repository. As you use git commands (or RStudio’s GUI buttons) to capture versions or “snapshots” of your work, those versions (and their associated metadata) get stored within the <code>.git/</code> folder. This allows you to access and/or recover any previous versions of your work. If you delete <code>.git/</code>, you delete your project’s history. Here is an example website repository, represented visually:</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -448,7 +447,7 @@ What is a git repository?
 </div>
 <div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>I use this command <em>often</em> when working on the command line to double check that I’m actually where I think I am, and to see tracked files and untracked or changed files. It’s a good habit run <code>git status</code> after switching branches or before/after adding files to commit.</p>
+<p>I use this command <em>often</em> when working on the command line to double check that I’m actually where I think I am, and to see tracked files and untracked or changed files. It’s a good habit to run <code>git status</code> after switching branches or before/after adding files to commit.</p>
 </div>
 </div>
 </div>
@@ -457,13 +456,13 @@ What is a git repository?
 <!-- If you create a repo in *GitHub first*, the default now has been updated to make the default branch `main`. However, if you create a *local git repository first* (as we've done here) you may need to update your default branch name to `main` (depending on your version of Git and its configuration settings). -->
 <!-- ::: -->
 <ol start="7" type="1">
-<li><strong>If your current branch is named <code>master</code>, update the name to <code>main</code>.</strong> If your branch is already named <code>main</code>, you can head straight to step 8. Choose your workflow below based on your Git version (check your version by running <code>git --version</code> in the command line):</li>
+<li><strong>If your default branch is named <code>master</code>, update the name to <code>main</code>.</strong> If your default branch (you should only have one branch so far, the default branch) is already named <code>main</code>, you can head straight to step 8. Otherwise, choose your workflow below based on your Git version (check your version by running <code>git --version</code> in the command line):</li>
 </ol>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href=""><strong><svg aria-label="Git Alt" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5A5A5A;overflow:visible;position:relative;"><title>Git Alt</title><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg> For Git version 2.28 or later</strong></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href=""><strong><svg aria-label="Git Alt" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5A5A5A;overflow:visible;position:relative;"><title>Git Alt</title><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg> For older versions of Git</strong></a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href=""><strong><i class="fa-brands fa-git-alt" title="GitHub branch symbol" aria-hidden="true"></i> For Git version 2.28 or later</strong></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href=""><strong><i class="fa-brands fa-git-alt" title="GitHub branch symbol" aria-hidden="true"></i> For older versions of Git</strong></a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>You can update the default branch to <code>main</code> by running the following line in the Terminal window:</p>
+<p>You can update the default branch to <code>main</code> by running the following line in the command line:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> init.defaultBranch main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -474,7 +473,7 @@ What is a git repository?
 <!-- ::: -->
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>Rename the default branch as <code>main</code> by running the following line in the Terminal window:</p>
+<p>Rename the default branch as <code>main</code> by running the following line in the command line:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-m</span> master main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -505,7 +504,7 @@ Why are we doing this?
 </div>
 </div>
 <ol start="8" type="1">
-<li><strong>Stage/add your website’s scaffolding files</strong> in your <code>mysite</code> directory (<em>analogous to checking the boxes next to your files in RStudio’s Git tab</em>)…</li>
+<li><strong>Stage/add all of your website’s scaffolding files</strong> (<em>analogous to checking the boxes next to your files in RStudio’s Git tab</em>)…</li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this adds all untracked or changed files at once</span></span>
@@ -532,7 +531,7 @@ Tip
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"initial commit"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="9" type="1">
-<li><strong>Create an empty remote repository on GitHub.</strong> At this point, we’ve created a local Git repository that contains the basic files needed to build our Quarto website. Now, we need to create a “remote” repository (i.e.&nbsp;a version of your project that is hosted on the internet) on GitHub. There are multiple ways to do this, but we’ll cover the workflow that makes most intuitive sense to me. <strong>Login to <a href="https://github.com/">GitHub</a>, <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository">create a new repository</a>, and give it the same name as your local repository/R Project (e.g.&nbsp;<code>yourusername.github.io</code>).</strong></li>
+<li><strong>Create an empty remote repository on GitHub.</strong> At this point, we’ve created a local git repository that contains the basic files needed to build our Quarto website. Now, we need to create a “remote” repository (i.e.&nbsp;a version of your project that is hosted on the internet) on GitHub. There are multiple ways to do this, but we’ll cover the workflow that makes most intuitive sense to me. <strong>Login to <a href="https://github.com/">GitHub</a>, <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository">create a new repository</a>, and give it the same name as your local repository/R Project (e.g.&nbsp;<code>username.github.io</code>).</strong></li>
 </ol>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -576,7 +575,7 @@ Understanding the difference between Git vs.&nbsp;Github
 </div>
 </div>
 <ol start="10" type="1">
-<li><strong>Connect your remote (GitHub) repository to your local Git repository.</strong> Your empty GitHub repo conveniently includes instructions for doing so. Copy the code under “push an existing repository from the command line” to your clipboard, paste into the command line, and run.</li>
+<li><strong>Connect your remote (GitHub) repository to your local git repository.</strong> Your empty GitHub repo conveniently includes instructions for doing so. Copy the code under “push an existing repository from the command line” to your clipboard, paste into the command line, and run.</li>
 </ol>
 <div class="cell">
 <div class="cell-output-display">
@@ -712,6 +711,22 @@ Create a Quarto website inside an existing GitHub repository
 </div>
 </div>
 </div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Data science jargon: Directory == Folder
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Throughout this document, we’ll use the words <strong>directory</strong> and <strong>folder</strong> interchangeably.</p>
+</div>
+</div>
+</div>
 <p>And finally, fill out the <strong>Directory name:</strong> field (this is the name of your R project, and eventually, your remote (i.e.&nbsp;GitHub) repo name), and choose where to save your directory to using the <strong>Browse</strong> button. Click <strong>Create Project</strong>.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -719,11 +734,11 @@ Create a Quarto website inside an existing GitHub repository
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Name your project <strong>yourusername.github.io</strong> if you plan to deploy using GitHub pages
+Name your project <strong>username.github.io</strong> if you plan to deploy using GitHub pages
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Because we’ll be using GitHub pages to publish/host our websites, it’s recommended that you name your project <strong>yourusername.github.io</strong> (you’re allowed <strong>one</strong> user website with the <strong>github.io</strong> suffix) – for example, <a href="https://github.com/samanthacsik/samanthacsik.github.io">the project/GitHub repository</a>, which contains the code for <a href="https://samanthacsik.github.io/">my personal website</a>, is named <strong>samanthacsik.github.io</strong>. Otherwise, name it something reasonable (this will become the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Slug">slug</a> for your site if publishing with GitHub pages, so choose carefully). I’m calling my project <strong>mysite</strong> <em>just for tutorial purposes only</em> – you should definitely give yours a more practical/creative name.</p>
+<p>Because we’ll be using GitHub pages to publish/host our websites, it’s recommended that you name your project <strong>username.github.io</strong> (you’re allowed <strong>one</strong> user website with the <strong>github.io</strong> suffix) – for example, <a href="https://github.com/samanthacsik/samanthacsik.github.io">the project/GitHub repository</a>, which contains the code for <a href="https://samanthacsik.github.io/">my personal website</a>, is named <strong>samanthacsik.github.io</strong>. Otherwise, name it something reasonable (this will become the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Slug">slug</a> for your site if publishing with GitHub pages, so choose carefully). I’m calling my project <strong>mysite</strong> <em>just for tutorial purposes only</em> – you should definitely give yours a more practical/creative name.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -758,7 +773,7 @@ Organizing R projects / git repositories
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"usethis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -767,7 +782,7 @@ Organizing R projects / git repositories
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>We’re using the <code>{usethis}</code> workflow here because it’s a super useful package to begin learning for project setup. Read more about the tooling this package offers on the <a href="https://usethis.r-lib.org/"><code>usethis</code> documentation</a>. <!-- However, rather than using the `usethis::use_git()` function here to create your local git repo, you could have also checked the box where it says **Create a git repository** when initially setting up your Quarto website (see step 3 above). --></p>
 </div>
@@ -786,7 +801,7 @@ Organizing R projects / git repositories
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -795,9 +810,9 @@ What is a git repository?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>When we initialize our R project, <code>mysite/</code> (or <code>youusername.github.io/</code>), as a git repository using <code>usethis::use_git()</code>, a hidden <code>.git/</code> folder is created <em>within</em> that project folder. This hidden <code>.git/</code> folder <em>is</em> the git repository. As you use git commands (or RStudio’s GUI buttons) to capture versions or “snapshots” of your work, those versions (and their associated metadata) get stored within the <code>.git/</code> folder. This allows you to access and/or recover any previous versions of your work. If you delete <code>.git/</code>, you delete your project’s history. Here is an example website repository, represented visually:</p>
+<p>When we initialize our R project, <code>mysite/</code> (or <code>username.github.io/</code>), as a git repository using <code>usethis::use_git()</code>, a hidden <code>.git/</code> folder is created <em>within</em> that project folder. This hidden <code>.git/</code> folder <em>is</em> the git repository. As you use git commands (or RStudio’s GUI buttons) to capture versions or “snapshots” of your work, those versions (and their associated metadata) get stored within the <code>.git/</code> folder. This allows you to access and/or recover any previous versions of your work. If you delete <code>.git/</code>, you delete your project’s history. Here is an example website repository, represented visually:</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -815,7 +830,7 @@ What is a git repository?
 </ol>
 <p>Then, in the Console, run <code>usethis::use_github()</code> to create an upstream remote repository (i.e.&nbsp;GitHub repo). Your web browser should open up to your new GitHub repository, with the same name as your local git repo/R project.</p>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -824,7 +839,7 @@ Understanding the difference between Git vs.&nbsp;Github
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><a href="https://git-scm.com/"><em>Git</em></a> is a <strong>version control software</strong> designed to manage the versioning and tracking of source code files and project history. It <strong>operates locally</strong> on your computer, allowing you to create repositories and track changes. It works directly with files on your computer, and is primarily used through the command line interface (e.g.&nbsp;Terminal, Git Bash). Some GUIs (Graphical User Interfaces), like RStudio, provide user-friendly buttons to execute git commands as well.</p>
 <p><a href="https://github.com/"><em>GitHub</em></a> is a <strong>cloud-based</strong> hosting service that allows you to <strong>manage Git repositories</strong> – as Jenny Bryan describes in her book <a href="https://happygitwithr.com/index.html">Happy Git and GitHub for the useR</a>, hosting services like GitHub <em>“provide a home for your Git-based projects on the internet.”</em> GitHub provides us with the tools for storing, managing, and collaborating on git repositories. It also offers additional features on top of Git, like issue tracking, project management tools, code review, pull requests, and more.</p>
@@ -861,7 +876,7 @@ Understanding the difference between Git vs.&nbsp;Github
 <li><p><strong>If your current branch is named <code>master</code>, update the name to <code>main</code>.</strong> (If your branch is named <em><code>main</code></em>, you’re good to go! You can continue to the next section, <a href="https://ucsb-meds.github.io/creating-quarto-websites/#publish-your-site-with-github-pages">Publish your site with GitHub Pages</a>.) In the console, run <code>usethis::git_default_branch_rename(from = "master", to = "main")</code> to update your default branch name. Confirm that it updated <strong>(a)</strong> locally by running <code>git status</code> again in your Terminal – the first printed line should now read, <code>On branch main</code>, and <strong>(b)</strong> on your remote by refreshing your GitHub repo (in your web browser) – you should see the updated default branch name at the top of your repo.</p></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -870,7 +885,7 @@ Why are we doing this?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The racist “master” terminology for git branches motivates us to update our default branch to “main” instead.</p>
 <p>There is a push across platforms and software to update this historical default branch name from <code>master</code> to <code>main</code>. GitHub has already done so – creating a remote repository <em>first</em> results in a default branch named <code>main</code>. Depending on your version of Git and/or your configuration settings, however, you may need to set update the name manually when creating a local git repository first (as we’re doing here).</p>
@@ -883,7 +898,7 @@ Why are we doing this?
 <!-- ::: -->
 <!-- 6.  Let's switch our default branch name from `master` to `main`. In the console, run `usethis::git_default_branch_rename(from = "master", to = "main")` to update your default branch name. Confirm that it updated **(a)** locally by running `git status` again in your Terminal -- the first printed line should now read, `On branch main`, and **(b)** on your remote by refreshing your GitHub repo (in your web browser) -- you should see the updated default branch name at the top of your repo. -->
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -892,7 +907,7 @@ Create a Quarto website inside an existing GitHub repository
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The above instructions follow the <strong>“create local R project (and initialize as a git repo) <em>first</em> &gt; create upstream remote repo (on GitHub) <em>second</em>”</strong> workflow. However, if you already have a remote GitHub repository that you want to use for your website, clone the GitHub repo, then run the following command in the command line:</p>
 <div class="cell">
@@ -924,7 +939,7 @@ Create a Quarto website inside an existing GitHub repository
 </ol></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -933,7 +948,7 @@ Creating “non-standard” file types in RStudio (like a <code>.nojekyll</code>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The <code>touch</code> command can be used to create a new, empty file from the command line. Similarly, RStudio’s <strong>Text File</strong> button allows you to define and create any file type. Since there’s no default button in RStudio for creating a <code>.nojekyll</code> file, you’ll want to use one of these two approaches.</p>
 <p><code>.nojekyll</code> is a <em>hidden</em> file which won’t visibly appear in your directory. You <em>should</em> see it show up as a file to track with git under the <strong>Git</strong> tab in RStudio. You can also view hidden files in Finder (Mac) using the keyboard shortcut <code>Command</code> + <code>Shift</code> + <code>.</code>, or follow <a href="https://support.microsoft.com/en-us/windows/show-hidden-files-0320fe58-0117-fd59-6851-9b7f9840fdb2">these instructions</a> for Windows 10, 8.1, and 7.</p>
@@ -956,7 +971,7 @@ Creating “non-standard” file types in RStudio (like a <code>.nojekyll</code>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -965,7 +980,7 @@ Your rendered website pages will be saved to <code>output-dir</code> (here, that
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The <code>output-dir</code> is the directory (i.e.&nbsp;folder) where your rendered <code>.html</code> (and other important) files will automatically be saved to when you “Build” your website (see the next step!) – that is, when you convert all your <code>.qmd</code> files to the <code>.html</code> files that your web browser can interpret/display.</p>
 </div>
@@ -1107,19 +1122,19 @@ Do <em>not</em> change the name of <code>index.qmd</code>
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-2" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-annotation="1" data-code-lines="3" data-code-cell="annotated-cell-2">add a photo by supplying a relative file path &amp; image name (here, <code>headshot.jpg</code> lives in my repo’s root directory)</span>
+<span data-code-cell="annotated-cell-2" data-code-annotation="1" data-code-lines="3">add a photo by supplying a relative file path &amp; image name (here, <code>headshot.jpg</code> lives in my repo’s root directory)</span>
 </dd>
 <dt data-target-cell="annotated-cell-2" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-annotation="2" data-code-lines="5" data-code-cell="annotated-cell-2">use a <a href="https://quarto.org/docs/websites/website-about.html#templates">pre-built template</a> (here, <code>trestles</code>) to update the layout of your landing page (or any page!)</span>
+<span data-code-cell="annotated-cell-2" data-code-annotation="2" data-code-lines="5">use a <a href="https://quarto.org/docs/websites/website-about.html#templates">pre-built template</a> (here, <code>trestles</code>) to update the layout of your landing page (or any page!)</span>
 </dd>
 <dt data-target-cell="annotated-cell-2" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-annotation="3" data-code-lines="6,7" data-code-cell="annotated-cell-2">set image shape (<code>round</code>, <code>rounded</code>, <code>rectangle</code>) &amp; size</span>
+<span data-code-cell="annotated-cell-2" data-code-annotation="3" data-code-lines="6,7">set image shape (<code>round</code>, <code>rounded</code>, <code>rectangle</code>) &amp; size</span>
 </dd>
 <dt data-target-cell="annotated-cell-2" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-annotation="4" data-code-lines="8,9,10,11,12,13,14,15,16" data-code-cell="annotated-cell-2">add button links to your favorite social media pages (e.g.&nbsp;LinkedIn, Twitter, GitHub, and even your email – <strong>Note:</strong> the <code>mailto::</code> ahead of your email address, <code>mailto::youremail.com</code>)</span>
+<span data-code-cell="annotated-cell-2" data-code-annotation="4" data-code-lines="8,9,10,11,12,13,14,15,16">add button links to your favorite social media pages (e.g.&nbsp;LinkedIn, Twitter, GitHub, and even your email – <strong>Note:</strong> the <code>mailto::</code> ahead of your email address, <code>mailto::youremail.com</code>)</span>
 </dd>
 </dl>
 </div>
@@ -1138,7 +1153,7 @@ Do <em>not</em> change the name of <code>index.qmd</code>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1147,7 +1162,7 @@ Quarto supports creating completely custom page layouts – but I recommend stic
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-28" class="callout-28-contents callout-collapse collapse">
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Quarto’s built-in <a href="https://quarto.org/docs/websites/website-about.html#templates">About Page templates</a> are great for a couple reasons, primarily:</p>
 <ol type="1">
@@ -1187,11 +1202,11 @@ Quarto supports creating completely custom page layouts – but I recommend stic
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-3" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-annotation="1" data-code-lines="6" data-code-cell="annotated-cell-3">Give your website a better title (e.g.&nbsp;your name)! This is the text that appears in the top left corner of your website (by default, it appears as your repo name) – when clicked, a user will be brought back to the landing page</span>
+<span data-code-cell="annotated-cell-3" data-code-annotation="1" data-code-lines="6">Give your website a better title (e.g.&nbsp;your name)! This is the text that appears in the top left corner of your website (by default, it appears as your repo name) – when clicked, a user will be brought back to the landing page</span>
 </dd>
 <dt data-target-cell="annotated-cell-3" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-annotation="2" data-code-lines="17" data-code-cell="annotated-cell-3">Set your <code>page-layout</code> to <code>full</code> so that your page content takes up more of the page width</span>
+<span data-code-cell="annotated-cell-3" data-code-annotation="2" data-code-lines="17">Set your <code>page-layout</code> to <code>full</code> so that your page content takes up more of the page width</span>
 </dd>
 </dl>
 <div class="cell" data-layout-align="center">
@@ -1240,7 +1255,7 @@ Quarto supports creating completely custom page layouts – but I recommend stic
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-4" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-annotation="1" data-code-lines="13" data-code-cell="annotated-cell-4">A newly-added navbar page. <strong>Note:</strong> The page name, as it appears in the navbar of your website, will be the same as whatever is listed in the <code>title</code> field of that file’s yaml. For example, I have set <code>title: "All my favorite resources!"</code> in the yaml of <code>resources.qmd</code> – this is how it will appear in my website’s navbar. If you’d like the page name to appear differently in the navbar, use the <code>href</code> and <code>text</code> options together (e.g.&nbsp;see how <code>index.qmd</code> is rendered as <code>Home</code> in my website’s navbar).</span>
+<span data-code-cell="annotated-cell-4" data-code-annotation="1" data-code-lines="13">A newly-added navbar page. <strong>Note:</strong> The page name, as it appears in the navbar of your website, will be the same as whatever is listed in the <code>title</code> field of that file’s yaml. For example, I have set <code>title: "All my favorite resources!"</code> in the yaml of <code>resources.qmd</code> – this is how it will appear in my website’s navbar. If you’d like the page name to appear differently in the navbar, use the <code>href</code> and <code>text</code> options together (e.g.&nbsp;see how <code>index.qmd</code> is rendered as <code>Home</code> in my website’s navbar).</span>
 </dd>
 </dl>
 <div class="cell" data-layout-align="center">

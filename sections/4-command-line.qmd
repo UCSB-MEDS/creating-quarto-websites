@@ -19,7 +19,7 @@ format: html
 There are lots of differing opinions on how to keep your R projects/git repositories organized on your computer. I personally save all of mine to a folder called `git` in my computer's home directory (e.g. `Users/samanthacsik/git/`) so everything is in one place.
 :::
 
-3.  **Create the scaffolding (i.e. folder structure & necessary files) for your website** by running the following in the command line:
+3.  **Create the scaffolding (i.e. folder structure & necessary files) for your website** by running the following in the command line (substitute `mysite` with whatever name you want to give your repo):
 
 ::: {.callout-note collapse=true}
 ## Data science jargon: Directory == Folder
@@ -28,13 +28,12 @@ Throughout this document, we'll use the words **directory** and **folder** inter
 
 ```{bash}
 #| eval: false
-# substitute `mysite` with whatever name you want to give your repo (see important text in callout box below)
 quarto create-project mysite --type website 
 ```
 
 ::: {.callout-important}
-## Name your project **yourusername.github.io** if you plan to deploy using GitHub pages
-Because we'll be using GitHub pages to publish/host our websites, it's recommended that you name your project **yourusername.github.io** (you're allowed **one** user website with the **github.io** suffix) -- for example, [the project/GitHub repository](https://github.com/samanthacsik/samanthacsik.github.io), which contains the code for [my personal website](https://samanthacsik.github.io/), is named **samanthacsik.github.io**. Otherwise, name it something reasonable (this will become the [slug](https://developer.mozilla.org/en-US/docs/Glossary/Slug) for your site if publishing with GitHub pages, so choose carefully). I'm calling my project **mysite** *just for tutorial purposes only* -- you should definitely give yours a more practical/creative name.
+## Name your project **username.github.io** if you plan to deploy using GitHub pages
+Because we'll be using GitHub pages to publish/host our websites, it's recommended that you name your project **username.github.io** (you're allowed **one** user website with the **github.io** suffix) -- for example, [the project/GitHub repository](https://github.com/samanthacsik/samanthacsik.github.io), which contains the code for [my personal website](https://samanthacsik.github.io/), is named **samanthacsik.github.io**. Otherwise, name it something reasonable (this will become the [slug](https://developer.mozilla.org/en-US/docs/Glossary/Slug) for your site if publishing with GitHub pages, so choose carefully). I'm calling my project **mysite** *just for tutorial purposes only* -- you should definitely give yours a more practical/creative name.
 :::
 
 ```{r}
@@ -95,7 +94,7 @@ git init
 
 ::: {.callout-note collapse=true}
 ## What is a git repository?
-When we initialize our R project, `mysite/` (or `youusername.github.io/`), as a git repository using `usethis::use_git()`, a hidden `.git/` folder is created *within* that project folder. This hidden `.git/` folder *is* the git repository. As you use git commands (or RStudio's GUI buttons) to capture versions or "snapshots" of your work, those versions (and their associated metadata) get stored within the `.git/` folder. This allows you to access and/or recover any previous versions of your work. If you delete `.git/`, you delete your project's history. Here is an example website repository, represented visually:
+When we initialize our R project, `mysite/` (or `username.github.io/`), as a git repository using `git init`, a hidden `.git/` folder is created *within* that project folder. This hidden `.git/` folder *is* the git repository. As you use git commands (or RStudio's GUI buttons) to capture versions or "snapshots" of your work, those versions (and their associated metadata) get stored within the `.git/` folder. This allows you to access and/or recover any previous versions of your work. If you delete `.git/`, you delete your project's history. Here is an example website repository, represented visually:
 
 ```{r}
 #| eval: true
@@ -133,7 +132,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 ::: {.callout-note collapse=true}
 ## `git status` provides lots of helpful information about the current state of your your working directory and staging area
-I use this command *often* when working on the command line to double check that I'm actually where I think I am, and to see tracked files and untracked or changed files. It's a good habit run `git status` after switching branches or before/after adding files to commit.
+I use this command *often* when working on the command line to double check that I'm actually where I think I am, and to see tracked files and untracked or changed files. It's a good habit to run `git status` after switching branches or before/after adding files to commit.
 :::
 
 <!-- -   **If your current branch is named `master`, follow step 7 below to update the name to `main`.** Why? The racist "master" terminology for git branches motivates us to update our default branch to "main" instead. If your branch is already named `main`, you can head straight to step 8. -->
@@ -142,12 +141,12 @@ I use this command *often* when working on the command line to double check that
 <!-- If you create a repo in *GitHub first*, the default now has been updated to make the default branch `main`. However, if you create a *local git repository first* (as we've done here) you may need to update your default branch name to `main` (depending on your version of Git and its configuration settings). -->
 <!-- ::: -->
 
-7.  **If your current branch is named `master`, update the name to `main`.** If your branch is already named `main`, you can head straight to step 8. Choose your workflow below based on your Git version (check your version by running `git --version` in the command line):
+7.  **If your default branch is named `master`, update the name to `main`.** If your default branch (you should only have one branch so far, the default branch) is already named `main`, you can head straight to step 8. Otherwise, choose your workflow below based on your Git version (check your version by running `git --version` in the command line):
 
 ::: panel-tabset
-## **`r fontawesome::fa("git-alt", fill = "#5A5A5A", a11y = "sem")` For Git version 2.28 or later**
+## **{{< fa brands git-alt title="GitHub branch symbol" >}} For Git version 2.28 or later**
 
-You can update the default branch to `main` by running the following line in the Terminal window:
+You can update the default branch to `main` by running the following line in the command line:
 
 ```{bash}
 #| eval: false
@@ -162,9 +161,9 @@ You can double check that this worked by typing out the `git status` command aga
 <!-- Be mindful that your workflow for updating `master` to `main` will look different if you've already created both a local git repo (first) AND an upstream remote i.e. GitHub repo (second). Check out [this post](https://gitbetter.substack.com/p/how-to-change-git-default-branch) for more info. -->
 <!-- ::: -->
 
-## **`r fontawesome::fa("git-alt", fill = "#5A5A5A", a11y = "sem")` For older versions of Git**
+## **{{< fa brands git-alt title="GitHub branch symbol" >}} For older versions of Git**
 
-Rename the default branch as `main` by running the following line in the Terminal window:
+Rename the default branch as `main` by running the following line in the command line:
 
 ```{bash}
 #| eval: false
@@ -190,7 +189,7 @@ The racist “master” terminology for git branches motivates us to update our 
 There is a push across platforms and software to update this historical default branch name from `master` to `main`. GitHub has already done so –  creating a remote repository *first* results in a default branch named `main`. Depending on your version of Git and/or your configuration settings, however, you may need to set update the name manually when creating a local git repository first (as we’re doing here).
 :::
 
-8.  **Stage/add your website's scaffolding files** in your `mysite` directory (*analogous to checking the boxes next to your files in RStudio's Git tab*)...
+8.  **Stage/add all of your website's scaffolding files** (*analogous to checking the boxes next to your files in RStudio's Git tab*)...
 
 ```{bash}
 #| eval: false
@@ -212,7 +211,7 @@ Use the `git status` command again to see if your files have been successfully a
 git commit -m "initial commit"
 ```
 
-9.  **Create an empty remote repository on GitHub.** At this point, we've created a local Git repository that contains the basic files needed to build our Quarto website. Now, we need to create a "remote" repository (i.e. a version of your project that is hosted on the internet) on GitHub. There are multiple ways to do this, but we'll cover the workflow that makes most intuitive sense to me. **Login to [GitHub](https://github.com/), [create a new repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository), and give it the same name as your local repository/R Project (e.g. `yourusername.github.io`).**
+9.  **Create an empty remote repository on GitHub.** At this point, we've created a local git repository that contains the basic files needed to build our Quarto website. Now, we need to create a "remote" repository (i.e. a version of your project that is hosted on the internet) on GitHub. There are multiple ways to do this, but we'll cover the workflow that makes most intuitive sense to me. **Login to [GitHub](https://github.com/), [create a new repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository), and give it the same name as your local repository/R Project (e.g. `username.github.io`).**
 
 ::: {.callout-important}
 ## Do not initialize your remote repository (on GitHub) with a `README.md`, license, or `.gitignore` file!
@@ -239,7 +238,7 @@ knitr::include_graphics("media/ahorst-git-workflow.png")
 ```
 :::
 
-10. **Connect your remote (GitHub) repository to your local Git repository.** Your empty GitHub repo conveniently includes instructions for doing so. Copy the code under "push an existing repository from the command line" to your clipboard, paste into the command line, and run.
+10. **Connect your remote (GitHub) repository to your local git repository.** Your empty GitHub repo conveniently includes instructions for doing so. Copy the code under "push an existing repository from the command line" to your clipboard, paste into the command line, and run.
 
 ```{r}
 #| echo: false
