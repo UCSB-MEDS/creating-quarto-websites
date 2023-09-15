@@ -126,7 +126,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">September 14, 2023</p>
+      <p class="date-modified">September 15, 2023</p>
     </div>
   </div>
     
@@ -767,7 +767,7 @@ Organizing R projects / git repositories
 <li>You should now see a folder called <code>mysite</code> (or whatever you named your Quarto project) with a series of files (<code>_quarto.yml</code>, <code>about.qmd</code>, <code>index.qmd</code>, <code>styles.css</code>) that provide the scaffolding for your website in the <strong>Files</strong> tab (in the bottom right panel in RStudio, if you haven’t altered the pane layout).</li>
 </ul>
 <ol start="2" type="1">
-<li><strong>Install the <a href="https://usethis.r-lib.org/index.html"><code>{usethis}</code> package</a>.</strong> At this point you’ve created a directory (folder) with the website scaffolding files, but it’s not yet being tracked by git, nor is it connected to a remote repository on GitHub. We can use the <code>{usethis}</code> package to help us set this up. First, install the <a href="https://usethis.r-lib.org/index.html"><code>{usethis}</code></a> package if you don’t already have it.</li>
+<li><strong>Install the <a href="https://usethis.r-lib.org/index.html"><code>{usethis}</code> package</a>, if necessary.</strong> At this point you’ve created a directory (folder) with the website scaffolding files, but it’s not yet being tracked by git, nor is it connected to a remote repository on GitHub. We can use the <code>{usethis}</code> package to help us set this up. First, install the <a href="https://usethis.r-lib.org/index.html"><code>{usethis}</code></a> package if you don’t already have it.</li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"usethis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1122,19 +1122,19 @@ Do <em>not</em> change the name of <code>index.qmd</code>
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-2" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-2" data-code-annotation="1" data-code-lines="3">add a photo by supplying a relative file path &amp; image name (here, <code>headshot.jpg</code> lives in my repo’s root directory)</span>
+<span data-code-cell="annotated-cell-2" data-code-lines="3" data-code-annotation="1">add a photo by supplying a relative file path &amp; image name (here, <code>headshot.jpg</code> lives in my repo’s root directory)</span>
 </dd>
 <dt data-target-cell="annotated-cell-2" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-2" data-code-annotation="2" data-code-lines="5">use a <a href="https://quarto.org/docs/websites/website-about.html#templates">pre-built template</a> (here, <code>trestles</code>) to update the layout of your landing page (or any page!)</span>
+<span data-code-cell="annotated-cell-2" data-code-lines="5" data-code-annotation="2">use a <a href="https://quarto.org/docs/websites/website-about.html#templates">pre-built template</a> (here, <code>trestles</code>) to update the layout of your landing page (or any page!)</span>
 </dd>
 <dt data-target-cell="annotated-cell-2" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-cell="annotated-cell-2" data-code-annotation="3" data-code-lines="6,7">set image shape (<code>round</code>, <code>rounded</code>, <code>rectangle</code>) &amp; size</span>
+<span data-code-cell="annotated-cell-2" data-code-lines="6,7" data-code-annotation="3">set image shape (<code>round</code>, <code>rounded</code>, <code>rectangle</code>) &amp; size</span>
 </dd>
 <dt data-target-cell="annotated-cell-2" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-cell="annotated-cell-2" data-code-annotation="4" data-code-lines="8,9,10,11,12,13,14,15,16">add button links to your favorite social media pages (e.g.&nbsp;LinkedIn, Twitter, GitHub, and even your email – <strong>Note:</strong> the <code>mailto::</code> ahead of your email address, <code>mailto::youremail.com</code>)</span>
+<span data-code-cell="annotated-cell-2" data-code-lines="8,9,10,11,12,13,14,15,16" data-code-annotation="4">add button links to your favorite social media pages (e.g.&nbsp;LinkedIn, Twitter, GitHub, and even your email – <strong>Note:</strong> the <code>mailto::</code> ahead of your email address, <code>mailto::youremail.com</code>)</span>
 </dd>
 </dl>
 </div>
@@ -1202,11 +1202,11 @@ Quarto supports creating completely custom page layouts – but I recommend stic
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-3" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-3" data-code-annotation="1" data-code-lines="6">Give your website a better title (e.g.&nbsp;your name)! This is the text that appears in the top left corner of your website (by default, it appears as your repo name) – when clicked, a user will be brought back to the landing page</span>
+<span data-code-cell="annotated-cell-3" data-code-lines="6" data-code-annotation="1">Give your website a better title (e.g.&nbsp;your name)! This is the text that appears in the top left corner of your website (by default, it appears as your repo name) – when clicked, a user will be brought back to the landing page</span>
 </dd>
 <dt data-target-cell="annotated-cell-3" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-3" data-code-annotation="2" data-code-lines="17">Set your <code>page-layout</code> to <code>full</code> so that your page content takes up more of the page width</span>
+<span data-code-cell="annotated-cell-3" data-code-lines="17" data-code-annotation="2">Set your <code>page-layout</code> to <code>full</code> so that your page content takes up more of the page width</span>
 </dd>
 </dl>
 <div class="cell" data-layout-align="center">
@@ -1255,7 +1255,7 @@ Quarto supports creating completely custom page layouts – but I recommend stic
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-4" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-4" data-code-annotation="1" data-code-lines="13">A newly-added navbar page. <strong>Note:</strong> The page name, as it appears in the navbar of your website, will be the same as whatever is listed in the <code>title</code> field of that file’s yaml. For example, I have set <code>title: "All my favorite resources!"</code> in the yaml of <code>resources.qmd</code> – this is how it will appear in my website’s navbar. If you’d like the page name to appear differently in the navbar, use the <code>href</code> and <code>text</code> options together (e.g.&nbsp;see how <code>index.qmd</code> is rendered as <code>Home</code> in my website’s navbar).</span>
+<span data-code-cell="annotated-cell-4" data-code-lines="13" data-code-annotation="1">A newly-added navbar page. <strong>Note:</strong> The page name, as it appears in the navbar of your website, will be the same as whatever is listed in the <code>title</code> field of that file’s yaml. For example, I have set <code>title: "All my favorite resources!"</code> in the yaml of <code>resources.qmd</code> – this is how it will appear in my website’s navbar. If you’d like the page name to appear differently in the navbar, use the <code>href</code> and <code>text</code> options together (e.g.&nbsp;see how <code>index.qmd</code> is rendered as <code>Home</code> in my website’s navbar).</span>
 </dd>
 </dl>
 <div class="cell" data-layout-align="center">

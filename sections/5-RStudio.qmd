@@ -57,7 +57,7 @@ knitr::include_graphics("media/vRStudio4.png")
 # knitr::include_graphics("media/mysite_scaffolding.png")
 ```
 
-2.  **Install the [`{usethis}` package](https://usethis.r-lib.org/index.html).** At this point you've created a directory (folder) with the website scaffolding files, but it's not yet being tracked by git, nor is it connected to a remote repository on GitHub. We can use the `{usethis}` package to help us set this up. First, install the [`{usethis}`](https://usethis.r-lib.org/index.html) package if you don't already have it.
+2.  **Install the [`{usethis}` package](https://usethis.r-lib.org/index.html), if necessary.** At this point you've created a directory (folder) with the website scaffolding files, but it's not yet being tracked by git, nor is it connected to a remote repository on GitHub. We can use the `{usethis}` package to help us set this up. First, install the [`{usethis}`](https://usethis.r-lib.org/index.html) package if you don't already have it.
 
 ```{r}
 #| eval: false
