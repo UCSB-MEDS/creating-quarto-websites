@@ -109,7 +109,7 @@ knitr::include_graphics("media/git-repo-ex.png")
 <!-- `git status` is a super useful command which displays the state of your working directory and staging area. I use this command *often* when working on the command line to double check that I'm actually where I think I am, and to see tracked files and untracked or changed files. It's a good habit run `git status` after switching branches or before/after adding files to commit. -->
 <!-- ::: -->
 
-6.  **Check the name of your default branch** -- that is, the branch that all changes eventually get merged back into (if you're building a website, this branch is typically the one you'll want to deploy). Run either `git branch` (this prints all local branches and highlights the one that you're currently on) or `git status` (shown below) in the command line to identify the name of your default branch (this should be the only branch you have at the moment). Running `git status` will return something that looks like this, where the first line tells you which branch you're currently on:
+6.  **Check the name of your default branch** -- that is, the branch that all changes eventually get merged back into (if you're building a website, this branch is typically the one you'll want to deploy). Run `git status` in the command line to identify the name of your default branch (this should be the only branch you have at the moment). Running `git status` will return something that looks like this, where the first line tells you which branch you're currently on:
 
 ```{bash}
 #| eval: false
