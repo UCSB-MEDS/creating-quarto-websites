@@ -51,7 +51,7 @@ toc: false # <2>
 about: 
   template: trestles # <3>
   image-shape: round # <4>
-  image-width: 23em # <4>
+  image-width: 20em # <4>
   links: # <5>
     - text: LinkedIn # <5>
       href: https://www.linkedin.com/in/samanthacsik/ # <5>
