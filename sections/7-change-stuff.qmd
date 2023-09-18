@@ -162,9 +162,14 @@ editor: visual
 
 ```{r}
 #| echo: false
-#| fig-align: center
-#| fig-cap: "A newly added navpage page, titled \"All of my favorite resources!\""
+#| layout-ncol: 2
+#| column: page
+#| fig-subcap:
+#|  - "A newly added navbar page, titled \"All of my favorite resources!\""
+#|  - "A newly added navbar page, with an alternate navbar title (set using `href` in `_quarto.yml`)"
+
 knitr::include_graphics("media/resources_page.png")
+knitr::include_graphics("media/resources_page_renamed.png")
 ```
 
 ### {{< fa arrow-right title="An arrow pointing to the right" >}} **Change the theme** 
@@ -198,7 +203,7 @@ format:
   html:
     theme: 
       light: minty
-      dark: slate
+      dark: solar
     css: styles.css
 ```
 
