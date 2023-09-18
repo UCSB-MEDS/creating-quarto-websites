@@ -41,6 +41,11 @@ project:
 The `output-dir` is the directory (i.e. folder) where your rendered `.html` (and other important) files will automatically be saved to when you "Build" your website (see the next step!) -- that is, when you convert all your `.qmd` files to the `.html` files that your web browser can interpret/display. 
 :::
 
+::: {.callout-tip}
+## You can delete `_site/` if it exists and if you're publishing with GitHub Pages 
+If you previewed or built your site *before* setting `output-dir` to `docs` in `_quarto.yml`, you'll notice a `_site/` directory inside your repository -- this is the default output directory name. Because GitHub Pages will expect a `docs/` folder to deploy from, you can delete `_site/` altogether (and push your deletion, if you've already committed/pushed `_site/` to GitHub).
+:::
+
 3.  **Build/render your website.** Click on the **Build** tab (top left pane in RStudio if you have the default layout), then **Render Website.** You should see a minimal, albeit functional, soon-to-be website appear in the **Viewer** tab. Click on the <img src="media/view_in_browser.png" alt="A browser window overlaid by an arrow pointing up and angled to the right." style="display: inline-block; margin: 0; position: relative; top: 0px; width:25px;height:20px;"/> button to open your file in your web browser. **Note:** your website is currently being hosted by your local machine, not at a searchable URL. We'll get there soon though!
 
 ```{r}
