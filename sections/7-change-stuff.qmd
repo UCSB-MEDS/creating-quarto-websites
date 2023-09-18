@@ -114,10 +114,12 @@ format:
   html:
     theme: cosmo
     css: styles.css
-    page-layout: full # <2>
+    toc: true # <2>
+    page-layout: full # <3>
 ```
 1. Give your website a better title (e.g. your name)! This is the text that appears in the top left corner of your website (by default, it appears as your repo name) -- when clicked, a user will be brought back to the landing page
-2. Set your `page-layout` to `full` so that your page content takes up more of the page width
+2. **Note:** `toc: true` here (in `_quarto.yml`) renders a navigation menu on *all* web pages by default (but we can update options on a page-by-page basis e.g. we set `toc: false` in our `index.qmd` YAML)
+3. Set your `page-layout` to `full` so that your page content takes up more of the page width
 
 ```{r}
 #| echo: false
