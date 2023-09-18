@@ -17,7 +17,7 @@ When you Render your site (by clicking **Build** \> **Render Website**), Quarto 
 This is the default/expected name given to website landing/home pages. If you change the name of this file, you risk breaking your deployment.
 :::
 
-Remember: `index.qmd` is the page people will arrive at when navigating to your website -- give this landing/home page a makeover by trying out some of the following:
+`index.html` (which is built from `index.qmd`) is the page people will arrive at when navigating to your website -- give this landing/home page a makeover by trying out some of the following:
 
   -   Update the yaml `title` in your `index.qmd` file. Here, I changed mine from "mysite" to my name, "Samantha Csik"
 
