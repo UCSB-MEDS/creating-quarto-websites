@@ -10,6 +10,38 @@ format: html
 
 R users have long loved [RMarkdown](https://rmarkdown.rstudio.com/) for combining prose, code, and outputs into single "knitted" documents. Quarto extends all of RMarkdown's best features (plus many more!) to additional languages.
 
+::: {.callout-note collapse=true}
+## A side-by-side comparison of `.rmd` vs. `.qmd` files
+If you're already an avid RMarkdown user, great news! RMarkdown (`.rmd`) and Quarto Markdown (`.qmd`) files look super similar:
+
+-  document-level metadata and configurations are included in the document's YAML (denoted by the `---` gates at the top of the document)
+-  code is written inside executable code chunks
+-  prose is written in the body of the document
+  
+There are some slight differences to be aware of:
+
+-  some YAML option names differ between the two document types (e.g. `output` in `.rmd` vs. `format` in `.qmd`)
+-  chunk-level execution options are are written within with code block braces (e.g. ````{r echo=FALSE}`) in `.rmd` files, and written below code block braces following hash pipes, `|#` (e.g. `|# echo: false`) in `.qmd` files
+-  booleans are capitalized in YAML and chunk-level metadata in `.rmd` files (e.g. `FALSE`) and lowercase in `.qmd` files (e.g. `false`)
+- you **Knit** `.rmd` files and **Render** `.qmd` files to convert your work to your desired output type (e.g. `.html`)
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: "100%"
+knitr::include_graphics("media/rmd-vs-qmd.png")
+```
+
+They also look pretty similar when knitted/rendered. Below is a side-by-side comparison of a knitted `.rmd` file and a rendered `.qmd` file (both as `.html` files):
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: "100%"
+knitr::include_graphics("media/rmd-vs-qmd-output.png")
+```
+:::
+
 ```{r}
 #| echo: false
 #| fig-align: center
