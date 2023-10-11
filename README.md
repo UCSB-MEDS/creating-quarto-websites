@@ -12,5 +12,6 @@ Some content was adapted from Allison Horst's [instructions](https://docs.google
 
 ### Taught on the following dates:
 - August 5, 2022 ([Release v.1.0.0-meds-2023](https://github.com/UCSB-MEDS/creating-quarto-websites/releases/tag/v1.0.0-meds-2023))
+- September 25, 2023 ([Rlease v.1.1.0-meds-2024]())
 
 
