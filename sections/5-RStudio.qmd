@@ -91,9 +91,7 @@ knitr::include_graphics("media/git-repo-ex.png")
 ```
 :::
 
-4.  **Create an upstream remote repository (i.e. GitHub repo) using `usethis::use_github()`.** Running `usethis::use_github()` in the Console will open up your web browser to your new remote repository on GitHub. It should automatically have
-
-Then, in the Console, run `usethis::use_github()` to create an upstream remote repository (i.e. GitHub repo). Your web browser should open up to your new GitHub repository, with the same name as your local git repo/R project.
+4.  **Create an upstream remote repository (i.e. GitHub repo) using `usethis::use_github()`.** Running `usethis::use_github()` in the Console will open up your web browser to your new remote repository on GitHub -- it should already have the same name as your local git repo/R project.
 
 ::: {.callout-note collapse=true}
 ## Understanding the difference between Git vs. Github 
