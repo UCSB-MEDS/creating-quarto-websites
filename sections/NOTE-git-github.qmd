@@ -1,0 +1,26 @@
+---
+format: html
+---
+
+::: {.callout-note collapse=true}
+## Understanding the difference between Git vs. Github 
+[*Git*](https://git-scm.com/) is a **version control software** designed to manage the versioning and tracking of source code files and project history. It **operates locally** on your computer, allowing you to create repositories and track changes. It works directly with files on your computer, and is primarily used through a command line interface (e.g. Terminal, Git Bash). Some GUIs (Graphical User Interfaces), like RStudio, provide user-friendly buttons to execute git commands as well.
+
+[*GitHub*](https://github.com/) is a **cloud-based** hosting service that allows you to **manage Git repositories** -- as Jenny Bryan describes in her book [Happy Git and GitHub for the useR](https://happygitwithr.com/index.html), hosting services like GitHub *"provide a home for your Git-based projects on the internet."* GitHub provides us with the tools for storing, managing, and collaborating on git repositories. It also offers additional features on top of Git, like issue tracking, project management tools, code review, pull requests, and more.
+
+The illustration below depicts how we use Git and GitHub together to version control our work locally (e.g. on our computer(s)), and send versions to and receive updates from a remote (i.e. GitHub) repository.
+
+```{r}
+#| eval: true
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+#| fig-alt: "A basic git workflow represented as two islands, one with \"local repo\" and \"working directory\", and another with \"remote repo.\" Bunnies move file boxes from the working directory to the staging area, then with Commit move them to the local repo. Bunnies in rowboats move changes from the local repo to the remote repo (labeled \"PUSH\") and from the remote repo to the working directory (labeled \"PULL\")."
+knitr::include_graphics("media/ahorst-git-workflow.png")
+```
+
+::: {.center-text .body-text-s .gray-text}
+*Illustration by [Allison Horst](https://allisonhorst.com/)*
+:::
+
+:::

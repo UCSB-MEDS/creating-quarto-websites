@@ -5,7 +5,6 @@ format: html
 ### **Why use the command line to set up your Quarto website?**
 
 -   You'll start to get more comfortable working in a command line interface (CLI)
-
 -   You're able to interact with Quarto via the command line regardless of which language (R, Python, Julia, ObservableJS) or IDE (**I**ntegrated **D**evelopment **E**nvironment) you might find yourself working with
 
 ### **Steps:**
@@ -14,27 +13,18 @@ format: html
 
 2.  **Navigate to the location on your computer where you'd like your project to live.** Determine where you are in your file system using `pwd` (print working directory). Use `cd` (change directory) to navigate your file system to wherever you'd like your project to live.
 
-::: {.callout-tip}
-## Organizing R projects / git repositories
-There are lots of differing opinions on how to keep your R projects/git repositories organized on your computer. I personally save all of mine to a folder called `git` in my computer's home directory (e.g. `Users/samanthacsik/git/`) so everything is in one place.
-:::
+{{< include /sections/TIP-organizing-repos.qmd >}}
 
 3.  **Create the scaffolding (i.e. folder structure & necessary files) for your website** by running the following in the command line (substitute `mysite` with whatever name you want to give your repo):
-
-::: {.callout-note collapse=true}
-## Data science jargon: Directory == Folder
-Throughout this document, we'll use the words **directory** and **folder** interchangeably.
-:::
 
 ```{bash}
 #| eval: false
 quarto create-project mysite --type website 
 ```
 
-::: {.callout-important}
-## Name your project **username.github.io** if you plan to deploy using GitHub pages
-Because we'll be using GitHub pages to publish/host our websites, it's recommended that you name your project **username.github.io** (you're allowed **one** user website with the **github.io** suffix) -- for example, [the project/GitHub repository](https://github.com/samanthacsik/samanthacsik.github.io), which contains the code for [my personal website](https://samanthacsik.github.io/), is named **samanthacsik.github.io**. Otherwise, name it something reasonable (this will become the [slug](https://developer.mozilla.org/en-US/docs/Glossary/Slug) for your site if publishing with GitHub pages, so choose carefully). I'm calling my project **mysite** *just for tutorial purposes only* -- you should definitely give yours a more practical/creative name.
-:::
+{{< include /sections/NOTE-jargon.qmd >}}
+
+{{< include /sections/IMPORTANT-repo-name.qmd >}}
 
 ```{r}
 #| echo: false
@@ -46,6 +36,40 @@ Because we'll be using GitHub pages to publish/host our websites, it's recommend
 knitr::include_graphics("media/pwd_cd.png")
 knitr::include_graphics("media/CLI_create_website.png")
 ```
+
+<!-- ::: {.grid} -->
+<!-- ::: {.g-col-12 .g-col-md-6} -->
+
+<!-- ```{r} -->
+<!-- #| eval: true  -->
+<!-- #| echo: false -->
+<!-- #| fig-align: "center" -->
+<!-- #| out-width: "150%"  -->
+<!-- knitr::include_graphics("media/pwd_cd.png") -->
+<!-- ``` -->
+
+<!-- ::: {.center-text .small-text .gray-text} -->
+<!-- *Use `pwd` to see your current working directory. Use `cd` to change directories.*  -->
+<!-- ::: -->
+
+<!-- ::: -->
+
+<!-- ::: {.g-col-12 .g-col-md-6} -->
+
+<!-- ```{r} -->
+<!-- #| eval: true  -->
+<!-- #| echo: false -->
+<!-- #| fig-align: "center" -->
+<!-- #| out-width: "150%"  -->
+<!-- knitr::include_graphics("media/CLI_create_website.png") -->
+<!-- ``` -->
+
+<!-- ::: {.center-text .small-text .gray-text} -->
+<!-- *Create a new quarto project using the `quarto create-project your_project_name --type website` commands.* -->
+<!-- ::: -->
+
+<!-- ::: -->
+<!-- ::: -->
 
 -   If you `cd` into your new `mysite` directory, and use the `ls` command to list out all the contents of that directory, you should see a series of files (`_quarto.yml`, `about.qmd`, `index.qmd`, `styles.css`) that provide the scaffolding for your website. For example:
 
@@ -80,9 +104,9 @@ quarto preview
 
 -   Your site preview should open up in your browser. Quit your preview by pressing `control` + `C`
 
-::: {.callout-important}
+::: {.callout-tip}
 ## Preview your website from different locations using file paths
-You will need to supply the path to your website directory when previewing from a different location. For example, if my Quarto website directory is at `User/samanthacsik/git/mysite`, but I am one directory above in `User/samanthacsik/git`, I can run `quarto preview mysite`. Alternatively I could provide the full path `quarto preview User/samanthacsik/git/mysite` or relative path quarto preview `~/git/mysite`, no matter which directory I'm currently in.
+You will need to supply the path to your website directory when previewing from a different location. For example, if my Quarto website directory is at `Users/samanthacsik/git/mysite`, but I am one directory above in `Users/samanthacsik/git`, I can run `quarto preview mysite`. Alternatively I could provide the full path `quarto preview User/samanthacsik/git/mysite` or relative path `quarto preview ~/git/mysite`, no matter which directory I'm currently in.
 :::
 
 5.  **Initialize your project as a git repository.** At this point you've created a directory (folder) containing some important website scaffolding files, but they're not yet being tracked by Git. First be sure to `cd` into your website folder. Then, initialize this folder as a git repository using the `git init` command in the terminal window.
@@ -92,22 +116,7 @@ You will need to supply the path to your website directory when previewing from 
 git init
 ```
 
-::: {.callout-note collapse=true}
-## What is a git repository?
-When we initialize our R project, `mysite/` (or `username.github.io/`), as a git repository using `git init`, a hidden `.git/` folder is created *within* that project folder. This hidden `.git/` folder *is* the git repository. As you use git commands (or RStudio's GUI buttons) to capture versions or "snapshots" of your work, those versions (and their associated metadata) get stored within the `.git/` folder. This allows you to access and/or recover any previous versions of your work. If you delete `.git/`, you delete your project's history. Here is an example website repository, represented visually:
-
-```{r}
-#| eval: true
-#| echo: false
-#| fig-align: "center"
-#| out-width: "100%"
-knitr::include_graphics("media/git-repo-ex.png")
-```
-:::
-
-<!-- ::: {.column-margin} -->
-<!-- `git status` is a super useful command which displays the state of your working directory and staging area. I use this command *often* when working on the command line to double check that I'm actually where I think I am, and to see tracked files and untracked or changed files. It's a good habit run `git status` after switching branches or before/after adding files to commit. -->
-<!-- ::: -->
+{{< include /sections/NOTE-git-repo.qmd >}}
 
 6.  **Check the name of your default branch** -- that is, the branch that all changes eventually get merged back into (if you're building a website, this branch is typically the one you'll want to deploy). Run `git status` in the command line to identify the name of your default branch (this should be the only branch you have at the moment). Running `git status` will return something that looks like this, where the first line tells you which branch you're currently on:
 
@@ -132,18 +141,12 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 ::: {.callout-note collapse=true}
 ## `git status` provides lots of helpful information about the current state of your your working directory and staging area
-I use this command *often* when working on the command line to double check that I'm actually where I think I am, and to see tracked files and untracked or changed files. It's a good habit to run `git status` after switching branches or before/after adding files to commit.
+I use this command *often* when working on the command line to double check that I'm actually where I think I am, and to see tracked files and untracked or changed files. It's a good habit to run `git status` after switching branches or before / after adding files to commit.
 :::
-
-<!-- -   **If your current branch is named `master`, follow step 7 below to update the name to `main`.** Why? The racist "master" terminology for git branches motivates us to update our default branch to "main" instead. If your branch is already named `main`, you can head straight to step 8. -->
-
-<!-- ::: {.callout-note} -->
-<!-- If you create a repo in *GitHub first*, the default now has been updated to make the default branch `main`. However, if you create a *local git repository first* (as we've done here) you may need to update your default branch name to `main` (depending on your version of Git and its configuration settings). -->
-<!-- ::: -->
 
 7.  **If your default branch is named `master`, update the name to `main`.** If your default branch (you should only have one branch so far, the default branch) is already named `main`, you can head straight to step 8. Otherwise, choose your workflow below based on your Git version (check your version by running `git --version` in the command line):
 
-::: panel-tabset
+::: {.panel-tabset}
 ## **{{< fa brands git-alt title="GitHub branch symbol" >}} For Git version 2.28 or later**
 
 You can update the default branch to `main` by running the following line in the command line:
@@ -156,10 +159,6 @@ git config --global init.defaultBranch main
 ***This sets the default branch name to `main` for any new repositories you create moving forward (it does not rename branches in existing projects).***
 
 You can double check that this worked by typing out the `git status` command again. The first printed line should now read, `On branch main`.
-
-<!-- ::: {.callout-important} -->
-<!-- Be mindful that your workflow for updating `master` to `main` will look different if you've already created both a local git repo (first) AND an upstream remote i.e. GitHub repo (second). Check out [this post](https://gitbetter.substack.com/p/how-to-change-git-default-branch) for more info. -->
-<!-- ::: -->
 
 ## **{{< fa brands git-alt title="GitHub branch symbol" >}} For older versions of Git**
 
@@ -175,21 +174,11 @@ The `-m` attribute is used to rename the branch without affecting the branch's h
 ***This sets the default branch name to `main` ONLY for this repository (so you'll need to do this with any new local git repositories that you create.***
 
 You can double check that this worked by typing out the `git status` command again. The first printed line should now read, `On branch main`.
-
-<!-- ::: {.callout-important} -->
-<!-- Be mindful that your workflow for updating `master` to `main` will look different if you've already created both a local git repo (first) AND an upstream remote i.e. GitHub repo (second). Check out [this post](https://gitbetter.substack.com/p/how-to-change-git-default-branch) for more info. -->
-<!-- ::: -->
 :::
 
-::: {.callout-note collapse=true}
-## Why are we doing this?
+{{< include /sections/NOTE-master-main.qmd >}}
 
-The racist “master” terminology for git branches motivates us to update our default branch to “main” instead.
-
-There is a push across platforms and software to update this historical default branch name from `master` to `main`. GitHub has already done so –  creating a remote repository *first* results in a default branch named `main`. Depending on your version of Git and/or your configuration settings, however, you may need to set update the name manually when creating a local git repository first (as we’re doing here).
-:::
-
-8.  **Stage/add all of your website's scaffolding files** (*analogous to checking the boxes next to your files in RStudio's Git tab*)...
+8.  **Stage / add all of your website's scaffolding files** (*analogous to checking the boxes next to your files in RStudio's Git tab*)**...**
 
 ```{bash}
 #| eval: false
@@ -211,7 +200,7 @@ Use the `git status` command again to see if your files have been successfully a
 git commit -m "initial commit"
 ```
 
-9.  **Create an empty remote repository on GitHub.** At this point, we've created a local git repository that contains the basic files needed to build our Quarto website. Now, we need to create a "remote" repository (i.e. a version of your project that is hosted on the internet) on GitHub. There are multiple ways to do this, but we'll cover the workflow that makes most intuitive sense to me. **Login to [GitHub](https://github.com/), [create a new repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository), and give it the same name as your local repository/R Project (e.g. `username.github.io`).**
+9.  **Create an empty remote repository on GitHub.** At this point, we've created a local git repository that contains the basic files needed to build our Quarto website. Now, we need to create a "remote" repository (i.e. a version of your project that is hosted on the internet) on GitHub. There are multiple ways to do this, but we'll cover the workflow that makes most intuitive sense to me. **Login to [GitHub](https://github.com/), [create a new repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository), and give it the same name as your local git repository / R Project (e.g. `username.github.io`).**
 
 ::: {.callout-important}
 ## Do not initialize your remote repository (on GitHub) with a `README.md`, license, or `.gitignore` file!
@@ -219,24 +208,7 @@ git commit -m "initial commit"
 Doing so now can lead to merge conflicts. We can add them after our local and remote repositories have been connected.
 :::
 
-::: {.callout-note collapse=true}
-## Understanding the difference between Git vs. Github 
-[*Git*](https://git-scm.com/) is a **version control software** designed to manage the versioning and tracking of source code files and project history. It **operates locally** on your computer, allowing you to create repositories and track changes. It works directly with files on your computer, and is primarily used through a command line interface (e.g. Terminal, Git Bash). Some GUIs (Graphical User Interfaces), like RStudio, provide user-friendly buttons to execute git commands as well.
-
-[*GitHub*](https://github.com/) is a **cloud-based** hosting service that allows you to **manage Git repositories** -- as Jenny Bryan describes in her book [Happy Git and GitHub for the useR](https://happygitwithr.com/index.html), hosting services like GitHub *"provide a home for your Git-based projects on the internet."* GitHub provides us with the tools for storing, managing, and collaborating on git repositories. It also offers additional features on top of Git, like issue tracking, project management tools, code review, pull requests, and more.
-
-The illustration below depicts how we use Git and GitHub together to version control our work locally (e.g. on our computer(s)), and send versions to and receive updates from a remote (i.e. GitHub) repository.
-
-```{r}
-#| eval: true
-#| echo: false
-#| fig-align: "center"
-#| out-width: "100%"
-#| fig-cap: "Illustration by [Allison Horst](https://allisonhorst.com/)"
-#| fig-alt: "A basic git workflow represented as two islands, one with \"local repo\" and \"working directory\", and another with \"remote repo.\" Bunnies move file boxes from the working directory to the staging area, then with Commit move them to the local repo. Bunnies in rowboats move changes from the local repo to the remote repo (labeled \"PUSH\") and from the remote repo to the working directory (labeled \"PULL\")."
-knitr::include_graphics("media/ahorst-git-workflow.png")
-```
-:::
+{{< include /sections/NOTE-git-github.qmd >}}
 
 10. **Connect your remote (GitHub) repository to your local git repository.** Your empty GitHub repo conveniently includes instructions for doing so. Copy the code under "push an existing repository from the command line" to your clipboard, paste into the command line, and run.
 
@@ -251,7 +223,7 @@ knitr::include_graphics("media/GH_quick_setup_options.png")
 ```{bash}
 #| eval: false
 #| echo: true
-git remote add origin https://github.com/yourUserName/yourRepoName.git
+git remote add origin https://github.com/YourGitHubUsername/yourRepoName.git
 git branch -M main
 git push -u origin main
 ```
@@ -318,4 +290,4 @@ knitr::include_graphics("media/mysite-remote-cli.png")
 touch .gitignore
 ```
 
-{{< include /sections/NOTE.qmd >}}
+{{< include /sections/NOTE-workflow.qmd >}}
