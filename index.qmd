@@ -1,13 +1,18 @@
 ---
 title: "Creating your personal website using Quarto"
-author: Sam Csik
+author: 
+  - name: Sam Csik
+    url: https://samanthacsik.github.io/
+    orcid: 0000-0002-5300-3075
+    affiliation: Master of Environmental Data Science (MEDS) Program
+    affiliation-url: https://bren.ucsb.edu/masters-programs/master-environmental-data-science
 date: August 5, 2022
 date-modified: last-modified
 format: 
   html:
-    theme: 
-      - minty
-      - styles.scss
+    theme: meds-website-styles.scss
+      # - minty
+      # - styles.scss
     mainfont: Nunito
     toc: true
     toc-location: left
@@ -22,14 +27,16 @@ format:
 
 {{< include /sections/3-create-scaffolding.qmd >}}
 
-::: panel-tabset
-## **`r fontawesome::fa("terminal", fill = "#5A5A5A", a11y = "sem")` Through the command line**
+::: {.panel-tabset}
+
+## **{{< fa terminal title="terminal symbol, |>" >}} Through the command line**
 
 {{< include /sections/4-command-line.qmd >}}
 
-## **`r fontawesome::fa("r-project", fill = "#5A5A5A", a11y = "sem")` Using the RStudio IDE**
+## **{{< fa brands r-project title="R programming language icon" >}} Using the RStudio IDE**
 
 {{< include /sections/5-RStudio.qmd >}}
+
 :::
 
 {{< include /sections/6-publish-with-github-pages.qmd >}}

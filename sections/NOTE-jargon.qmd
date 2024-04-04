@@ -1,0 +1,8 @@
+---
+format: html
+---
+
+::: {.callout-note collapse=true}
+## Data science jargon: Directory == Folder
+Throughout this document, we'll use the words **directory** and **folder** interchangeably.
+:::

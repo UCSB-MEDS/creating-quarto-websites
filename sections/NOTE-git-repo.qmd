@@ -1,0 +1,16 @@
+---
+format: html
+---
+
+::: {.callout-note collapse=true}
+## What is a git repository?
+When we initialize our R project, `mysite/` (or `YourGitHubUsername.github.io/`), as a git repository using `git init`, a hidden `.git/` folder is created *within* that project folder. This hidden `.git/` folder *is* the git repository. As you use git commands (or RStudio's GUI buttons) to capture versions or "snapshots" of your work, those versions (and their associated metadata) get stored within the `.git/` folder. This allows you to access and / or recover any previous versions of your work. If you delete `.git/`, you delete your project's history. Here is an example website repository, represented visually:
+
+```{r}
+#| eval: true
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics("media/git-repo-ex.png")
+```
+:::

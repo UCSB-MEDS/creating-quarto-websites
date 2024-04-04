@@ -1,0 +1,191 @@
+/*-- scss:defaults --*/
+
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito:wght@300;800&family=Roboto+Mono:wght@300;400&family=Sanchez&display=swap');
+
+// fonts
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-family-serif: 'Sanchez', serif;
+$font-family-monospace: 'Roboto Mono', monospace;
+
+// colors
+$baby-blue: #d2e3f3;
+$teal: #047C90;
+$dark-blue: #003660;
+$white: #FFFFFF;
+$green: #78A540;
+$magenta: #900C3F;
+$white: #FFFFFF;
+$off-white: #F7F7F7;
+$gray: #ADADAD;
+$dark-gray: #373A3E;
+$peach: #DF8073;
+
+// quarto sass variables
+$navbar-bg: $off-white;
+$navbar-fg: $dark-blue;
+$navbar-hl: $teal;
+$body-bg: $white;
+$body-color: $dark-gray;
+$footer-bg: $dark-blue;
+$link-color: $green;
+
+/*-- scss:rules --*/
+
+// header font & color
+h1, h2, h3, h4 {
+  font-family: $font-family-serif;
+  color: $dark-blue;
+}
+
+// line beneath h2
+h2 {
+  border-bottom: 3px solid $dark-blue;
+  padding-bottom: 0.5rem;
+}
+
+.large-fa-icon {
+  font-size: 2.5em;
+}
+
+// XL body text
+.body-text-xl {
+  font-size: 30px;
+	line-height: 1.7em;
+	margin-bottom: 1em;
+}
+
+// L body text
+.body-text-l {
+  font-size: 25px;
+	line-height: 1.7em;
+	margin-bottom: 1em;
+}
+
+// M body text
+.body-text-m {
+  font-size: 20px;
+	line-height: 1.7em;
+	margin-bottom: 1em;
+}
+
+// S body text
+.body-text-s {
+  font-size: 14px;
+	line-height: 0.3em;
+}
+
+// pink-box
+.pink-box {
+  width: 800px;
+  padding: 10px;
+  border: 5px solid rgba(217, 178, 189, 0.5);
+  margin: 0 auto;
+}
+
+// gray text
+.gray-text {
+  color: $gray;
+}
+
+// teal text
+.teal-text {
+  color: $teal;
+}
+
+// dark blue text
+.dark-blue-text {
+  color: $dark-blue;
+}
+
+// pink text
+.pink-text {
+  color: $magenta;
+}
+
+// peach text
+.peach-text {
+  color: $peach;
+}
+
+// center text (horizontally)
+.center-text{
+  text-align: center;
+}
+
+// btn styling
+.btn {
+  color: $teal;
+  background-color: $white;
+  border-color: $teal;
+}
+
+// button hover styling
+.btn:hover {
+  color: $green;
+  background-color: $white;
+  border-color: $green;
+}
+
+.solutionbox {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-radius: .25rem;
+  border-left: solid #acacac .3rem;
+  border-right: solid 0.5px silver;
+  border-top: solid 0.5px silver;
+  border-bottom: solid 0.5px silver;
+  border-left-color: $teal !important;
+}
+
+/* from Melisssa Van Bussel: https://www.youtube.com/watch?v=DDQO_3R-q74
+.solutionbox-icon {
+  height: 0.9rem;
+  width: 0.9rem;
+  display: inline-block;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: 0.9rem 0.9rem;
+  margin-top: 0.5rem;
+  padding-right: 1.25rem;
+  background-image: url('images/screwdriver-wrench-solid.svg');
+
+}
+
+.solutionbox-header {
+  //margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: none;
+  font-weight: 600;
+  opacity: 85%;
+  font-size: 0.9rem;
+  padding-left: 0.5em;
+  padding-right: 0.5rem;
+  display: flex;
+  background-color: $teal;
+  height: 2em;
+  overflow: hidden;
+}
+
+.solutionbox-header p {
+  padding-top: 0.2em;
+}
+
+.solutionbox-body {
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.solutionbox-body > :last-child {
+  padding-bottom: 0.5rem;
+  margin-bottom: 0;
+}
+
+*/
+
+
+
+
+

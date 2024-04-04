@@ -14,5 +14,5 @@ quarto create-project --type website
 
 This adds the the default files (`_quarto.yml`, `.gitignore`, `index.qmd`, `about.qmd`, `styles.css`) for getting started on your website.
 
-You may also use this approach if you already have an existing local directory of documents or R project that you'd like to use as the directory for your website. First, navigate to that directory/open that R project, then run the above command in the command line. 
+You may also use this approach if you already have an existing local directory of documents or R project that you'd like to use as the directory for your website. First, navigate to that directory / open that R project, then run the above command in the command line. 
 :::

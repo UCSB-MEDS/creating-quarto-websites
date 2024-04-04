@@ -14,12 +14,12 @@ When you Render your site (by clicking **Build** \> **Render Website**), Quarto 
 
 ::: {.callout-important}
 ## Do *not* change the name of `index.qmd`
-This is the default/expected name given to website landing/home pages. If you change the name of this file, you risk breaking your deployment.
+This is the default / expected name given to website landing / home pages. If you change the name of this file, you risk breaking your deployment.
 :::
 
-`index.html` (which is built from `index.qmd`) is the page people will arrive at when navigating to your website -- give this landing/home page a makeover by trying out some of the following:
+`index.html` (which is built from `index.qmd`) is the page people will arrive at when navigating to your website -- give this landing / home page a makeover by trying out some of the following:
 
-  -   Update the yaml `title` in your `index.qmd` file. Here, I changed mine from "mysite" to my name, "Samantha Csik"
+  -   Update the YAML `title` in your `index.qmd` file. Here, I changed mine from `"mysite"` to my name, `"Samantha Csik"`
 
   -   Delete the sample text and begin adding your own content -- a great place to start is a short blurb introducing yourself!
 
@@ -27,12 +27,12 @@ This is the default/expected name given to website landing/home pages. If you ch
 #| echo: false
 #| fig-align: center
 #| fig-cap: "My Quarto website home page, which now includes my name and some content, but isn't super visually pleasing..."
-knitr::include_graphics("media/no_about_page.png")
+knitr::include_graphics("media/no-about-page.png")
 ```
 
 ### {{< fa arrow-right title="An arrow pointing to the right" >}} **Turn your landing page (`index.qmd`) into an "[About Page](https://quarto.org/docs/websites/website-about.html)" with a photo**
 
-When the `about` option is added to a document's yaml, a special template will be used to layout the content of that page. Choose from one of Quarto's five [built-in templates](https://quarto.org/docs/websites/website-about.html#templates), each with a slightly different layout style. Some yaml options to play around with:
+When the `about` option is added to a document's YAML, a special template will be used to layout the content of that page. Choose from one of Quarto's five [built-in templates](https://quarto.org/docs/websites/website-about.html#templates), each with a slightly different layout style. Some YAML options to play around with:
 
   -   `template`: choose from Quarto's built-in template options
 
@@ -79,7 +79,7 @@ about:
 #| echo: false
 #| fig-align: center
 #| fig-cap: "My Quarto website after updating my landing page with the built-in `trestles` template, adding an image, and linked buttons. (**Note:** using three dashes, `---`, creates a page divider, as seen between sections in the screenshot above.) Overall, a big improvement! However, our text is a bit squished in the center of the page -- we'll fix then in the next step."
-knitr::include_graphics("media/about_page.png")
+knitr::include_graphics("media/about-page.png")
 ```
 
 ::: {.callout-note collapse=true}
@@ -90,7 +90,12 @@ Quarto's built-in [About Page templates](https://quarto.org/docs/websites/websit
 1. they provide a quick and easy way to create visually-pleasing web pages (particularly website landing pages)
 2. they take care of a lot of the finicky "under-the-hood" styling (e.g. creating "responsive" page elements i.e. automatically rearranging content to fit changing viewport sizes) that would otherwise require a fair bit of [CSS](https://www.w3schools.com/css/) knowledge
 
-As you get more comfortable with the Quarto framework and CSS for styling webpages (we'll learn more about this in a later workshop!), you may decide to build a completely custom webpage layout. The [Openscapes website](https://openscapes.org/) ([{{< fa brands github >}} source code](https://github.com/Openscapes/website-new)) is just one example of a Quarto website with custom page layouts. You can check out the [Quarto documentation](https://quarto.org/docs/output-formats/page-layout.html) to learn more. 
+As you get more comfortable with the Quarto framework and CSS for styling webpages (we'll learn more about this in a later workshop!), you may decide to build a completely custom webpage layout. The following Quarto websites leverage custom layouts to arrange contents on individual webpages:
+
+- [Openscapes](https://openscapes.org/) ([{{< fa brands github >}} source code](https://github.com/Openscapes/website-new))
+- [EDS 240: Data Visualization & Communication](https://samanthacsik.github.io/EDS-240-data-viz/) ([{{< fa brands github >}} source code](https://github.com/samanthacsik/EDS-240-data-viz))
+
+I briefly touch on using [Bootstrap CSS Grid](https://quarto.org/docs/output-formats/page-layout.html#css-grid) to build these responsive custom webpage layouts in this [blog post](https://samanthacsik.github.io/posts/2023-08-01-openscapes-website/#greatest-victory-responsive-web-pages). Check out the [Quarto documentation](https://quarto.org/docs/output-formats/page-layout.html) to learn more. 
 :::
 
 ### {{< fa arrow-right title="An arrow pointing to the right" >}} **Modify website appearance in `_quarto.yml`** 
@@ -125,14 +130,16 @@ format:
 #| echo: false
 #| fig-align: center
 #| fig-cap: "My website with a new title (see top left corner) and with `page-layout` set to `full`, so that content doesn't appear as squished in the middle of the page."
-knitr::include_graphics("media/full_page.png")
+knitr::include_graphics("media/full-page.png")
 ```
 
-### {{< fa arrow-right title="An arrow pointing to the right" >}} **Add additional pages to your website** 
+### {{< fa arrow-right title="An arrow pointing to the right" >}} **Add additional pages to your website**
 
-In the default Quarto website skeleton, there are two items in the navbar that appear as "Home" and "About" (**Note:** don't confuse the special-formatted "About Page" we created in `index.qmd` with the navbar page currently titled "About"). Those navbar tabs link to two `.html` files (`index.html` and `about.html`) and are automatically rendered when when you Build to `/docs` (i.e. you don't need to knit them manually to create the html). Adding a new page to your website requires two steps:
+In the default Quarto website skeleton, there are two items in the navbar that appear as "Home" and "About" (**Note:** don't confuse the special-formatted "About Page" we created in `index.qmd` with the navbar page currently titled "About"). Those navbar tabs link to two `.html` files (`index.html` and `about.html`) and are automatically rendered when when you Build to `/docs`. Adding a new page to your website requires two steps:
 
-  a. **Create a new `.qmd` file** (**New File** \> **Quarto Document** and save it to your project's root directory) and add any content that you want to appear on that page. Here, I'm creating a new page called "All of my favorite resources!" and saved it to my root directory as `resources.qmd`.
+<!-- (i.e. you don't need to knit them manually to create the html) -->
+
+  a. **Create a new `.qmd` file** (**New File** \> **Quarto Document** and save it to your project's root directory) and add any content that you want to appear on that page. Here, I'm creating a new page titled "All of my favorite resources!" and saved it to my root directory as `resources.qmd`.
 
   b. **Update `_quarto.yml`** by adding your new `.qmd` to the list of navbar pages. My website's `_quarto.yml` file now looks like this:
 
@@ -158,7 +165,7 @@ format:
 
 editor: visual
 ```
-1. A newly-added navbar page. **Note:** The page name, as it appears in the navbar of your website, will be the same as whatever is listed in the `title` field of that file's yaml. For example, I have set `title: "All my favorite resources!"` in the yaml of `resources.qmd` -- this is how it will appear in my website's navbar. If you'd like the page name to appear differently in the navbar, use the `href` and `text` options together (e.g. see how `index.qmd` is rendered as `Home` in my website's navbar).
+1. A newly-added navbar page. **Note:** The page name, as it appears in the navbar of your website, will be the same as whatever is listed in the `title` field of that file's YAML. For example, I have set `title: "All my favorite resources!"` in the YAML of `resources.qmd` -- this is how it will appear in my website's navbar. If you'd like to set the navbar name as something other than the page's title, use the `href` and `text` options together (e.g. see how `index.qmd` is rendered as `Home` in my website's navbar).
 
 ```{r}
 #| echo: false
@@ -217,5 +224,5 @@ knitr::include_graphics("media/dark.png")
 ::: callout-important
 ## Always "Render Website" before pushing changes that you want to deploy!
 
-You *must* **Render Website** (under the **Build** tab) before pushing added/changed files to GitHub if you want to see those changes updated on your site. Rendering individual files alone will not work.
+You *must* **Render Website** (under the **Build** tab) before pushing added / changed files to GitHub if you want to see those changes updated on your site. *Rendering individual files alone will not work.*
 :::

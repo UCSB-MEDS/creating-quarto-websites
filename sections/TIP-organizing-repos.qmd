@@ -1,0 +1,8 @@
+---
+format: html
+---
+
+::: {.callout-tip}
+## Organizing R projects / git repositories
+There are lots of differing opinions on how to keep your R projects / git repositories organized on your computer. I personally save all of mine to a folder called `git` in my computer's (Mac) home directory (e.g. `Users/samanthacsik/git/`) so everything is in one place.
+:::
