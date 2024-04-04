@@ -11,8 +11,6 @@ date-modified: last-modified
 format: 
   html:
     theme: meds-website-styles.scss
-      # - minty
-      # - styles.scss
     mainfont: Nunito
     toc: true
     toc-location: left

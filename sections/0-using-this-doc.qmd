@@ -2,6 +2,8 @@
 format: html
 ---
 
+<br>
+
 *This document was originally developed as teaching material for UCSB's [Master of Environmental Data Science (MEDS)](https://bren.ucsb.edu/masters-programs/master-environmental-data-science/academics-meds) program.*
 
 ## {{< fa lightbulb title="Lightbulb">}} Some tips on navigating this document
