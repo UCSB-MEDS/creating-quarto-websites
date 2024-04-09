@@ -2,10 +2,6 @@
 format: html
 ---
 
-<br>
-
-*This document was originally developed as teaching material for UCSB's [Master of Environmental Data Science (MEDS)](https://bren.ucsb.edu/masters-programs/master-environmental-data-science/academics-meds) program.*
-
 ## {{< fa lightbulb title="Lightbulb">}} Some tips on navigating this document
 
 If you've found your way here, welcome! Maybe you're excited to start on your website-building journey, or maybe you're just getting a feel for what Quarto is all about. Regardless, I hope you find these materials helpful. Some notes on what to expect:
