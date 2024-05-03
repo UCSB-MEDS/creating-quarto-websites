@@ -4,7 +4,7 @@ format: html
 
 ## {{< fa brands github title="GitHub Octocat" >}} Build & publish your site with GitHub Pages
 
-There are a [lots of options to publish your website](https://quarto.org/docs/websites/publishing-websites.html). We'll use the [GitHub Pages option](https://quarto.org/docs/websites/publishing-websites.html#github-pages), which allows you to publish a website from any GitHub repository. To do so, there are a few configuration steps:
+There are a [lots of options to publish your website](https://quarto.org/docs/publishing/). We'll use the [GitHub Pages option](https://quarto.org/docs/publishing/github-pages.html), which allows you to publish a website from any GitHub repository. To do so, there are a few configuration steps:
 
 1.  **Create a file named `.nojekyll` in your repository's root directory (e.g. `mysite/`)**, which is required to disable some processing of HTML files that GitHub does by default. There are two ways you can do this: 
 

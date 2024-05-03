@@ -135,7 +135,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">April 9, 2024</p>
+      <p class="date-modified">May 3, 2024</p>
     </div>
   </div>
     
@@ -950,7 +950,7 @@ Understanding the difference between Git vs.&nbsp;Github
 <li><p>Open RStudio’s Terminal window (next to the Console) and run either <code>git branch</code> (this prints all local branches and highlights the one that you’re currently on) or <code>git status</code> (the first printed line should say <code>On branch &lt;branch_name&gt;</code>).</p></li>
 <li><p>Click on the <strong>Git</strong> tab in the top right pane of RStudio. Next to the <img src="media/branch.png" class="img-fluid" style="display: inline-block; margin: 0; position: relative; top: 0px; width:20px;height:18px;" alt="A white diamond with two purple squares, one directly above and one directly to the right, connected to the diamond by a line."> symbol, you should see a dropdown menu that displays the name of your current branch.</p></li>
 </ol></li>
-<li><p><strong>If your current branch is named <code>master</code>, update the name to <code>main</code>.</strong> (If your branch is named <em><code>main</code></em>, you’re good to go! You can continue to the next section, <a href="https://ucsb-meds.github.io/creating-quarto-websites/#publish-your-site-with-github-pages">Publish your site with GitHub Pages</a>.) In the console, run <code>usethis::git_default_branch_rename(from = "master", to = "main")</code> to update your default branch name. Confirm that it updated <strong>(a)</strong> locally by running <code>git status</code> again in your Terminal – the first printed line should now read, <code>On branch main</code>, and <strong>(b)</strong> on your remote by refreshing your GitHub repo (in your web browser) – you should see the updated default branch name at the top of your repo.</p></li>
+<li><p><strong>If your current branch is named <code>master</code>, update the name to <code>main</code>.</strong> (If your branch is named <em><code>main</code></em>, you’re good to go! You can skip this step continue to the next section on <a href="https://ucsb-meds.github.io/creating-quarto-websites/#fa-brands-github-titlegithub-octocat-build-publish-your-site-with-github-pages">publishing your site with GitHub Pages</a>. In the console, run <code>usethis::git_default_branch_rename(from = "master", to = "main")</code> to update your default branch name. Confirm that it updated <strong>(a)</strong> locally by running <code>git status</code> again in your Terminal – the first printed line should now read, <code>On branch main</code>, and <strong>(b)</strong> on your remote by refreshing your GitHub repo (in your web browser) – you should see the updated default branch name at the top of your repo.</p></li>
 </ol>
 <p></p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -981,7 +981,7 @@ Create a Quarto website inside an existing GitHub repository
 </section>
 <section id="fa-brands-github-titlegithub-octocat-build-publish-your-site-with-github-pages" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="fa-brands-github-titlegithub-octocat-build-publish-your-site-with-github-pages"><i class="fa-brands fa-github" title="GitHub Octocat" aria-hidden="true"></i> Build &amp; publish your site with GitHub Pages</h2>
-<p>There are a <a href="https://quarto.org/docs/websites/publishing-websites.html">lots of options to publish your website</a>. We’ll use the <a href="https://quarto.org/docs/websites/publishing-websites.html#github-pages">GitHub Pages option</a>, which allows you to publish a website from any GitHub repository. To do so, there are a few configuration steps:</p>
+<p>There are a <a href="https://quarto.org/docs/publishing/">lots of options to publish your website</a>. We’ll use the <a href="https://quarto.org/docs/publishing/github-pages.html">GitHub Pages option</a>, which allows you to publish a website from any GitHub repository. To do so, there are a few configuration steps:</p>
 <ol type="1">
 <li><p><strong>Create a file named <code>.nojekyll</code> in your repository’s root directory (e.g.&nbsp;<code>mysite/</code>)</strong>, which is required to disable some processing of HTML files that GitHub does by default. There are two ways you can do this:</p>
 <ol type="a">
