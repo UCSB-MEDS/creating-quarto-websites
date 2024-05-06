@@ -139,7 +139,15 @@ In the default Quarto website skeleton, there are two items in the navbar that a
 
 <!-- (i.e. you don't need to knit them manually to create the html) -->
 
-  a. **Create a new `.qmd` file** (**New File** \> **Quarto Document** and save it to your project's root directory) and add any content that you want to appear on that page. Here, I'm creating a new page titled "All of my favorite resources!" and saved it to my root directory as `resources.qmd`.
+  a. **Create a new `.qmd` file** (from RStudio's **File pane**, click **Blank File** \> **Quarto Document** and save it to your project's root directory) and add any necessary YAML options, along with any content that you want to appear on that page. Here, I'm creating a new page titled "All of my favorite resources!" and saved it to my root directory as `resources.qmd`.
+  
+```{r filename="resources.qmd"}
+#| eval: false
+#| echo: true
+---
+title: "All my favorite resources!"
+---
+```
 
   b. **Update `_quarto.yml`** by adding your new `.qmd` to the list of navbar pages. My website's `_quarto.yml` file now looks like this:
 

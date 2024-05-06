@@ -15,6 +15,7 @@ format:
     toc: true
     toc-location: left
     toc-depth: 2
+    smooth-scroll: true
 ---
 
 <br>
