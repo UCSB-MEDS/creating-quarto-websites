@@ -230,7 +230,7 @@ knitr::include_graphics("media/dark.png")
 ```
 
 ::: callout-important
-## Always "Render Website" before pushing changes that you want to deploy!
+## One last reminder to "Render Website" before pushing changes that you want to deploy!
 
-You *must* **Render Website** (under the **Build** tab) before pushing added / changed files to GitHub if you want to see those changes updated on your site. *Rendering individual files alone will not work.*
+If you've made and pushed changes to your website, but you're not seeing your website actually update, you may have forgotten to **Render Website**! Try doing so, then commit / push your files again. 
 :::
