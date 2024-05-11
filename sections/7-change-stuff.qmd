@@ -179,10 +179,10 @@ editor: visual
 #| column: page
 #| fig-subcap:
 #|  - "A newly added navbar page, titled \"All of my favorite resources!\""
-#|  - "A newly added navbar page, with an alternate navbar title (set using `href` in `_quarto.yml`)"
+#|  - "A newly added navbar page, with an alternate navbar title (set using the `href` and `text` options together in `_quarto.yml`)"
 
-knitr::include_graphics("media/resources_page.png")
-knitr::include_graphics("media/resources_page_renamed.png")
+knitr::include_graphics("media/resources-page.png")
+knitr::include_graphics("media/resources-page-renamed.png")
 ```
 
 ### {{< fa arrow-right title="An arrow pointing to the right" >}} **Change the theme** 
