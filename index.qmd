@@ -32,13 +32,13 @@ format:
 
 ::: {.panel-tabset}
 
-## **{{< fa terminal title="terminal symbol, |>" >}} Through the command line**
-
-{{< include /sections/4-command-line.qmd >}}
-
 ## **{{< fa brands r-project title="R programming language icon" >}} Using the RStudio IDE**
 
 {{< include /sections/5-RStudio.qmd >}}
+
+## **{{< fa terminal title="terminal symbol, |>" >}} Through the command line**
+
+{{< include /sections/4-command-line.qmd >}}
 
 :::
 

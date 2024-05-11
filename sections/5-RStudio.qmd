@@ -4,7 +4,7 @@ format: html
 
 ### **Why use RStudio to set up your Quarto website?**
 
--   It's *super* easy to do with the click of just a few buttons! **Remember**, the commands we type out in our terminal window underlie the buttons we're clicking on in the RStudio IDE -- RStudio simply provides a user-friendly interface for executing those commands.
+-   It's *super* easy to do with the click of just a few buttons! **Remember**, the commands we type out in our Terminal window underlie the buttons we click on in the RStudio IDE -- RStudio simply provides a user-friendly interface for executing those commands.
 
 ### **Steps:**
 
@@ -48,9 +48,35 @@ knitr::include_graphics("media/vRStudio4.png")
 # knitr::include_graphics("media/mysite_scaffolding.png")
 ```
 
-2.  **Install the [`{usethis}` package](https://usethis.r-lib.org/index.html), if necessary.** At this point you've created a directory (folder) with the website scaffolding files, but it's not yet being tracked by git, nor is it connected to a remote repository on GitHub. We can use the `{usethis}` package to help us set this up. First, install the [`{usethis}`](https://usethis.r-lib.org/index.html) package if you don't already have it. Do so by running the following in your console:
+2. **Preview your very basic, but functional website** by typing the following command in the Terminal:
+
+```{bash filename="Terminal"}
+#| eval: false
+quarto preview
+```
+
+-   Your site preview should open up in your browser. Quit your preview by clicking the **Stop** button in the top right corner of your Terminal. 
 
 ```{r}
+#| eval: true
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics("media/preview.png")
+```
+
+<!-- ::: {.center-text .gray-text} -->
+<!-- My website preview, which opens in a browser window after running `quarto preview` in the command line. -->
+<!-- ::: -->
+
+::: {.callout-tip}
+## `quarto preview` makes it easy to quickly view iterative changes
+Running `quarto preview` launches a preview of your website in a browser window. So long as you leave the preview running, it will update each time you make and save changes to website files (which makes iterating on your work really easy!).
+:::
+
+3.  **Install the [`{usethis}` package](https://usethis.r-lib.org/index.html), if necessary.** At this point you've created a directory (folder) with the website scaffolding files, but it's not yet being tracked by git, nor is it connected to a remote repository on GitHub. We can use the `{usethis}` package to help us set this up. First, install the [`{usethis}`](https://usethis.r-lib.org/index.html) package if you don't already have it. Do so by running the following in your console:
+
+```{r filename="Console"}
 #| eval: false
 install.packages("usethis")
 ```
@@ -60,7 +86,7 @@ install.packages("usethis")
 We're using the `{usethis}` workflow here because (1) it's super easy, and (2) because it's worth knowing that the `{usethis}` package exists if you haven't explore it already! Read more about the tooling this package offers on the [`usethis` documentation](https://usethis.r-lib.org/).
 :::
 
-3.  **Initialize your R Project folder as a git repository using `usethis::use_git()`:** In the Console, run `usethis::use_git()` to create a local git repository. Choose **yes** when asked if it's okay to commit any uncommitted files. If asked to restart R, choose **yes**. Once complete, you should see the **Git** tab appear in your top left pane in RStudio.
+4. **Initialize your R Project folder as a git repository using `usethis::use_git()`:** In the Console, run `usethis::use_git()` to create a local git repository. Choose **yes** when asked if it's okay to commit any uncommitted files. If asked to restart R, choose **yes**. Once complete, you should see the **Git** tab appear in your top left pane in RStudio.
 
 ```{r}
 #| echo: false
@@ -70,7 +96,7 @@ knitr::include_graphics("media/mysite_scaffolding_git.png")
 
 {{< include /sections/NOTE-git-repo.qmd >}}
 
-4.  **Create an upstream remote repository (i.e. GitHub repo) using `usethis::use_github()`.** Running `usethis::use_github()` in the Console will open up your web browser to your new remote repository on GitHub -- it should already have the same name as your local git repo / R project.
+5. **Create an upstream remote repository (i.e. GitHub repo) using `usethis::use_github()`.** Running `usethis::use_github()` in the Console will open up your web browser to your new remote repository on GitHub -- it should already have the same name as your local git repo / R project.
 
 {{< include /sections/NOTE-git-github.qmd >}}
 
@@ -81,13 +107,13 @@ knitr::include_graphics("media/mysite_scaffolding_git.png")
 knitr::include_graphics("media/mysite_remote.png")
 ```
 
-5. **Check the name of your default branch (the only branch you should have at the moment)** -- that is, the branch that all changes eventually get merged back into (if you're building a website, this branch is typically the one you'll want to deploy). There are multiple ways to check this -- here are two easy options:
+6. **Check the name of your default branch (the only branch you should have at the moment)** -- that is, the branch that all changes eventually get merged back into (if you're building a website, this branch is typically the one you'll want to deploy). There are multiple ways to check this -- here are two easy options:
 
     a.  Open RStudio's Terminal window (next to the Console) and run either `git branch` (this prints all local branches and highlights the one that you're currently on) or `git status` (the first printed line should say `On branch <branch_name>`). 
 
     b.  Click on the **Git** tab in the top right pane of RStudio. Next to the ![A white diamond with two purple squares, one directly above and one directly to the right, connected to the diamond by a line.](media/branch.png){alt="A white diamond with two purple squares, one directly above and one directly to the right, connected to the diamond by a line." style="display: inline-block; margin: 0; position: relative; top: 0px; width:20px;height:18px;"} symbol, you should see a dropdown menu that displays the name of your current branch.
 
-6.  **If your current branch is named `master`, update the name to `main`.** (If your branch is named *`main`*, you're good to go! You can skip this step continue to the next section on [publishing your site with GitHub Pages](https://ucsb-meds.github.io/creating-quarto-websites/#fa-brands-github-titlegithub-octocat-build-publish-your-site-with-github-pages). In the console, run `usethis::git_default_branch_rename(from = "master", to = "main")` to update your default branch name. Confirm that it updated **(a)** locally by running `git status` again in your Terminal -- the first printed line should now read, `On branch main`, and **(b)** on your remote by refreshing your GitHub repo (in your web browser) -- you should see the updated default branch name at the top of your repo.
+7.  **If your current branch is named `master`, update the name to `main`.** (If your branch is named *`main`*, you're good to go! You can skip this step continue to the next section on [publishing your site with GitHub Pages](https://ucsb-meds.github.io/creating-quarto-websites/#fa-brands-github-titlegithub-octocat-build-publish-your-site-with-github-pages). In the console, run `usethis::git_default_branch_rename(from = "master", to = "main")` to update your default branch name. Confirm that it updated **(a)** locally by running `git status` again in your Terminal -- the first printed line should now read, `On branch main`, and **(b)** on your remote by refreshing your GitHub repo (in your web browser) -- you should see the updated default branch name at the top of your repo.
 
 {{< include /sections/NOTE-master-main.qmd}}
 

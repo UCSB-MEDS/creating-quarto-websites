@@ -17,7 +17,7 @@ format: html
 
 3.  **Create the scaffolding (i.e. folder structure & necessary files) for your website** by running the following in the command line (substitute `mysite` with whatever name you want to give your repo):
 
-```{bash}
+```{bash filename="Command Line"}
 #| eval: false
 quarto create-project mysite --type website 
 ```
@@ -73,7 +73,7 @@ knitr::include_graphics("media/CLI_create_website.png")
 
 -   If you `cd` into your new `mysite` directory, and use the `ls` command to list out all the contents of that directory, you should see a series of files (`_quarto.yml`, `about.qmd`, `index.qmd`, `styles.css`) that provide the scaffolding for your website. For example:
 
-```{bash}
+```{bash filename="Command Line"}
 #| eval: false
 # print current working directory
 (base) Samanthas-MacBook-Air:git samanthacsik$ pwd 
@@ -95,23 +95,33 @@ _quarto.yml	_site		about.qmd   index.qmd   styles.css
 knitr::include_graphics("media/mysite_finder.png")
 ```
 
-4.  **Preview your very basic, but functional website** straight from the command line by typing (you'll need to navigate to your project directory (e.g `mysite/`):
+4.  **Preview your very basic, but functional website** straight from the command line by typing (you'll need to navigate to your project directory (e.g `mysite/`)):
 
-```{bash}
+```{bash filename="Command Line"}
 #| eval: false
 quarto preview
 ```
 
--   Your site preview should open up in your browser. Quit your preview by pressing `control` + `C`
+-   Your site preview should open up in your browser. Quit your preview by pressing `control` + `C`.
+
+```{r}
+#| eval: true
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics("media/preview.png")
+```
 
 ::: {.callout-tip}
-## Preview your website from different locations using file paths
-You will need to supply the path to your website directory when previewing from a different location. For example, if my Quarto website directory is at `Users/samanthacsik/git/mysite`, but I am one directory above in `Users/samanthacsik/git`, I can run `quarto preview mysite`. Alternatively I could provide the full path `quarto preview User/samanthacsik/git/mysite` or relative path `quarto preview ~/git/mysite`, no matter which directory I'm currently in.
+## `quarto preview` makes it easy to quickly view iterative changes
+Running `quarto preview` launches a preview of your website in a browser window. So long as you leave the preview running, it will update each time you make and save changes to website files (which makes iterating on your work really easy!).
+
+You can also preview your website from different locations using file paths. You'll need to supply the path to your website directory when previewing from a different location. For example, if my Quarto website directory is at `Users/samanthacsik/git/mysite`, but I am one directory above in `Users/samanthacsik/git`, I can run `quarto preview mysite`. Alternatively I could provide the full path `quarto preview User/samanthacsik/git/mysite` or relative path `quarto preview ~/git/mysite`, no matter which directory I'm currently in.
 :::
 
 5.  **Initialize your project as a git repository.** At this point you've created a directory (folder) containing some important website scaffolding files, but they're not yet being tracked by Git. First be sure to `cd` into your website folder. Then, initialize this folder as a git repository using the `git init` command in the terminal window.
 
-```{bash}
+```{bash filename="Command Line"}
 #| eval: false
 git init
 ```
@@ -120,7 +130,7 @@ git init
 
 6.  **Check the name of your default branch** -- that is, the branch that all changes eventually get merged back into (if you're building a website, this branch is typically the one you'll want to deploy). Run `git status` in the command line to identify the name of your default branch (this should be the only branch you have at the moment). Running `git status` will return something that looks like this, where the first line tells you which branch you're currently on:
 
-```{bash}
+```{bash filename="Command Line"}
 #| eval: false
 (base) Samanthas-MacBook-Air:mysite samanthacsik$ git status
 On branch master
@@ -151,7 +161,7 @@ I use this command *often* when working on the command line to double check that
 
 You can update the default branch to `main` by running the following line in the command line:
 
-```{bash}
+```{bash filename="Command Line"}
 #| eval: false
 git config --global init.defaultBranch main
 ```
@@ -164,7 +174,7 @@ You can double check that this worked by typing out the `git status` command aga
 
 Rename the default branch as `main` by running the following line in the command line:
 
-```{bash}
+```{bash filename="Command Line"}
 #| eval: false
 git branch -m master main
 ```
@@ -180,7 +190,7 @@ You can double check that this worked by typing out the `git status` command aga
 
 8.  **Stage / add all of your website's scaffolding files** (*analogous to checking the boxes next to your files in RStudio's Git tab*)**...**
 
-```{bash}
+```{bash filename="Command Line"}
 #| eval: false
 # this adds all untracked or changed files at once
 git add . 
@@ -195,7 +205,7 @@ Use the `git status` command again to see if your files have been successfully a
 
 **...and commit them** (*analogous to pressing the "Commit" button in RStudio and typing your commit message into the dialog box that appears*):
 
-```{bash}
+```{bash filename="Command Line"}
 #| eval: false
 git commit -m "initial commit"
 ```
@@ -220,7 +230,7 @@ knitr::include_graphics("media/GH_quick_setup_options.png")
 ::: {.callout-note collapse=true}
 ## The code that GitHub provides (as shown above) should look something like this:
 
-```{bash}
+```{bash filename="Command Line"}
 #| eval: false
 #| echo: true
 git remote add origin https://github.com/YourGitHubUsername/yourRepoName.git
@@ -254,7 +264,7 @@ It does three things:
 
 You should see something similar to this print out, if successful!
 
-```{bash}
+```{bash filename="Command Line"}
 #| eval: false
 (base) Samanthas-Air:mysite samanthacsik$ git remote add origin https://github.com/samanthacsik/mysite.git
 (base) Samanthas-Air:mysite samanthacsik$ git branch -M main
@@ -284,7 +294,7 @@ knitr::include_graphics("media/mysite-remote-cli.png")
 
 12. **(Optional) Add `.gitignore`, `LICENSE`, `README.md` files, which we chose not to initialize our remote repository with**. The `touch` command can be used to create any file type that we want (just make sure you're in the desired location -- typically, you want to create these in your project's root directory). For example:
 
-```{bash}
+```{bash filename="Command Line"}
 #| eval: false
 #| echo: true
 touch .gitignore
