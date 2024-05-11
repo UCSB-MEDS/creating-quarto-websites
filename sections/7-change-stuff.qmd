@@ -46,7 +46,7 @@ When the `about` option is added to a document's YAML, a special template will b
 #| eval: false
 ---
 title: "Samantha Csik"
-image: headshot.jpg # <1>
+image: media/headshot.jpg # <1>
 toc: false # <2>
 about: 
   template: trestles # <3>
@@ -55,8 +55,6 @@ about:
   links: # <5>
     - text: LinkedIn # <5>
       href: https://www.linkedin.com/in/samanthacsik/ # <5>
-    - text: Twitter # <5>
-      href: https://twitter.com/SamanthaCsik # <5>
     - text: GitHub # <5>
       href: https://github.com/samanthacsik # <5>
     - text: Email # <5>
@@ -65,11 +63,11 @@ about:
         
 # page content excluded for brevity ~
 ```
-1. add a photo by supplying a relative file path & image name (here, `headshot.jpg` lives in my repo's root directory)
+1. add a photo by supplying a relative file path & image name (here, `headshot.jpg` lives in a folder called `media/`)
 2. remove "On this page" menu by setting `toc: false`
 3. use a [pre-built template](https://quarto.org/docs/websites/website-about.html#templates) (here, `trestles`) to update the layout of your landing page (or any page!)
 4. set image shape (`round`, `rounded`, `rectangle`) & size
-5. add button links to your favorite social media pages (e.g. LinkedIn, Twitter, GitHub, and even your email -- **Note:** the `mailto::` ahead of your email address, `mailto::youremail.com`)
+5. add button links to your favorite social media pages (e.g. LinkedIn, GitHub, and even your email -- Note the `mailto::` ahead of your email address, `mailto::youremail.com`)
 
 ::: column-margin
 **Fun Tip:** Install the [Font Awesome Extension for Quarto](https://github.com/quarto-ext/fontawesome) to add free [Font Awesome](https://fontawesome.com/) `r fontawesome::fa("font-awesome", fill = "#5A5A5A", a11y = "sem")` icons to your site! Be sure to check out the [`icon` option](https://quarto.org/docs/websites/website-about.html#links) when adding linked buttons to your About Page.
@@ -108,8 +106,8 @@ project:
   output-dir: docs
 
 website:
-  title: "Samantha Csik" # <1>
   navbar:
+    title: "Samantha Csik" # <1>
     left:
       - href: index.qmd
         text: Home
@@ -122,8 +120,8 @@ format:
     toc: true # <2>
     page-layout: full # <3>
 ```
-1. Give your website a better title (e.g. your name)! This is the text that appears in the top left corner of your website (by default, it appears as your repo name) -- when clicked, a user will be brought back to the landing page
-2. **Note:** `toc: true` here (in `_quarto.yml`) renders a navigation menu on *all* web pages by default (but we can update options on a page-by-page basis e.g. we set `toc: false` in our `index.qmd` YAML)
+1. Give your website a better title (e.g. your name)! This is the text that appears in the top left corner of your website (by default, it appears as your repo name) -- when clicked, a user will be brought back to the landing page. **Note:** I removed my site-level `title` option and added it instead as a navbar `title`. Functionally, they appear the same way, but organizationally I think this makes more intuitive sense -- if I wanted to add a `logo` instead of a `title`, I'd similarly need to place that option beneath `navbar`.
+2. Note that the default `toc: true` here (in `_quarto.yml`) renders a navigation menu on *all* web pages by default (but we can update options on a page-by-page basis e.g. we set `toc: false` in our `index.qmd` YAML)
 3. Set your `page-layout` to `full` so that your page content takes up more of the page width
 
 ```{r}
