@@ -20,7 +20,7 @@ format:
 
 <br>
 
-*This document was originally developed as teaching material for the Bren School of Environmental Science & Management's [Master of Environmental Data Science](https://bren.ucsb.edu/masters-programs/master-environmental-data-science/academics-meds) (MEDS) program. Beginning Fall 2024, these materials will be taught as a part of a [2-unit course](https://bren.ucsb.edu/courses/eds-240) offered at Bren. You can find these, along with other related materials, linked on the [course website](https://ucsb-meds.github.io/EDS-296-DS-portfolios/).*
+*This document was originally developed as teaching material for the Bren School of Environmental Science & Management's [Master of Environmental Data Science](https://bren.ucsb.edu/masters-programs/master-environmental-data-science/academics-meds) (MEDS) program. Beginning Fall 2024, these materials will be taught as a part of a [2-unit course](https://bren.ucsb.edu/courses/eds-296-1f) offered at Bren. You can find these, along with other related materials, linked on the [course website](https://ucsb-meds.github.io/EDS-296-DS-portfolios/).*
 
 {{< include /sections/0-using-this-doc.qmd >}}
 
