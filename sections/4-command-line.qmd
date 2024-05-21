@@ -95,6 +95,8 @@ _quarto.yml	_site		about.qmd   index.qmd   styles.css
 knitr::include_graphics("media/mysite_finder.png")
 ```
 
+{{< include /sections/NOTE-tour.qmd >}}
+
 4.  **Preview your very basic, but functional website** straight from the command line by typing (you'll need to navigate to your project directory (e.g `mysite/`)):
 
 ```{bash filename="Command Line"}
@@ -116,6 +118,14 @@ knitr::include_graphics("media/preview.png")
 ## `quarto preview` makes it easy to quickly view iterative changes
 Running `quarto preview` launches a preview of your website in a browser window. So long as you leave the preview running, it will update each time you make and save changes to website files (which makes iterating on your work really easy!).
 
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: "80%"
+#| fig-align: "center"
+knitr::include_graphics("media/quarto-preview.gif")
+```
+
 You can also preview your website from different locations using file paths. You'll need to supply the path to your website directory when previewing from a different location. For example, if my Quarto website directory is at `Users/samanthacsik/git/mysite`, but I am one directory above in `Users/samanthacsik/git`, I can run `quarto preview mysite`. Alternatively I could provide the full path `quarto preview User/samanthacsik/git/mysite` or relative path `quarto preview ~/git/mysite`, no matter which directory I'm currently in.
 :::
 
@@ -126,7 +136,18 @@ You can also preview your website from different locations using file paths. You
 git init
 ```
 
-{{< include /sections/NOTE-git-repo.qmd >}}
+::: {.callout-note collapse=true}
+## What is a git repository?
+When we initialize our R project, `mysite/` (or `YourGitHubUsername.github.io/`), as a git repository using `git init`, a hidden `.git/` folder is created *within* that project folder. This hidden `.git/` folder *is* the git repository. As you use git commands (or RStudio's GUI buttons) to capture versions or "snapshots" of your work, those versions (and their associated metadata) get stored within the `.git/` folder. This allows you to access and / or recover any previous versions of your work. If you delete `.git/`, you delete your project's history. Here is an example website repository, represented visually:
+
+```{r}
+#| eval: true
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics("media/git-repo-ex.png")
+```
+:::
 
 6.  **Check the name of your default branch** -- that is, the branch that all changes eventually get merged back into (if you're building a website, this branch is typically the one you'll want to deploy). Run `git status` in the command line to identify the name of your default branch (this should be the only branch you have at the moment). Running `git status` will return something that looks like this, where the first line tells you which branch you're currently on:
 

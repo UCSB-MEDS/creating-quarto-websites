@@ -42,6 +42,8 @@ knitr::include_graphics("media/vRStudio4.png")
 
 -   You should now see a folder called `mysite` (or whatever you named your Quarto project) with a series of files (`_quarto.yml`, `about.qmd`, `index.qmd`, `styles.css`) that provide the scaffolding for your website in the **Files** tab (in the bottom right panel in RStudio, if you haven't altered the pane layout).
 
+{{< include /sections/NOTE-tour.qmd >}}
+
 ```{r}
 #| echo: false
 #| fig-align: center
@@ -72,6 +74,14 @@ knitr::include_graphics("media/preview.png")
 ::: {.callout-tip}
 ## `quarto preview` makes it easy to quickly view iterative changes
 Running `quarto preview` launches a preview of your website in a browser window. So long as you leave the preview running, it will update each time you make and save changes to website files (which makes iterating on your work really easy!).
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: "80%"
+#| fig-align: "center"
+knitr::include_graphics("media/quarto-preview.gif")
+```
 :::
 
 3.  **Install the [`{usethis}` package](https://usethis.r-lib.org/index.html), if necessary.** At this point you've created a directory (folder) with the website scaffolding files, but it's not yet being tracked by git, nor is it connected to a remote repository on GitHub. We can use the `{usethis}` package to help us set this up. First, install the [`{usethis}`](https://usethis.r-lib.org/index.html) package if you don't already have it. Do so by running the following in your console:
@@ -94,7 +104,18 @@ We're using the `{usethis}` workflow here because (1) it's super easy, and (2) b
 knitr::include_graphics("media/mysite_scaffolding_git.png")
 ```
 
-{{< include /sections/NOTE-git-repo.qmd >}}
+::: {.callout-note collapse=true}
+## What is a git repository?
+When we initialize our R project, `mysite/` (or `YourGitHubUsername.github.io/`), as a git repository using `usethis::use_git()`, a hidden `.git/` folder is created *within* that project folder. This hidden `.git/` folder *is* the git repository. As you use git commands (or RStudio's GUI buttons) to capture versions or "snapshots" of your work, those versions (and their associated metadata) get stored within the `.git/` folder. This allows you to access and / or recover any previous versions of your work. If you delete `.git/`, you delete your project's history. Here is an example website repository, represented visually:
+
+```{r}
+#| eval: true
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics("media/git-repo-ex.png")
+```
+:::
 
 5. **Create an upstream remote repository (i.e. GitHub repo) using `usethis::use_github()`.** Running `usethis::use_github()` in the Console will open up your web browser to your new remote repository on GitHub -- it should already have the same name as your local git repo / R project.
 
