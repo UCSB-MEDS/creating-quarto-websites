@@ -119,11 +119,11 @@ knitr::include_graphics("media/preview.png")
 Running `quarto preview` launches a preview of your website in a browser window. So long as you leave the preview running, it will update each time you make and save changes to website files (which makes iterating on your work really easy!).
 
 ```{r}
-#| eval: true
+#| eval: false
 #| echo: false
 #| out-width: "80%"
 #| fig-align: "center"
-knitr::include_graphics("media/quarto-preview.gif")
+#knitr::include_graphics("media/quarto-preview.gif")
 ```
 
 You can also preview your website from different locations using file paths. You'll need to supply the path to your website directory when previewing from a different location. For example, if my Quarto website directory is at `Users/samanthacsik/git/mysite`, but I am one directory above in `Users/samanthacsik/git`, I can run `quarto preview mysite`. Alternatively I could provide the full path `quarto preview User/samanthacsik/git/mysite` or relative path `quarto preview ~/git/mysite`, no matter which directory I'm currently in.

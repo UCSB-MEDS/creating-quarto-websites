@@ -76,11 +76,11 @@ knitr::include_graphics("media/preview.png")
 Running `quarto preview` launches a preview of your website in a browser window. So long as you leave the preview running, it will update each time you make and save changes to website files (which makes iterating on your work really easy!).
 
 ```{r}
-#| eval: true
+#| eval: false
 #| echo: false
 #| out-width: "80%"
 #| fig-align: "center"
-knitr::include_graphics("media/quarto-preview.gif")
+#knitr::include_graphics("media/quarto-preview.gif")
 ```
 :::
 
