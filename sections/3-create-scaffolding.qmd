@@ -14,7 +14,7 @@ To follow along, you'll need:
 -   A [GitHub](https://github.com/) account
 -   [Git](https://git-scm.com/) installed / configured
 
-Please refer to the MEDS Installation Guide for [Mac](https://ucsb-meds.github.io/meds-install-mac.html) and [Windows](https://ucsb-meds.github.io/meds-install-windows.html) machines to find detailed setup instructions (follow steps 1-7).
+Please refer to the [MEDS Installation Guide](https://ucsb-meds.github.io/MEDS-installation-guide/) for detailed setup instructions (follow steps 1-7).
 :::
 
 This document reviews two ways to get started with using Quarto to build your website.
