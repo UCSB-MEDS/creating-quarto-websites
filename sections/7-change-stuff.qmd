@@ -2,7 +2,7 @@
 format: html
 ---
 
-## {{< fa edit title="Pencil and paper" >}} Where you should start changing stuff
+## {{< fa edit title="Pencil and paper" >}} Where you should start changing stuff {#change-stuff}
 
 Right now, our website is built using Quarto's default styling. Let's learn about where things live and how to start customizing some stuff.
 

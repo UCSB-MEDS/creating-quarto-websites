@@ -2,7 +2,7 @@
 format: html
 ---
 
-## {{< fa seedling title="Sprouted seedling" >}} Create the scaffolding for your website
+## {{< fa seedling title="Sprouted seedling" >}} Create the scaffolding for your website {#create-website-scaffolding}
 
 ::: callout-important
 ## Before getting started...

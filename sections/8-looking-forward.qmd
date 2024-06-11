@@ -2,7 +2,7 @@
 format: html
 ---
 
-## {{< fa forward title="Fast forward symbol" >}} Looking forward
+## {{< fa forward title="Fast forward symbol" >}} Looking forward {#looking-forward}
 
 You should now have a basic version of your website up and running 🎉 During Fall quarter, we'll learn how to:
 
@@ -14,7 +14,7 @@ c\. continue developing your online "brand"
 
 In the meantime, explore some [current student & alumni websites](https://ucsb-meds.github.io/student_websites.html) (**Note:** MEDS class of 2022 used the [`{distill}`](https://rstudio.github.io/distill/website.html) package to build their websites) for inspiration, or dig into the [Quarto Website documentation](https://quarto.org/docs/websites/) if you're hoping to get started now on further customization.
 
-## {{< fa star title="Star" >}} Additional resources to get you stoked about Quarto
+## {{< fa star title="Star" >}} Additional resources to get you stoked about Quarto {#resources}
 
 <!-- -   We don't talk about Quarto, by Alison Hill \| [`r fontawesome::fa("blog", fill = "#5A5A5A", a11y = "sem")` blog post](https://www.apreshill.com/blog/2022-04-we-dont-talk-about-quarto/) -->
 

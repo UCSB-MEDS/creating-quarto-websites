@@ -2,7 +2,7 @@
 format: html
 ---
 
-## {{< fa tools title="A flathead screwdriver and wrench crossed on top of one another" >}} Do I *need* to use Quarto to build my website?
+## {{< fa tools title="A flathead screwdriver and wrench crossed on top of one another" >}} Do I *need* to use Quarto to build my website? {#is-quarto-necessary}
 
 Nope! There are a number of R-based tools that make building websites and blogs fun and easy, including the still-widely-used [`{blogdown}`](https://bookdown.org/yihui/blogdown/) and [`{distill}`](https://rstudio.github.io/distill/website.html) packages.
 

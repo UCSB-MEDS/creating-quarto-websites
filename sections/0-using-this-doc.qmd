@@ -2,7 +2,7 @@
 format: html
 ---
 
-## {{< fa lightbulb title="Lightbulb">}} Some tips on navigating this document
+## {{< fa lightbulb title="Lightbulb">}} Some tips on navigating this document {#navigating-this-doc}
 
 If you've found your way here, welcome! Maybe you're excited to start on your website-building journey, or maybe you're just getting a feel for what Quarto is all about. Regardless, I hope you find these materials helpful. Some notes on what to expect:
 

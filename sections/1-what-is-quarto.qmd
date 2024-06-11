@@ -2,7 +2,7 @@
 format: html
 ---
 
-## {{< fa circle-question title="Question mark" >}} What is Quarto?
+## {{< fa circle-question title="Question mark" >}} What is Quarto? {#what-is-quarto}
 
 [Quarto](https://quarto.org/) is a publishing system built on [Pandoc](https://pandoc.org/) that allows users to create dynamic content using R, Python, Julia, and ObservableJS (with plans to add more languages too!).
 
