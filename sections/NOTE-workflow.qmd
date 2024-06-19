@@ -3,7 +3,7 @@ format: html
 ---
 
 ::: {.callout-note collapse=true}
-## Create a Quarto website inside an existing GitHub repository
+## What if I want to create a Quarto website inside an existing GitHub repository?
 
 The above instructions follow the **"create local R project (and initialize as a git repo) *first* > create upstream remote repo (on GitHub) *second*"** workflow. However, if you already have a remote GitHub repository that you want to use for your website, clone the GitHub repo, then run the following command in the command line:
 
