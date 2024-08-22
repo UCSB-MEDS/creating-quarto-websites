@@ -1,17 +1,15 @@
 # Building your personal website using Quarto
-**Taught by:** [@samanthacsik](https://github.com/samanthacsik)  
-**Duration:** 1-2 hours
 
-A personal website is not only a great way to showcase your experiences and skills, but also gives people (potential employers included!) a better sense of who you are as a person. There are lots of great ways to build websites using R (e.g. [`{distill}`](https://rstudio.github.io/distill/website.html), [`{blogdown}`](https://bookdown.org/yihui/blogdown/)) -- this year, we'll be using [Quarto](https://quarto.org/docs/websites/), an exciting, new, and versatile publishing tool that supports R, Python, Julia, and ObservableJS.
+Step by step instructions for building a personal website using Quarto and deploying it using GitHub Pages.
 
-Instructions for getting started can be found in [this Quarto document](https://ucsb-meds.github.io/creating-quarto-websites/).
+## Description 
 
-Some content was adapted from Allison Horst's [instructions](https://docs.google.com/document/d/1c0SZiVvp32UTJ9sK_yVjI8ou6pVdFRXsY2236tiTA1c/edit) for building a `distill` website, taught in Summer 2021.
+A personal website is not only a great way to showcase your experiences and skills, but also gives people (potential employers included!) a better sense of who you are as a person. There are lots of great ways to build websites using R (e.g. [`{distill}`](https://rstudio.github.io/distill/website.html), [`{blogdown}`](https://bookdown.org/yihui/blogdown/)). In this workshop, we'll use [Quarto](https://quarto.org/docs/websites/), a user-friendly and versatile publishing frameowrk that supports R, Python, Julia, and ObservableJS. Instructions for getting started can be found in [this Quarto document](https://ucsb-meds.github.io/creating-quarto-websites/). 
 
----
+**Note:** As of Fall 2024, these materials will be presented as part of a new 2-unit course, [EDS 296 - Data Science Tools for Building Professional Online Portfolios](https://ucsb-meds.github.io/EDS-296-DS-portfolios/).
 
-### Taught on the following dates:
-- August 5, 2022 ([Release v.1.0.0-meds-2023](https://github.com/UCSB-MEDS/creating-quarto-websites/releases/tag/v1.0.0-meds-2023))
-- September 25, 2023 ([Release v.1.1.0-meds-2024](https://github.com/UCSB-MEDS/creating-quarto-websites/releases/tag/v1.1.0-meds-2024))
+## Contributors
+
+These workshop materials are maintained and taught by [Samantha Csik](https://github.com/samanthacsik), Data Training Coordinator at the National Center for Ecological Analysis and Synthesis and Lecturer at the Bren School of Enviromental Science & Management.
 
 
