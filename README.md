@@ -1,6 +1,6 @@
 # Building your personal website using Quarto
 
-Step by step instructions for building a personal website using Quarto and deploying it using GitHub Pages.
+Step-by-step instructions for building a personal website using Quarto and deploying it using GitHub Pages.
 
 ## Description 
 
