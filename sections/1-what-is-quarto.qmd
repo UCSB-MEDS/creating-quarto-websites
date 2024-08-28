@@ -1,5 +1,12 @@
 ---
-format: html
+format: 
+  html:
+    theme: meds-website-styles.scss
+    mainfont: Nunito
+    toc: true
+    toc-location: left
+    toc-depth: 2
+    smooth-scroll: true
 ---
 
 ## {{< fa circle-question title="Question mark" >}} What is Quarto? {#what-is-quarto}

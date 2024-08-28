@@ -1,5 +1,12 @@
 ---
-format: html
+format: 
+  html:
+    theme: meds-website-styles.scss
+    mainfont: Nunito
+    toc: true
+    toc-location: left
+    toc-depth: 2
+    smooth-scroll: true
 ---
 
 ## {{< fa edit title="Pencil and paper" >}} Where you should start changing stuff {#change-stuff}
@@ -48,12 +55,12 @@ When the `about` option is added to a document's YAML, a special template will b
 #| eval: false
 ---
 title: "Samantha Csik"
-image: media/headshot.jpg # <1>
+image: media/headshot.jpeg # <1>
 toc: false # <2>
 about: 
-  template: trestles # <3>
+  template: jolla # <3>
   image-shape: round # <4>
-  image-width: 20em # <4>
+  image-width: 17em # <4>
   links: # <5>
     - text: LinkedIn # <5>
       href: https://www.linkedin.com/in/samanthacsik/ # <5>
@@ -65,9 +72,9 @@ about:
         
 # page content excluded for brevity ~
 ```
-1. add a photo by supplying a relative file path & image name (here, `headshot.jpg` lives in a folder called `media/`)
+1. add a photo by supplying a relative file path & image name (here, `headshot.jpeg` lives in a folder called `media/`)
 2. remove "On this page" menu by setting `toc: false`
-3. use a [pre-built template](https://quarto.org/docs/websites/website-about.html#templates) (here, `trestles`) to update the layout of your landing page (or any page!)
+3. use a [pre-built template](https://quarto.org/docs/websites/website-about.html#templates) (here, `jolla`) to update the layout of your landing page (or any page!)
 4. set image shape (`round`, `rounded`, `rectangle`) & size
 5. add button links to your favorite social media pages (e.g. LinkedIn, GitHub, and even your email -- Note the `mailto::` ahead of your email address, `mailto::youremail.com`)
 
@@ -78,8 +85,8 @@ about:
 ```{r}
 #| echo: false
 #| fig-align: center
-#| fig-cap: "My Quarto website after updating my landing page with the built-in `trestles` template, adding an image, and linked buttons. (**Note:** using three dashes, `---`, creates a page divider, as seen between sections in the screenshot above.) Overall, a big improvement! However, our text is a bit squished in the center of the page -- we'll fix then in the next step."
-knitr::include_graphics("media/about-page.png")
+#| fig-cap: "My Quarto website after updating my landing page with the built-in `jolla` template, adding an image, and linked buttons. Overall, a big improvement! However, our text is a bit squished in the center of the page -- we'll fix then in the next step."
+knitr::include_graphics("media/with-about-page.png")
 ```
 
 ::: {.callout-note collapse=true}
@@ -108,8 +115,8 @@ project:
   output-dir: docs
 
 website:
+  title: "Sam Csik" # <1>
   navbar:
-    title: "Samantha Csik" # <1>
     left:
       - href: index.qmd
         text: Home
@@ -122,7 +129,9 @@ format:
     toc: true # <2>
     page-layout: full # <3>
 ```
-1. Give your website a better title (e.g. your name)! This is the text that appears in the top left corner of your website (by default, it appears as your repo name) -- when clicked, a user will be brought back to the landing page. **Note:** I removed my site-level `title` option and added it instead as a navbar `title`. Functionally, they appear the same way, but organizationally I think this makes more intuitive sense -- if I wanted to add a `logo` instead of a `title`, I'd similarly need to place that option beneath `navbar`.
+1. Your website title, which appears in your browser tab and in the top left corner of your website's navbar (by default)
+<!-- 2. This navbar title is the text that appears in the top left corner of your website (by default, this inherits your **website** title; see #1) -- when clicked, a user will be brought back to the landing page. You can alternative add a logo here (more on that in the next workshop!) -->
+<!-- **Note:** I removed my site-level `title` option and added it instead as a navbar `title`. Functionally, they appear the same way, but organizationally I think this makes more intuitive sense -- if I wanted to add a `logo` instead of a `title`, I'd similarly need to place that option beneath `navbar`. -->
 2. Note that the default `toc: true` here (in `_quarto.yml`) renders a navigation menu on *all* web pages by default (but we can update options on a page-by-page basis e.g. we set `toc: false` in our `index.qmd` YAML)
 3. Set your `page-layout` to `full` so that your page content takes up more of the page width
 
@@ -132,6 +141,17 @@ format:
 #| fig-cap: "My website with a new title (see top left corner) and with `page-layout` set to `full`, so that content doesn't appear as squished in the middle of the page."
 knitr::include_graphics("media/full-page.png")
 ```
+
+::: {.callout-note}
+## You aren't required to have a `title` on `index.qmd`
+Going for a more minimalist look? You can comment out (or remove) the `title` option from `index.qmd`. You'll note that this also cleans up the title which appears in your browser tab.
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-cap: ""
+knitr::include_graphics("media/no-page-title.png")
+```
+:::
 
 ### {{< fa arrow-right title="An arrow pointing to the right" >}} **Add additional pages to your website**
 
@@ -157,9 +177,8 @@ project:
   output-dir: docs
 
 website:
-  title: "Samantha Csik"
+  title: "Sam Csik"
   navbar:
-   background: primary
    left:
      - href: index.qmd
        text: Home
@@ -170,8 +189,6 @@ format:
   html:
     theme: cosmo
     css: styles.css
-
-editor: visual
 ```
 1. A newly-added navbar page. **Note:** The page name, as it appears in the navbar of your website, will be the same as whatever is listed in the `title` field of that file's YAML. For example, I have set `title: "All my favorite resources!"` in the YAML of `resources.qmd` -- this is how it will appear in my website's navbar. If you'd like to set the navbar name as something other than the page's title, use the `href` and `text` options together (e.g. see how `index.qmd` is rendered as `Home` in my website's navbar).
 

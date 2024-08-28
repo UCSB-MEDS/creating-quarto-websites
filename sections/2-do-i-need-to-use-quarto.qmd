@@ -1,5 +1,12 @@
 ---
-format: html
+format: 
+  html:
+    theme: meds-website-styles.scss
+    mainfont: Nunito
+    toc: true
+    toc-location: left
+    toc-depth: 2
+    smooth-scroll: true
 ---
 
 ## {{< fa tools title="A flathead screwdriver and wrench crossed on top of one another" >}} Do I *need* to use Quarto to build my website? {#is-quarto-necessary}

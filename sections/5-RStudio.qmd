@@ -1,5 +1,12 @@
 ---
-format: html
+format: 
+  html:
+    theme: meds-website-styles.scss
+    mainfont: Nunito
+    toc: true
+    toc-location: left
+    toc-depth: 2
+    smooth-scroll: true
 ---
 
 ### **Why use RStudio to set up your Quarto website?**
@@ -101,7 +108,7 @@ We're using the `{usethis}` workflow here because (1) it's super easy, and (2) b
 ```{r}
 #| echo: false
 #| fig-align: center
-knitr::include_graphics("media/mysite_scaffolding_git.png")
+knitr::include_graphics("media/git-tab.png")
 ```
 
 ::: {.callout-note collapse=true}
@@ -125,7 +132,7 @@ knitr::include_graphics("media/git-repo-ex.png")
 #| echo: false
 #| fig-align: center
 #| fig-cap: "After running `usethis::use_github()` your browser window should open up to your new GitHub repository and look similar to the browser above."
-knitr::include_graphics("media/mysite_remote.png")
+knitr::include_graphics("media/mysite-remote.png")
 ```
 
 6. **Check the name of your default branch (the only branch you should have at the moment)** -- that is, the branch that all changes eventually get merged back into (if you're building a website, this branch is typically the one you'll want to deploy). There are multiple ways to check this -- here are two easy options:
@@ -143,7 +150,5 @@ The racist “master” terminology for git branches motivates us to update our 
 
 There is a push across platforms and software to update this historical default branch name from `master` to `main`. GitHub has already done so –  creating a remote repository *first* results in a default branch named `main`. Depending on your version of Git and / or your configuration settings, however, you may need to set update the name manually when creating a local git repository first (as we’re doing here).
 :::
-
-<!-- {{< include /sections/NOTE-master-main.qmd}} -->
 
 {{< include /sections/NOTE-workflow.qmd >}}

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -24,7 +24,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -35,7 +35,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -97,7 +97,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul>
 </nav>
 </div>
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
 </div>
 <main class="content page-columns page-full" id="quarto-document-content">
 
@@ -114,14 +114,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="quarto-title-meta-contents">
     <p class="author"><a href="https://samanthacsik.github.io/">Sam Csik</a> <a href="https://orcid.org/0000-0002-5300-3075" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
   </div>
-    <div class="quarto-title-meta-contents">
+  <div class="quarto-title-meta-contents">
         <p class="affiliation">
             <a href="https://bren.ucsb.edu/masters-programs/master-environmental-data-science">
             Master of Environmental Data Science (MEDS) program
             </a>
           </p>
       </div>
-    </div>
+  </div>
 
 <div class="quarto-title-meta">
 
@@ -136,14 +136,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">June 19, 2024</p>
+      <p class="date-modified">August 27, 2024</p>
     </div>
   </div>
     
   </div>
   
 
+
 </header>
+
 
 <p><br></p>
 <p><em>This document was originally developed as teaching material for the Bren School of Environmental Science &amp; Management’s <a href="https://bren.ucsb.edu/masters-programs/master-environmental-data-science/academics-meds">Master of Environmental Data Science</a> (MEDS) program. Beginning Fall 2024, these materials will be taught as a part of a <a href="https://bren.ucsb.edu/courses/eds-296-1f">2-unit course</a> offered at Bren. You can find these, along with other related materials, linked on the <a href="https://ucsb-meds.github.io/EDS-296-DS-portfolios/">course website</a>.</em></p>
@@ -228,7 +230,7 @@ A side-by-side comparison of <code>.rmd</code> vs.&nbsp;<code>.qmd</code> files
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/rmd-vs-qmd.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="media/rmd-vs-qmd.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -238,7 +240,7 @@ A side-by-side comparison of <code>.rmd</code> vs.&nbsp;<code>.qmd</code> files
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/rmd-vs-qmd-output.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="media/rmd-vs-qmd-output.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -250,7 +252,7 @@ A side-by-side comparison of <code>.rmd</code> vs.&nbsp;<code>.qmd</code> files
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/quarto_schematic.png" class="img-fluid figure-img" alt="A schematic representing the multi-language input (e.g. Python, R, Observable, Julia) and multi-format output (e.g. PDF, html, Word documents, and more) versatility of Quarto." width="4000"></p>
+<p><img src="media/quarto_schematic.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="A schematic representing the multi-language input (e.g. Python, R, Observable, Julia) and multi-format output (e.g. PDF, html, Word documents, and more) versatility of Quarto." width="4000"></p>
 </figure>
 </div>
 </div>
@@ -270,7 +272,7 @@ A side-by-side comparison of <code>.rmd</code> vs.&nbsp;<code>.qmd</code> files
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/blogdown_distill.png" class="img-fluid figure-img" width="521"></p>
+<p><img src="media/blogdown_distill.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="521"></p>
 </figure>
 </div>
 </div>
@@ -330,18 +332,21 @@ Before getting started…
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/vRStudio1.png" class="img-fluid figure-img" width="1215"></p>
+<p><img src="media/vRStudio1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1215"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Choose <strong>New Directory</strong>, then <strong>Quarto Website.</strong></p>
-<div class="cell column-page quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div>
+
+</div>
+<div class="cell column-page quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="media/vRStudio2.png" class="img-fluid" width="1215"></p>
 </div>
-<div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="media/vRStudio3.png" class="img-fluid" width="1215"></p>
 </div>
 </div>
@@ -393,7 +398,7 @@ Organizing R projects / git repositories
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/vRStudio4.png" class="img-fluid figure-img" width="1325"></p>
+<p><img src="media/vRStudio4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1325"></p>
 </figure>
 </div>
 </div>
@@ -443,7 +448,7 @@ Take a quick tour of your website files
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  type<span class="sc">:</span> website</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>website<span class="sc">:</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  title<span class="sc">:</span> <span class="st">"OHI-methods-EXAMPLE"</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  title<span class="sc">:</span> <span class="st">"mysite"</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  navbar<span class="sc">:</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    left<span class="sc">:</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>      <span class="sc">-</span> href<span class="sc">:</span> index.qmd</span>
@@ -483,7 +488,7 @@ Take a quick tour of your website files
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/preview.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="media/preview.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -538,7 +543,7 @@ Take a quick tour of your website files
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/mysite_scaffolding_git.png" class="img-fluid figure-img" width="1215"></p>
+<p><img src="media/git-tab.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1215"></p>
 </figure>
 </div>
 </div>
@@ -560,7 +565,7 @@ What is a git repository?
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/git-repo-ex.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="media/git-repo-ex.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -590,7 +595,7 @@ Understanding the difference between Git vs.&nbsp;Github
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/ahorst-git-workflow.png" class="img-fluid figure-img" style="width:100.0%" alt="A basic git workflow represented as two islands, one with &quot;local repo&quot; and &quot;working directory&quot;, and another with &quot;remote repo.&quot; Bunnies move file boxes from the working directory to the staging area, then with Commit move them to the local repo. Bunnies in rowboats move changes from the local repo to the remote repo (labeled &quot;PUSH&quot;) and from the remote repo to the working directory (labeled &quot;PULL&quot;)."></p>
+<p><img src="media/ahorst-git-workflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="A basic git workflow represented as two islands, one with &quot;local repo&quot; and &quot;working directory&quot;, and another with &quot;remote repo.&quot; Bunnies move file boxes from the working directory to the staging area, then with Commit move them to the local repo. Bunnies in rowboats move changes from the local repo to the remote repo (labeled &quot;PUSH&quot;) and from the remote repo to the working directory (labeled &quot;PULL&quot;)."></p>
 </figure>
 </div>
 </div>
@@ -605,8 +610,8 @@ Understanding the difference between Git vs.&nbsp;Github
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/mysite_remote.png" class="img-fluid figure-img" width="1245"></p>
-<figcaption class="figure-caption">After running <code>usethis::use_github()</code> your browser window should open up to your new GitHub repository and look similar to the browser above.</figcaption>
+<p><img src="media/mysite-remote.png" class="img-fluid figure-img" width="1552"></p>
+<figcaption>After running <code>usethis::use_github()</code> your browser window should open up to your new GitHub repository and look similar to the browser above.</figcaption>
 </figure>
 </div>
 </div>
@@ -636,7 +641,6 @@ Why are we doing this?
 </div>
 </div>
 </div>
-<!-- {{< include /sections/NOTE-master-main.qmd}} -->
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -732,21 +736,24 @@ Name your project <code>YourGitHubUsername.github.io</code> if you plan to deplo
 <p>Because we’ll be using GitHub pages to publish / host our websites, it’s recommended that you name your project <code>YourGitHubUsername.github.io</code> (you’re allowed <strong>one</strong> user website with the <strong>github.io</strong> suffix) – for example, <a href="https://github.com/samanthacsik/samanthacsik.github.io">the project / GitHub repository</a>, which contains the code for <a href="https://samanthacsik.github.io/">my personal website</a>, is named <code>samanthacsik.github.io</code>. Otherwise, name it something reasonable (this will become the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Slug">slug</a> for your site if publishing with GitHub pages, so choose carefully). I’m calling my project <strong>mysite</strong> <em>just for tutorial purposes only</em> – you should definitely give yours a more practical / creative name.</p>
 </div>
 </div>
-<div class="cell column-page quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div>
+
+</div>
+<div class="cell column-page quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/pwd_cd.png" class="img-fluid figure-img" width="780"></p>
-<figcaption class="figure-caption">Use <code>pwd</code> to see your current working directory. Use <code>cd</code> to change directories.</figcaption>
+<figcaption>Use <code>pwd</code> to see your current working directory. Use <code>cd</code> to change directories.</figcaption>
 </figure>
 </div>
 </div>
-<div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/CLI_create_website.png" class="img-fluid figure-img" width="780"></p>
-<figcaption class="figure-caption">Create a new quarto project using the <code>quarto create-project your_project_name --type website</code> commands.</figcaption>
+<figcaption>Create a new quarto project using the <code>quarto create-project your_project_name --type website</code> commands.</figcaption>
 </figure>
 </div>
 </div>
@@ -804,7 +811,11 @@ Name your project <code>YourGitHubUsername.github.io</code> if you plan to deplo
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="media/mysite_finder.png" class="img-fluid" width="945"></p>
+<div>
+<figure class="figure">
+<p><img src="media/mysite_finder.png" class="img-fluid figure-img" width="945"></p>
+</figure>
+</div>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -849,7 +860,7 @@ Take a quick tour of your website files
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  type<span class="sc">:</span> website</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>website<span class="sc">:</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  title<span class="sc">:</span> <span class="st">"OHI-methods-EXAMPLE"</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  title<span class="sc">:</span> <span class="st">"mysite"</span></span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  navbar<span class="sc">:</span></span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    left<span class="sc">:</span></span>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>      <span class="sc">-</span> href<span class="sc">:</span> index.qmd</span>
@@ -889,7 +900,7 @@ Take a quick tour of your website files
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/preview.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="media/preview.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -936,7 +947,7 @@ What is a git repository?
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/git-repo-ex.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="media/git-repo-ex.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -1109,7 +1120,7 @@ Understanding the difference between Git vs.&nbsp;Github
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/ahorst-git-workflow.png" class="img-fluid figure-img" style="width:100.0%" alt="A basic git workflow represented as two islands, one with &quot;local repo&quot; and &quot;working directory&quot;, and another with &quot;remote repo.&quot; Bunnies move file boxes from the working directory to the staging area, then with Commit move them to the local repo. Bunnies in rowboats move changes from the local repo to the remote repo (labeled &quot;PUSH&quot;) and from the remote repo to the working directory (labeled &quot;PULL&quot;)."></p>
+<p><img src="media/ahorst-git-workflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="A basic git workflow represented as two islands, one with &quot;local repo&quot; and &quot;working directory&quot;, and another with &quot;remote repo.&quot; Bunnies move file boxes from the working directory to the staging area, then with Commit move them to the local repo. Bunnies in rowboats move changes from the local repo to the remote repo (labeled &quot;PUSH&quot;) and from the remote repo to the working directory (labeled &quot;PULL&quot;)."></p>
 </figure>
 </div>
 </div>
@@ -1125,7 +1136,11 @@ Understanding the difference between Git vs.&nbsp;Github
 </ol>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="media/GH_quick_setup_options.png" class="img-fluid" width="720"></p>
+<div>
+<figure class="figure">
+<p><img src="media/GH_quick_setup_options.png" class="img-fluid figure-img" width="720"></p>
+</figure>
+</div>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -1201,7 +1216,7 @@ The code that GitHub provides (as shown above) should look something like this:
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/mysite-remote-cli.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="media/mysite-remote-cli.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -1331,7 +1346,7 @@ You can delete <code>_site/</code> if it exists and if you’re publishing with 
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/build_site.png" class="img-fluid figure-img" width="1552"></p>
+<p><img src="media/build_site.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1552"></p>
 </figure>
 </div>
 </div>
@@ -1359,21 +1374,24 @@ Always “Render Website” before pushing changes that you want to deploy!
 </ol></li>
 <li><p><strong>Configure GitHub pages to serve content from the “docs” directory</strong> by clicking on the <strong>Settings</strong> tab in the top menu bar, then the <strong>Pages</strong> tab from the left-hand menu bar. Make sure that <strong>Branch</strong> is set to <code>main</code> and that the selected folder is set to <code>/docs</code>. Click <strong>Save</strong>. Once deployed (this may take a few minutes), your website’s URL will appear inside a box at the top of the page (you may have to try refreshing a few times).</p></li>
 </ol>
-<div class="cell column-page quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div>
+
+</div>
+<div class="cell column-page quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/gh_pages.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">Your website’s URL will appear at the top of the page once you’ve configured GitHub pages to host your Quarto site</figcaption>
+<p><img src="media/gh-pages.png" class="img-fluid figure-img" width="1552"></p>
+<figcaption>Your website’s URL will appear at the top of the page once you’ve configured GitHub pages to host your Quarto site</figcaption>
 </figure>
 </div>
 </div>
-<div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/rendered_site.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">A hosted Quarto website! Now time to customize and add content.</figcaption>
+<figcaption>A hosted Quarto website! Now time to customize and add content.</figcaption>
 </figure>
 </div>
 </div>
@@ -1392,7 +1410,11 @@ Check out the <strong>Actions</strong> tab on GitHub to view deployment status
 <p>See deployment status, time of each deployment, and how long it took to deploy each run. You can also find failed deployments here (yes, it does happen on occasion) and take action on fixing them.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="media/actions_tab.png" class="img-fluid" width="1552"></p>
+<div>
+<figure class="figure">
+<p><img src="media/actions-tab.png" class="img-fluid figure-img" width="1552"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -1401,12 +1423,12 @@ Check out the <strong>Actions</strong> tab on GitHub to view deployment status
 <section id="change-stuff" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="change-stuff"><i class="fa-solid fa-edit" title="Pencil and paper" aria-hidden="true"></i> Where you should start changing stuff</h2>
 <p>Right now, our website is built using Quarto’s default styling. Let’s learn about where things live and how to start customizing some stuff.</p>
-<section id="fa-arrow-right-titlean-arrow-pointing-to-the-right-dont-mess-with-stuff-in-docs" class="level3">
-<h3 class="anchored" data-anchor-id="fa-arrow-right-titlean-arrow-pointing-to-the-right-dont-mess-with-stuff-in-docs"><i class="fa-solid fa-arrow-right" title="An arrow pointing to the right" aria-hidden="true"></i> <strong>Don’t mess with stuff in <code>/docs</code></strong></h3>
+<section id="dont-mess-with-stuff-in-docs" class="level3">
+<h3 class="anchored" data-anchor-id="dont-mess-with-stuff-in-docs"><i class="fa-solid fa-arrow-right" title="An arrow pointing to the right" aria-hidden="true"></i> <strong>Don’t mess with stuff in <code>/docs</code></strong></h3>
 <p>When you Render your site (by clicking <strong>Build</strong> &gt; <strong>Render Website</strong>), Quarto takes all your <code>.qmd</code> files, converts them to <code>.html</code> files (along with some other important stuff), and saves everything to your <code>/docs</code> folder. Your site now deploys from this folder, so you really don’t want to mess with anything in here directly.</p>
 </section>
-<section id="fa-arrow-right-titlean-arrow-pointing-to-the-right-add-content-to-your-landing-page-index.qmd" class="level3">
-<h3 class="anchored" data-anchor-id="fa-arrow-right-titlean-arrow-pointing-to-the-right-add-content-to-your-landing-page-index.qmd"><i class="fa-solid fa-arrow-right" title="An arrow pointing to the right" aria-hidden="true"></i> <strong>Add content to your landing page (<code>index.qmd</code>)</strong></h3>
+<section id="add-content-to-your-landing-page-index.qmd" class="level3">
+<h3 class="anchored" data-anchor-id="add-content-to-your-landing-page-index.qmd"><i class="fa-solid fa-arrow-right" title="An arrow pointing to the right" aria-hidden="true"></i> <strong>Add content to your landing page (<code>index.qmd</code>)</strong></h3>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1429,15 +1451,15 @@ Do <em>not</em> change the name of <code>index.qmd</code>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/no-about-page.png" class="img-fluid figure-img" width="669"></p>
-<figcaption class="figure-caption">My Quarto website home page, which now includes my name and some content, but isn’t super visually pleasing…</figcaption>
+<p><img src="media/no-about-page.png" class="img-fluid figure-img" width="1552"></p>
+<figcaption>My Quarto website home page, which now includes my name and some content, but isn’t super visually pleasing…</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="fa-arrow-right-titlean-arrow-pointing-to-the-right-arrange-your-landing-page-index.qmd-using-a-pre-build-template" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="fa-arrow-right-titlean-arrow-pointing-to-the-right-arrange-your-landing-page-index.qmd-using-a-pre-build-template"><i class="fa-solid fa-arrow-right" title="An arrow pointing to the right" aria-hidden="true"></i> <strong>Arrange your landing page (<code>index.qmd</code>) using a <a href="https://quarto.org/docs/websites/website-about.html">pre-build template</a></strong></h3>
+<section id="arrange-your-landing-page-index.qmd-using-a-pre-build-template" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="arrange-your-landing-page-index.qmd-using-a-pre-build-template"><i class="fa-solid fa-arrow-right" title="An arrow pointing to the right" aria-hidden="true"></i> <strong>Arrange your landing page (<code>index.qmd</code>) using a <a href="https://quarto.org/docs/websites/website-about.html">pre-build template</a></strong></h3>
 <!-- ###  **Turn your landing page (`index.qmd`) into an "[About Page](https://quarto.org/docs/websites/website-about.html)" with a photo** -->
 <p>When the <code>about</code> option is added to a document’s YAML, a special template will be used to layout the content of that page. Choose from one of Quarto’s five <a href="https://quarto.org/docs/websites/website-about.html#templates">built-in templates</a>, each with a slightly different layout style. Some YAML options to play around with:</p>
 <ul>
@@ -1453,12 +1475,12 @@ Do <em>not</em> change the name of <code>index.qmd</code>
 </div>
 <div class="sourceCode cell-code" id="annotated-cell-2"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-2-1"><a href="#annotated-cell-2-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
 <span id="annotated-cell-2-2"><a href="#annotated-cell-2-2" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">"Samantha Csik"</span></span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="1" onclick="event.preventDefault();" href="">1</a><span id="annotated-cell-2-3" class="code-annotation-target"><a href="#annotated-cell-2-3" aria-hidden="true" tabindex="-1"></a>image<span class="sc">:</span> media<span class="sc">/</span>headshot.jpg</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="1" onclick="event.preventDefault();" href="">1</a><span id="annotated-cell-2-3" class="code-annotation-target"><a href="#annotated-cell-2-3" aria-hidden="true" tabindex="-1"></a>image<span class="sc">:</span> media<span class="sc">/</span>headshot.jpeg</span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="2" onclick="event.preventDefault();" href="">2</a><span id="annotated-cell-2-4" class="code-annotation-target"><a href="#annotated-cell-2-4" aria-hidden="true" tabindex="-1"></a>toc<span class="sc">:</span> false</span>
 <span id="annotated-cell-2-5"><a href="#annotated-cell-2-5" aria-hidden="true" tabindex="-1"></a>about<span class="sc">:</span> </span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="3" onclick="event.preventDefault();" href="">3</a><span id="annotated-cell-2-6" class="code-annotation-target"><a href="#annotated-cell-2-6" aria-hidden="true" tabindex="-1"></a>  template<span class="sc">:</span> trestles</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="3" onclick="event.preventDefault();" href="">3</a><span id="annotated-cell-2-6" class="code-annotation-target"><a href="#annotated-cell-2-6" aria-hidden="true" tabindex="-1"></a>  template<span class="sc">:</span> jolla</span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="4" onclick="event.preventDefault();" href="">4</a><span id="annotated-cell-2-7" class="code-annotation-target"><a href="#annotated-cell-2-7" aria-hidden="true" tabindex="-1"></a>  image<span class="sc">-</span>shape<span class="sc">:</span> round</span>
-<span id="annotated-cell-2-8"><a href="#annotated-cell-2-8" aria-hidden="true" tabindex="-1"></a>  image<span class="sc">-</span>width<span class="sc">:</span> 20em</span>
+<span id="annotated-cell-2-8"><a href="#annotated-cell-2-8" aria-hidden="true" tabindex="-1"></a>  image<span class="sc">-</span>width<span class="sc">:</span> <span class="dv">17</span>em</span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="5" onclick="event.preventDefault();" href="">5</a><span id="annotated-cell-2-9" class="code-annotation-target"><a href="#annotated-cell-2-9" aria-hidden="true" tabindex="-1"></a>  links<span class="sc">:</span></span>
 <span id="annotated-cell-2-10"><a href="#annotated-cell-2-10" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span> text<span class="sc">:</span> LinkedIn</span>
 <span id="annotated-cell-2-11"><a href="#annotated-cell-2-11" aria-hidden="true" tabindex="-1"></a>      href<span class="sc">:</span> https<span class="sc">:</span><span class="er">//</span>www.linkedin.com<span class="sc">/</span><span class="cf">in</span><span class="sc">/</span>samanthacsik<span class="sc">/</span></span>
@@ -1474,23 +1496,23 @@ Do <em>not</em> change the name of <code>index.qmd</code>
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-2" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-2" data-code-annotation="1" data-code-lines="3">add a photo by supplying a relative file path &amp; image name (here, <code>headshot.jpg</code> lives in a folder called <code>media/</code>)</span>
+<span data-code-cell="annotated-cell-2" data-code-lines="3" data-code-annotation="1">add a photo by supplying a relative file path &amp; image name (here, <code>headshot.jpeg</code> lives in a folder called <code>media/</code>)</span>
 </dd>
 <dt data-target-cell="annotated-cell-2" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-2" data-code-annotation="2" data-code-lines="4">remove “On this page” menu by setting <code>toc: false</code></span>
+<span data-code-cell="annotated-cell-2" data-code-lines="4" data-code-annotation="2">remove “On this page” menu by setting <code>toc: false</code></span>
 </dd>
 <dt data-target-cell="annotated-cell-2" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-cell="annotated-cell-2" data-code-annotation="3" data-code-lines="6">use a <a href="https://quarto.org/docs/websites/website-about.html#templates">pre-built template</a> (here, <code>trestles</code>) to update the layout of your landing page (or any page!)</span>
+<span data-code-cell="annotated-cell-2" data-code-lines="6" data-code-annotation="3">use a <a href="https://quarto.org/docs/websites/website-about.html#templates">pre-built template</a> (here, <code>jolla</code>) to update the layout of your landing page (or any page!)</span>
 </dd>
 <dt data-target-cell="annotated-cell-2" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-cell="annotated-cell-2" data-code-annotation="4" data-code-lines="7,8">set image shape (<code>round</code>, <code>rounded</code>, <code>rectangle</code>) &amp; size</span>
+<span data-code-cell="annotated-cell-2" data-code-lines="7,8" data-code-annotation="4">set image shape (<code>round</code>, <code>rounded</code>, <code>rectangle</code>) &amp; size</span>
 </dd>
 <dt data-target-cell="annotated-cell-2" data-target-annotation="5">5</dt>
 <dd>
-<span data-code-cell="annotated-cell-2" data-code-annotation="5" data-code-lines="9,10,11,12,13,14,15">add button links to your favorite social media pages (e.g.&nbsp;LinkedIn, GitHub, and even your email – Note the <code>mailto::</code> ahead of your email address, <code>mailto::youremail.com</code>)</span>
+<span data-code-cell="annotated-cell-2" data-code-lines="9,10,11,12,13,14,15" data-code-annotation="5">add button links to your favorite social media pages (e.g.&nbsp;LinkedIn, GitHub, and even your email – Note the <code>mailto::</code> ahead of your email address, <code>mailto::youremail.com</code>)</span>
 </dd>
 </dl>
 </div>
@@ -1502,8 +1524,8 @@ Do <em>not</em> change the name of <code>index.qmd</code>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/about-page.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">My Quarto website after updating my landing page with the built-in <code>trestles</code> template, adding an image, and linked buttons. (<strong>Note:</strong> using three dashes, <code>---</code>, creates a page divider, as seen between sections in the screenshot above.) Overall, a big improvement! However, our text is a bit squished in the center of the page – we’ll fix then in the next step.</figcaption>
+<p><img src="media/with-about-page.png" class="img-fluid figure-img" width="1552"></p>
+<figcaption>My Quarto website after updating my landing page with the built-in <code>jolla</code> template, adding an image, and linked buttons. Overall, a big improvement! However, our text is a bit squished in the center of the page – we’ll fix then in the next step.</figcaption>
 </figure>
 </div>
 </div>
@@ -1535,20 +1557,20 @@ Quarto supports creating completely custom page layouts – but I recommend stic
 </div>
 </div>
 </section>
-<section id="fa-arrow-right-titlean-arrow-pointing-to-the-right-modify-website-appearance-in-_quarto.yml" class="level3">
-<h3 class="anchored" data-anchor-id="fa-arrow-right-titlean-arrow-pointing-to-the-right-modify-website-appearance-in-_quarto.yml"><i class="fa-solid fa-arrow-right" title="An arrow pointing to the right" aria-hidden="true"></i> <strong>Modify website appearance in <code>_quarto.yml</code></strong></h3>
+<section id="modify-website-appearance-in-_quarto.yml" class="level3">
+<h3 class="anchored" data-anchor-id="modify-website-appearance-in-_quarto.yml"><i class="fa-solid fa-arrow-right" title="An arrow pointing to the right" aria-hidden="true"></i> <strong>Modify website appearance in <code>_quarto.yml</code></strong></h3>
 <p>The <code>_quarto.yml</code> file is a configuration file – any document rendered within the project directory will automatically inherit the metadata defined within this file. Some easy updates that make a big difference:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>_quarto.yml</strong></pre>
 </div>
-<div class="sourceCode" id="annotated-cell-3"><pre class="sourceCode yaml code-annotation-code code-with-copy code-annotated"><code class="sourceCode yaml"><span id="annotated-cell-3-1"><a href="#annotated-cell-3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<div class="sourceCode" id="annotated-cell-3" data-filename="_quarto.yml"><pre class="sourceCode yaml code-annotation-code code-with-copy code-annotated"><code class="sourceCode yaml"><span id="annotated-cell-3-1"><a href="#annotated-cell-3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
 <span id="annotated-cell-3-2"><a href="#annotated-cell-3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
 <span id="annotated-cell-3-3"><a href="#annotated-cell-3-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">output-dir</span><span class="kw">:</span><span class="at"> docs</span></span>
 <span id="annotated-cell-3-4"><a href="#annotated-cell-3-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="annotated-cell-3-5"><a href="#annotated-cell-3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
-<span id="annotated-cell-3-6"><a href="#annotated-cell-3-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="1" onclick="event.preventDefault();" href="">1</a><span id="annotated-cell-3-7" class="code-annotation-target"><a href="#annotated-cell-3-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Samantha Csik"</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="1" onclick="event.preventDefault();" href="">1</a><span id="annotated-cell-3-6" class="code-annotation-target"><a href="#annotated-cell-3-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Sam Csik"</span></span>
+<span id="annotated-cell-3-7"><a href="#annotated-cell-3-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
 <span id="annotated-cell-3-8"><a href="#annotated-cell-3-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">left</span><span class="kw">:</span></span>
 <span id="annotated-cell-3-9"><a href="#annotated-cell-3-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> index.qmd</span></span>
 <span id="annotated-cell-3-10"><a href="#annotated-cell-3-10" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Home</span></span>
@@ -1564,15 +1586,15 @@ Quarto supports creating completely custom page layouts – but I recommend stic
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-3" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-3" data-code-annotation="1" data-code-lines="7">Give your website a better title (e.g.&nbsp;your name)! This is the text that appears in the top left corner of your website (by default, it appears as your repo name) – when clicked, a user will be brought back to the landing page. <strong>Note:</strong> I removed my site-level <code>title</code> option and added it instead as a navbar <code>title</code>. Functionally, they appear the same way, but organizationally I think this makes more intuitive sense – if I wanted to add a <code>logo</code> instead of a <code>title</code>, I’d similarly need to place that option beneath <code>navbar</code>.</span>
+<span data-code-cell="annotated-cell-3" data-code-lines="6" data-code-annotation="1">Your website title, which appears in your browser tab and in the top left corner of your website’s navbar (by default) <!-- 2. This navbar title is the text that appears in the top left corner of your website (by default, this inherits your **website** title; see #1) -- when clicked, a user will be brought back to the landing page. You can alternative add a logo here (more on that in the next workshop!) --> <!-- **Note:** I removed my site-level `title` option and added it instead as a navbar `title`. Functionally, they appear the same way, but organizationally I think this makes more intuitive sense -- if I wanted to add a `logo` instead of a `title`, I'd similarly need to place that option beneath `navbar`. --></span>
 </dd>
 <dt data-target-cell="annotated-cell-3" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-3" data-code-annotation="2" data-code-lines="17">Note that the default <code>toc: true</code> here (in <code>_quarto.yml</code>) renders a navigation menu on <em>all</em> web pages by default (but we can update options on a page-by-page basis e.g.&nbsp;we set <code>toc: false</code> in our <code>index.qmd</code> YAML)</span>
+<span data-code-cell="annotated-cell-3" data-code-lines="17" data-code-annotation="2">Note that the default <code>toc: true</code> here (in <code>_quarto.yml</code>) renders a navigation menu on <em>all</em> web pages by default (but we can update options on a page-by-page basis e.g.&nbsp;we set <code>toc: false</code> in our <code>index.qmd</code> YAML)</span>
 </dd>
 <dt data-target-cell="annotated-cell-3" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-cell="annotated-cell-3" data-code-annotation="3" data-code-lines="18">Set your <code>page-layout</code> to <code>full</code> so that your page content takes up more of the page width</span>
+<span data-code-cell="annotated-cell-3" data-code-lines="18" data-code-annotation="3">Set your <code>page-layout</code> to <code>full</code> so that your page content takes up more of the page width</span>
 </dd>
 </dl>
 <div class="cell" data-layout-align="center">
@@ -1580,14 +1602,36 @@ Quarto supports creating completely custom page layouts – but I recommend stic
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/full-page.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">My website with a new title (see top left corner) and with <code>page-layout</code> set to <code>full</code>, so that content doesn’t appear as squished in the middle of the page.</figcaption>
+<figcaption>My website with a new title (see top left corner) and with <code>page-layout</code> set to <code>full</code>, so that content doesn’t appear as squished in the middle of the page.</figcaption>
 </figure>
 </div>
 </div>
 </div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+You aren’t required to have a <code>title</code> on <code>index.qmd</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Going for a more minimalist look? You can comment out (or remove) the <code>title</code> option from <code>index.qmd</code>. You’ll note that this also cleans up the title which appears in your browser tab.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="media/no-page-title.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1552"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="fa-arrow-right-titlean-arrow-pointing-to-the-right-add-additional-pages-to-your-website" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="fa-arrow-right-titlean-arrow-pointing-to-the-right-add-additional-pages-to-your-website"><i class="fa-solid fa-arrow-right" title="An arrow pointing to the right" aria-hidden="true"></i> <strong>Add additional pages to your website</strong></h3>
+<section id="add-additional-pages-to-your-website" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="add-additional-pages-to-your-website"><i class="fa-solid fa-arrow-right" title="An arrow pointing to the right" aria-hidden="true"></i> <strong>Add additional pages to your website</strong></h3>
 <p>In the default Quarto website skeleton, there are two items in the navbar that appear as “Home” and “About” (<strong>Note:</strong> don’t confuse the special-formatted “About Page” we created in <code>index.qmd</code> with the navbar page currently titled “About”). Those navbar tabs link to two <code>.html</code> files (<code>index.html</code> and <code>about.html</code>) and are automatically rendered when when you Build to <code>/docs</code>. Adding a new page to your website requires two steps:</p>
 <!-- (i.e. you don't need to knit them manually to create the html) -->
 <ol type="a">
@@ -1610,62 +1654,62 @@ Quarto supports creating completely custom page layouts – but I recommend stic
 <div class="code-with-filename-file">
 <pre><strong>_quarto.yml</strong></pre>
 </div>
-<div class="sourceCode" id="annotated-cell-5"><pre class="sourceCode yaml code-annotation-code code-with-copy code-annotated"><code class="sourceCode yaml"><span id="annotated-cell-5-1"><a href="#annotated-cell-5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<div class="sourceCode" id="annotated-cell-5" data-filename="_quarto.yml"><pre class="sourceCode yaml code-annotation-code code-with-copy code-annotated"><code class="sourceCode yaml"><span id="annotated-cell-5-1"><a href="#annotated-cell-5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
 <span id="annotated-cell-5-2"><a href="#annotated-cell-5-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
 <span id="annotated-cell-5-3"><a href="#annotated-cell-5-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">output-dir</span><span class="kw">:</span><span class="at"> docs</span></span>
 <span id="annotated-cell-5-4"><a href="#annotated-cell-5-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="annotated-cell-5-5"><a href="#annotated-cell-5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
-<span id="annotated-cell-5-6"><a href="#annotated-cell-5-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Samantha Csik"</span></span>
+<span id="annotated-cell-5-6"><a href="#annotated-cell-5-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Sam Csik"</span></span>
 <span id="annotated-cell-5-7"><a href="#annotated-cell-5-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
-<span id="annotated-cell-5-8"><a href="#annotated-cell-5-8" aria-hidden="true" tabindex="-1"></a><span class="at">   </span><span class="fu">background</span><span class="kw">:</span><span class="at"> primary</span></span>
-<span id="annotated-cell-5-9"><a href="#annotated-cell-5-9" aria-hidden="true" tabindex="-1"></a><span class="at">   </span><span class="fu">left</span><span class="kw">:</span></span>
-<span id="annotated-cell-5-10"><a href="#annotated-cell-5-10" aria-hidden="true" tabindex="-1"></a><span class="at">     </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> index.qmd</span></span>
-<span id="annotated-cell-5-11"><a href="#annotated-cell-5-11" aria-hidden="true" tabindex="-1"></a><span class="at">       </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Home</span></span>
-<span id="annotated-cell-5-12"><a href="#annotated-cell-5-12" aria-hidden="true" tabindex="-1"></a><span class="at">     </span><span class="kw">-</span><span class="at"> about.qmd</span></span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="1" onclick="event.preventDefault();" href="">1</a><span id="annotated-cell-5-13" class="code-annotation-target"><a href="#annotated-cell-5-13" aria-hidden="true" tabindex="-1"></a><span class="at">     </span><span class="kw">-</span><span class="at"> resources.qmd</span></span>
-<span id="annotated-cell-5-14"><a href="#annotated-cell-5-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="annotated-cell-5-15"><a href="#annotated-cell-5-15" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="annotated-cell-5-16"><a href="#annotated-cell-5-16" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="annotated-cell-5-17"><a href="#annotated-cell-5-17" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> cosmo</span></span>
-<span id="annotated-cell-5-18"><a href="#annotated-cell-5-18" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span>
-<span id="annotated-cell-5-19"><a href="#annotated-cell-5-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="annotated-cell-5-20"><a href="#annotated-cell-5-20" aria-hidden="true" tabindex="-1"></a><span class="fu">editor</span><span class="kw">:</span><span class="at"> visual</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="annotated-cell-5-8"><a href="#annotated-cell-5-8" aria-hidden="true" tabindex="-1"></a><span class="at">   </span><span class="fu">left</span><span class="kw">:</span></span>
+<span id="annotated-cell-5-9"><a href="#annotated-cell-5-9" aria-hidden="true" tabindex="-1"></a><span class="at">     </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> index.qmd</span></span>
+<span id="annotated-cell-5-10"><a href="#annotated-cell-5-10" aria-hidden="true" tabindex="-1"></a><span class="at">       </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Home</span></span>
+<span id="annotated-cell-5-11"><a href="#annotated-cell-5-11" aria-hidden="true" tabindex="-1"></a><span class="at">     </span><span class="kw">-</span><span class="at"> about.qmd</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="1" onclick="event.preventDefault();" href="">1</a><span id="annotated-cell-5-12" class="code-annotation-target"><a href="#annotated-cell-5-12" aria-hidden="true" tabindex="-1"></a><span class="at">     </span><span class="kw">-</span><span class="at"> resources.qmd</span></span>
+<span id="annotated-cell-5-13"><a href="#annotated-cell-5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-5-14"><a href="#annotated-cell-5-14" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="annotated-cell-5-15"><a href="#annotated-cell-5-15" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="annotated-cell-5-16"><a href="#annotated-cell-5-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> cosmo</span></span>
+<span id="annotated-cell-5-17"><a href="#annotated-cell-5-17" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-5" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-5" data-code-annotation="1" data-code-lines="13">A newly-added navbar page. <strong>Note:</strong> The page name, as it appears in the navbar of your website, will be the same as whatever is listed in the <code>title</code> field of that file’s YAML. For example, I have set <code>title: "All my favorite resources!"</code> in the YAML of <code>resources.qmd</code> – this is how it will appear in my website’s navbar. If you’d like to set the navbar name as something other than the page’s title, use the <code>href</code> and <code>text</code> options together (e.g.&nbsp;see how <code>index.qmd</code> is rendered as <code>Home</code> in my website’s navbar).</span>
+<span data-code-cell="annotated-cell-5" data-code-lines="12" data-code-annotation="1">A newly-added navbar page. <strong>Note:</strong> The page name, as it appears in the navbar of your website, will be the same as whatever is listed in the <code>title</code> field of that file’s YAML. For example, I have set <code>title: "All my favorite resources!"</code> in the YAML of <code>resources.qmd</code> – this is how it will appear in my website’s navbar. If you’d like to set the navbar name as something other than the page’s title, use the <code>href</code> and <code>text</code> options together (e.g.&nbsp;see how <code>index.qmd</code> is rendered as <code>Home</code> in my website’s navbar).</span>
 </dd>
 </dl>
-<div class="cell column-page quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div>
+
+</div>
+<div class="cell column-page quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/resources-page.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">A newly added navbar page, titled “All of my favorite resources!”</figcaption>
+<figcaption>A newly added navbar page, titled “All of my favorite resources!”</figcaption>
 </figure>
 </div>
 </div>
-<div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/resources-page-renamed.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">A newly added navbar page, with an alternate navbar title (set using the <code>href</code> and <code>text</code> options together in <code>_quarto.yml</code>)</figcaption>
+<figcaption>A newly added navbar page, with an alternate navbar title (set using the <code>href</code> and <code>text</code> options together in <code>_quarto.yml</code>)</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="fa-arrow-right-titlean-arrow-pointing-to-the-right-change-the-theme" class="level3">
-<h3 class="anchored" data-anchor-id="fa-arrow-right-titlean-arrow-pointing-to-the-right-change-the-theme"><i class="fa-solid fa-arrow-right" title="An arrow pointing to the right" aria-hidden="true"></i> <strong>Change the theme</strong></h3>
+<section id="change-the-theme" class="level3">
+<h3 class="anchored" data-anchor-id="change-the-theme"><i class="fa-solid fa-arrow-right" title="An arrow pointing to the right" aria-hidden="true"></i> <strong>Change the theme</strong></h3>
 <p>Update the appearance of your site by choosing from one of the 25 predefined <a href="https://bootswatch.com/">Bootswatch themes</a>. By default, Quarto sites are built using the <a href="https://bootswatch.com/cosmo/">cosmo</a> theme. Supply just one theme name to the <code>theme</code> option in your <code>_quarto.qmd</code> file:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>_quarto.yml</strong></pre>
 </div>
-<div class="sourceCode" id="cb24"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ~ additional metadata excluded for brevity ~</span></span>
+<div class="sourceCode" id="cb24" data-filename="_quarto.yml"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ~ additional metadata excluded for brevity ~</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="co"># supplying just one theme ("minty")</span></span>
 <span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
@@ -1678,7 +1722,7 @@ Quarto supports creating completely custom page layouts – but I recommend stic
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/light.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">With theme, ‘minty’, a prebuilt <a href="https://bootswatch.com/">Bootswatch theme</a></figcaption>
+<figcaption>With theme, ‘minty’, a prebuilt <a href="https://bootswatch.com/">Bootswatch theme</a></figcaption>
 </figure>
 </div>
 </div>
@@ -1688,7 +1732,7 @@ Quarto supports creating completely custom page layouts – but I recommend stic
 <div class="code-with-filename-file">
 <pre><strong>_quarto.yml</strong></pre>
 </div>
-<div class="sourceCode" id="cb25"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ~ additional metadata excluded for brevity ~</span></span>
+<div class="sourceCode" id="cb25" data-filename="_quarto.yml"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ~ additional metadata excluded for brevity ~</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="co"># supplying a light ("minty") and dark ("slate") theme to toggle between</span></span>
 <span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
@@ -1703,7 +1747,7 @@ Quarto supports creating completely custom page layouts – but I recommend stic
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/dark.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">With light/dark theme options applied; here, the <code>dark</code> theme, which is set to the prebuilt <a href="https://bootswatch.com/">Bootswatch theme</a> theme, <code>slate</code>, is toggled on.</figcaption>
+<figcaption>With light/dark theme options applied; here, the <code>dark</code> theme, which is set to the prebuilt <a href="https://bootswatch.com/">Bootswatch theme</a> theme, <code>slate</code>, is toggled on.</figcaption>
 </figure>
 </div>
 </div>
@@ -1787,18 +1831,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1830,11 +1863,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1844,8 +1916,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1857,7 +1938,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1901,6 +2105,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1926,6 +2131,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1986,6 +2217,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

@@ -1,5 +1,12 @@
 ---
-format: html
+format: 
+  html:
+    theme: meds-website-styles.scss
+    mainfont: Nunito
+    toc: true
+    toc-location: left
+    toc-depth: 2
+    smooth-scroll: true
 ---
 
 ## {{< fa people-carry-box title="Two people lift a large box together" >}} Acknowledgements {#acknowledgements}

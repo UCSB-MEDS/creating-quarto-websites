@@ -31,7 +31,6 @@ format:
 {{< include /sections/3-create-scaffolding.qmd >}}
 
 ::: {.panel-tabset}
-
 ## **{{< fa brands r-project title="R programming language icon" >}} Using the RStudio IDE**
 
 {{< include /sections/5-RStudio.qmd >}}
@@ -39,7 +38,6 @@ format:
 ## **{{< fa terminal title="terminal symbol, |>" >}} Through the command line**
 
 {{< include /sections/4-command-line.qmd >}}
-
 :::
 
 {{< include /sections/6-publish-with-github-pages.qmd >}}

@@ -1,5 +1,12 @@
 ---
-format: html
+format: 
+  html:
+    theme: meds-website-styles.scss
+    mainfont: Nunito
+    toc: true
+    toc-location: left
+    toc-depth: 2
+    smooth-scroll: true
 ---
 
 ## {{< fa brands github title="GitHub Octocat" >}} Build & publish your site with GitHub Pages {#github-pages}
@@ -77,7 +84,7 @@ Clicking **Render Website** in the **Build tab** (or running `quarto render` in 
 #| fig-subcap: 
 #|  - "Your website's URL will appear at the top of the page once you've configured GitHub pages to host your Quarto site"
 #|  - "A hosted Quarto website! Now time to customize and add content."
-knitr::include_graphics("media/gh_pages.png")
+knitr::include_graphics("media/gh-pages.png")
 knitr::include_graphics("media/rendered_site.png")
 ```
 
@@ -88,6 +95,6 @@ See deployment status, time of each deployment, and how long it took to deploy e
 
 ```{r}
 #| echo: false
-knitr::include_graphics("media/actions_tab.png")
+knitr::include_graphics("media/actions-tab.png")
 ```
 :::
