@@ -136,7 +136,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">August 27, 2024</p>
+      <p class="date-modified">August 28, 2024</p>
     </div>
   </div>
     
@@ -1500,7 +1500,7 @@ Do <em>not</em> change the name of <code>index.qmd</code>
 </dd>
 <dt data-target-cell="annotated-cell-2" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-2" data-code-lines="4" data-code-annotation="2">remove “On this page” menu by setting <code>toc: false</code></span>
+<span data-code-cell="annotated-cell-2" data-code-lines="4" data-code-annotation="2">if you have a template / content with header text, you can remove “On this page” menu by setting <code>toc: false</code></span>
 </dd>
 <dt data-target-cell="annotated-cell-2" data-target-annotation="3">3</dt>
 <dd>
@@ -1512,7 +1512,7 @@ Do <em>not</em> change the name of <code>index.qmd</code>
 </dd>
 <dt data-target-cell="annotated-cell-2" data-target-annotation="5">5</dt>
 <dd>
-<span data-code-cell="annotated-cell-2" data-code-lines="9,10,11,12,13,14,15" data-code-annotation="5">add button links to your favorite social media pages (e.g.&nbsp;LinkedIn, GitHub, and even your email – Note the <code>mailto::</code> ahead of your email address, <code>mailto::youremail.com</code>)</span>
+<span data-code-cell="annotated-cell-2" data-code-lines="9,10,11,12,13,14,15" data-code-annotation="5">add button links to your favorite social media pages (e.g.&nbsp;LinkedIn, GitHub, and even your email – Note the <code>mailto::</code> that must precede of your email address, <code>mailto::youremail.com</code>)</span>
 </dd>
 </dl>
 </div>
@@ -1542,7 +1542,7 @@ Quarto supports creating completely custom page layouts – but I recommend stic
 </div>
 <div id="callout-35" class="callout-35-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Quarto’s built-in <a href="https://quarto.org/docs/websites/website-about.html#templates">About Page templates</a> are great for a couple reasons, primarily:</p>
+<p>Quarto’s built-in <a href="https://quarto.org/docs/websites/website-about.html#templates">templates</a> are great for a couple reasons, primarily:</p>
 <ol type="1">
 <li>they provide a quick and easy way to create visually-pleasing web pages (particularly website landing pages)</li>
 <li>they take care of a lot of the finicky “under-the-hood” styling (e.g.&nbsp;creating “responsive” page elements i.e.&nbsp;automatically rearranging content to fit changing viewport sizes) that would otherwise require a fair bit of <a href="https://www.w3schools.com/css/">CSS</a> knowledge</li>
@@ -1590,7 +1590,7 @@ Quarto supports creating completely custom page layouts – but I recommend stic
 </dd>
 <dt data-target-cell="annotated-cell-3" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-3" data-code-lines="17" data-code-annotation="2">Note that the default <code>toc: true</code> here (in <code>_quarto.yml</code>) renders a navigation menu on <em>all</em> web pages by default (but we can update options on a page-by-page basis e.g.&nbsp;we set <code>toc: false</code> in our <code>index.qmd</code> YAML)</span>
+<span data-code-cell="annotated-cell-3" data-code-lines="17" data-code-annotation="2">Note that the default <code>toc: true</code> here (in <code>_quarto.yml</code>) renders a navigation menu on <em>all</em> web pages by default (but you can override options on a page-by-page basis)</span>
 </dd>
 <dt data-target-cell="annotated-cell-3" data-target-annotation="3">3</dt>
 <dd>
@@ -1617,7 +1617,7 @@ You aren’t required to have a <code>title</code> on <code>index.qmd</code>
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Going for a more minimalist look? You can comment out (or remove) the <code>title</code> option from <code>index.qmd</code>. You’ll note that this also cleans up the title which appears in your browser tab.</p>
+<p>Going for a more minimalist look? You can comment out (or remove) the <code>title</code> option from <code>index.qmd</code>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -1769,18 +1769,21 @@ One last reminder to “Render Website” before pushing changes that you want t
 </section>
 <section id="looking-forward" class="level2">
 <h2 class="anchored" data-anchor-id="looking-forward"><i class="fa-solid fa-forward" title="Fast forward symbol" aria-hidden="true"></i> Looking forward</h2>
-<p>You should now have a basic version of your website up and running 🎉 During Fall quarter, we’ll learn how to:</p>
+<p>You should now have a basic version of your website up and running 🎉 in the next sessions, we’ll learn how to:</p>
 <p>a. <a href="https://ucsb-meds.github.io/customizing-quarto-websites/#/title-slide">customize the appearance of our site using Sass &amp; CSS</a></p>
 <p>b. <a href="https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/">add a blog and blog posts to our websites</a></p>
 <p>c. continue developing your online “brand”</p>
-<p>In the meantime, explore some <a href="https://ucsb-meds.github.io/student_websites.html">current student &amp; alumni websites</a> (<strong>Note:</strong> MEDS class of 2022 used the <a href="https://rstudio.github.io/distill/website.html"><code>{distill}</code></a> package to build their websites) for inspiration, or dig into the <a href="https://quarto.org/docs/websites/">Quarto Website documentation</a> if you’re hoping to get started now on further customization.</p>
+<!-- In the meantime, explore some [current student & alumni websites](https://ucsb-meds.github.io/student_websites.html) (**Note:** MEDS class of 2022 used the [`{distill}`](https://rstudio.github.io/distill/website.html) package to build their websites) for inspiration, or dig into the [Quarto Website documentation](https://quarto.org/docs/websites/) if you're hoping to get started now on further customization. -->
 </section>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources"><i class="fa-solid fa-star" title="Star" aria-hidden="true"></i> Additional resources to get you stoked about Quarto</h2>
 <!-- -   We don't talk about Quarto, by Alison Hill \| [`<svg aria-label="Blog" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5A5A5A;overflow:visible;position:relative;"><title>Blog</title><path d="M192 32c0 17.7 14.3 32 32 32c123.7 0 224 100.3 224 224c0 17.7 14.3 32 32 32s32-14.3 32-32C512 128.9 383.1 0 224 0c-17.7 0-32 14.3-32 32zm0 96c0 17.7 14.3 32 32 32c70.7 0 128 57.3 128 128c0 17.7 14.3 32 32 32s32-14.3 32-32c0-106-86-192-192-192c-17.7 0-32 14.3-32 32zM96 144c0-26.5-21.5-48-48-48S0 117.5 0 144V368c0 79.5 64.5 144 144 144s144-64.5 144-144s-64.5-144-144-144H128v96h16c26.5 0 48 21.5 48 48s-21.5 48-48 48s-48-21.5-48-48V144z"/></svg>`{=html} blog post](https://www.apreshill.com/blog/2022-04-we-dont-talk-about-quarto/) -->
 <ul>
+<li><p>The <a href="https://quarto.org/docs/websites/">Quarto Website documentation</a> is <em>amazing</em> – definitely check it out</p></li>
 <li><p>Awesome Quarto (GitHub repository of curated Quarto resources), by Mickaël Canouil | <a href="https://github.com/mcanouil/awesome-quarto"><i class="fa-brands fa-github" title="GitHub Octocat" aria-hidden="true"></i> GitHub repo</a></p></li>
-<li><p>Reproducible Authoring with Quarto, by Mine Çetinkaya-Rundel | <a href="https://mine-cetinkaya-rundel.github.io/2022-repro-toronto/#/title-slide"><i class="fa-solid fa-desktop" title="Desktop computer" aria-hidden="true"></i> slides</a> | <a href="https://www.youtube.com/watch?v=6p4vOKS6Xls"><i class="fa-solid fa-video" title="video camera" aria-hidden="true"></i> recording</a></p></li>
+</ul>
+<!-- -   Reproducible Authoring with Quarto, by Mine Çetinkaya-Rundel \| [  slides](https://mine-cetinkaya-rundel.github.io/2022-repro-toronto/#/title-slide) \| [ recording](https://www.youtube.com/watch?v=6p4vOKS6Xls) -->
+<ul>
 <li><p>Hello Quarto! A Chat with NASA Openscapes, Co-Hosted with R-Ladies Santa Barbara | <a href="https://www.openscapes.org/blog/2022/06/22/hello-quarto/"><i class="fa-solid fa-blog" title="Blog symbol" aria-hidden="true"></i> blog post</a> | <a href="https://www.youtube.com/watch?v=azVAl343CIU"><i class="fa-solid fa-video" title="video camera" aria-hidden="true"></i> recording</a></p></li>
 <li><p>rstudio::conf 2022 keynote, Hello Quarto, by Julie Lowndes and Mine Çetinkaya-Rundel | <a href="https://www.rstudio.com/conference/2022/keynotes/collaborate-with-quarto/"><i class="fa-solid fa-video" title="video camera" aria-hidden="true"></i> recording</a></p></li>
 </ul>
