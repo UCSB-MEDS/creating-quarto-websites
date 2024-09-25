@@ -118,7 +118,7 @@ quarto preview
 #| echo: false
 #| fig-align: "center"
 #| out-width: "100%"
-knitr::include_graphics("media/preview.png")
+knitr::include_graphics("media/preview-cli.png")
 ```
 
 ::: {.callout-tip}
@@ -178,11 +178,11 @@ nothing added to commit but untracked files present (use "git add" to track)
 ```
 
 ::: {.callout-note collapse=true}
-## `git status` provides lots of helpful information about the current state of your your working directory and staging area
+## `git status` provides lots of helpful information about the current state of your working directory and staging area
 I use this command *often* when working on the command line to double check that I'm actually where I think I am, and to see tracked files and untracked or changed files. It's a good habit to run `git status` after switching branches or before / after adding files to commit.
 :::
 
-7.  **If your default branch is named `master`, update the name to `main`.** If your default branch (you should only have one branch so far, the default branch) is already named `main`, you can head straight to step 8. Otherwise, choose your workflow below based on your Git version (check your version by running `git --version` in the command line):
+7.  **If your default branch is named `master`, update the name to `main`.** If your default branch (you should only have one branch so far, which is the default branch) is already named `main`, you can head straight to step 8. Otherwise, choose your workflow below based on your Git version (check your version by running `git --version` in the command line):
 
 ::: {.panel-tabset}
 ## **{{< fa brands git-alt title="GitHub branch symbol" >}} For Git version 2.28 or later**
@@ -238,7 +238,7 @@ Use the `git status` command again to see if your files have been successfully a
 git commit -m "initial commit"
 ```
 
-9.  **Create an empty remote repository on GitHub.** At this point, we've created a local git repository that contains the basic files needed to build our Quarto website. Now, we need to create a "remote" repository (i.e. a version of your project that is hosted on the internet) on GitHub. There are multiple ways to do this, but we'll cover the workflow that makes most intuitive sense to me. **Login to [GitHub](https://github.com/), [create a new repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository), and give it the same name as your local git repository / R Project (e.g. `username.github.io`).**
+9.  **Create an empty remote repository on GitHub.** At this point, we've created a local git repository that contains the basic files needed to build our Quarto website. We've also created one commit (i.e. taken a "snapshot" of our work) in that local git respository. Now, we need to create a "remote" repository (i.e. a version of your project that is hosted on the internet) on GitHub. There are multiple ways to do this, but we'll cover the workflow that makes most intuitive sense to me. **Login to [GitHub](https://github.com/), [create a new (public) repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository), and give it the same name as your local git repository / R Project (e.g. `username.github.io`).**
 
 ::: {.callout-important}
 ## Do not initialize your remote repository (on GitHub) with a `README.md`, license, or `.gitignore` file!

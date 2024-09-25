@@ -7,5 +7,5 @@ format: html
 
 The racist “master” terminology for git branches motivates us to update our default branch to “main” instead.
 
-There is a push across platforms and software to update this historical default branch name from `master` to `main`. GitHub has already done so –  creating a remote repository *first* results in a default branch named `main`. Depending on your version of Git and / or your configuration settings, however, you may need to set update the name manually when creating a local git repository first (as we’re doing here).
+There is a push across platforms and software to update this historical default branch name from `master` to `main`. GitHub has already done so –  creating a remote repository *first* results in a default branch named `main`. Depending on your version of Git and / or your configuration settings, however, you may need to update the name manually when creating a local git repository first (as we’re doing here).
 :::

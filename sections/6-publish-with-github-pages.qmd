@@ -11,7 +11,7 @@ format:
 
 ## {{< fa brands github title="GitHub Octocat" >}} Build & publish your site with GitHub Pages {#github-pages}
 
-There are a [lots of options to publish your website](https://quarto.org/docs/publishing/). We'll use the [GitHub Pages option](https://quarto.org/docs/publishing/github-pages.html), which allows you to publish a website from any GitHub repository. To do so, there are a few configuration steps:
+There are a [lots of options to publish your website](https://quarto.org/docs/publishing/). We'll use the [GitHub Pages option](https://quarto.org/docs/publishing/github-pages.html), which allows you to publish a website from any GitHub repository (for free!). To do so, there are a few configuration steps:
 
 1.  **Create a file named `.nojekyll` in your repository's root directory (e.g. `mysite/`)**, which is required to disable some processing of HTML files that GitHub does by default. There are two ways you can do this: 
 
@@ -50,7 +50,11 @@ The `output-dir` is the directory (i.e. folder) where your rendered `.html` (and
 
 ::: {.callout-tip}
 ## You can delete `_site/` if it exists and if you're publishing with GitHub Pages 
-If you previewed or built your site *before* setting `output-dir` to `docs` in `_quarto.yml`, you'll notice a `_site/` directory inside your repository -- this is the default output directory name. Because GitHub Pages will expect a `docs/` folder to deploy from, you can delete `_site/` altogether (and push your deletion, if you've already committed / pushed `_site/` to GitHub).
+If you previewed or built your site *before* setting `output-dir` to `docs` in `_quarto.yml`, you'll notice a `_site/` directory inside your repository -- this is the default output directory name. Because GitHub Pages will expect a `docs/` folder to deploy from, you can delete `_site/` altogether (and push your deletion, if you've already committed / pushed `_site/` to GitHub). A couple options for deleting files / directories:
+
+1. **Using RStudio GUI buttons:** from the Files pane, check the box next to `_site` > click the **Delete** button
+
+2. **Using the command line:** from the RStudio Terminal (or other command line interface), type `git rm -r _site` (the `-r` flag is used to "recursively remove" the folder and all it's contents, including any subfolders and files within them)
 :::
 
 3.  **Render your website.** Click on the **Build** tab (top left pane in RStudio if you have the default layout), then **Render Website** (alternatively, you can run `quarto render` in the Terminal). You should see your minimal, albeit functional, soon-to-be website appear in the **Viewer** tab. You can click on the <img src="media/view_in_browser.png" alt="A browser window overlaid by an arrow pointing up and angled to the right." style="display: inline-block; margin: 0; position: relative; top: 0px; width:25px;height:20px;"/> button to open your file in your web browser. **Note:** your website is currently being hosted by your local machine, not at a searchable URL. We'll get there soon though!

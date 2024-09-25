@@ -10,7 +10,7 @@ format: html
 To follow along, you'll need:
 
 -   [R](https://cloud.r-project.org/) & [RStudio](https://posit.co/download/rstudio-desktop/#download) installed 
--   [Quarto](https://quarto.org/docs/get-started/) installed -- **Quarto is now included with RStudio v2022.07.1+ i.e. no need for a separate download/install if you have the latest version of RStudio**
+-   [Quarto](https://quarto.org/docs/get-started/) installed -- **Quarto is now included with RStudio v2022.07.1+ i.e. no need for a separate download / install if you have the latest version of RStudio**
 -   A [GitHub](https://github.com/) account
 -   [Git](https://git-scm.com/) installed / configured
 

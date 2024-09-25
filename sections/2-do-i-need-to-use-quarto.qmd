@@ -19,7 +19,7 @@ Nope! There are a number of R-based tools that make building websites and blogs 
 knitr::include_graphics("media/blogdown_distill.png")
 ```
 
-Alternatively, you can skip R altogether and build really beautiful sites using HTML templates (check out [this tutorial](https://rpubs.com/alatleephillips/science-website-tutorial) by NCEAS' Science Communication and Policy Officer, [Alex Phillips](https://www.alexandraatleephillips.com/)) or a variety of [static site generators](https://jamstack.org/generators/?utm_source=blog&utm_medium=about-ssgs-pnh&utm_campaign=devex) (e.g. [Hugo](https://gohugo.io/), [Jekyll](https://jekyllrb.com/)).
+Alternatively, you can skip R altogether and build really beautiful sites using HTML templates (check out [this tutorial](https://rpubs.com/alatleephillips/science-website-tutorial) by past NCEAS Science Communication and Policy Officer / current Bren Teaching Faculty, [Alex Phillips](https://www.alexandraatleephillips.com/)) or a variety of [static site generators](https://jamstack.org/generators/?utm_source=blog&utm_medium=about-ssgs-pnh&utm_campaign=devex) (e.g. [Hugo](https://gohugo.io/), [Jekyll](https://jekyllrb.com/)).
 
 That said, Quarto has the data science community abuzz -- it's versatile, user-friendly, and looks pretty great out-of-the-box (while still being customizable), and there's an ever-growing number of excellent resources (see [Mickaël Canouil](https://github.com/mcanouil)'s [awesome-quarto](https://github.com/mcanouil/awesome-quarto) as a starting point) to help you on your own Quarto journey.
 

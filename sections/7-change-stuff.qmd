@@ -37,6 +37,12 @@ This is the default / expected name given to website landing / home pages. If yo
 knitr::include_graphics("media/no-about-page.png")
 ```
 
+::: {.callout-tip}
+## Remember to spin up a preview so that you can see your changes in real time!
+
+Run `quarto preview` in your Terminal, which will open your preview in a browser window. Make changes, save them, and watch your preview update!
+:::
+
 ### {{< fa arrow-right title="An arrow pointing to the right" >}} **Arrange your landing page (`index.qmd`) using a [pre-build template](https://quarto.org/docs/websites/website-about.html)**
 
 <!-- ### {{< fa arrow-right title="An arrow pointing to the right" >}} **Turn your landing page (`index.qmd`) into an "[About Page](https://quarto.org/docs/websites/website-about.html)" with a photo** -->
@@ -97,12 +103,12 @@ Quarto's built-in [templates](https://quarto.org/docs/websites/website-about.htm
 1. they provide a quick and easy way to create visually-pleasing web pages (particularly website landing pages)
 2. they take care of a lot of the finicky "under-the-hood" styling (e.g. creating "responsive" page elements i.e. automatically rearranging content to fit changing viewport sizes) that would otherwise require a fair bit of [CSS](https://www.w3schools.com/css/) knowledge
 
-As you get more comfortable with the Quarto framework and CSS for styling webpages (we'll learn more about this in a later workshop!), you may decide to build a completely custom webpage layout. The following Quarto websites leverage custom layouts to arrange contents on individual webpages:
+As you get more comfortable with the Quarto framework and CSS for styling web pages (we'll learn more about this in a later workshop!), you may decide to build a completely custom web page layout. The following Quarto websites leverage custom layouts to arrange contents on individual web pages:
 
 - [Openscapes](https://openscapes.org/) ([{{< fa brands github >}} source code](https://github.com/Openscapes/website-new))
 - [EDS 240: Data Visualization & Communication](https://samanthacsik.github.io/EDS-240-data-viz/) ([{{< fa brands github >}} source code](https://github.com/samanthacsik/EDS-240-data-viz))
 
-I briefly touch on using [Bootstrap CSS Grid](https://quarto.org/docs/output-formats/page-layout.html#css-grid) to build these responsive custom webpage layouts in this [blog post](https://samanthacsik.github.io/posts/2023-08-01-openscapes-website/#greatest-victory-responsive-web-pages). Check out the [Quarto documentation](https://quarto.org/docs/output-formats/page-layout.html) to learn more. 
+I briefly touch on using [Bootstrap CSS Grid](https://quarto.org/docs/output-formats/page-layout.html#css-grid) to build these responsive custom web page layouts in this [blog post](https://samanthacsik.github.io/posts/2023-08-01-openscapes-website/#greatest-victory-responsive-web-pages). Check out the [Quarto documentation](https://quarto.org/docs/output-formats/page-layout.html) to learn more. 
 :::
 
 ### {{< fa arrow-right title="An arrow pointing to the right" >}} **Modify website appearance in `_quarto.yml`** 
@@ -129,7 +135,7 @@ format:
     toc: true # <2>
     page-layout: full # <3>
 ```
-1. Your website title, which appears in your browser tab and in the top left corner of your website's navbar (by default)
+1. Your website title, which appears in your browser tab and in the top left corner of your website's navbar (by default, it's set to your repository name, which isn't so pretty -- change this!)
 <!-- 2. This navbar title is the text that appears in the top left corner of your website (by default, this inherits your **website** title; see #1) -- when clicked, a user will be brought back to the landing page. You can alternative add a logo here (more on that in the next workshop!) -->
 <!-- **Note:** I removed my site-level `title` option and added it instead as a navbar `title`. Functionally, they appear the same way, but organizationally I think this makes more intuitive sense -- if I wanted to add a `logo` instead of a `title`, I'd similarly need to place that option beneath `navbar`. -->
 2. Note that the default `toc: true` here (in `_quarto.yml`) renders a navigation menu on *all* web pages by default (but you can override options on a page-by-page basis)
@@ -242,7 +248,7 @@ format:
 ```{r}
 #| echo: false
 #| fig-align: center
-#| fig-cap: "With light/dark theme options applied; here, the `dark` theme, which is set to the prebuilt [Bootswatch theme](https://bootswatch.com/) theme, `slate`, is toggled on."
+#| fig-cap: "With light / dark theme options applied; here, the `dark` theme, which is set to the prebuilt [Bootswatch theme](https://bootswatch.com/) theme, `slate`, is toggled on."
 knitr::include_graphics("media/dark.png")
 ```
 

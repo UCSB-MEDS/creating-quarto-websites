@@ -17,7 +17,7 @@ a\. [customize the appearance of our site using Sass & CSS](https://ucsb-meds.gi
 
 b\. [add a blog and blog posts to our websites](https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/) 
 
-c\. continue developing your online "brand"
+c\. [begin developing your "personal brand"](https://ucsb-meds.github.io/EDS-296-DS-portfolios/course-materials/week2-customizing-websites.html#pre-class-prep)
 
 <!-- In the meantime, explore some [current student & alumni websites](https://ucsb-meds.github.io/student_websites.html) (**Note:** MEDS class of 2022 used the [`{distill}`](https://rstudio.github.io/distill/website.html) package to build their websites) for inspiration, or dig into the [Quarto Website documentation](https://quarto.org/docs/websites/) if you're hoping to get started now on further customization. -->
 
