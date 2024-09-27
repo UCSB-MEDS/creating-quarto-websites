@@ -136,7 +136,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">September 25, 2024</p>
+      <p class="date-modified">September 27, 2024</p>
     </div>
   </div>
     
@@ -571,10 +571,34 @@ What is a git repository?
 </div>
 </div>
 <ol start="5" type="1">
-<li><strong>Create an upstream remote repository (i.e.&nbsp;GitHub repo) using <code>usethis::use_github()</code>.</strong> Running <code>usethis::use_github()</code> in the Console will open up your web browser to your new remote repository on GitHub – it should already have the same name as your local git repo / R project.</li>
+<li><p><strong>Check the name of your default branch (the only branch you should have at the moment)</strong> – that is, the branch that all changes eventually get merged back into (if you’re building a website, this branch is typically the one you’ll want to deploy). There are multiple ways to check this – here are two easy options:</p>
+<ol type="a">
+<li><p>Open RStudio’s Terminal window (next to the Console) and run either <code>git branch</code> (this prints all local branches and highlights the one that you’re currently on) or <code>git status</code> (the first printed line should say <code>On branch &lt;branch_name&gt;</code>).</p></li>
+<li><p>Click on the <strong>Git</strong> tab in the top right pane of RStudio. Next to the <img src="media/branch.png" class="img-fluid" style="display: inline-block; margin: 0; position: relative; top: 0px; width:20px;height:18px;" alt="A white diamond with two purple squares, one directly above and one directly to the right, connected to the diamond by a line."> symbol, you should see a dropdown menu that displays the name of your current branch.</p></li>
+</ol></li>
+<li><p><strong>If your current branch is named <code>master</code>, update the name to <code>main</code>.</strong> <em>(If your branch is named </em><code>main</code><em>, you’re good to go! You can skip this step.)</em> In the console, run <code>usethis::git_default_branch_rename(from = "master", to = "main")</code> to update your default branch name. Confirm that it updated by running <code>git status</code> again in your Terminal – the first printed line should now read, <code>On branch main</code>. <!-- and b. on your remote by refreshing your GitHub repo (in your web browser) -- you should see the updated default branch name at the top of your repo --></p></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The racist “master” terminology for git branches motivates us to update our default branch to “main” instead
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>There is a push across platforms and software to update this historical default branch name from <code>master</code> to <code>main</code>. GitHub has already done so – creating a remote repository <em>first</em> results in a default branch named <code>main</code>. Depending on your version of Git and / or your configuration settings, however, you may need to update the name manually when creating a local git repository first (as we’re doing here).</p>
+</div>
+</div>
+</div>
+<ol start="7" type="1">
+<li><strong>Create an upstream remote repository (i.e.&nbsp;GitHub repo) using <code>usethis::use_github()</code>.</strong> Running <code>usethis::use_github()</code> in the Console will open up your web browser to your new remote repository on GitHub – it should already have the same name as your local git repo / R project.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -583,7 +607,7 @@ Understanding the difference between Git vs.&nbsp;Github
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><a href="https://git-scm.com/"><em>Git</em></a> is a <strong>version control software</strong> designed to manage the versioning and tracking of source code files and project history. It <strong>operates locally</strong> on your computer, allowing you to create repositories and track changes. It works directly with files on your computer, and is primarily used through a command line interface (e.g.&nbsp;Terminal, Git Bash). Some GUIs (Graphical User Interfaces), like RStudio, provide user-friendly buttons to execute git commands as well.</p>
 <p><a href="https://github.com/"><em>GitHub</em></a> is a <strong>cloud-based</strong> hosting service that allows you to <strong>manage Git repositories</strong> – as Jenny Bryan describes in her book <a href="https://happygitwithr.com/index.html">Happy Git and GitHub for the useR</a>, hosting services like GitHub <em>“provide a home for your Git-based projects on the internet.”</em> GitHub provides us with the tools for storing, managing, and collaborating on git repositories. It also offers additional features on top of Git, like issue tracking, project management tools, code review, pull requests, and more.</p>
@@ -610,31 +634,6 @@ Understanding the difference between Git vs.&nbsp;Github
 <p><img src="media/mysite-remote.png" class="img-fluid figure-img" width="1552"></p>
 <figcaption>After running <code>usethis::use_github()</code> your browser window should open up to your new GitHub repository and look similar to the browser above.</figcaption>
 </figure>
-</div>
-</div>
-</div>
-<ol start="6" type="1">
-<li><p><strong>Check the name of your default branch (the only branch you should have at the moment)</strong> – that is, the branch that all changes eventually get merged back into (if you’re building a website, this branch is typically the one you’ll want to deploy). There are multiple ways to check this – here are two easy options:</p>
-<ol type="a">
-<li><p>Open RStudio’s Terminal window (next to the Console) and run either <code>git branch</code> (this prints all local branches and highlights the one that you’re currently on) or <code>git status</code> (the first printed line should say <code>On branch &lt;branch_name&gt;</code>).</p></li>
-<li><p>Click on the <strong>Git</strong> tab in the top right pane of RStudio. Next to the <img src="media/branch.png" class="img-fluid" style="display: inline-block; margin: 0; position: relative; top: 0px; width:20px;height:18px;" alt="A white diamond with two purple squares, one directly above and one directly to the right, connected to the diamond by a line."> symbol, you should see a dropdown menu that displays the name of your current branch.</p></li>
-</ol></li>
-<li><p><strong>If your current branch is named <code>master</code>, update the name to <code>main</code>.</strong> <em>(If your branch is named </em><code>main</code><em>, you’re good to go! You can skip this step and continue to the next section that walks though publishing your site with GitHub Pages.)</em> In the console, run <code>usethis::git_default_branch_rename(from = "master", to = "main")</code> to update your default branch name. Confirm that it updated <strong>(a)</strong> locally by running <code>git status</code> again in your Terminal – the first printed line should now read, <code>On branch main</code>, and <strong>(b)</strong> on your remote by refreshing your GitHub repo (in your web browser) – you should see the updated default branch name at the top of your repo.</p></li>
-</ol>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Why are we doing this?
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>The racist “master” terminology for git branches motivates us to update our default branch to “main” instead.</p>
-<p>There is a push across platforms and software to update this historical default branch name from <code>master</code> to <code>main</code>. GitHub has already done so – creating a remote repository <em>first</em> results in a default branch named <code>main</code>. Depending on your version of Git and / or your configuration settings, however, you may need to update the name manually when creating a local git repository first (as we’re doing here).</p>
 </div>
 </div>
 </div>
@@ -1034,13 +1033,12 @@ What is a git repository?
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Why are we doing this?
+The racist “master” terminology for git branches motivates us to update our default branch to “main” instead
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-23" class="callout-23-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The racist “master” terminology for git branches motivates us to update our default branch to “main” instead.</p>
 <p>There is a push across platforms and software to update this historical default branch name from <code>master</code> to <code>main</code>. GitHub has already done so – creating a remote repository <em>first</em> results in a default branch named <code>main</code>. Depending on your version of Git and / or your configuration settings, however, you may need to update the name manually when creating a local git repository first (as we’re doing here).</p>
 </div>
 </div>
