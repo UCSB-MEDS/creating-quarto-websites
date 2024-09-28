@@ -132,6 +132,7 @@ knitr::include_graphics("media/git-repo-ex.png")
 
 6.  **If your current branch is named `master`, update the name to `main`.** *(If your branch is named *`main`*, you're good to go! You can skip this step.)* In the console, run `usethis::git_default_branch_rename(from = "master", to = "main")` to update your default branch name. Confirm that it updated by running `git status` again in your Terminal -- the first printed line should now read, `On branch main`.
     <!-- and b. on your remote by refreshing your GitHub repo (in your web browser) -- you should see the updated default branch name at the top of your repo -->
+    - The above function only updates your default branch name for *this* respository. **You'll also want to update your git config file so that the default branch name of any future local git repository is automatically named `main`.**  Run `usethis::use_git_config(init.defaultBranch = "main")` to do so. 
 
 {{< include /sections/NOTE-master-main.qmd >}}
 
