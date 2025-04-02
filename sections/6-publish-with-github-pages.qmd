@@ -11,17 +11,12 @@ format:
 
 ## {{< fa brands github title="GitHub Octocat" >}} Build & publish your site with GitHub Pages {#github-pages}
 
-There are a [lots of options to publish your website](https://quarto.org/docs/publishing/). We'll use the [GitHub Pages option](https://quarto.org/docs/publishing/github-pages.html), which allows you to publish a website from any GitHub repository (for free!). To do so, there are a few configuration steps:
+There are a [lots of options to publish your website](https://quarto.org/docs/publishing/){target="_blank"}. We'll use the [GitHub Pages option](https://quarto.org/docs/publishing/github-pages.html){target="_blank"}, which allows you to publish a website from any GitHub repository (for free!). To do so, there are a few configuration steps:
 
 1.  **Create a file named `.nojekyll` in your repository's root directory (e.g. `mysite/`)**, which is required to disable some processing of HTML files that GitHub does by default. There are two ways you can do this: 
 
-    a. From your **Terminal** (you can use the RStudio Terminal or a separate command line interface -- just make sure you're in the correct directory) using the following command:
-    
-    ```{bash}
-#| eval: false
-touch .nojekyll
-```
-
+    a. From your **Terminal** (you can use the RStudio Terminal or a separate command line interface -- just make sure you're in the correct directory) type the bash command, `touch .nojekyll`.
+      
     b. From RStudio's **File** pane by clicking **New Blank File** > **Text File**, then typing in `.nojekyll`.
 
 ::: {.callout-note collapse=true}
@@ -29,7 +24,7 @@ touch .nojekyll
 
 The `touch` command can be used to create a new, empty file from the command line. Similarly, RStudio's **Text File** button allows you to define and create any file type. Since there's no default button in RStudio for creating a `.nojekyll` file, you'll want to use one of these two approaches.
 
-`.nojekyll` is a *hidden* file which won't visibly appear in your directory. You *should* see it show up as a file to track with git (either under the **Git** tab in RStudio, or when you run `git status` in the command line). You can also view hidden files in Finder (Mac) using the keyboard shortcut `Command` + `Shift` + `.`, or follow [these instructions](https://support.microsoft.com/en-us/windows/show-hidden-files-0320fe58-0117-fd59-6851-9b7f9840fdb2) for Windows 10, 8.1, and 7.
+`.nojekyll` is a *hidden* file which won't visibly appear in your directory. You *should* see it show up as a file to track with git (either under the **Git** tab in RStudio, or when you run `git status` in the command line). You can also view hidden files in Finder (Mac) using the keyboard shortcut `Command` + `Shift` + `.`, or follow [these instructions](https://support.microsoft.com/en-us/windows/show-hidden-files-0320fe58-0117-fd59-6851-9b7f9840fdb2){target="_blank"} for Windows 10, 8.1, and 7.
 :::
 
 2.  **Set the `output-dir` in your `_quarto.yml` file to `docs`** (it's easiest to open and edit this from RStudio):
@@ -65,7 +60,7 @@ If you previewed or built your site *before* setting `output-dir` to `docs` in `
 knitr::include_graphics("media/build_site.png")
 ```
 
-::: callout-important
+::: {.callout-important}
 ## Always "Render Website" before pushing changes that you want to deploy!
 
 Clicking **Render Website** in the **Build tab** (or running `quarto render` in the Terminal) is a necessary pre-deployment (*and* redeployment) step – it converts all `.qmd` files to `.html` and ensures that all website components are stitched together correctly. If you do not render your website before pushing your files, your changes will not deploy.
