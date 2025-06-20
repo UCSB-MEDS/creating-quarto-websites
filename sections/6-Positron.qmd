@@ -1,0 +1,22 @@
+---
+format: 
+  html:
+    theme: meds-website-styles.scss
+    mainfont: Nunito
+    toc: true
+    toc-location: left
+    toc-depth: 2
+    smooth-scroll: true
+---
+
+::: {.callout-important}
+## Positron is in beta, and so are these instructions!
+The following instructions are born from my desire for an entry point into using Positron. They are almost certain to change as my understanding of this new IDE improves, and as Positron continues to be developed. [Feedback](https://github.com/UCSB-MEDS/creating-quarto-websites/issues){target="_blank"} is welcomed!
+:::
+
+### **Why use Positron to set up your Quarto website?**
+
+- [Positron](https://positron.posit.co/){target="_blank"} is Posit PBC's "next generation data science IDE." It's built with extensibility and polyglot (mulilanguage) support in mind (meaning, you can use one development environment across you various R and Python data science projects) 
+- Positron offers lots of RStudio's greatest features (just packaged in a slightly different way), plus more
+- While RStudio has been a beloved development environment for R programmers for *many* years (and will continue to be for a long while more!), Positron is likely to become a go-to predecessor
+
