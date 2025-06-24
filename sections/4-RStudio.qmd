@@ -11,7 +11,7 @@ format:
 
 ### **Why use RStudio to set up your Quarto website?**
 
--   It's *super* easy to do with the click of just a few buttons! **Remember**, the commands we type out in our Terminal window underlie the buttons we click on in the RStudio IDE -- RStudio simply provides a user-friendly interface for executing those commands.
+-   It's *super* easy to do with the click of just a few buttons! **Remember**, commands we can type out in our Terminal window underlie the buttons we click on in the RStudio IDE -- RStudio simply provides a user-friendly interface for executing those commands.
 
 ### **Steps:**
 

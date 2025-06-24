@@ -12,11 +12,46 @@ format:
 ::: {.callout-important}
 ## Positron is in beta, and so are these instructions!
 The following instructions are born from my desire for an entry point into using Positron. They are almost certain to change as my understanding of this new IDE improves, and as Positron continues to be developed. [Feedback](https://github.com/UCSB-MEDS/creating-quarto-websites/issues){target="_blank"} is welcomed!
+
+*Developed using Positron v2025.06.0*
 :::
 
 ### **Why use Positron to set up your Quarto website?**
 
-- [Positron](https://positron.posit.co/){target="_blank"} is Posit PBC's "next generation data science IDE." It's built with extensibility and polyglot (mulilanguage) support in mind (meaning, you can use one development environment across you various R and Python data science projects) 
-- Positron offers lots of RStudio's greatest features (just packaged in a slightly different way), plus more
-- While RStudio has been a beloved development environment for R programmers for *many* years (and will continue to be for a long while more!), Positron is likely to become a go-to predecessor
+- [Positron](https://positron.posit.co/){target="_blank"} is Posit PBC's "next generation data science IDE." It's built with extensibility and multilingual (polyglot) support in mind (meaning, you can use one development environment across your various R and Python data science projects) 
+- Positron includes many of RStudio's most-loved features (though packaged in a slightly different way), along with addtional capabilities to support more modern workflows
+- While RStudio remains a powerful and popular IDE, especially for R users, Positron is positioned to become its (likely) successor in the long term
 
+### **Steps:**
+
+1. **Create a new Quarto project with some necessary website files.** Use the keyboard shortcut, `Command/Control` + `Shift` + `P`, to open the Command Palette, then type **Quarto: Create Project**. Press **Enter/Return** to reveal available options...
+
+```{r}
+#| echo: false
+#| fig-align: center
+knitr::include_graphics("media/command-palette-quarto-proj.png")
+```
+
+{{< include /sections/NOTE-command-palette.qmd >}}
+
+...then select **Website Project**:
+
+```{r}
+#| echo: false
+#| fig-align: center
+knitr::include_graphics("media/website-project.png")
+```
+
+- Select directory > **Choose Project Directory**
+
+[screenshot]
+
+- Enter Project Directory Name (see note below)
+
+{{< include /sections/IMPORTANT-repo-name.qmd >}}
+
+{{< include /sections/TIP-organizing-repos.qmd >}}
+
+[screenshot]
+
+{{< include /sections/NOTE-tour.qmd >}}
