@@ -5,5 +5,5 @@ format: html
 ::: {.callout-note collapse=true}
 ## The Command Palette provides access to all available commands
 
-The Command Palette is the place you'll want to turn to for accessing all the functionality Positron has to offer, from changing your IDE color theme, to accessing version control actions (e.g. git), to searching for and running extensions, and more. Open it using the keyboard shortcut `Command / Control` + `Shift` + `P`, then use the fuzzy search to explore all available functionality.
+The Command Palette is the place you'll want to turn to for accessing all the functionality Positron has to offer, from changing your IDE color theme, to accessing version control actions (e.g. git), to searching for and running extensions, and more. Open it using the keyboard shortcut `Command/Control` + `Shift` + `P`, then use the fuzzy search to explore all available functionality.
 :::

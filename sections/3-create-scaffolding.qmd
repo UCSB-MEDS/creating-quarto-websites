@@ -17,7 +17,7 @@ To follow along, you'll need:
 Please refer to the [MEDS Installation Guide](https://ucsb-meds.github.io/MEDS-installation-guide/){target="_blank"} for detailed setup instructions (follow steps 1-7).
 :::
 
-This document reviews two ways to get started with using Quarto to build your website.
+This document reviews three ways to get started with using Quarto to build your website.
 
 (1) `r fontawesome::fa("r-project", fill = "#5A5A5A", a11y = "sem")` Using the RStudio IDE
 (2) `r fontawesome::fa("terminal", fill = "#5A5A5A", a11y = "sem")` Through the command line  

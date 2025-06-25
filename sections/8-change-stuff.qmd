@@ -37,7 +37,7 @@ This is the default / expected name given to website landing / home pages. If yo
 knitr::include_graphics("media/no-about-page.png")
 ```
 
-::: {.callout-tip}
+::: {.callout-tip collapse="true"}
 ## Remember to spin up a preview so that you can see your changes in real time!
 
 Run `quarto preview` in your Terminal, which will open your preview in a browser window. Make changes, save them, and watch your preview update!
@@ -148,7 +148,7 @@ format:
 knitr::include_graphics("media/full-page.png")
 ```
 
-::: {.callout-note}
+::: {.callout-note collapse="true"}
 ## You aren't required to have a `title` on `index.qmd`
 Going for a more minimalist look? You can comment out (or remove) the `title` option from `index.qmd`.
 ```{r}

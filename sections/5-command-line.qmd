@@ -121,7 +121,7 @@ quarto preview
 knitr::include_graphics("media/preview-cli.png")
 ```
 
-::: {.callout-tip}
+::: {.callout-tip collapse="true"}
 ## `quarto preview` makes it easy to quickly view iterative changes
 Running `quarto preview` launches a preview of your website in a browser window. So long as you leave the preview running, it will update each time you make and save changes to website files (which makes iterating on your work really easy!).
 
@@ -227,7 +227,8 @@ git add .
 git add <file_name>
 ```
 
-::: {.callout-tip}
+::: {.callout-tip collapse="true"}
+## Use `git status` to check in on your file status
 Use the `git status` command again to see if your files have been successfully added *before* committing them -- any untracked or changed files that were once printed in **red** should now appear in **green**.
 :::
 

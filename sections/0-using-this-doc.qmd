@@ -17,12 +17,13 @@ This document is meant to introduce you to Quarto as a tool and framework for bu
 
 You'll encounter some callout boxes throughout these materials, which are meant to provide additional tips, considerations, contexts:
 
-::: {.callout-note collapse=true}
+::: {.callout-note collapse="true"}
 ## Note (collapsed by default to minimize scrolling; click to expand)
 This is a **note**, often providing additional context, clarification, resources, etc.
 :::
 
-::: {.callout-tip}
+::: {.callout-tip collapse="true"}
+## Tip (collapsed by default to minimize scrolling; click to expand)
 This is a **tip**, with suggested workflows, organizational tips, additional tools, etc.
 :::
 

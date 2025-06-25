@@ -43,7 +43,7 @@ project:
 The `output-dir` is the directory (i.e. folder) where your rendered `.html` (and other important) files will automatically be saved to when you "Build" your website (see the next step!) -- that is, when you convert all your `.qmd` files to the `.html` files that your web browser can interpret / display. 
 :::
 
-::: {.callout-tip}
+::: {.callout-tip collapse="true"}
 ## You can delete `_site/` if it exists and if you're publishing with GitHub Pages 
 If you previewed or built your site *before* setting `output-dir` to `docs` in `_quarto.yml`, you'll notice a `_site/` directory inside your repository -- this is the default output directory name. Because GitHub Pages will expect a `docs/` folder to deploy from, you can delete `_site/` altogether (and push your deletion, if you've already committed / pushed `_site/` to GitHub). A couple options for deleting files / directories:
 
@@ -87,7 +87,7 @@ knitr::include_graphics("media/gh-pages.png")
 knitr::include_graphics("media/rendered_site.png")
 ```
 
-::: {.callout-tip}
+::: {.callout-tip collapse="true"}
 ## Check out the **Actions** tab on GitHub to view deployment status
 
 See deployment status, time of each deployment, and how long it took to deploy each run. You can also find failed deployments here (yes, it does happen on occasion) and take action on fixing them.

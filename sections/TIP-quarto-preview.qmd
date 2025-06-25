@@ -1,0 +1,9 @@
+---
+format: html
+---
+
+::: {.callout-tip collapse="true"}
+## `quarto preview` makes it easy to quickly view iterative changes
+
+Running `quarto preview` launches a preview of your website in a browser window. So long as you leave the preview running, it will update each time you make and save changes to website files (which makes iterating on your work really easy!).
+:::
