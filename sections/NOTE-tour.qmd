@@ -46,7 +46,7 @@ format:
 
 4. **`styles.css` is a stylesheet, where you can write CSS rules to alter the appearance of your website.** We'll actually create and use a different type of stylesheet (called a "sassy css file", `.scss`) in the next workshop, [Customizing Quarto Websites](https://ucsb-meds.github.io/customizing-quarto-websites/#/title-slide){target="_blank"}.
 
-*These following will appear after we preview our website and initialize our project as a git repository*
+*The following will appear after we preview our website and initialize our project as a git repository*
 
 5. **The `_site/` directory is where all of your rendered HTML (and other important) files live.** When you render or preview your site (we'll do this in the next step!), Quarto takes all of your `.qmd` files and converts them to `.html` files, and saves them to this folder (which is important because web browsers don't know how to read `.qmd` files, but *do* know how to read `.html` files). We're actually going to change the name of this folder once we configure our website for deployment, but `_site` is the default name that Quarto uses (we can leave as-is, for now). You don't want to physically edit or move any files inside this directory (if you want to make a change to your website, update the `.qmd` or `_quarto.yml` file, then re-render). 
 

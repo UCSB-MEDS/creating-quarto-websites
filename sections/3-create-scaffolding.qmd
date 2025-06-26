@@ -19,8 +19,8 @@ Please refer to the [MEDS Installation Guide](https://ucsb-meds.github.io/MEDS-i
 
 This document reviews three ways to get started with using Quarto to build your website.
 
-(1) `r fontawesome::fa("r-project", fill = "#5A5A5A", a11y = "sem")` Using the RStudio IDE
-(2) `r fontawesome::fa("terminal", fill = "#5A5A5A", a11y = "sem")` Through the command line  
-(3) `r fontawesome::fa("plus", fill = "#5A5A5A", a11y = "sem")` Using the Positron IDE
+(1) `r fontawesome::fa("r-project", fill = "#5A5A5A", a11y = "sem")` Using RStudio
+(2) `r fontawesome::fa("plus", fill = "#5A5A5A", a11y = "sem")` Using Positron
+(3) `r fontawesome::fa("terminal", fill = "#5A5A5A", a11y = "sem")` Using the command line  
 
 The order of operations is slightly different depending on which approach you decide to take, but the concepts remain the same.

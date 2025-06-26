@@ -1,0 +1,21 @@
+---
+format: html
+---
+
+::: {.callout-note collapse=true}
+## The code that GitHub provides (as shown above) should look something like this:
+
+```{bash filename="Command Line"}
+#| eval: false
+#| echo: true
+git remote add origin https://github.com/YourGitHubUsername/yourRepoName.git
+git branch -M main
+git push -u origin main
+```
+
+It does three things:
+
+-  Adds the GitHub repository as the remote repository (i.e. connects your local repo to the remote repo)
+-  Renames the default branch to `main` (if you didn't complete step 7, this will take care of it for you!)
+-  Pushes the `main` branch to the remote GitHub repository
+:::

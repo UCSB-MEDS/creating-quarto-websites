@@ -35,14 +35,16 @@ format:
 
 {{< include /sections/4-RStudio.qmd >}}
 
-## **{{< fa terminal title="terminal symbol, |>" >}} Command line**
-
-{{< include /sections/5-command-line.qmd >}}
-
 ## **{{< fa plus title="plus symbol" >}} Positron *(beta)***
 
 {{< include /sections/6-Positron.qmd >}}
+
+## **{{< fa terminal title="terminal symbol, |>" >}} Command line**
+
+{{< include /sections/5-command-line.qmd >}}
 :::
+
+{{< include /sections/NOTE-workflow.qmd >}}
 
 {{< include /sections/7-publish-with-github-pages.qmd >}}
 
