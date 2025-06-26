@@ -309,9 +309,9 @@ Before getting started…
 </div>
 <p>This document reviews three ways to get started with using Quarto to build your website.</p>
 <ol type="1">
-<li><svg aria-label="R Project" role="img" viewbox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5A5A5A;overflow:visible;position:relative;"><title>R Project</title><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg> Using RStudio</li>
-<li><svg aria-label="Plus" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5A5A5A;overflow:visible;position:relative;"><title>Plus</title><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"></path></svg> Using Positron</li>
-<li><svg aria-label="Terminal" role="img" viewbox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5A5A5A;overflow:visible;position:relative;"><title>Terminal</title><path d="M9.4 86.6C-3.1 74.1-3.1 53.9 9.4 41.4s32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L178.7 256 9.4 86.6zM256 416H544c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32s14.3-32 32-32z"></path></svg> Using the command line</li>
+<li><i class="fa-brands fa-r-project" title="R programming language icon" aria-hidden="true"></i> Using RStudio</li>
+<li><i class="fa-solid fa-plus" title="plus sign" aria-hidden="true"></i> Using Positron</li>
+<li><i class="fa-solid fa-terminal" title="terminal symbol, |>" aria-hidden="true"></i> Using the command line</li>
 </ol>
 <p>The order of operations is slightly different depending on which approach you decide to take, but the concepts remain the same.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset page-columns page-full">
@@ -707,8 +707,20 @@ Positron is in beta, and so are these instructions!
 </div>
 <div class="callout-body-container callout-body">
 <p>The following instructions are born from my desire for an entry point into using Positron. They are almost certain to change as my understanding of this new IDE improves, and as Positron continues to be developed. While I’ve experienced some bugs and sticking points along the way, improvements to Positron are ongoing. Please note that while Positron supports development using both R and Python, I’ve chosen to use an R interpreter throughout to better highlight the similarities between RStudio and Positron workflows. <a href="https://github.com/UCSB-MEDS/creating-quarto-websites/issues" target="_blank">Feedback</a> on these instructions is welcomed!</p>
-<p>[ADD INSTALLATION &amp; CONFIGURATION INSTRUCTIONS]</p>
-<p><em>Developed using Positron v2025.06.0 (<a href="https://positron.posit.co/download.html">download</a>)</em></p>
+<p>If you’d like to take Positron for a test drive but aren’t sure where to start, here’s how I got myself set up:</p>
+<p><strong>Install Positron</strong></p>
+<ol type="1">
+<li>Verify that your computer meets the <a href="https://positron.posit.co/start.html#machine-prerequisites" target="_blank">prerequisites</a> for installing &amp; using Positron</li>
+<li><a href="https://positron.posit.co/download.html" target="_blank">Download</a> and install the appropriate version of Positron for your operating system</li>
+<li><a href="https://positron.posit.co/add-to-path.html">Add Positron to your PATH</a> (so you can launch it from the terminal)</li>
+</ol>
+<p><strong>Configure Positron (optional, but helpful!)</strong></p>
+<p><em>Open the Command Palette using the keyboard shortcut, <code>Cmd/Ctrl</code> + <code>Shift</code> + <code>P</code></em></p>
+<ol start="4" type="1">
+<li><strong>Enable RStudio Keybindings:</strong> (so you can continue using your favorite RStudio keyboard shortcuts) open command palette &gt; search <strong>Preferences: Open Settings (UI)</strong> &gt; search <strong>RStudio keybindings</strong> &gt; check the box next to <strong>Enable RStudio keybindings</strong> &gt; restart Positron</li>
+<li><strong>Choose a new color theme:</strong> open command palette &gt; search <strong>Preferences: Color Theme</strong> &gt; use the up / down arrow keys to view different theems. You can also choose <strong>+ Browse additional color themes…</strong> to explore more options available via extensions. If you choose one, it’ll prompt you to install the extension to apply it.</li>
+</ol>
+<p><em>This lesson was developed using Positron v2025.06.0</em></p>
 </div>
 </div>
 <section id="why-use-positron-to-set-up-your-quarto-website" class="level3">
@@ -722,7 +734,7 @@ Positron is in beta, and so are these instructions!
 <section id="steps-1" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="steps-1"><strong>Steps:</strong></h3>
 <ol type="1">
-<li><strong>Create a new Quarto project with some necessary website files.</strong> Use the keyboard shortcut, <code>Cmd / Ctrl</code> + <code>Shift</code> + <code>P</code>, to open the Command Palette, then type <strong>Quarto: Create Project</strong>. Press <strong>Enter / Return</strong> to reveal available options.</li>
+<li><strong>Create a new Quarto project with some necessary website files.</strong> Use the keyboard shortcut, <code>Cmd/Ctrl</code> + <code>Shift</code> + <code>P</code>, to open the Command Palette, then type <strong>Quarto: Create Project</strong>. Press <strong>Enter/Return</strong> to reveal available options.</li>
 </ol>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -745,7 +757,7 @@ The Command Palette provides access to all available commands
 </div>
 <div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The Command Palette is the place you’ll want to turn to for accessing all the functionality Positron has to offer, from changing your IDE color theme, to accessing version control actions (e.g.&nbsp;git), to searching for and running extensions, and more. Open it using the keyboard shortcut <code>Cmd / Ctrl</code> + <code>Shift</code> + <code>P</code>, then use the fuzzy search to explore all available functionality.</p>
+<p>The Command Palette is the place you’ll want to turn to for accessing all the functionality Positron has to offer, from changing your IDE color theme, to accessing version control actions (e.g.&nbsp;git), to searching for and running extensions, and more. Open it using the keyboard shortcut <code>Cmd/Ctrl</code> + <code>Shift</code> + <code>P</code>, then use the fuzzy search to explore all available functionality.</p>
 </div>
 </div>
 </div>
@@ -913,7 +925,7 @@ Take a quick tour of your website files
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/positron-kill-preview.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Your website preview should look something like this, when opened in the browser"></p>
+<p><img src="media/positron-preview.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Your website preview should look something like this, when opened in the browser"></p>
 </figure>
 </div>
 </div>
@@ -931,19 +943,19 @@ Take a quick tour of your website files
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
+<ol start="2" type="i">
+<li>Quit your preview by pressing <code>Ctrl</code> + <code>C</code> in your Terminal</li>
+</ol>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/positron-preview.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="media/positron-preview-browser.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <figcaption>Your website preview will open in a browser window after running <code>quarto preview</code></figcaption>
 </figure>
 </div>
 </div>
 </div>
-<ol start="2" type="i">
-<li>Quit your preview by pressing <code>Ctrl</code> + <code>C</code> in your Terminal</li>
-</ol>
 </div>
 </div>
 </div>
@@ -967,7 +979,7 @@ Take a quick tour of your website files
 <li><strong>Initialize your project as a git repository.</strong> At this point you’ve created a project directory (folder) containing some important website scaffolding files, but they’re not yet being tracked by Git. If you’ve read the RStudio-based instructions, you’ll note that we use the <code>{usethis}</code> package for this step, and if you’ve read the Command line-based instructions, you’ll see that we use git commands. <em><code>{usethis}</code> is a helpful wrapper package for many common git commands, built for use within R Projects.</em> Recall that in step 1, we created a <em>Quarto Project</em>, not an <em>R Project</em> (which is defined by the presence of an <code>.Rproj</code> file in the project’s root directory). <strong>There are (at least) two options for proceeding:</strong></li>
 </ol>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href=""><strong><i class="fa-brands fa-git-alt" title="Git icon" aria-hidden="true"></i> Use Git (recommended)</strong></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href=""><strong><i class="fa-brands fa-r-project" title="R programming language icon" aria-hidden="true"></i> Use <code>{usethis}</code></strong></a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href=""><strong><i class="fa-solid fa-terminal" title="terminal symbol, |>" aria-hidden="true"></i> Use the Command line <em>(recommended)</em></strong></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href=""><strong><i class="fa-brands fa-r-project" title="R programming language icon" aria-hidden="true"></i> Use <code>{usethis}</code></strong></a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
 <p><em>This option allows us to keep our Quarto Project as-is (no need to convert to an R Project)</em></p>
@@ -1053,7 +1065,7 @@ Take a quick tour of your website files
 </div>
 <p><strong>Pros:</strong></p>
 <ul>
-<li>Enables R-specific conveniences (e.g., <code>{usethis}</code>, RStudio / Positron project management).</li>
+<li>Enables R-specific conveniences (e.g., <code>{usethis}</code>).</li>
 <li>Similifies workflow for R users (e.g.&nbsp;automatically sets the root directory as your working directory)</li>
 <li>Helpful for reproducibility and collaboration on R-dominated projects</li>
 </ul>
@@ -1077,7 +1089,7 @@ What is a git repository?
 </div>
 <div id="callout-22" class="callout-22-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>When we initialize our R project, <code>mysite/</code> (or <code>YourGitHubUsername.github.io/</code>), as a git repository, a hidden <code>.git/</code> folder is created <em>within</em> that project folder. This hidden <code>.git/</code> folder <em>is</em> the git repository. As you use git commands (or Positron’s GUI buttons) to capture versions or “snapshots” of your work, those versions (and their associated metadata) get stored within the <code>.git/</code> folder. This allows you to access and / or recover any previous versions of your work. If you delete <code>.git/</code>, you delete your project’s history. Here is an example website repository, represented visually:</p>
+<p>When we initialize our R project, <code>mysite/</code> (or <code>yourGitHubUsername.github.io/</code>), as a git repository using <code>git init</code> (or a wrapper function, such as <code>usethis::use_git()</code>), a hidden <code>.git/</code> folder is created <em>within</em> that project folder. This hidden <code>.git/</code> folder <em>is</em> the git repository. As you use git commands (or RStudio’s GUI buttons) to capture versions or “snapshots” of your work, those versions (and their associated metadata) get stored within the <code>.git/</code> folder. This allows you to access and / or recover any previous versions of your work. If you delete <code>.git/</code>, you delete your project’s history. Here is an example website repository, represented visually:</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -1108,7 +1120,7 @@ What is a git repository?
 <li><strong>If your current branch is named <code>master</code>, update the name to <code>main</code>.</strong> <em>(If your branch is named <code>main</code>, you’re good to go! You can skip this step.)</em> Select the option below that fits your workflow:</li>
 </ol>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true" href=""><strong><i class="fa-brands fa-git-alt" title="Git icon" aria-hidden="true"></i> Use Git (recommended)</strong></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false" href=""><strong><i class="fa-brands fa-r-project" title="R programming language icon" aria-hidden="true"></i> Use <code>{usethis}</code></strong></a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true" href=""><strong><i class="fa-solid fa-terminal" title="terminal symbol, |>" aria-hidden="true"></i> Use the Command line <em>(recommended)</em></strong></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false" href=""><strong><i class="fa-brands fa-r-project" title="R programming language icon" aria-hidden="true"></i> Use <code>{usethis}</code></strong></a></li></ul>
 <div class="tab-content">
 <div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
 <ol type="i">
@@ -1175,7 +1187,7 @@ The racist “master” terminology for git branches motivates us to update our 
 <li><strong>Create an upstream remote repository (i.e.&nbsp;GitHub repo)</strong>. So far, we’ve created a local git repository that contains the basic files needed to build our Quarto website. We’ve also created one commit (i.e.&nbsp;taken a “snapshot” of our work) in that local git respository. Now, we need to create a “remote” repository (i.e.&nbsp;a version of your project that is hosted on the internet) on GitHub. Select the option below that fits your workflow (though I found the Positron GUI buttons to be super easy and convenient!):</li>
 </ol>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true" href=""><strong><i class="fa-solid fa-plus" title="plus sign" aria-hidden="true"></i> Use Positron GUI (recommended)</strong></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false" href=""><strong><i class="fa-brands fa-r-project" title="R programming language icon" aria-hidden="true"></i> Use <code>{usethis}</code></strong></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-3" role="tab" aria-controls="tabset-6-3" aria-selected="false" href=""><strong><i class="fa-brands fa-git-alt" title="Git icon" aria-hidden="true"></i> Use Git</strong></a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true" href=""><strong><i class="fa-solid fa-plus" title="plus sign" aria-hidden="true"></i> Use Positron GUI <em>(recommended)</em></strong></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false" href=""><strong><i class="fa-brands fa-r-project" title="R programming language icon" aria-hidden="true"></i> Use <code>{usethis}</code></strong></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-3" role="tab" aria-controls="tabset-6-3" aria-selected="false" href=""><strong><i class="fa-solid fa-terminal" title="terminal symbol, |>" aria-hidden="true"></i> Use the Command line</strong></a></li></ul>
 <div class="tab-content">
 <div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
 <ol type="i">
@@ -1919,7 +1931,7 @@ Understanding the difference between Git vs.&nbsp;Github
 <p>From RStudio’s <strong>Files</strong> pane, click <strong>New Blank File</strong> &gt; <strong>Text File</strong>, then type <code>.nojekyll</code> &gt; click <strong>OK</strong> (you can use the <strong>Text File</strong> option to create any file type)</p>
 </div>
 <div id="tabset-9-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-2-tab">
-<p>From Positron’s <strong>Explorer</strong> menu, click on the <strong>New File…</strong> button, <img src="media/positron-new-file.png" class="img-fluid" style="display: inline-block; margin: 0; position: relative; top: 0px; width:20px;height:20px;" alt="A file with a plus sign, +, overlaid on it">, (if you don’t see it, hover your mouse over your repository directory name). Type <code>.nojekyll</code> then press <strong>Enter / Return</strong> to add it.</p>
+<p>From Positron’s <strong>Explorer</strong> menu, click on the <strong>New File…</strong> button, <img src="media/positron-new-file.png" class="img-fluid" style="display: inline-block; margin: 0; position: relative; top: 0px; width:20px;height:20px;" alt="A file with a plus sign, +, overlaid on it">, (if you don’t see it, hover your mouse over your repository directory name). Type <code>.nojekyll</code> then press <strong>Enter/Return</strong> to add it.</p>
 </div>
 <div id="tabset-9-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-3-tab">
 <p><em>NOTE: You may use the Terminal in RStudio, Positron, or a separate command line interface (just make sure you’re in the correct directory)</em></p>
@@ -2062,7 +2074,7 @@ Always “Render Website” before pushing changes that you want to deploy!
 <div id="tabset-12-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-12-2-tab">
 <ol type="i">
 <li><strong>Stage</strong> your files by clicking the <strong>+</strong> button next to the <strong>Changes</strong> log in the <strong>Source Control</strong> menu (or hover over individual files to separately stage them)</li>
-<li><strong>Commit</strong> your files by adding a commit message in the commit message field, then pressing <code>Ctrl / Cmd</code> + <code>Enter / Return</code> (or by pressing the <strong>Commit</strong> button)</li>
+<li><strong>Commit</strong> your files by adding a commit message in the commit message field, then pressing <code>Ctrl/Cmd</code> + <code>Enter/Return</code> (or by pressing the <strong>Commit</strong> button)</li>
 <li><strong>Push</strong> your files by clicking the <strong>Sync Changes</strong> button (appears after you’ve made a commit)</li>
 </ol>
 <div class="cell" data-layout-align="center">

@@ -22,7 +22,7 @@ From RStudio's **Files** pane, click **New Blank File** > **Text File**, then ty
 
 ## **{{< fa plus title="plus sign" >}} Positron GUI buttons**
 
-From Positron's **Explorer** menu, click on the **New File...** button, ![](media/positron-new-file.png){alt="A file with a plus sign, +, overlaid on it" style="display: inline-block; margin: 0; position: relative; top: 0px; width:20px;height:20px;"}, (if you don't see it, hover your mouse over your repository directory name). Type `.nojekyll` then press **Enter / Return** to add it.
+From Positron's **Explorer** menu, click on the **New File...** button, ![](media/positron-new-file.png){alt="A file with a plus sign, +, overlaid on it" style="display: inline-block; margin: 0; position: relative; top: 0px; width:20px;height:20px;"}, (if you don't see it, hover your mouse over your repository directory name). Type `.nojekyll` then press **Enter/Return** to add it.
 
 ## **{{< fa terminal title="terminal symbol, |>" >}} Command line / Terminal**
 
@@ -120,7 +120,7 @@ iii. **Push** your files to the remote repository (on GitHub) by clicking the **
 ## **{{< fa plus title="plus sign" >}} Positron GUI buttons**
 
 i. **Stage** your files by clicking the **+** button next to the **Changes** log in the **Source Control** menu (or hover over individual files to separately stage them)
-ii. **Commit** your files by adding a commit message in the commit message field, then pressing `Ctrl / Cmd` + `Enter / Return` (or by pressing the **Commit** button)
+ii. **Commit** your files by adding a commit message in the commit message field, then pressing `Ctrl/Cmd` + `Enter/Return` (or by pressing the **Commit** button)
 iii. **Push** your files by clicking the **Sync Changes** button (appears after you've made a commit)
 
 ```{r}
