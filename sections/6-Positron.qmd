@@ -324,7 +324,7 @@ ii. Click either the **Publish Branch** button (under **Changes**), or the cloud
 knitr::include_graphics("media/positron-create-remote.png")
 ```
 
-## **{{< fa brands r-project title="R programming language icon" >}} Use `{usethis}`**
+## **{{< fa brands r-project title="R programming language icon" >}} `{usethis}`**
 
 *This option assumes that you’ve already converted your Quarto Project to an R Project (refer back to step 3, where we initialized our project as a git repository, if necessary)*
 
