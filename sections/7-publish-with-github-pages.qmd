@@ -123,14 +123,6 @@ i. **Stage** your files by clicking the **+** button next to the **Changes** log
 ii. **Commit** your files by adding a commit message in the commit message field, then pressing `Ctrl/Cmd` + `Enter/Return` (or by pressing the **Commit** button)
 iii. **Push** your files by clicking the **Sync Changes** button (appears after you've made a commit)
 
-```{r}
-#| eval: true
-#| echo: false
-#| fig-align: "center"
-#| out-width: "100%"  
-knitr::include_graphics("media/positron-stage-commit-push.png")
-```
-
 ## **{{< fa terminal title="terminal symbol, |>" >}} Command line / Terminal**
 
 i. **Stage** your files by running `git add .` in the Terminal (or stage files individually by running `git add file-name`)

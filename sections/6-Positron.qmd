@@ -127,31 +127,42 @@ knitr::include_graphics("media/positron-preview-browser.png")
 
 {{< include /sections/TIP-quarto-preview.qmd >}}
 
-3. **Initialize your project as a git repository.** At this point you’ve created a project directory (folder) containing some important website scaffolding files, but they’re not yet being tracked by Git. If you've read the RStudio-based instructions, you'll note that we use the `{usethis}` package for this step, and if you've read the Command line-based instructions, you'll see that we use git commands. *`{usethis}` is a helpful wrapper package for many common git commands, built for use within R Projects.* Recall that in step 1, we created a *Quarto Project*, not an *R Project* (which is defined by the presence of an `.Rproj` file in the project's root directory). **There are (at least) two options for proceeding:**
+3. **Initialize your project as a git repository and make your first commit.** At this point you’ve created a project directory (folder) containing some important website scaffolding files, but they’re not yet being tracked by Git. If you've read the RStudio-based instructions, you'll note that we use the `{usethis}` package for this step, and if you've read the Command line-based instructions, you'll see that we use git commands. *`{usethis}` is a helpful wrapper package for many common git commands, built for use within R Projects.* Recall that in step 1, we created a *Quarto Project*, not an *R Project* (which is defined by the presence of an `.Rproj` file in the project's root directory). **There are a few options for proceeding:**
 
 ::: {.panel-tabset}
-## **{{< fa terminal title="terminal symbol, |>" >}} Use the Command line *(recommended)***
+## **{{< fa plus title="plus sign" >}} Positron GUI buttons**
 
 *This option allows us to keep our Quarto Project as-is (no need to convert to an R Project)*
 
-i. Ensure that you're in your project's root directory (e.g. `mysite/`) by typing `pwd` (print working directory) in the Terminal
+i. Open the **Source Control** menu, then click the **Initialize Repository** button
 
-ii. Initialize this folder as a **git repository** using the command:
+```{r}
+#| eval: true
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics("media/positron-initialize-git-repo.png")
+```
 
-```{bash filename="Command line / Terminal"}
-#| eval: false
-git init
+ii. **Stage** your files by clicking the **+** button next to the Changes log in the Source Control menu (or hover over individual files to separately stage them), add a **commit message**, and **commit** them by clicking the **Commit** button
+
+```{r}
+#| eval: true
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics("media/positron-initial-commit.png")
 ```
 
 **Pros:**
 
-- Initializing our project using Git commands takes a language-agnostic approach to version control and project organization (as opposed to converting the project into an R Project, which introduces R-specific tooling and assumptions)
+- Initializing our project using Positron's GUI buttons takes a language-agnostic approach to version control and project organization (as opposed to converting the project into an R Project, which introduces R-specific tooling and assumptions)
 
 **Cons:**
 
 - You won’t be able to use R-specific helper functions provided by `{usethis}`
 
-## **{{< fa brands r-project title="R programming language icon" >}} Use `{usethis}`**
+## **{{< fa brands r-project title="R programming language icon" >}} `{usethis}`**
 
 *This option requires that we first convert our Quarto Project to an R Project*
 
@@ -190,7 +201,7 @@ usethis::use_git()
 
 ```{r}
 #| echo: false
-knitr::include_graphics("media/positron-initial-commit.png")
+knitr::include_graphics("media/positron-graph-initial-commit.png")
 ```
 
 **Pros:**
@@ -203,6 +214,44 @@ knitr::include_graphics("media/positron-initial-commit.png")
 
 - Adds an `.Rproj` file to your project's root directory, which sets your project up to use R-specific tools and workflows
 - May not make sense if your project is primarily written in another language or makes use of multiple languages throughout
+
+## **{{< fa terminal title="terminal symbol, |>" >}} Command line / Terminal**
+
+*This option allows us to keep our Quarto Project as-is (no need to convert to an R Project)*
+
+i. Ensure you're in your project's root directory (e.g. `mysite/`) by typing `pwd` (print working directory) in Positron's Terminal
+
+ii. Initialize this folder as a **git repository** using the command:
+
+```{bash filename="Command line / Terminal"}
+#| eval: false
+git init
+```
+
+iii. Our project is now a git repository, but our files are still untracked (meaning git doesn't actually know about them yet). Print the names of your untracked files using the command:
+
+```{bash filename="Command line / Terminal"}
+#| eval: false
+git status
+```
+
+iv. Make your first commit by staging your files, then committing them with a commit message:
+
+```{bash filename="Command line / Terminal"}
+#| eval: false
+git add . # stage all files
+git status # check to see that files were staged
+git commit -m "initial commit" # commit them with a commit message
+git status # check to see that files were committed
+```
+
+**Pros:**
+
+- Initializing our project using Git commands takes a language-agnostic approach to version control and project organization (as opposed to converting the project into an R Project, which introduces R-specific tooling and assumptions)
+
+**Cons:**
+
+- You won’t be able to use R-specific helper functions provided by `{usethis}`
 :::
 
 {{< include /sections/NOTE-git-repo.qmd >}}
