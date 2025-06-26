@@ -86,7 +86,7 @@ knitr::include_graphics("media/positron-explorer.png")
 2. **Preview your very basic, but functional website.** Select the option below that fits your workflow:
 
 ::: {.panel-tabset}
-## **{{< fa brands plus title="plus sign" >}} Positron GUI buttons**
+## **{{< fa plus title="plus sign" >}} Positron GUI buttons**
 
 i. Open one of your website files (e.g. `index.qmd`) and click the **Preview** button at the top to launch a preview in Positron's **Viewer** pane
 
@@ -259,7 +259,7 @@ git status # check to see that files were committed
 4. **Check the name of your default branch (the only branch you should have at the moment)** – that is, the branch that all changes eventually get merged back into (if you’re building a website, this branch is typically the one you’ll want to deploy). There are multiple ways to check this – here are two easy options:
 
 ::: {.panel-tabset}
-## **{{< fa brands plus title="plus sign" >}} Positron GUI buttons**
+## **{{< fa plus title="plus sign" >}} Positron GUI buttons**
 
 Click on the **Source Control** menu (left side menu option that looks like a branch). You should see the branch name next to your most recent commit.
 
@@ -272,7 +272,7 @@ Click on the **Source Control** menu (left side menu option that looks like a br
 5. **If your current branch is named `master`, update the name to `main`.** *(If your branch is named `main`, you're good to go! You can skip this step.)* Select the option below that fits your workflow:
 
 ::: {.panel-tabset}
-## **{{< fa terminal title="terminal symbol, |>" >}} Use the Command line *(recommended)***
+## **{{< fa terminal title="terminal symbol, |>" >}} Command line / Terminal**
 
 i. Update the default branch name to `main` by running the following in your Terminal:
 
@@ -285,7 +285,7 @@ git config --global init.defaultBranch main
 
 ii. Confirm that your branch name was updated by running `git status` in the Terminal. The first printed line should now read, `On branch main` (you should also see your updated branch name next to your most recent commit in the **Source Control** menu).
 
-## **{{< fa brands r-project title="R programming language icon" >}} Use `{usethis}`**
+## **{{< fa brands r-project title="R programming language icon" >}} `{usethis}`**
 
 *This option assumes that you've already converted your Quarto Project to an R Project (refer back to step 3, where we initialized our project as a git repository, if necessary)*
 
@@ -313,7 +313,7 @@ usethis::use_git_config(init.defaultBranch = "main")
 
 ::: {.panel-tabset}
 
-## **{{< fa plus title="plus sign" >}} Use Positron GUI *(recommended)***
+## **{{< fa plus title="plus sign" >}} Positron GUI buttons**
 
 i. Open the **Source Control** menu (left side menu option that looks like a branch)
 
@@ -342,7 +342,7 @@ usethis::use_github()
 knitr::include_graphics("media/mysite-remote.png")
 ```
 
-## **{{< fa terminal title="terminal symbol, |>" >}} Use the Command line**
+## **{{< fa terminal title="terminal symbol, |>" >}} Command line / Terminal**
 
 *There are multiple ways to do this, but we'll cover the workflow that makes most intuitive sense to me.* 
 
