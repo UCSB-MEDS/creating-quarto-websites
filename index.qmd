@@ -20,7 +20,7 @@ format:
 
 <br>
 
-*This document was originally developed as teaching material for the Bren School of Environmental Science & Management's [Master of Environmental Data Science](https://bren.ucsb.edu/masters-programs/master-environmental-data-science){target="_blank"} (MEDS) program. Beginning Fall 2024, these materials will be taught as a part of a 2-unit course offered at Bren. You can find these, along with other related materials, linked on the [course website](https://ucsb-meds.github.io/EDS-296-DS-portfolios/){target="_blank"}.*
+<!-- *This document was originally developed as teaching material for the Bren School of Environmental Science & Management's [Master of Environmental Data Science](https://bren.ucsb.edu/masters-programs/master-environmental-data-science){target="_blank"} (MEDS) program. Beginning Fall 2024, these materials will be taught as a part of a 2-unit course offered at Bren. You can find these, along with other related materials, linked on the [course website](https://ucsb-meds.github.io/EDS-296-DS-portfolios/){target="_blank"}.* -->
 
 {{< include /sections/0-using-this-doc.qmd >}}
 
@@ -31,21 +31,27 @@ format:
 {{< include /sections/3-create-scaffolding.qmd >}}
 
 ::: {.panel-tabset}
-## **{{< fa brands r-project title="R programming language icon" >}} Using the RStudio IDE**
+## **{{< fa brands r-project title="R programming language icon" >}} RStudio**
 
-{{< include /sections/5-RStudio.qmd >}}
+{{< include /sections/4-RStudio.qmd >}}
 
-## **{{< fa terminal title="terminal symbol, |>" >}} Through the command line**
+## **{{< fa plus title="plus symbol" >}} Positron *(beta)***
 
-{{< include /sections/4-command-line.qmd >}}
+{{< include /sections/6-Positron.qmd >}}
+
+## **{{< fa terminal title="terminal symbol, |>" >}} Command line**
+
+{{< include /sections/5-command-line.qmd >}}
 :::
 
-{{< include /sections/6-publish-with-github-pages.qmd >}}
+{{< include /sections/NOTE-workflow.qmd >}}
 
-{{< include /sections/7-change-stuff.qmd >}}
+{{< include /sections/7-publish-with-github-pages.qmd >}}
 
-{{< include /sections/8-looking-forward.qmd >}}
+{{< include /sections/8-change-stuff.qmd >}}
 
-{{< include /sections/9-acknowledgements.qmd >}}
+{{< include /sections/9-looking-forward.qmd >}}
 
-{{< include /sections/10-contribute.qmd >}}
+{{< include /sections/10-acknowledgements.qmd >}}
+
+{{< include /sections/11-contribute.qmd >}}

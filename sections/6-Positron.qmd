@@ -1,0 +1,407 @@
+---
+format: 
+  html:
+    theme: meds-website-styles.scss
+    mainfont: Nunito
+    toc: true
+    toc-location: left
+    toc-depth: 2
+    smooth-scroll: true
+---
+
+::: {.callout-important}
+## Positron is in beta, and so are these instructions!
+The following instructions are born from my desire for an entry point into using Positron. They are almost certain to change as my understanding of this new IDE improves, and as Positron continues to be developed. While I’ve experienced some bugs and sticking points along the way, improvements to Positron are ongoing. Please note that while Positron supports development using both R and Python, I’ve chosen to use an R interpreter throughout to better highlight the similarities between RStudio and Positron workflows. [Feedback](https://github.com/UCSB-MEDS/creating-quarto-websites/issues){target="_blank"} on these instructions is welcomed!
+
+If you'd like to take Positron for a test drive but aren't sure where to start, here's how I got myself set up:
+
+**Install Positron**
+
+1. Verify that your computer meets the [prerequisites](https://positron.posit.co/start.html#machine-prerequisites){target="_blank"} for installing & using Positron
+2. [Download](https://positron.posit.co/download.html){target="_blank"} and install the appropriate version of Positron for your operating system
+3. [Add Positron to your PATH](https://positron.posit.co/add-to-path.html) (so you can launch it from the terminal)
+
+**Configure Positron (optional, but helpful!)**
+
+*Open the Command Palette using the keyboard shortcut, `Cmd/Ctrl` + `Shift` + `P`*
+
+4. **Enable RStudio Keybindings:** (so you can continue using your favorite RStudio keyboard shortcuts) open command palette > search **Preferences: Open Settings (UI)** > search **RStudio keybindings** > check the box next to  **Enable RStudio keybindings** > restart Positron
+5. **Choose a new color theme:** open command palette > search **Preferences: Color Theme** > use the up / down arrow keys to view different theems. You can also choose **+ Browse additional color themes...** to explore more options available via extensions. If you choose one, it'll prompt you to install the extension to apply it.
+
+*This lesson was developed using Positron v2025.06.0*
+:::
+
+### **Why use Positron to set up your Quarto website?**
+
+- [Positron](https://positron.posit.co/){target="_blank"} is Posit PBC's "next generation data science IDE." It's built with extensibility and multilingual (polyglot) support in mind (meaning, you can use one development environment across your various R and Python data science projects) 
+- Positron includes many of RStudio's most-loved features (though packaged in a slightly different way), along with addtional capabilities to support more modern workflows
+- While RStudio remains a powerful and popular IDE, especially for R users, Positron is positioned to become its (likely) successor in the long term
+
+### **Steps:**
+
+1. **Create a new Quarto project with some necessary website files.** Use the keyboard shortcut, `Cmd/Ctrl` + `Shift` + `P`, to open the Command Palette, then type **Quarto: Create Project**. Press **Enter/Return** to reveal available options.
+
+```{r}
+#| echo: false
+#| fig-align: center
+knitr::include_graphics("media/positron-command-palette-quarto-proj.png")
+```
+
+{{< include /sections/NOTE-command-palette.qmd >}}
+
+Select **Website Project**, then choose a directory to save your project to. Click **Choose Project Directory** to confirm.
+
+```{r}
+#| echo: false
+#| layout-ncol: 2
+#| column: page
+knitr::include_graphics("media/positron-website-project.png")
+knitr::include_graphics("media/positron-choose-project-directory.png")
+```
+
+{{< include /sections/NOTE-jargon.qmd >}}
+
+Finally, fill out the **Project Directory Name** field -- this is the name of your Quarto project, and will eventually become your remote (i.e. GitHub) repository name ***(Important: see note below re: naming!)***. Press **Enter / Return** to confirm. 
+
+{{< include /sections/IMPORTANT-repo-name.qmd >}}
+
+```{r}
+#| echo: false
+#| fig-align: center
+knitr::include_graphics("media/positron-directory-name.png")
+```
+
+{{< include /sections/TIP-organizing-repos.qmd >}}
+
+- You should now see an open folder called `mysite` (or whatever you named your Quarto project) in the **Explorer** menu (left side menu option that looks like two overlapping files) with a series of files (`_quarto.yml`, `about.qmd`, `index.qmd`, `styles.css`) that provide the scaffolding for your website.
+
+```{r}
+#| echo: false
+#| fig-align: center
+knitr::include_graphics("media/positron-explorer.png")
+```
+
+{{< include /sections/NOTE-tour.qmd >}}
+
+2. **Preview your very basic, but functional website.** Select the option below that fits your workflow:
+
+::: {.panel-tabset}
+## **{{< fa brands plus title="plus sign" >}} Positron GUI buttons**
+
+i. Open one of your website files (e.g. `index.qmd`) and click the **Preview** button at the top to launch a preview in Positron's **Viewer** pane
+
+ii. Optionally, check the box next to **Render on Save** (which lives next to the **Preview** button), so that your website preview is refreshed / updated each time to save changes to your files
+
+iii. Quit your preview by pressing `Ctrl` + `C` in your Terminal or by clicking the trash can icon next to your **Quarto Preview** process in the Terminal:
+
+```{r}
+#| eval: true
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+#| fig-alt: "Your website preview should look something like this, when opened in the browser"
+knitr::include_graphics("media/positron-preview.png")
+```
+
+## **{{< fa terminal title="terminal symbol, |>" >}} Command line / Terminal**
+
+i. Run the following in Positron's Terminal to open a preview of your website in a browser window: 
+
+```{bash filename="Terminal"}
+#| eval: false
+quarto preview
+```
+
+ii. Quit your preview by pressing `Ctrl` + `C` in your Terminal 
+
+```{r}
+#| eval: true
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+#| fig-cap: "Your website preview will open in a browser window after running `quarto preview`"
+knitr::include_graphics("media/positron-preview-browser.png")
+```
+
+:::
+
+{{< include /sections/TIP-quarto-preview.qmd >}}
+
+3. **Initialize your project as a git repository and make your first commit.** At this point you’ve created a project directory (folder) containing some important website scaffolding files, but they’re not yet being tracked by Git. If you've read the RStudio-based instructions, you'll note that we use the `{usethis}` package for this step, and if you've read the Command line-based instructions, you'll see that we use git commands. *`{usethis}` is a helpful wrapper package for many common git commands, built for use within R Projects.* Recall that in step 1, we created a *Quarto Project*, not an *R Project* (which is defined by the presence of an `.Rproj` file in the project's root directory). **There are a few options for proceeding:**
+
+::: {.panel-tabset}
+## **{{< fa plus title="plus sign" >}} Positron GUI buttons**
+
+*This option allows us to keep our Quarto Project as-is (no need to convert to an R Project)*
+
+i. Open the **Source Control** menu, then click the **Initialize Repository** button
+
+```{r}
+#| eval: true
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics("media/positron-initialize-git-repo.png")
+```
+
+ii. **Stage** your files by clicking the **+** button next to the Changes log in the Source Control menu (or hover over individual files to separately stage them), add a **commit message**, and **commit** them by clicking the **Commit** button
+
+```{r}
+#| eval: true
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics("media/positron-initial-commit.png")
+```
+
+**Pros:**
+
+- Initializing our project using Positron's GUI buttons takes a language-agnostic approach to version control and project organization (as opposed to converting the project into an R Project, which introduces R-specific tooling and assumptions)
+
+**Cons:**
+
+- You won’t be able to use R-specific helper functions provided by `{usethis}`
+
+## **{{< fa brands r-project title="R programming language icon" >}} `{usethis}`**
+
+*This option requires that we first convert our Quarto Project to an R Project*
+
+i. Start an R interpreter by clicking on the **Start Session** button, then choose the version of R you'd like to use (I only have one installed here):
+
+```{r}
+#| eval: true
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics("media/positron-start-session.png")
+```
+
+ii. Install the [`{usethis}`](https://usethis.r-lib.org/index.html){target="_blank"} package (if you don't already have it) by running the following in your console:
+
+```{r filename="Console"}
+#| eval: false
+install.packages("usethis")
+```
+
+iii. Convert your project into an **R Project** by running the following in your console. This creates a `.Rproj` file in your project's root directory: 
+
+```{r filename="Console"}
+#| eval: false
+usethis::create_project(path = ".")
+```
+
+iv. Initialize your project as a **git repository** by running the following in your console: 
+
+```{r filename="Console"}
+#| eval: false
+usethis::use_git()
+```
+
+- Choose **yes** when asked if it’s okay to commit any uncommitted files. If asked to restart R, choose **yes**. You should now see an your initial commit in the **Source Control** menu (left side menu option that looks like a branch): 
+
+```{r}
+#| echo: false
+knitr::include_graphics("media/positron-graph-initial-commit.png")
+```
+
+**Pros:**
+
+- Enables R-specific conveniences (e.g., `{usethis}`).
+- Similifies workflow for R users (e.g. automatically sets the root directory as your working directory)
+- Helpful for reproducibility and collaboration on R-dominated projects
+
+**Cons:**
+
+- Adds an `.Rproj` file to your project's root directory, which sets your project up to use R-specific tools and workflows
+- May not make sense if your project is primarily written in another language or makes use of multiple languages throughout
+
+## **{{< fa terminal title="terminal symbol, |>" >}} Command line / Terminal**
+
+*This option allows us to keep our Quarto Project as-is (no need to convert to an R Project)*
+
+i. Ensure you're in your project's root directory (e.g. `mysite/`) by typing `pwd` (print working directory) in Positron's Terminal
+
+ii. Initialize this folder as a **git repository** using the command:
+
+```{bash filename="Command line / Terminal"}
+#| eval: false
+git init
+```
+
+iii. Our project is now a git repository, but our files are still untracked (meaning git doesn't actually know about them yet). Print the names of your untracked files using the command:
+
+```{bash filename="Command line / Terminal"}
+#| eval: false
+git status
+```
+
+iv. Make your first commit by staging your files, then committing them with a commit message:
+
+```{bash filename="Command line / Terminal"}
+#| eval: false
+git add . # stage all files
+git status # check to see that files were staged
+git commit -m "initial commit" # commit them with a commit message
+git status # check to see that files were committed
+```
+
+**Pros:**
+
+- Initializing our project using Git commands takes a language-agnostic approach to version control and project organization (as opposed to converting the project into an R Project, which introduces R-specific tooling and assumptions)
+
+**Cons:**
+
+- You won’t be able to use R-specific helper functions provided by `{usethis}`
+:::
+
+{{< include /sections/NOTE-git-repo.qmd >}}
+
+4. **Check the name of your default branch (the only branch you should have at the moment)** – that is, the branch that all changes eventually get merged back into (if you’re building a website, this branch is typically the one you’ll want to deploy). There are multiple ways to check this – here are two easy options:
+
+::: {.panel-tabset}
+## **{{< fa brands plus title="plus sign" >}} Positron GUI buttons**
+
+Click on the **Source Control** menu (left side menu option that looks like a branch). You should see the branch name next to your most recent commit.
+
+## **{{< fa terminal title="terminal symbol, |>" >}} Command line / Terminal**
+
+ Open Positron's Terminal (next to the Console) and run either `git branch` (this prints all local branches and highlights the one that you're currently on) or `git status` (the first printed line should say `On branch <branch name>`)
+
+:::
+
+5. **If your current branch is named `master`, update the name to `main`.** *(If your branch is named `main`, you're good to go! You can skip this step.)* Select the option below that fits your workflow:
+
+::: {.panel-tabset}
+## **{{< fa terminal title="terminal symbol, |>" >}} Use the Command line *(recommended)***
+
+i. Update the default branch name to `main` by running the following in your Terminal:
+
+```{bash filename="Terminal"}
+#| eval: false
+git config --global init.defaultBranch main
+```
+
+**In addition to updating *this* branch name to `main`, this command *also* sets the default branch name to `main` for any new repositories you create moving forward (it does not rename branches in existing projects).**
+
+ii. Confirm that your branch name was updated by running `git status` in the Terminal. The first printed line should now read, `On branch main` (you should also see your updated branch name next to your most recent commit in the **Source Control** menu).
+
+## **{{< fa brands r-project title="R programming language icon" >}} Use `{usethis}`**
+
+*This option assumes that you've already converted your Quarto Project to an R Project (refer back to step 3, where we initialized our project as a git repository, if necessary)*
+
+i. Update the default branch name to main by running the following in your Console:
+
+```{r filename="Console"}
+#| eval: false
+usethis::git_default_branch_rename(from = "master", to = "main")
+```
+
+ii. Confirm that your branch name was updated by running `git status` in your Terminal -- the first printed line should now read, `On branch main` (you should also see your updated branch name next to your most recent commit in the **Source Control** menu).
+
+iii. The above function only updates your default branch name for *this* respository. **You'll also want to update your git config file so that the default branch name of any future local git repository is automatically named `main`.**  To do so, run:
+
+```{r filename="Console"}
+#| eval: false    
+usethis::use_git_config(init.defaultBranch = "main")
+```
+
+:::
+
+{{< include /sections/NOTE-master-main.qmd >}}
+
+6. **Create an upstream remote repository (i.e. GitHub repo)**. So far, we’ve created a local git repository that contains the basic files needed to build our Quarto website. We’ve also created one commit (i.e. taken a “snapshot” of our work) in that local git respository. Now, we need to create a “remote” repository (i.e. a version of your project that is hosted on the internet) on GitHub. Select the option below that fits your workflow (though I found the Positron GUI buttons to be super easy and convenient!):
+
+::: {.panel-tabset}
+
+## **{{< fa plus title="plus sign" >}} Use Positron GUI *(recommended)***
+
+i. Open the **Source Control** menu (left side menu option that looks like a branch)
+
+ii. Click either the **Publish Branch** button (under **Changes**), or the cloud upload button (under **Graph**) (you may be first prompted to log into GitHub), then select **Publish to GitHub public repository** from the Command Palette. This will open up your new remote repository on GitHub in a web browser -- it should already have the same name as your local git repo
+
+```{r}
+#| echo: false
+knitr::include_graphics("media/positron-create-remote.png")
+```
+
+## **{{< fa brands r-project title="R programming language icon" >}} Use `{usethis}`**
+
+*This option assumes that you’ve already converted your Quarto Project to an R Project (refer back to step 3, where we initialized our project as a git repository, if necessary)*
+
+i. Run the following in your Console, which will open up your web browser to your new remote repository on GitHub -- it should already have the same name as your local git repo / R project:
+
+```{r filename="Console"}
+#| eval: false
+usethis::use_github()
+```
+
+```{r}
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("media/mysite-remote.png")
+```
+
+## **{{< fa terminal title="terminal symbol, |>" >}} Use the Command line**
+
+*There are multiple ways to do this, but we'll cover the workflow that makes most intuitive sense to me.* 
+
+i. **Create an empty remote repository on GitHub.** Login to [GitHub](https://github.com/), [create a new (public) repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository), and give it the **same name** as your local git repository / R Project (e.g. `username.github.io`).
+
+::: {.callout-important}
+## Do not initialize your remote repository (on GitHub) with a `README.md`, license, or `.gitignore` file!
+
+Doing so now can lead to merge conflicts. We can add them after our local and remote repositories have been connected.
+:::
+
+ii. **Connect your remote (GitHub) repository to your local git repository.** Your empty GitHub repo conveniently includes instructions for doing so. Copy the code under “push an existing repository from the command line” to your clipboard, paste into the command line, and run.
+
+```{r}
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("media/GH_quick_setup_options.png")
+```
+
+{{< include /sections/NOTE-new-remote-repo-setup.qmd >}}
+
+You should see something similar to this print out, if successful!
+
+```{bash filename="Command line / Terminal"}
+#| eval: false
+(base) Samanthas-Air:mysite samanthacsik$ git remote add origin https://github.com/samanthacsik/mysite.git
+(base) Samanthas-Air:mysite samanthacsik$ git branch -M main
+(base) Samanthas-Air:mysite samanthacsik$ git push -u origin main
+Enumerating objects: 42, done.
+Counting objects: 100% (42/42), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (35/35), done.
+Writing objects: 100% (42/42), 311.78 KiB | 15.59 MiB/s, done.
+Total 42 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/samanthacsik/mysite.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+(base) Samanthas-Air:mysite samanthacsik$ 
+```
+
+iii. **Refresh your GitHub repository (in your web browser)** to see that your updates have been successfully pushed!
+
+```{r}
+#| eval: true
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics("media/mysite-remote-cli.png")
+```
+
+iv. **(Optional) Add `.gitignore`, `LICENSE`, `README.md` files, which we chose not to initialize our remote repository with**. The `touch` command can be used to create any file type that we want (just make sure you're in the desired location -- typically, you want to create these in your project's root directory). For example:
+
+```{bash filename="Command line / Terminal"}
+#| eval: false
+#| echo: true
+touch .gitignore
+```
+:::
+
+{{< include /sections/NOTE-git-github.qmd >}}

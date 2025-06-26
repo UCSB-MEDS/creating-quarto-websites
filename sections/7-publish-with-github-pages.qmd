@@ -1,0 +1,155 @@
+---
+format: 
+  html:
+    theme: meds-website-styles.scss
+    mainfont: Nunito
+    toc: true
+    toc-location: left
+    toc-depth: 2
+    smooth-scroll: true
+---
+
+## {{< fa brands github title="GitHub Octocat" >}} Build & publish your site with GitHub Pages {#github-pages}
+
+There are a [lots of options to publish your website](https://quarto.org/docs/publishing/){target="_blank"}. We'll use the [GitHub Pages option](https://quarto.org/docs/publishing/github-pages.html){target="_blank"}, which allows you to publish a website from any GitHub repository (for free!). To do so, there are a few configuration steps:
+
+1.  **Create a file named `.nojekyll` in your repository's root directory (e.g. `mysite/`)**, which is required to disable some processing of HTML files that GitHub does by default. There are a few ways you can do this: 
+
+::: {.panel-tabset}
+## **{{< fa brands r-project title="R programming language icon" >}} RStudio GUI buttons**
+
+From RStudio's **Files** pane, click **New Blank File** > **Text File**, then type `.nojekyll` > click **OK** (you can use the **Text File** option to create any file type)
+
+## **{{< fa plus title="plus sign" >}} Positron GUI buttons**
+
+From Positron's **Explorer** menu, click on the **New File...** button, ![](media/positron-new-file.png){alt="A file with a plus sign, +, overlaid on it" style="display: inline-block; margin: 0; position: relative; top: 0px; width:20px;height:20px;"}, (if you don't see it, hover your mouse over your repository directory name). Type `.nojekyll` then press **Enter/Return** to add it.
+
+## **{{< fa terminal title="terminal symbol, |>" >}} Command line / Terminal**
+
+*NOTE: You may use the Terminal in RStudio, Positron, or a separate command line interface (just make sure you're in the correct directory)*
+
+From the Terminal, type the bash command, 
+
+```{bash filename="Command line / Terminal"}
+#| eval: false
+touch .nojekyll
+```
+
+The `touch` command can be used to create a new, empty file.
+:::
+
+::: {.callout-note collapse=true}
+## `.nojekyll` files may (or may not, depending on your IDE) visibly appear in your directory
+
+`.nojekyll` is a *hidden* file which may not visibly appear in your directory (e.g. if using RStudio). Regardless, you *should* see it show up as a file to track with git (either under the **Git** tab in RStudio, the **Source Control** menu in Positron, or when you run `git status` in the command line). You can also view hidden files in Finder (Mac) using the keyboard shortcut `Cmd` + `Shift` + `.`, or follow [these instructions](https://support.microsoft.com/en-us/windows/show-hidden-files-0320fe58-0117-fd59-6851-9b7f9840fdb2){target="_blank"} for Windows 10, 8.1, and 7.
+:::
+
+2.  **Set the `output-dir` in your `_quarto.yml` file to `docs`** (it's easiest to open and edit this using RStudio or Positron):
+
+```{r filename="_quarto.yml"}
+#| eval: false
+project:
+  type: website
+  output-dir: docs
+  
+# ~ additional metadata excluded for brevity ~
+```
+
+::: {.callout-note collapse=true}
+## Your rendered website pages will be saved to `output-dir` (here, that's the `docs/` folder)
+The `output-dir` is the directory (i.e. folder) where your rendered `.html` (and other important) files will automatically be saved to when you "Build" your website (see the next step!) -- that is, when you convert all your `.qmd` files to the `.html` files that your web browser can interpret / display. 
+:::
+
+::: {.callout-tip collapse="true"}
+## You can delete `_site/` if it exists and if you're publishing with GitHub Pages 
+If you previewed or built your site *before* setting `output-dir` to `docs` in `_quarto.yml`, you'll notice a `_site/` directory inside your repository -- this is the default output directory name. Because GitHub Pages will expect a `docs/` folder to deploy from, you can delete `_site/` altogether (and push your deletion, if you've already committed / pushed `_site/` to GitHub). A couple options for deleting files / directories:
+
+::: {.panel-tabset}
+## **{{< fa brands r-project title="R programming language icon" >}} RStudio GUI buttons**
+
+From the **Files** pane, check the box next to `_site` > click the **Delete** button
+
+## **{{< fa plus title="plus sign" >}} Positron GUI buttons**
+
+From the **Explorer** menu, right click on `_site` > click **Delete**
+
+## **{{< fa terminal title="terminal symbol, |>" >}} Command line / Terminal**
+
+Type the command `git rm -r _site` (the `-r` flag is used to "recursively remove" the folder and all it's contents, including any subfolders and files within them)
+:::
+:::
+
+3.  **Render your website.** Select the option below that fits your workflow:
+
+::: {.panel-tabset}
+## **{{< fa brands r-project title="R programming language icon" >}} RStudio GUI buttons**
+
+Click on the **Build** tab (top left pane in RStudio, if you have the default layout), then **Render Website**. You should see your minimal, albeit functional, soon-to-be website appear in the **Viewer** pane. You can click on the <img src="media/view_in_browser.png" alt="A browser window overlaid by an arrow pointing up and angled to the right." style="display: inline-block; margin: 0; position: relative; top: 0px; width:25px;height:20px;"/> button to open your file in your web browser. **Note:** your website is currently being hosted by your local machine, not at a searchable URL. We'll get there soon though!
+
+::: {.callout-important}
+## Always "Render Website" before pushing changes that you want to deploy!
+
+Clicking **Render Website** in the **Build tab** (or running `quarto render` in the Terminal) is a necessary pre-deployment (*and* redeployment) step – it converts all `.qmd` files to `.html` and ensures that all website components are stitched together correctly. If you do not render your website before pushing your files, your changes will not deploy.
+
+**Note:** *Previewing* your website is different than *rendering* your website. Previewing alone does not formally prepare all of your website files for deployment.
+:::
+
+## **{{< fa plus title="plus sign" >}} Positron GUI buttons**
+
+*NOTE: I would love some community input on this -- still trying to understand if I'm interpeting [this documentation](https://quarto.org/docs/tools/positron/#render-and-preview){target="_blank"} correctly {{< fa face-smile title="a smiling face" >}}*
+
+Positron's **Preview** button (which becomes available when you open any of your website `.qmd` files, e.g. `index.qmd`) both spins up a preview in the Viewer pane *and* fully renders your website so that it's ready for distribution (e.g. pushing to GitHub to deploy using GitHub pages).  
+
+## **{{< fa terminal title="terminal symbol, |>" >}} Command line / Terminal**
+
+Run `quarto render` in the Terminal -- you may use the Terminal in RStudio, Positron, or a separate command line interface (just make sure you’re in the correct directory).
+
+*NOTE: If you're using an RStudio Terminal, running `quarto render` will open up your fully rendered website in the **Viewer** pane (similar to what you see when you preview your site). If you're using a Positron Terminal or a seperate command line interface, running `quarto render` will not provide a visible preview.*
+
+:::
+
+4.  **Send all of your website files from your local git repository to your remote GitHub repository.** Select the option below that fits your workflow: 
+
+::: {.panel-tabset}
+## **{{< fa brands r-project title="R programming language icon" >}} RStudio GUI buttons**
+
+i. **Stage** your files by checking all the boxes in the **Git** tab
+ii. **Commit** your files by clicking the **Commit** button, adding a commit message, then clicking **Commit**
+iii. **Push** your files to the remote repository (on GitHub) by clicking the **Push** button (with the green upward facing arrow)
+
+## **{{< fa plus title="plus sign" >}} Positron GUI buttons**
+
+i. **Stage** your files by clicking the **+** button next to the **Changes** log in the **Source Control** menu (or hover over individual files to separately stage them)
+ii. **Commit** your files by adding a commit message in the commit message field, then pressing `Ctrl/Cmd` + `Enter/Return` (or by pressing the **Commit** button)
+iii. **Push** your files by clicking the **Sync Changes** button (appears after you've made a commit)
+
+## **{{< fa terminal title="terminal symbol, |>" >}} Command line / Terminal**
+
+i. **Stage** your files by running `git add .` in the Terminal (or stage files individually by running `git add file-name`)
+ii. **Commit** your files by running `git commit -m "my commit message"` in the Terminal
+iii. **Push** your files to the remote repository (on GitHub) by running `git push` in the Terminal
+:::
+
+5.  **Configure GitHub pages to serve content from the "docs" directory** by clicking on the **Settings** tab in the top menu bar, then the **Pages** tab from the left-hand menu bar. Make sure that **Branch** is set to `main` and that the selected folder is set to `/docs`. Click **Save**. Once deployed (this may take a few minutes), your website's URL will appear inside a box at the top of the page (you may have to try refreshing a few times). 
+
+```{r}
+#| echo: false
+#| layout-ncol: 2
+#| column: page
+#| fig-subcap: 
+#|  - "Your website's URL will appear at the top of the page once you've configured GitHub pages to host your Quarto site"
+#|  - "A hosted Quarto website (notice the URL)! Now time to customize and add content."
+knitr::include_graphics("media/gh-pages.png")
+knitr::include_graphics("media/rendered_site.png")
+```
+
+::: {.callout-tip collapse="true"}
+## Check out the **Actions** tab on GitHub to view deployment status
+
+See deployment status, time of each deployment, and how long it took to deploy each run. You can also find failed deployments here (yes, it does happen on occasion) and take action on fixing them.
+
+```{r}
+#| echo: false
+knitr::include_graphics("media/actions-tab.png")
+```
+:::
