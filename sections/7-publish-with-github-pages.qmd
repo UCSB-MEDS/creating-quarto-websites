@@ -22,7 +22,7 @@ From RStudio's **Files** pane, click **New Blank File** > **Text File**, then ty
 
 ## **{{< fa plus title="plus sign" >}} Positron GUI buttons**
 
-From Positron's **Explorer** menu (left side menu option that looks like two overlapping files), click on the **New File...** button, ![](media/positron-new-file.png){alt="A file with a plus sign, +, overlaid on it" style="display: inline-block; margin: 0; position: relative; top: 0px; width:20px;height:20px;"}, (if you don't see it, hover your mouse over your repository directory name). Type `.nojekyll` then press **Enter / Return** to add it.
+From Positron's **Explorer** menu, click on the **New File...** button, ![](media/positron-new-file.png){alt="A file with a plus sign, +, overlaid on it" style="display: inline-block; margin: 0; position: relative; top: 0px; width:20px;height:20px;"}, (if you don't see it, hover your mouse over your repository directory name). Type `.nojekyll` then press **Enter / Return** to add it.
 
 ## **{{< fa terminal title="terminal symbol, |>" >}} Command line / Terminal**
 
@@ -30,7 +30,8 @@ From Positron's **Explorer** menu (left side menu option that looks like two ove
 
 From the Terminal, type the bash command, 
 
-```{bash}
+```{bash filename="Command line / Terminal"}
+#| eval: false
 touch .nojekyll
 ```
 
@@ -97,7 +98,7 @@ Clicking **Render Website** in the **Build tab** (or running `quarto render` in 
 
 *NOTE: I would love some community input on this -- still trying to understand if I'm interpeting [this documentation](https://quarto.org/docs/tools/positron/#render-and-preview){target="_blank"} correctly {{< fa face-smile title="a smiling face" >}}*
 
-Positron's **Preview** button (which becomes available when you open any of your website `.qmd` files, e.g. `index.qmd`) spins up a preview in the Viewer pane *and* fully renders your website so that it's ready for distribution (e.g. pushing to GitHub to deploy using GitHub pages).  
+Positron's **Preview** button (which becomes available when you open any of your website `.qmd` files, e.g. `index.qmd`) both spins up a preview in the Viewer pane *and* fully renders your website so that it's ready for distribution (e.g. pushing to GitHub to deploy using GitHub pages).  
 
 ## **{{< fa terminal title="terminal symbol, |>" >}} Command line / Terminal**
 
@@ -145,7 +146,7 @@ iii. **Push** your files to the remote repository (on GitHub) by running `git pu
 #| column: page
 #| fig-subcap: 
 #|  - "Your website's URL will appear at the top of the page once you've configured GitHub pages to host your Quarto site"
-#|  - "A hosted Quarto website! Now time to customize and add content."
+#|  - "A hosted Quarto website (notice the URL)! Now time to customize and add content."
 knitr::include_graphics("media/gh-pages.png")
 knitr::include_graphics("media/rendered_site.png")
 ```

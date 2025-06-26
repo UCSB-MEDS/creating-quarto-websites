@@ -24,7 +24,7 @@ format:
 
 3.  **Create the scaffolding (i.e. folder structure & necessary files) for your website** by running the following in the command line (substitute `mysite` with whatever name you want to give your repo):
 
-```{bash filename="Command Line"}
+```{bash filename="Command line / Terminal"}
 #| eval: false
 quarto create-project mysite --type website 
 ```
@@ -44,43 +44,9 @@ knitr::include_graphics("media/pwd_cd.png")
 knitr::include_graphics("media/CLI_create_website.png")
 ```
 
-<!-- ::: {.grid} -->
-<!-- ::: {.g-col-12 .g-col-md-6} -->
+If you `cd` into your new `mysite` directory, and use the `ls` command to list out all the contents of that directory, you should see a series of files (`_quarto.yml`, `about.qmd`, `index.qmd`, `styles.css`) that provide the scaffolding for your website. For example:
 
-<!-- ```{r} -->
-<!-- #| eval: true  -->
-<!-- #| echo: false -->
-<!-- #| fig-align: "center" -->
-<!-- #| out-width: "150%"  -->
-<!-- knitr::include_graphics("media/pwd_cd.png") -->
-<!-- ``` -->
-
-<!-- ::: {.center-text .small-text .gray-text} -->
-<!-- *Use `pwd` to see your current working directory. Use `cd` to change directories.*  -->
-<!-- ::: -->
-
-<!-- ::: -->
-
-<!-- ::: {.g-col-12 .g-col-md-6} -->
-
-<!-- ```{r} -->
-<!-- #| eval: true  -->
-<!-- #| echo: false -->
-<!-- #| fig-align: "center" -->
-<!-- #| out-width: "150%"  -->
-<!-- knitr::include_graphics("media/CLI_create_website.png") -->
-<!-- ``` -->
-
-<!-- ::: {.center-text .small-text .gray-text} -->
-<!-- *Create a new quarto project using the `quarto create-project your_project_name --type website` commands.* -->
-<!-- ::: -->
-
-<!-- ::: -->
-<!-- ::: -->
-
--   If you `cd` into your new `mysite` directory, and use the `ls` command to list out all the contents of that directory, you should see a series of files (`_quarto.yml`, `about.qmd`, `index.qmd`, `styles.css`) that provide the scaffolding for your website. For example:
-
-```{bash filename="Command Line"}
+```{bash filename="Command line / Terminal"}
 #| eval: false
 # print current working directory
 (base) Samanthas-MacBook-Air:git samanthacsik$ pwd 
@@ -95,7 +61,7 @@ knitr::include_graphics("media/CLI_create_website.png")
 _quarto.yml	_site		about.qmd   index.qmd   styles.css
 ```
 
--   Alternatively, you can use Finder (Mac) or Windows Explorer (Windows) to view your new directory and files.
+Alternatively, you can use Finder (Mac) or Windows Explorer (Windows) to view your new directory and files.
 
 ```{r}
 #| echo: false
@@ -106,12 +72,12 @@ knitr::include_graphics("media/mysite_finder.png")
 
 4.  **Preview your very basic, but functional website** straight from the command line by typing (you'll need to navigate to your project directory (e.g `mysite/`)):
 
-```{bash filename="Command Line"}
+```{bash filename="Command line / Terminal"}
 #| eval: false
 quarto preview
 ```
 
--   Your site preview should open up in your browser. Quit your preview by pressing `Ctrl` + `C`.
+Your site preview should open up in your browser. Quit your preview by pressing `Ctrl` + `C`.
 
 ```{r}
 #| eval: true
@@ -136,25 +102,14 @@ Running `quarto preview` launches a preview of your website in a browser window.
 You can also preview your website from different locations using file paths. You'll need to supply the path to your website directory when previewing from a different location. For example, if my Quarto website directory is at `Users/samanthacsik/git/mysite`, but I am one directory above in `Users/samanthacsik/git`, I can run `quarto preview mysite`. Alternatively I could provide the full path `quarto preview User/samanthacsik/git/mysite` or relative path `quarto preview ~/git/mysite`, no matter which directory I'm currently in.
 :::
 
-5.  **Initialize your project as a git repository.** At this point you've created a directory (folder) containing some important website scaffolding files, but they're not yet being tracked by Git. First be sure to `cd` into your website folder. Then, initialize this folder as a git repository using the `git init` command in the terminal window.
+5.  **Initialize your project as a git repository.** At this point you've created a directory (folder) containing some important website scaffolding files, but they're not yet being tracked by Git. First be sure to `cd` into your website folder. Then, initialize this folder as a git repository using the `git init` command in the Terminal window:
 
 ```{bash filename="Command line / Terminal"}
 #| eval: false
 git init
 ```
 
-::: {.callout-note collapse=true}
-## What is a git repository?
-When we initialize our R project, `mysite/` (or `YourGitHubUsername.github.io/`), as a git repository using `git init`, a hidden `.git/` folder is created *within* that project folder. This hidden `.git/` folder *is* the git repository. As you use git commands (or RStudio's GUI buttons) to capture versions or "snapshots" of your work, those versions (and their associated metadata) get stored within the `.git/` folder. This allows you to access and / or recover any previous versions of your work. If you delete `.git/`, you delete your project's history. Here is an example website repository, represented visually:
-
-```{r}
-#| eval: true
-#| echo: false
-#| fig-align: "center"
-#| out-width: "100%"
-knitr::include_graphics("media/git-repo-ex.png")
-```
-:::
+{{< include /sections/NOTE-git-repo.qmd >}}
 
 6.  **Check the name of your default branch** -- that is, the branch that all changes eventually get merged back into (if you're building a website, this branch is typically the one you'll want to deploy). Run `git status` in the command line to identify the name of your default branch (this should be the only branch you have at the moment). Running `git status` will return something that looks like this, where the first line tells you which branch you're currently on:
 
@@ -182,7 +137,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 I use this command *often* when working on the command line to double check that I'm actually where I think I am, and to see tracked files and untracked or changed files. It's a good habit to run `git status` after switching branches or before / after adding files to commit.
 :::
 
-7.  **If your default branch is named `master`, update the name to `main`.** If your default branch (you should only have one branch so far, which is the default branch) is already named `main`, you can head straight to step 8. Otherwise, choose your workflow below based on your Git version (check your version by running `git --version` in the command line):
+7.  **If your default branch is named `master`, update the name to `main`.** *If your default branch (you should only have one branch so far, which is the default branch) is already named `main`, you can head straight to step 8.* Otherwise, choose your workflow below based on your Git version (check your version by running `git --version` in the command line):
 
 ::: {.panel-tabset}
 ## **{{< fa brands git-alt title="GitHub branch symbol" >}} For Git version 2.28 or later**
@@ -239,7 +194,7 @@ Use the `git status` command again to see if your files have been successfully a
 git commit -m "initial commit"
 ```
 
-9.  **Create an empty remote repository on GitHub.** At this point, we've created a local git repository that contains the basic files needed to build our Quarto website. We've also created one commit (i.e. taken a "snapshot" of our work) in that local git respository. Now, we need to create a "remote" repository (i.e. a version of your project that is hosted on the internet) on GitHub. There are multiple ways to do this, but we'll cover the workflow that makes most intuitive sense to me. **Login to [GitHub](https://github.com/), [create a new (public) repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository), and give it the same name as your local git repository / R Project (e.g. `username.github.io`).**
+9.  **Create an empty remote repository on GitHub.** So far, we've created a local git repository that contains the basic files needed to build our Quarto website. We've also created one commit (i.e. taken a "snapshot" of our work) in that local git respository. Now, we need to create a "remote" repository (i.e. a version of your project that is hosted on the internet) on GitHub. There are multiple ways to do this, but we'll cover the workflow that makes most intuitive sense to me. **Login to [GitHub](https://github.com/), [create a new (public) repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository), and give it the *same name* as your local git repository / R Project (e.g. `yourGitHubUsername.github.io`).**
 
 ::: {.callout-important}
 ## Do not initialize your remote repository (on GitHub) with a `README.md`, license, or `.gitignore` file!
@@ -247,9 +202,7 @@ git commit -m "initial commit"
 Doing so now can lead to merge conflicts. We can add them after our local and remote repositories have been connected.
 :::
 
-{{< include /sections/NOTE-git-github.qmd >}}
-
-10. **Connect your remote (GitHub) repository to your local git repository.** Your empty GitHub repo conveniently includes instructions for doing so. Copy the code under "push an existing repository from the command line" to your clipboard, paste into the command line, and run.
+10. **Connect your remote (GitHub) repository to your local git repository.** Your empty GitHub repo conveniently includes instructions for doing so. Copy the code under **"...or push an existing repository from the command line"** to your clipboard, paste into the command line, and run.
 
 ```{r}
 #| echo: false
@@ -295,5 +248,7 @@ knitr::include_graphics("media/mysite-remote-cli.png")
 #| echo: true
 touch .gitignore
 ```
+
+{{< include /sections/NOTE-git-github.qmd >}}
 
 <!-- {{< include /sections/NOTE-workflow.qmd >}} -->

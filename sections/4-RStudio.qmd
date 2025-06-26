@@ -47,7 +47,7 @@ And finally, fill out the **Directory name:** field -- this is the name of your 
 knitr::include_graphics("media/vRStudio4.png")
 ```
 
-- You should now see a folder called `mysite` (or whatever you named your Quarto project) with a series of files (`_quarto.yml`, `about.qmd`, `index.qmd`, `styles.css`) that provide the scaffolding for your website in the **Files** tab (in the bottom right panel in RStudio, if you haven't altered the pane layout).
+You should now see a folder called `mysite` (or whatever you named your Quarto project) with a series of files (`_quarto.yml`, `about.qmd`, `index.qmd`, `styles.css`) that provide the scaffolding for your website in the **Files** tab (in the bottom right panel in RStudio, if you haven't altered the pane layout).
 
 {{< include /sections/NOTE-tour.qmd >}}
 
@@ -92,26 +92,23 @@ install.packages("usethis")
 We're using the `{usethis}` workflow here because (1) it's super easy, and (2) because it's worth knowing that the `{usethis}` package exists if you haven't explored it already! Read more about the tooling this package offers on the [`{usethis}` documentation](https://usethis.r-lib.org/){target="_blank"}.
 :::
 
-4. **Initialize your R Project folder as a git repository using `usethis::use_git()`:** In the Console, run `usethis::use_git()` to create a local git repository. Choose **yes** when asked if it's okay to commit any uncommitted files. If asked to restart R, choose **yes**. Once complete, you should see the **Git** tab appear in your top left pane in RStudio.
+4. **Initialize your R Project folder as a git repository using `usethis::use_git()`:** To create a local git repository, run the following in your Console:
+
+```{r filename="Console"}
+#| eval: false
+usethis::use_git()
+```
+
+Choose **yes** when asked if it's okay to commit any uncommitted files. If asked to restart R, choose **yes**. Once complete, you should see the **Git** tab appear in your top left pane in RStudio.
 
 ```{r}
 #| echo: false
 #| fig-align: center
+#| fig-cap: "Notice the Git tab appear (here, in the top right pane) upon restarting RStudio."
 knitr::include_graphics("media/git-tab.png")
 ```
 
-::: {.callout-note collapse=true}
-## What is a git repository?
-When we initialize our R project, `mysite/` (or `YourGitHubUsername.github.io/`), as a git repository using `usethis::use_git()`, a hidden `.git/` folder is created *within* that project folder. This hidden `.git/` folder *is* the git repository. As you use git commands (or RStudio's GUI buttons) to capture versions or "snapshots" of your work, those versions (and their associated metadata) get stored within the `.git/` folder. This allows you to access and / or recover any previous versions of your work. If you delete `.git/`, you delete your project's history. Here is an example website repository, represented visually:
-
-```{r}
-#| eval: true
-#| echo: false
-#| fig-align: "center"
-#| out-width: "100%"
-knitr::include_graphics("media/git-repo-ex.png")
-```
-:::
+{{< include /sections/NOTE-git-repo.qmd >}}
 
 5. **Check the name of your default branch (the only branch you should have at the moment)** -- that is, the branch that all changes eventually get merged back into (if you're building a website, this branch is typically the one you'll want to deploy). There are multiple ways to check this -- here are two easy options:
 
@@ -142,7 +139,7 @@ usethis::use_git_config(init.defaultBranch = "main")
 
 {{< include /sections/NOTE-master-main.qmd >}}
 
-7. **Create an upstream remote repository (i.e. GitHub repo)**. At this point, we’ve created a local git repository that contains the basic files needed to build our Quarto website. We’ve also created one commit (i.e. taken a “snapshot” of our work) in that local git respository. Now, we need to create a “remote” repository (i.e. a version of your project that is hosted on the internet) on GitHub. Run the following in your Console, which will open up your web browser to your new remote repository on GitHub -- it should already have the same name as your local git repo / R project:
+7. **Create an upstream remote repository (i.e. GitHub repo)**. So far, we’ve created a local git repository that contains the basic files needed to build our Quarto website. We’ve also created one commit (i.e. taken a “snapshot” of our work) in that local git respository. Now, we need to create a “remote” repository (i.e. a version of your project that is hosted on the internet) on GitHub. Run the following in your Console, which will open up your web browser to your new remote repository on GitHub -- it should already have the same name as your local git repo / R project:
 
 ```{r filename="Console"}
 #| eval: false

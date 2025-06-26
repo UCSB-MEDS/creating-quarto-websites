@@ -165,7 +165,9 @@ knitr::include_graphics("media/no-page-title.png")
 
 ### {{< fa arrow-right title="An arrow pointing to the right" >}} **Add additional pages to your website**
 
-In the default Quarto website skeleton, there are two items in the navbar that appear as "Home" and "About" (**Note:** don't confuse the special-formatted "About Page" we created in `index.qmd` with the navbar page currently titled "About"). Those navbar tabs link to two `.html` files (`index.html` and `about.html`) and are automatically rendered when when you Build to `/docs`. Adding a new page to your website requires two steps:
+In the default Quarto website skeleton, there are two items in the navbar that appear as "Home" and "About." Those navbar tabs link to two `.html` files (`index.html` and `about.html`) and are automatically rendered when when you Build to `docs/`. Adding a new page to your website requires two steps:
+
+<!-- (**Note:** don't confuse the special-formatted "About Page" we created in `index.qmd` with the navbar page currently titled "About"). -->
 
   a. **Create a new `.qmd` file** and add any necessary YAML options, along with any content that you want to appear on that page. Here, I'm creating a new page titled "All of my favorite resources!" and saved it to my root directory as `resources.qmd`.
   
@@ -277,6 +279,8 @@ knitr::include_graphics("media/dark.png")
 
 ::: callout-important
 ## One last reminder to "Render Website" before pushing changes that you want to deploy!
+
+This is *necessary* if you're working in RStudio (from the **Build** tab, click **Render Website**). If you're working in Positron, the **Preview** button takes care of both generating your website preview *and* fully rendering your site (so no additional steps are necessary).
 
 If you've made and pushed changes to your website, but you're not seeing your website actually update, you may have forgotten to **Render Website**! Try doing so, then commit / push your files again. 
 :::
