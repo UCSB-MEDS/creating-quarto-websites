@@ -8,6 +8,6 @@ A personal website is not only a great way to showcase your experiences and skil
 
 ## Contributors
 
-These workshop materials are maintained and taught by [Samantha Csik](https://github.com/samanthacsik), Data Training Coordinator at the National Center for Ecological Analysis and Synthesis and Lecturer at the Bren School of Enviromental Science & Management.
+These workshop materials are maintained and taught by [Samantha Shanny-Csik](https://github.com/samanthacsik), Data Training Coordinator and Lecturer at the Bren School of Enviromental Science & Management.
 
 
