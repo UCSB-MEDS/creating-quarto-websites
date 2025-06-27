@@ -1,0 +1,8 @@
+---
+format: html
+---
+
+::: {.callout-note collapse=true}
+## `{usethis}` is an R package that facilitates interactive workflows for project creation and development
+We're using the `{usethis}` workflow here because it provides a lot of really helpful tooling   (learn more in the [documentation](https://usethis.r-lib.org/){target="_blank"}), including a couple wrapper functions to execute git commands -- in other words, we'll use some familiar-feeling R functions provided by `{usethis}` to execute some Git commands, rather than running those Git commands in the Terminal. 
+:::

@@ -1,0 +1,11 @@
+---
+format: html
+---
+
+::: {.callout-important}
+## `{usethis}` relies on recognizing a project root (i.e. the top-level directory)
+
+This project root is often denoted by an `.Rproj` file, which is automatically added when you spin up a new project in RStudio (but it can also be the presence of a git repository (`.git/`), a `.here` file, a package `DESCRIPTION`, among others). *In order to use `{usethis}` functions for executing Git commands (like intializing a Git repository), we need a recognizable project root.*
+
+*However,* `{usethis}` currently does not recognize the root of a Quarto project (though shout out to [Jenny Bryan](https://github.com/jennybc){target="_blank"}, who flagged this for update in [this issue](https://github.com/r-lib/usethis/issues/2133){target="_blank"}). This means we first need to establish our project root before moving forward (see step iii, below). 
+:::
