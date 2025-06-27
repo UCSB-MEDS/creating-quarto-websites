@@ -87,10 +87,7 @@ knitr::include_graphics("media/preview-R.png")
 install.packages("usethis")
 ```
 
-::: {.callout-note collapse=true}
-## `{usethis}` is a package that facilitates interactive workflows for R project creation and development
-We're using the `{usethis}` workflow here because (1) it's super easy, and (2) because it's worth knowing that the `{usethis}` package exists if you haven't explored it already! Read more about the tooling this package offers on the [`{usethis}` documentation](https://usethis.r-lib.org/){target="_blank"}.
-:::
+{{< include /sections/NOTE-usethis.qmd >}}
 
 4. **Initialize your R Project folder as a git repository using `usethis::use_git()`:** To create a local git repository, run the following in your Console:
 
