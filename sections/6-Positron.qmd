@@ -92,7 +92,7 @@ i. Open one of your website files (e.g. `index.qmd`) and click the **Preview** b
 
 ii. Optionally, check the box next to **Render on Save** (which lives next to the **Preview** button), so that your website preview is refreshed / updated each time to save changes to your files
 
-iii. Quit your preview by pressing `Ctrl` + `C` in your Terminal or by clicking on the **Quarto Preview**the trash can icon next to your **Quarto Preview** button (in your Terminal), then click **Kill Terminal**:
+iii. Quit your preview by pressing `Ctrl` + `C` in your Terminal or by clicking the **Quarto Preview** button (in your Terminal), then **Kill Terminal**:
 
 ```{r}
 #| eval: true
