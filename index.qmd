@@ -35,7 +35,7 @@ format:
 
 {{< include /sections/4-RStudio.qmd >}}
 
-## **{{< fa plus title="plus symbol" >}} Positron *(beta)***
+## **{{< fa plus title="plus symbol" >}} Positron**
 
 {{< include /sections/6-Positron.qmd >}}
 

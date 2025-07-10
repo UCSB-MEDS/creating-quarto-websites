@@ -10,8 +10,8 @@ format:
 ---
 
 ::: {.callout-important}
-## Positron is in beta, and so are these instructions!
-The following instructions are born from my desire for an entry point into using Positron. They are almost certain to change as my understanding of this new IDE improves, and as Positron continues to be developed. While I’ve experienced some bugs and sticking points along the way, improvements to Positron are ongoing. Please note that while Positron supports development using both R and Python, I’ve chosen to use an R interpreter throughout to better highlight the similarities between RStudio and Positron workflows. [Feedback](https://github.com/UCSB-MEDS/creating-quarto-websites/issues){target="_blank"} on these instructions is welcomed!
+## Positron may be out of beta, but these instructions are a work in progress!
+The following instructions are born from my desire for an entry point into using Positron. They are almost certain to change as my understanding of this new IDE improves. Please note that while Positron supports development using both R and Python, I’ve chosen to use an R interpreter throughout to better highlight the similarities between RStudio and Positron workflows. [Feedback](https://github.com/UCSB-MEDS/creating-quarto-websites/issues){target="_blank"} on these instructions is welcomed!
 
 If you'd like to take Positron for a test drive but aren't sure where to start, here's how I got myself set up:
 
