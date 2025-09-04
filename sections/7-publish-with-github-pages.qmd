@@ -98,7 +98,9 @@ Clicking **Render Website** in the **Build tab** (or running `quarto render` in 
 
 *NOTE: I would love some community input on this -- still trying to understand if I'm interpeting [this documentation](https://quarto.org/docs/tools/positron/#render-and-preview){target="_blank"} correctly {{< fa face-smile title="a smiling face" >}}*
 
-Positron's **Preview** button (which becomes available when you open any of your website `.qmd` files, e.g. `index.qmd`) both spins up a preview in the Viewer pane *and* fully renders your website so that it's ready for distribution (e.g. pushing to GitHub to deploy using GitHub pages).  
+Positron's **Preview** button (which becomes available when you open any of your website `.qmd` files, e.g. `index.qmd`) both spins up a preview in the Viewer pane *and* fully renders your website so that it's ready for distribution (e.g. pushing to GitHub to deploy using GitHub pages). 
+
+If you update your website, preview it, push the changes to GitHub, and still don’t see those updates reflected online, try running `quarto render` in the Terminal before pushing again. This ensures that your website is properly rebuilt ahead of redeployment.
 
 ## **{{< fa terminal title="terminal symbol, |>" >}} Command line / Terminal**
 

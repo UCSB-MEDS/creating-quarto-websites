@@ -137,7 +137,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">July 10, 2025</p>
+      <p class="date-modified">September 4, 2025</p>
     </div>
   </div>
     
@@ -2123,6 +2123,7 @@ Always “Render Website” before pushing changes that you want to deploy!
 <div id="tabset-11-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-11-2-tab">
 <p><em>NOTE: I would love some community input on this – still trying to understand if I’m interpeting <a href="https://quarto.org/docs/tools/positron/#render-and-preview" target="_blank">this documentation</a> correctly <i class="fa-solid fa-face-smile" title="a smiling face" aria-hidden="true"></i></em></p>
 <p>Positron’s <strong>Preview</strong> button (which becomes available when you open any of your website <code>.qmd</code> files, e.g.&nbsp;<code>index.qmd</code>) both spins up a preview in the Viewer pane <em>and</em> fully renders your website so that it’s ready for distribution (e.g.&nbsp;pushing to GitHub to deploy using GitHub pages).</p>
+<p>If you update your website, preview it, push the changes to GitHub, and still don’t see those updates reflected online, try running <code>quarto render</code> in the Terminal before pushing again. This ensures that your website is properly rebuilt ahead of redeployment.</p>
 </div>
 <div id="tabset-11-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-11-3-tab">
 <p>Run <code>quarto render</code> in the Terminal – you may use the Terminal in RStudio, Positron, or a separate command line interface (just make sure you’re in the correct directory).</p>
