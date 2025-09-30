@@ -35,7 +35,7 @@ knitr::include_graphics("media/vRStudio3.png")
 
 {{< include /sections/NOTE-jargon.qmd >}}
 
-And finally, fill out the **Directory name:** field -- this is the name of your R project, and will eventually become your remote (i.e. GitHub) repository name ***(Important: see note below re: naming!)*** -- and choose where to save your directory to using the **Browse** button. Click **Create Project**.
+And finally, fill out the **Directory name:** field -- this is the name of your R project, and will eventually become your remote (i.e. GitHub) repository name ***(Important: see note below re: naming!)*** -- and choose where to save your directory to using the **Browse** button. I also recommend unchecking the **Use visual markdown editor** box, if selected (this just means you're project will open with the [Source editor](https://docs.posit.co/ide/user/ide/guide/productivity/text-editor.html){target="_blank"}, but you'll still be able to toggle to the [Visual editor](https://docs.posit.co/ide/user/ide/guide/documents/visual-editor.html){target="_blank"}, if desired). Click **Create Project**.
 
 {{< include /sections/IMPORTANT-repo-name.qmd >}}
 
