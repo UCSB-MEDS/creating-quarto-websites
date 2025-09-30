@@ -169,6 +169,8 @@ The `-m` attribute is used to rename the branch without affecting the branch's h
 You can double check that this worked by typing out the `git status` command again. The first printed line should now read, `On branch main`.
 :::
 
+{{< include /sections/TIP-git-config.qmd >}}
+
 {{< include /sections/NOTE-master-main.qmd >}}
 
 8.  **Stage / add all of your website's scaffolding files** (*analogous to checking the boxes next to your files in RStudio's Git tab*)**...**
