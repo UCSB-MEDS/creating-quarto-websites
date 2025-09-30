@@ -41,7 +41,7 @@ The `touch` command can be used to create a new, empty file.
 ::: {.callout-note collapse=true}
 ## `.nojekyll` files may (or may not, depending on your IDE) visibly appear in your directory
 
-`.nojekyll` is a *hidden* file which may not visibly appear in your directory (e.g. if using RStudio). Regardless, you *should* see it show up as a file to track with git (either under the **Git** tab in RStudio, the **Source Control** menu in Positron, or when you run `git status` in the command line). You can also view hidden files in Finder (Mac) using the keyboard shortcut `Cmd` + `Shift` + `.`, or follow [these instructions](https://support.microsoft.com/en-us/windows/show-hidden-files-0320fe58-0117-fd59-6851-9b7f9840fdb2){target="_blank"} for Windows 10, 8.1, and 7.
+`.nojekyll` is a *hidden* file which may not visibly appear in your directory (e.g. if using RStudio). Regardless, you *should* see it show up as a file to track with git (either under the **Git** tab in RStudio, the **Source Control** menu in Positron, or when you run `git status` in the command line). You can also view hidden files in Finder (Mac) using the keyboard shortcut `Cmd` + `Shift` + `.`, or follow [these instructions](https://support.microsoft.com/en-us/windows/show-hidden-files-0320fe58-0117-fd59-6851-9b7f9840fdb2){target="_blank"} for Windows 10 and 11.
 :::
 
 2.  **Set the `output-dir` in your `_quarto.yml` file to `docs`** (it's easiest to open and edit this using RStudio or Positron):
