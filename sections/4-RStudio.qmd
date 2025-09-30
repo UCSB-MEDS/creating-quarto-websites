@@ -134,6 +134,8 @@ Confirm that your branch name was updated by running `git status` in your Termin
 usethis::use_git_config(init.defaultBranch = "main")
 ```
 
+{{< include /sections/TIP-git-config.qmd >}}
+
 {{< include /sections/NOTE-master-main.qmd >}}
 
 7. **Create an upstream remote repository (i.e. GitHub repo)**. So far, we’ve created a local git repository that contains the basic files needed to build our Quarto website. We’ve also created one commit (i.e. taken a “snapshot” of our work) in that local git respository. Now, we need to create a “remote” repository (i.e. a version of your project that is hosted on the internet) on GitHub. Run the following in your Console, which will open up your web browser to your new remote repository on GitHub -- it should already have the same name as your local git repo / R project:

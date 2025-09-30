@@ -1,0 +1,14 @@
+---
+format: html
+---
+
+::: {.callout-tip collapse=true}
+## A git config file is a place to define your Git settings and preferences
+
+This includes things like setting your `user.name` and `user.email`, which are used to identify the author of commits (recall that we did this when we first configured git as part of the [MEDS Installation Guide](https://ucsb-meds.github.io/MEDS-installation-guide/#configure-git){target="_blank"}). It's also a place for us to permenently set the name of our default branch for all future git repositories. You can view the contents of your entire git config file by running the following command in your Terminal:
+
+```{r filename="Terminal"}
+#| eval: false    
+git config --list
+```
+:::
