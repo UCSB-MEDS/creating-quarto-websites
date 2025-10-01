@@ -86,7 +86,7 @@ about:
 2. if you have a template / content with header text, you can remove "On this page" menu by setting `toc: false`
 3. use a [pre-built template](https://quarto.org/docs/websites/website-about.html#templates){target="_blank"} (here, `jolla`) to update the layout of your landing page (or any page!)
 4. set image shape (`round`, `rounded`, `rectangle`) & size
-5. add button links to your favorite social media pages (e.g. LinkedIn, GitHub, and even your email -- Note the `mailto::` that must precede of your email address, `mailto::youremail.com`)
+5. add button links to your favorite social media pages (e.g. LinkedIn, GitHub, and even your email -- Note the `mailto:` that must precede of your email address, `mailto:youremail.com`)
 
 ::: column-margin
 **Fun Tip:** Install the [Font Awesome Extension for Quarto](https://github.com/quarto-ext/fontawesome){target="_blank"} to add free [Font Awesome](https://fontawesome.com/){target="_blank"} `r fontawesome::fa("font-awesome", fill = "#5A5A5A", a11y = "sem")` icons to your site! Be sure to check out the [`icon` option](https://quarto.org/docs/websites/website-about.html#links){target="_blank"} when adding linked buttons to your About Page.
