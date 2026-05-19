@@ -1,0 +1,160 @@
+---
+format: 
+  html:
+    theme: meds-website-styles.scss
+    mainfont: Nunito
+    toc: true
+    toc-location: left
+    toc-depth: 2
+    smooth-scroll: true
+---
+
+## {{< fa download title="download" >}} Initial setup {#setup}
+
+To follow along, you'll need:
+
+::: {.callout-note collapse="true"}
+## Setup instructions (collapsed to save space)
+
+### 1. R installed
+
+While Quarto is not an R-specific tool, we'll use an R interpreter throughout. Visit [cloud.r-project.org](https://cloud.r-project.org/){target="_blank"} to download the most recent version of R for your operating system.
+
+### 2. RStudio or Positron installed
+
+I recommend working in an IDE (**I**ntegrated **D**evelopment **E**nvironment; though this document does also cover spinning up a Quarto website directly from the command line, if you prefer). Two great options are [RStudio](https://posit.co/download/rstudio-desktop/#download){target="_blank"} and [Positron](https://positron.posit.co/install.html#install-positron){target="_blank"}. Choose the download option for your operating system. 
+
+### 3. Quarto installed
+
+Quarto comes pre-installed with RStudio v2022.07.1+ and all Positron versions, so no extra downloads necessary.
+
+### 4. A GitHub account
+
+Head to [https://github.com/](https://github.com/){target="_blank"} to create a GitHub account. Check out Jenny Bryan’s [Happy Git with R, Ch. 4](https://happygitwithr.com/github-acct.html){target="_blank"} for some helpful considerations when choosing a username. We suggest that you use a personal email, rather than a school or work email (which may become deactivated after you graduate or change jobs).
+
+### 5. Git installed & configured
+
+You should already have git on your device, but let’s check for it anyway. Open your IDE and run the following in the Terminal (choose the option for your operating system):
+
+::: {.panel-tabset}
+## {{< fa brands apple >}} Mac
+
+```{bash filename="Terminal"}
+#| eval: false
+which git
+```
+
+## {{< fa brands windows >}} Windows
+
+```{bash filename="Terminal"}
+#| eval: false
+where git
+```
+:::
+
+If you get something that looks like a file path to git on your computer (e.g. `/usr/local/bin/git` on a Mac, `C:\Program Files\Git\mingw64\bin\git.exe` on Windows, though it could differ slightly on your computer), then you have git installed. If you instead get no response at all, you should download & install git here: [git-scm.com/downloads](https://git-scm.com/downloads){target="_blank"}
+
+To configure git, run the following commands (by pressing **enter / return** after each line) in your IDE's Terminal. Be sure to replace the username (keep the quotation marks) with *your* GitHub username and the email with the email you used for your GitHub account.
+
+```{bash filename="Terminal"}
+#| eval: false
+git config --global user.name "Jane Doe"
+git config --global user.email janedoe@example.com
+```
+
+Then, in the Terminal run the following, and carefully check that the name and email returned match your GitHub information:
+
+```{bash filename="Terminal"}
+#| eval: false
+git config --list --global
+```
+
+### 5. A GitHub personal access token (PAT) set / stored
+
+**First:** What even is a personal access token? From GitHub's documentation:
+
+> Personal access tokens (PATs) are an alternative to using passwords for authentication to GitHub when using the [GitHub API](https://docs.github.com/en/rest/overview/other-authentication-methods#via-oauth-and-personal-access-tokens) or the [command line](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#using-a-token-on-the-command-line).
+
+This means that in order to push your work (files, scripts, etc.) from your laptop (or any other computer) to GitHub, you'll need to first to generate a PAT. **Importantly, you'll need to generate a PAT for each computer you wish to work from.** For example, we will complete the following steps to create a PAT for your personal laptop, but you'll also need to create a PAT if/when you choose to work on a second computer at home or on a server, etc. Good news is that you can follow these same steps when you're ready to set up additional PATs on other machines. For now, let's get a PAT for our personal laptop squared away:
+
+-   Install the `{usethis}` package in R by running the following in your IDE's Console:
+
+```{r filename="Console"}
+#| eval: false
+install.packages(“usethis”)
+```
+
+-   Then, run the following in your Console:
+
+```{r filename="Console"}
+#| eval: false
+usethis::create_github_token() 
+```
+
+-   Enter your GitHub password if/when prompted. You’ll be taken to a screen that looks like this:
+
+```{r}
+#| echo: false
+#| fig-align: "center"
+knitr::include_graphics(here::here("media", "new-pat.png"))
+```
+
+-   Add a note in the **Note** field to describe which machine this PAT is being used for. For example, if you are generating a PAT for your laptop, you might choose to name it, `My Personal Laptop`.
+
+-   Next, you'll see a section called **Select scopes** with reasonable options already selected for you. You don't need change anything. Scroll down to the bottom of that page and click the green **Generate token** button:
+
+```{r}
+#| echo: false
+#| fig-align: "center"
+knitr::include_graphics(here::here("media", "generate-token.png"))
+```
+
+-   Copy the generated PAT to your clipboard
+
+-   Head back to your IDE and run the following in the Console:
+
+```{r filename="Console"}
+#| eval: false
+gitcreds::gitcreds_set()
+```
+
+This will prompt you to paste the PAT you just copied from GitHub. Press return / enter to run. You should see something like this show up if all is well so far (you’ll have pasted your PAT where the example below says “REDACTED”):
+
+```{r}
+#| echo: false
+#| fig-align: "center"
+knitr::include_graphics(here::here("media", "gitcreds-set.png"))
+```
+
+-   In your Console, run:
+
+```{r filename="Console"}
+#| eval: false
+usethis::git_sitrep()
+```
+
+Does it return information about your connected GitHub account that looks something like below? Great! You’ve configured git and successfully stored your PAT.
+
+```{r}
+#| echo: false
+#| fig-align: "center"
+knitr::include_graphics(here::here("media", "git-sitrep.png"))
+```
+
+***Note:** Setting an expiration date on personal access tokens is recommended in order to keep your information secure. GitHub will send you an email when it's time to regenerate a token that's about to expire. Follow the email prompts, then use `gitcreds::gitcreds_set()` to reset your token.*
+:::
+
+***Note:** MEDS students should already have the following software installed / configured by the time we have this workshop {{< fa face-smile-beam >}}. These instructions were adapted from the [MEDS Installation Guide](https://ucsb-meds.github.io/MEDS-installation-guide/){target="_blank"}.*
+
+<!-- ::: {.callout-important}
+## Before getting started...
+
+To follow along, you'll need: 
+
+-   [R](https://cloud.r-project.org/){target="_blank"} & [RStudio](https://posit.co/download/rstudio-desktop/#download){target="_blank"} installed 
+-   [Quarto](https://quarto.org/docs/get-started/){target="_blank"} installed -- **Quarto is now included with RStudio v2022.07.1+ i.e. no need for a separate download / install if you have the latest version of RStudio**
+-   [Git](https://git-scm.com/){target="_blank"} installed / configured
+-   A [GitHub](https://github.com/){target="_blank"} account & a [personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#about-personal-access-tokens){target="_blank"} (PAT) set
+
+Please refer to the [MEDS Installation Guide](https://ucsb-meds.github.io/MEDS-installation-guide/){target="_blank"} for detailed setup instructions (follow steps 1-7). 
+::: -->

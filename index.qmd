@@ -28,30 +28,32 @@ format:
 
 {{< include /sections/2-do-i-need-to-use-quarto.qmd >}}
 
-{{< include /sections/3-create-scaffolding.qmd >}}
+{{< include /sections/3-setup.qmd >}}
+
+{{< include /sections/4-create-scaffolding.qmd >}}
 
 ::: {.panel-tabset}
 ## **{{< fa brands r-project title="R programming language icon" >}} RStudio**
 
-{{< include /sections/4-RStudio.qmd >}}
+{{< include /sections/4a-RStudio.qmd >}}
 
 ## **{{< fa plus title="plus symbol" >}} Positron**
 
-{{< include /sections/6-Positron.qmd >}}
+{{< include /sections/4b-Positron.qmd >}}
 
 ## **{{< fa terminal title="terminal symbol, |>" >}} Command line**
 
-{{< include /sections/5-command-line.qmd >}}
+{{< include /sections/4c-command-line.qmd >}}
 :::
 
 {{< include /sections/NOTE-workflow.qmd >}}
 
-{{< include /sections/7-publish-with-github-pages.qmd >}}
+{{< include /sections/5-publish-with-github-pages.qmd >}}
 
-{{< include /sections/8-change-stuff.qmd >}}
+{{< include /sections/6-change-stuff.qmd >}}
 
-{{< include /sections/9-looking-forward.qmd >}}
+{{< include /sections/7-looking-forward.qmd >}}
 
-{{< include /sections/10-acknowledgements.qmd >}}
+{{< include /sections/8-acknowledgements.qmd >}}
 
-{{< include /sections/11-contribute.qmd >}}
+{{< include /sections/9-contribute.qmd >}}

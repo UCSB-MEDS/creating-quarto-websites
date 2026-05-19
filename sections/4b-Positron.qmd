@@ -9,7 +9,7 @@ format:
     smooth-scroll: true
 ---
 
-::: {.callout-important}
+<!-- ::: {.callout-important}
 ## Positron may be out of beta, but these instructions are a work in progress!
 The following instructions are born from my desire for an entry point into using Positron. They are almost certain to change as my understanding of this new IDE improves. Please note that while Positron supports development using both R and Python, I’ve chosen to use an R interpreter throughout to better highlight the similarities between RStudio and Positron workflows. [Feedback](https://github.com/UCSB-MEDS/creating-quarto-websites/issues){target="_blank"} on these instructions is welcomed!
 
@@ -29,7 +29,7 @@ If you'd like to take Positron for a test drive but aren't sure where to start, 
 5. **Choose a new color theme:** open command palette > search **Preferences: Color Theme** > use the up / down arrow keys to view different theems. You can also choose **+ Browse additional color themes...** to explore more options available via extensions. If you choose one, it'll prompt you to install the extension to apply it.
 
 *This lesson was developed using Positron v2025.06.0*
-:::
+::: -->
 
 ### **Why use Positron to set up your Quarto website?**
 
@@ -185,16 +185,16 @@ ii. Install the [`{usethis}`](https://usethis.r-lib.org/index.html){target="_bla
 install.packages("usethis")
 ```
 
-{{< include /sections/IMPORTANT-usethis-root.qmd >}}
+<!-- {{< include /sections/IMPORTANT-usethis-root.qmd >}} -->
 
-iii. Set your Quarto project root by running the following in your console:
+<!-- iii. Set your Quarto project root by running the following in your console: -->
 
-```{r filename="Console"}
+<!-- ```{r filename="Console"}
 #| eval: false
 usethis::proj_set(".", force = TRUE)
-```
+``` -->
 
-iv. Initialize your project as a **git repository** by running the following in your console: 
+iii. Initialize your project as a **git repository** by running the following in your console: 
 
 ```{r filename="Console"}
 #| eval: false
@@ -291,7 +291,7 @@ ii. Confirm that your branch name was updated by running `git status` in the Ter
 
 ## **{{< fa brands r-project title="R programming language icon" >}} `{usethis}`**
 
-*This option assumes that you've already converted your Quarto Project to an R Project (refer back to step 3, where we initialized our project as a git repository, if necessary)*
+<!-- *This option assumes that you've already converted your Quarto Project to an R Project (refer back to step 3, where we initialized our project as a git repository, if necessary)* -->
 
 i. Update the default branch name to main by running the following in your Console:
 
