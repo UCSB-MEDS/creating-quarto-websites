@@ -1,0 +1,13 @@
+---
+format: html
+---
+
+## {{< fa seedling title="Sprouted seedling" >}} Create the scaffolding for your website {#create-website-scaffolding}
+
+This document reviews three ways to get started with using Quarto to build your website.
+
+(1) {{< fa brands r-project title="R programming language icon" >}} Using RStudio
+(2) {{< fa plus title="plus sign" >}} Using Positron
+(3) {{< fa terminal title="terminal symbol, |>" >}} Using the command line  
+
+The order of operations is slightly different depending on which approach you decide to take, but the concepts remain the same.
