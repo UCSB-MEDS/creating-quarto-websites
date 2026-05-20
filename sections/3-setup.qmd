@@ -144,7 +144,7 @@ knitr::include_graphics(here::here("media", "git-sitrep.png"))
 ***Note:** Setting an expiration date on personal access tokens is recommended in order to keep your information secure. GitHub will send you an email when it's time to regenerate a token that's about to expire. Follow the email prompts, then use `gitcreds::gitcreds_set()` to reset your token.*
 :::
 
-***Note:** MEDS students should already have the following software installed / configured by the time we have this workshop {{< fa face-smile-beam >}}. These instructions were adapted from the [MEDS Installation Guide](https://ucsb-meds.github.io/MEDS-installation-guide/){target="_blank"}.*
+***Note:** MEDS students should already have the above software installed / configured by the time we have this workshop {{< fa face-smile-beam >}}. These instructions were adapted from the [MEDS Installation Guide](https://ucsb-meds.github.io/MEDS-installation-guide/){target="_blank"}.*
 
 <!-- ::: {.callout-important}
 ## Before getting started...
