@@ -16,7 +16,7 @@ Right now, our website is built using Quarto's default styling. Let's learn abou
 ::: {.callout-note collapse="true"}
 ## You can decide which code editor you prefer to use from here on out!
 
-Both RStudio and Positron will make updating your website a productive and fun experience. You choose!
+Both Positron and RStudio will make updating your website a productive and fun experience. You choose!
 :::
 
 ### {{< fa arrow-right title="An arrow pointing to the right" >}} **Don't mess with stuff in `docs/`** 
@@ -32,7 +32,7 @@ This is the default / expected name given to website landing / home pages. If yo
 
 `index.html` (which is built from `index.qmd`) is the page people will arrive at when navigating to your website -- give this landing / home page a makeover by trying out some of the following:
 
-  -   Update the YAML `title` in your `index.qmd` file. Here, I changed mine from `"mysite"` to my name, `"Samantha Csik"`
+  -   Update the YAML `title` in your `index.qmd` file. Here, I changed mine from `"mysite"` to my name, `"Samantha Shanny-Csik"`
 
   -   Delete the sample text and begin adding your own content -- a great place to start is a short blurb introducing yourself!
 
@@ -64,7 +64,7 @@ When the `about` option is added to a document's YAML, a special template will b
 ```{r filename="index.qmd"}
 #| eval: false
 ---
-title: "Samantha Csik"
+title: "Samantha Shanny-Csik"
 image: media/headshot.jpeg # <1>
 toc: false # <2>
 about: 
@@ -125,7 +125,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Sam Csik" # <1>
+  title: "Sam Shanny-Csik" # <1>
   navbar:
     left:
       - href: index.qmd
@@ -179,16 +179,17 @@ title: "All my favorite resources!"
 ---
 ```
 
-A quick reminder on how to add new files:
+::: {.callout-note collapse="true"}
+## A quick reminder on how to add new files:
 
 ::: {.panel-tabset}
-## **{{< fa brands r-project title="R programming language icon" >}} RStudio GUI buttons**
-
-From RStudio's **File pane**, click **Blank File** > **Quarto Document** > give it a name (e.g. `resources.qmd` and save it to your project's root directory
-
 ## **{{< fa plus title="plus sign" >}} Positron GUI buttons**
 
 From Posit's **Explorer** menu, click the **New File...** button and give it a name with the `.qmd` extension (e.g. `resources.qmd`). 
+
+## **{{< fa brands r-project title="R programming language icon" >}} RStudio GUI buttons**
+
+From RStudio's **File pane**, click **Blank File** > **Quarto Document** > give it a name (e.g. `resources.qmd` and save it to your project's root directory)
 
 ## **{{< fa terminal title="terminal symbol, |>" >}} Command line / Terminal**
 
@@ -197,7 +198,7 @@ Use the `touch` command to create any file type from your RStudio or Positron Te
 ```{bash filename="Command line / Terminal"}
 touch resources.qmd
 ```
-
+:::
 :::
 
   b. **Update `_quarto.yml`** by adding your new `.qmd` to the list of navbar pages. My website's `_quarto.yml` file now looks like this:
@@ -208,7 +209,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Sam Csik"
+  title: "Sam Shanny-Csik"
   navbar:
    left:
      - href: index.qmd
