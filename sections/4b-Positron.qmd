@@ -342,7 +342,7 @@ knitr::include_graphics("media/positron-create-remote.png")
 
 ## **{{< fa brands r-project title="R programming language icon" >}} `{usethis}`**
 
-*This option assumes that you’ve already converted your Quarto Project to an R Project (refer back to step 3, where we initialized our project as a git repository, if necessary)*
+<!-- *This option assumes that you’ve already converted your Quarto Project to an R Project (refer back to step 3, where we initialized our project as a git repository, if necessary)* -->
 
 i. Run the following in your Console, which will open up your web browser to your new remote repository on GitHub -- it should already have the same name as your local git repo / R project:
 
