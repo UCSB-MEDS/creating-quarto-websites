@@ -35,7 +35,17 @@ If you'd like to take Positron for a test drive but aren't sure where to start, 
 
 - [Positron](https://positron.posit.co/){target="_blank"} is Posit PBC's "next generation data science IDE." It's built with extensibility and multilingual (polyglot) support in mind (meaning, you can use one development environment across your various R and Python data science projects) 
 - Positron includes many of RStudio's most-loved features (though packaged in a slightly different way), along with addtional capabilities to support more modern workflows
-- While RStudio remains a powerful and popular IDE, especially for R users, Positron is positioned to become its (likely) successor in the long term
+- While RStudio remains a powerful and popular IDE for R users, Positron is positioned to become its (likely) successor in the long term
+
+::: {.callout-tip collapse="true"}
+## A couple optional Positron customizations
+
+*Open the Command Palette using the keyboard shortcut, `Cmd/Ctrl` + `Shift` + `P`*
+
+- **Enable RStudio Keybindings:** (so you can continue using your favorite RStudio keyboard shortcuts) open command palette > search **Preferences: Open Settings (UI)** > search **RStudio keybindings** > check the box next to  **Enable RStudio keybindings** > restart Positron
+- **Choose a new color theme:** open command palette > search **Preferences: Color Theme** > use the up / down arrow keys to view different theems. You can also choose **+ Browse additional color themes...** to explore more options available via extensions. If you choose one, it'll prompt you to install the extension to apply it.
+
+:::
 
 ### **Steps:**
 

@@ -20,9 +20,9 @@ To follow along, you'll need:
 
 While Quarto is not an R-specific tool, we'll use an R interpreter throughout. Visit [cloud.r-project.org](https://cloud.r-project.org/){target="_blank"} to download the most recent version of R for your operating system.
 
-### 2. RStudio or Positron installed
+### 2. Positron or RStudio installed
 
-I recommend working in an IDE (**I**ntegrated **D**evelopment **E**nvironment; though this document does also cover spinning up a Quarto website directly from the command line, if you prefer). Two great options are [RStudio](https://posit.co/download/rstudio-desktop/#download){target="_blank"} and [Positron](https://positron.posit.co/install.html#install-positron){target="_blank"}. Choose the download option for your operating system. 
+I recommend working in an IDE (**I**ntegrated **D**evelopment **E**nvironment; though this document does also cover spinning up a Quarto website directly from the command line, if you prefer). Two great options are [Positron](https://positron.posit.co/install.html#install-positron){target="_blank"} and [RStudio](https://posit.co/download/rstudio-desktop/#download){target="_blank"}. Choose the download option for your operating system. This document includes instructions for creating your website in either IDE (and also via the command line!), thought we'll be using Positron for in-person instruction.
 
 ### 3. Quarto installed
 
