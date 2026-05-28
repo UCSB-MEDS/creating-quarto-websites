@@ -16,13 +16,13 @@ There are a [lots of options to publish your website](https://quarto.org/docs/pu
 1.  **Create a file named `.nojekyll` in your repository's root directory (e.g. `mysite/`)**, which is required to disable some processing of HTML files that GitHub does by default. There are a few ways you can do this: 
 
 ::: {.panel-tabset}
-## **{{< fa brands r-project title="R programming language icon" >}} RStudio GUI buttons**
-
-From RStudio's **Files** pane, click **New Blank File** > **Text File**, then type `.nojekyll` > click **OK** (you can use the **Text File** option to create any file type)
-
 ## **{{< fa plus title="plus sign" >}} Positron GUI buttons**
 
 From Positron's **Explorer** menu, click on the **New File...** button, ![](media/positron-new-file.png){alt="A file with a plus sign, +, overlaid on it" style="display: inline-block; margin: 0; position: relative; top: 0px; width:20px;height:20px;"}, (if you don't see it, hover your mouse over your repository directory name). Type `.nojekyll` then press **Enter/Return** to add it.
+
+## **{{< fa brands r-project title="R programming language icon" >}} RStudio GUI buttons**
+
+From RStudio's **Files** pane, click **New Blank File** > **Text File**, then type `.nojekyll` > click **OK** (you can use the **Text File** option to create any file type)
 
 ## **{{< fa terminal title="terminal symbol, |>" >}} Command line / Terminal**
 
@@ -65,13 +65,13 @@ The `output-dir` is the directory (i.e. folder) where your rendered `.html` (and
 If you previewed or built your site *before* setting `output-dir` to `docs` in `_quarto.yml`, you'll notice a `_site/` directory inside your repository -- this is the default output directory name. Because GitHub Pages will expect a `docs/` folder to deploy from, you can delete `_site/` altogether (and push your deletion, if you've already committed / pushed `_site/` to GitHub). A couple options for deleting files / directories:
 
 ::: {.panel-tabset}
-## **{{< fa brands r-project title="R programming language icon" >}} RStudio GUI buttons**
-
-From the **Files** pane, check the box next to `_site` > click the **Delete** button
-
 ## **{{< fa plus title="plus sign" >}} Positron GUI buttons**
 
 From the **Explorer** menu, right click on `_site` > click **Delete**
+
+## **{{< fa brands r-project title="R programming language icon" >}} RStudio GUI buttons**
+
+From the **Files** pane, check the box next to `_site` > click the **Delete** button
 
 ## **{{< fa terminal title="terminal symbol, |>" >}} Command line / Terminal**
 
@@ -82,6 +82,12 @@ Type the command `git rm -r _site` (the `-r` flag is used to "recursively remove
 3.  **Render your website.** Select the option below that fits your workflow:
 
 ::: {.panel-tabset}
+## **{{< fa plus title="plus sign" >}} Positron GUI buttons**
+
+*NOTE: I would love some community input on this -- still trying to understand if I'm interpeting [this documentation](https://quarto.org/docs/tools/positron/#render-and-preview){target="_blank"} correctly {{< fa face-smile title="a smiling face" >}}*
+
+Positron's **Preview** button (which becomes available when you open any of your website `.qmd` files, e.g. `index.qmd`) both spins up a preview in the Viewer pane *and* fully renders your website so that it's ready for distribution (e.g. pushing to GitHub to deploy using GitHub pages). That said, I'm in the habit of always running `quarto render` in the Positron Terminal when I'm ready to push my changes to GitHub.
+
 ## **{{< fa brands r-project title="R programming language icon" >}} RStudio GUI buttons**
 
 Click on the **Build** tab (top left pane in RStudio, if you have the default layout), then **Render Website**. You should see your minimal, albeit functional, soon-to-be website appear in the **Viewer** pane. You can click on the <img src="media/view_in_browser.png" alt="A browser window overlaid by an arrow pointing up and angled to the right." style="display: inline-block; margin: 0; position: relative; top: 0px; width:25px;height:20px;"/> button to open your file in your web browser. **Note:** your website is currently being hosted by your local machine, not at a searchable URL. We'll get there soon though!
@@ -94,36 +100,27 @@ Clicking **Render Website** in the **Build tab** (or running `quarto render` in 
 **Note:** *Previewing* your website is different than *rendering* your website. Previewing alone does not formally prepare all of your website files for deployment.
 :::
 
-## **{{< fa plus title="plus sign" >}} Positron GUI buttons**
-
-*NOTE: I would love some community input on this -- still trying to understand if I'm interpeting [this documentation](https://quarto.org/docs/tools/positron/#render-and-preview){target="_blank"} correctly {{< fa face-smile title="a smiling face" >}}*
-
-Positron's **Preview** button (which becomes available when you open any of your website `.qmd` files, e.g. `index.qmd`) both spins up a preview in the Viewer pane *and* fully renders your website so that it's ready for distribution (e.g. pushing to GitHub to deploy using GitHub pages). 
-
-If you update your website, preview it, push the changes to GitHub, and still don’t see those updates reflected online, try running `quarto render` in the Terminal before pushing again. This ensures that your website is properly rebuilt ahead of redeployment.
-
 ## **{{< fa terminal title="terminal symbol, |>" >}} Command line / Terminal**
 
-Run `quarto render` in the Terminal -- you may use the Terminal in RStudio, Positron, or a separate command line interface (just make sure you’re in the correct directory).
+Run `quarto render` in the Terminal -- you may use the Terminal in Positron, RStudio, or a separate command line interface (just make sure you’re in the correct directory).
 
 *NOTE: If you're using an RStudio Terminal, running `quarto render` will open up your fully rendered website in the **Viewer** pane (similar to what you see when you preview your site). If you're using a Positron Terminal or a seperate command line interface, running `quarto render` will not provide a visible preview.*
-
 :::
 
 4.  **Send all of your website files from your local git repository to your remote GitHub repository.** Select the option below that fits your workflow: 
 
 ::: {.panel-tabset}
-## **{{< fa brands r-project title="R programming language icon" >}} RStudio GUI buttons**
-
-i. **Stage** your files by checking all the boxes in the **Git** tab
-ii. **Commit** your files by clicking the **Commit** button, adding a commit message, then clicking **Commit**
-iii. **Push** your files to the remote repository (on GitHub) by clicking the **Push** button (with the green upward facing arrow)
-
 ## **{{< fa plus title="plus sign" >}} Positron GUI buttons**
 
 i. **Stage** your files by clicking the **+** button next to the **Changes** log in the **Source Control** menu (or hover over individual files to separately stage them)
 ii. **Commit** your files by adding a commit message in the commit message field, then pressing `Ctrl/Cmd` + `Enter/Return` (or by pressing the **Commit** button)
 iii. **Push** your files by clicking the **Sync Changes** button (appears after you've made a commit)
+
+## **{{< fa brands r-project title="R programming language icon" >}} RStudio GUI buttons**
+
+i. **Stage** your files by checking all the boxes in the **Git** tab
+ii. **Commit** your files by clicking the **Commit** button, adding a commit message, then clicking **Commit**
+iii. **Push** your files to the remote repository (on GitHub) by clicking the **Push** button (with the green upward facing arrow)
 
 ## **{{< fa terminal title="terminal symbol, |>" >}} Command line / Terminal**
 
